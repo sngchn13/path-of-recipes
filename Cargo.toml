@@ -6,5 +6,10 @@ edition = "2024"
 [dependencies]
 axum = { version = "0.8.7", features = ["json"] }
 dotenvy = "0.15.7"
+sea-orm = { version = "1.1.19", features = ["sqlx-postgres", "runtime-tokio-rustls", "macros"] }
 serde = "1.0.228"
 tokio = { version = "1.48.0", features = ["full"] }
+tower = { version = "0.5.2", features = ["full"] }
+tower-http = { version = "0.6.6", features = ["full"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.20", features = ["env-filter"] } #로그 출력방식을 설정함. .env로부터 출력방식을 가져오도록 함.

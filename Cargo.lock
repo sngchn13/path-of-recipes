@@ -65,6 +65,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "anyhow"
+version = "1.0.100"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a23eb6b1614318a8071c9b2521f36b424b2c83db5eb3a0fead4a6c0809af6e61"
+
+[[package]]
 name = "arrayvec"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -555,6 +561,10 @@ checksum = "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719"
 dependencies = [
  "serde",
 ]
+
+[[package]]
+name = "entity"
+version = "0.1.0"
 
 [[package]]
 name = "equivalent"
@@ -1200,6 +1210,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f52b00d39961fc5b2736ea853c9cc86238e165017a493d1d5c8eac6bdc4cc273"
 
 [[package]]
+name = "migration"
+version = "0.1.0"
+
+[[package]]
 name = "mime"
 version = "0.3.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1376,11 +1390,21 @@ dependencies = [
 ]
 
 [[package]]
-name = "path_of_recipes"
+name = "path-of-recipes"
 version = "0.1.0"
 dependencies = [
+ "path-of-recipes-api",
+]
+
+[[package]]
+name = "path-of-recipes-api"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
  "axum",
  "dotenvy",
+ "entity",
+ "migration",
  "sea-orm",
  "serde",
  "tokio",

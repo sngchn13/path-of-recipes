@@ -1,4 +1,6 @@
-use sea_orm_migration::{prelude::*, schema::*};
+use entity::item_types;
+use sea_orm::{ActiveModelTrait, EntityTrait, Set};
+use sea_orm_migration::{prelude::*};
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
@@ -19,10 +21,25 @@ impl MigrationTrait for Migration {
             "quivers", "shields(str)", "shields(dex)", "shields(int)", "shields(str_dex)", "shields(str_int)", "shields(dex_int)",
         ];
 
+        for name in seed_data {
+            let model = item_types::ActiveModel{
+                name: Set(name.to_string()),
+                ..Default::default()
+            };
+
+            model.insert(db).await?;
+        }
+
         Ok(())
     }
 
     async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+        let db = manager.get_connection();
+
+        item_types::Entity::delete_many()
+            .exec(db)
+            .await?;
+
         Ok(())
     }
 }

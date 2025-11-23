@@ -1,0 +1,70 @@
+use sea_orm_migration::{prelude::*, schema::*};
+
+#[derive(DeriveMigrationName)]
+pub struct Migration;
+
+#[async_trait::async_trait]
+impl MigrationTrait for Migration {
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+        manager
+            .create_table(
+                Table::create()
+                    .table(Node::Table)
+                    .if_not_exists()
+                    .col(pk_auto(Node::Id))
+                    .col(text(Node::Context).null())
+                    .col(string(Node::Rarity))
+                    .col(unsigned(Node::ItemLevel))
+                    .col(text(Node::Note).null())
+                    .col(string(Node::NodeType))
+                    .col(integer(Node::PositionX))
+                    .col(integer(Node::PositionY))
+                    .col(integer(Node::ItemBaseId))
+                    .col(integer(Node::GraphId))
+                    .foreign_key(
+                        ForeignKey::create()
+                            .name("fk_item_base_id")
+                            .from("nodes", "item_base_id")
+                            .to("item_bases", "id")
+                            .on_update(ForeignKeyAction::Cascade)
+                            .on_delete(ForeignKeyAction::Cascade)
+                    )
+                    .foreign_key(
+                        ForeignKey::create()
+                            .name("fk_graph_id")
+                            .from("nodes", "graph_id")
+                            .to("graphs", "id")
+                            .on_update(ForeignKeyAction::Cascade)
+                            .on_delete(ForeignKeyAction::Cascade)
+                    )
+                    .to_owned(),
+            )
+            .await?;
+
+        Ok(())
+    }
+
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+        manager
+            .drop_table(Table::drop().table(Node::Table).to_owned())
+            .await?;
+
+        Ok(())
+    }
+}
+
+#[derive(DeriveIden)]
+enum Node {
+    #[sea_orm(iden = "nodes")]
+    Table,
+    Id,
+    Context,
+    Rarity,
+    ItemLevel,
+    Note,
+    NodeType,
+    PositionX,
+    PositionY,
+    ItemBaseId,
+    GraphId,
+}

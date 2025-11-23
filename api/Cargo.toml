@@ -7,7 +7,7 @@ edition = "2024"
 anyhow = "1.0.100"
 axum = { version = "0.8.7", features = ["json", "macros"] }
 dotenvy = "0.15.7"
-serde = "1.0.228"
+serde = { workspace = true }
 tokio = { version = "1.48.0", features = ["full"] }
 tower = { version = "0.5.2", features = ["full"] }
 tower-http = { version = "0.6.6", features = ["full"] }

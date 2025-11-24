@@ -13,10 +13,12 @@ pub struct Model {
     pub mod_origin: String,
     pub affix: String,
     pub weight: Option<i16>,
-    pub req_item_lv: i32,
+    pub req_item_level: i32,
     pub display_en: String,
     pub display_kor: String,
+    #[sea_orm(unique_key = "idx_tier_tier_group_id")]
     pub tier: Option<i16>,
+    #[sea_orm(unique_key = "idx_tier_tier_group_id")]
     pub tier_group_id: Option<i32>,
     pub item_type_id: i32,
     pub family_id: Option<i32>,

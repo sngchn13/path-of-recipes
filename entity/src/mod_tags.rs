@@ -9,7 +9,9 @@ pub struct Model {
     #[sea_orm(primary_key)]
     #[serde(skip_deserializing)]
     pub id: i32,
+    #[sea_orm(unique_key = "idx_mod_id_tag_id")]
     pub mod_id: i32,
+    #[sea_orm(unique_key = "idx_mod_id_tag_id")]
     pub tag_id: i32,
 }
 

@@ -10,12 +10,27 @@ pub struct Model {
     #[serde(skip_deserializing)]
     pub id: i32,
     pub name: String,
+    pub cause_type_id: Option<i32>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(
+        belongs_to = "super::cause_types::Entity",
+        from = "Column::CauseTypeId",
+        to = "super::cause_types::Column::Id",
+        on_update = "Cascade",
+        on_delete = "Cascade"
+    )]
+    CauseTypes,
     #[sea_orm(has_many = "super::edges::Entity")]
     Edges,
+}
+
+impl Related<super::cause_types::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::CauseTypes.def()
+    }
 }
 
 impl Related<super::edges::Entity> for Entity {

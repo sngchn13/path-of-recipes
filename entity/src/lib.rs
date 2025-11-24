@@ -2,6 +2,7 @@
 
 pub mod prelude;
 
+pub mod cause_types;
 pub mod causes;
 pub mod edges;
 pub mod families;

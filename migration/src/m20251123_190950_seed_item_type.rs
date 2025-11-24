@@ -16,7 +16,7 @@ impl MigrationTrait for Migration {
             "amulets", "rings", "belts", "trinkets",
             "gloves(str)", "gloves(dex)", "gloves(int)", "gloves(str_dex)", "gloves(str_int)", "gloves(dex_int)",
             "boots(str)", "boots(dex)", "boots(int)", "boots(str_dex)", "boots(str_int)", "boots(dex_int)",
-            "body_armours(str)", "body_armours(dex)", "body_armours(int)", "body_armours(str_dex)", "body_armours(str_int)", "body_armours(dex_int)",
+            "body_armours(str)", "body_armours(dex)", "body_armours(int)", "body_armours(str_dex)", "body_armours(str_int)", "body_armours(dex_int)", "body_armours(str_dex_int)", 
             "helmets(str)", "helmets(dex)", "helmets(int)", "helmets(str_dex)", "helmets(str_int)", "helmets(dex_int)", 
             "quivers", "shields(str)", "shields(dex)", "shields(int)", "shields(str_dex)", "shields(str_int)", "shields(dex_int)",
         ];

@@ -12,7 +12,7 @@ impl MigrationTrait for Migration {
                     .table(Section::Table)
                     .if_not_exists()
                     .col(pk_auto(Section::Id))
-                    .col(string(Section::Name))
+                    .col(string(Section::Name).unique_key())
                     .to_owned(),
             )
             .await?;

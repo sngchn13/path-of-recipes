@@ -12,6 +12,7 @@ impl MigrationTrait for Migration {
                     .table(ItemBase::Table)
                     .if_not_exists()
                     .col(pk_auto(ItemBase::Id))
+                    .col(string(ItemBase::Name).unique_key())
                     .col(string(ItemBase::DisplayEn).null())
                     .col(string(ItemBase::DisplayKor).null())
                     .col(integer(ItemBase::ItemTypeId))
@@ -44,6 +45,7 @@ enum ItemBase {
     #[sea_orm(iden = "item_bases")]
     Table,
     Id,
+    Name,
     DisplayEn,
     DisplayKor,
     ItemTypeId,

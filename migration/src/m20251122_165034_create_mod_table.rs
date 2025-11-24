@@ -24,6 +24,9 @@ impl MigrationTrait for Migration {
                     .col(integer(Mod::ItemTypeId))
                     .col(integer(Mod::FamilyId).null())
                     .col(integer(Mod::SectionId))
+                    .col(string(Mod::DeprecatedVersion).null())
+                    .col(timestamp_with_time_zone(Mod::CreatedAt))
+                    .col(timestamp_with_time_zone(Mod::UpdatedAt).null())
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_tier_group_id")
@@ -89,4 +92,7 @@ enum Mod {
     ItemTypeId,
     FamilyId,
     SectionId,
+    DeprecatedVersion,
+    CreatedAt,
+    UpdatedAt,
 }

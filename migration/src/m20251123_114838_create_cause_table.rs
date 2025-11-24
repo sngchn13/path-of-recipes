@@ -13,6 +13,15 @@ impl MigrationTrait for Migration {
                     .if_not_exists()
                     .col(pk_auto(Cause::Id))
                     .col(string(Cause::Name))
+                    .col(integer(Cause::CauseTypeId).null())
+                    .foreign_key(
+                        ForeignKey::create()
+                            .name("fk_cause_type_id")
+                            .from("causes", "cause_type_id")
+                            .to("cause_types", "id")
+                            .on_update(ForeignKeyAction::Cascade)
+                            .on_delete(ForeignKeyAction::Cascade)
+                    )
                     .to_owned(),
             )
             .await?;
@@ -34,5 +43,6 @@ enum Cause {
     #[sea_orm(iden = "causes")]
     Table,
     Id,
-    Name
+    Name,
+    CauseTypeId,
 }

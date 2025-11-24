@@ -39,3 +39,10 @@
     ```sh
     cargo run -- status
     ```
+-----
+sea-orm-cli generate entity \
+  -u $DATABASE_URL \
+  -o ./entity/src \
+  --lib \
+  --with-serde both \
+  --serde-skip-deserializing-primary-key

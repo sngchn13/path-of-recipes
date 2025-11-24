@@ -21,6 +21,9 @@ pub struct Model {
     pub item_type_id: i32,
     pub family_id: Option<i32>,
     pub section_id: i32,
+    pub deprecated_version: Option<String>,
+    pub created_at: DateTimeWithTimeZone,
+    pub updated_at: Option<DateTimeWithTimeZone>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

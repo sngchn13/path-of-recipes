@@ -16,7 +16,7 @@ impl MigrationTrait for Migration {
                     .col(string(Mod::ModOrigin))
                     .col(string(Mod::Affix))
                     .col(small_unsigned(Mod::Weight).null())
-                    .col(unsigned(Mod::ReqItemLv))
+                    .col(unsigned(Mod::ReqItemLevel))
                     .col(string(Mod::DisplayEn))
                     .col(string(Mod::DisplayKor))
                     .col(tiny_unsigned(Mod::Tier).null())
@@ -59,6 +59,13 @@ impl MigrationTrait for Migration {
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
                     )
+                    .index(
+                        Index::create()
+                            .name("idx_tier_tier_group_id")
+                            .col(Mod::Tier)
+                            .col(Mod::TierGroupId)
+                            .unique()
+                    )
                     .to_owned(),
             )
             .await?;
@@ -84,7 +91,7 @@ enum Mod {
     ModOrigin,
     Affix,
     Weight,
-    ReqItemLv,
+    ReqItemLevel,
     DisplayEn,
     DisplayKor,
     Tier,

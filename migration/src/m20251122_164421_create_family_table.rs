@@ -12,7 +12,7 @@ impl MigrationTrait for Migration {
                     .table(Family::Table)
                     .if_not_exists()
                     .col(pk_auto(Family::Id))
-                    .col(string(Family::Name))
+                    .col(string(Family::Name).unique_key())
                     .to_owned(),
             )
             .await?;

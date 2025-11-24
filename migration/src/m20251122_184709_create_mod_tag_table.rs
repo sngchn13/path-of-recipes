@@ -30,6 +30,13 @@ impl MigrationTrait for Migration {
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
                     )
+                    .index(
+                        Index::create()
+                            .name("idx_mod_id_tag_id")
+                            .col(ModTag::ModId)
+                            .col(ModTag::TagId)
+                            .unique()
+                    )
                     .to_owned(),
             )
             .await?;

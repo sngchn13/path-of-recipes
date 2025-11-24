@@ -12,7 +12,7 @@ impl MigrationTrait for Migration {
                     .table(Tag::Table)
                     .if_not_exists()
                     .col(pk_auto(Tag::Id))
-                    .col(string(Tag::Name))
+                    .col(string(Tag::Name).unique_key())
                     .to_owned(),
             )
             .await?;

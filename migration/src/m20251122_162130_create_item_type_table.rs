@@ -19,7 +19,7 @@ impl MigrationTrait for Migration {
             .await?;
         manager.create_index(
             sea_query::Index::create()
-            .name("idx-item-type-name")
+            .name("idx_item_type_name")
             .table(ItemType::Table)
             .col(ItemType::Name)
             .to_owned())

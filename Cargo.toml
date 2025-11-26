@@ -9,6 +9,7 @@ members = [".", "api", "entity", "migration"]
 [workspace.dependencies]
 sea-orm = { version = "2.0.0-rc", features = ["sqlx-postgres", "runtime-tokio-rustls", "macros"]}
 serde = "1.0.228"
+dotenvy = "0.15.7"
 
 [dependencies]
 path-of-recipes-api = { path = "api" }

@@ -11,9 +11,13 @@ impl MigrationTrait for Migration {
                 Table::create()
                     .table(NodeMod::Table)
                     .if_not_exists()
-                    .col(pk_auto(NodeMod::Id))
                     .col(integer(NodeMod::NodeId))
                     .col(integer(NodeMod::ModId))
+                    .primary_key(
+                        Index::create()
+                            .col(NodeMod::NodeId)
+                            .col(NodeMod::ModId)
+                    )
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_node_id")
@@ -50,7 +54,6 @@ impl MigrationTrait for Migration {
 enum NodeMod {
     #[sea_orm(iden = "node_mods")]
     Table,
-    Id,
     NodeId,
     ModId,
 }

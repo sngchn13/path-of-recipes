@@ -11,14 +11,18 @@ impl MigrationTrait for Migration {
                 Table::create()
                     .table(ModTag::Table)
                     .if_not_exists()
-                    .col(pk_auto(ModTag::Id))
-                    .col(integer(ModTag::ModId))
+                    .col(integer(ModTag::ModGroupId))
                     .col(integer(ModTag::TagId))
+                    .primary_key(
+                        Index::create()
+                            .col(ModTag::ModGroupId)
+                            .col(ModTag::TagId)
+                    )
                     .foreign_key(
                         ForeignKey::create()
-                            .name("fk_mod_id")
-                            .from("mod_tags", "mod_id")
-                            .to("mods", "id")
+                            .name("fk_mod_group_id")
+                            .from("mod_tags", "mod_group_id")
+                            .to("mod_groups", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
                     )
@@ -29,13 +33,6 @@ impl MigrationTrait for Migration {
                             .to("tags", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
-                    )
-                    .index(
-                        Index::create()
-                            .name("idx_mod_id_tag_id")
-                            .col(ModTag::ModId)
-                            .col(ModTag::TagId)
-                            .unique()
                     )
                     .to_owned(),
             )
@@ -55,9 +52,8 @@ impl MigrationTrait for Migration {
 
 #[derive(DeriveIden)]
 enum ModTag {
-    #[sea_orm(iden = "mod_tags")]
+    #[sea_orm(iden = "mod_group_tags")]
     Table,
-    Id,
-    ModId,
+    ModGroupId,
     TagId,
 }

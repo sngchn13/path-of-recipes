@@ -4,27 +4,26 @@ use sea_orm::entity::prelude::*;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Debug, PartialEq, Eq, DeriveEntityModel, Serialize, Deserialize)]
-#[sea_orm(table_name = "mod_tags")]
+#[sea_orm(table_name = "mod_group_tags")]
 pub struct Model {
-    #[sea_orm(primary_key)]
+    #[sea_orm(primary_key, auto_increment = false)]
     #[serde(skip_deserializing)]
-    pub id: i32,
-    #[sea_orm(unique_key = "idx_mod_id_tag_id")]
-    pub mod_id: i32,
-    #[sea_orm(unique_key = "idx_mod_id_tag_id")]
+    pub mod_group_id: i32,
+    #[sea_orm(primary_key, auto_increment = false)]
+    #[serde(skip_deserializing)]
     pub tag_id: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
     #[sea_orm(
-        belongs_to = "super::mods::Entity",
-        from = "Column::ModId",
-        to = "super::mods::Column::Id",
+        belongs_to = "super::mod_groups::Entity",
+        from = "Column::ModGroupId",
+        to = "super::mod_groups::Column::Id",
         on_update = "Cascade",
         on_delete = "Cascade"
     )]
-    Mods,
+    ModGroups,
     #[sea_orm(
         belongs_to = "super::tags::Entity",
         from = "Column::TagId",
@@ -35,9 +34,9 @@ pub enum Relation {
     Tags,
 }
 
-impl Related<super::mods::Entity> for Entity {
+impl Related<super::mod_groups::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Mods.def()
+        Relation::ModGroups.def()
     }
 }
 

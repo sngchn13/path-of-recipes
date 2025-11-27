@@ -23,8 +23,8 @@ pub enum Relation {
         on_delete = "Cascade"
     )]
     CauseTypes,
-    #[sea_orm(has_many = "super::edges::Entity")]
-    Edges,
+    #[sea_orm(has_many = "super::edge_causes::Entity")]
+    EdgeCauses,
 }
 
 impl Related<super::cause_types::Entity> for Entity {
@@ -33,9 +33,18 @@ impl Related<super::cause_types::Entity> for Entity {
     }
 }
 
+impl Related<super::edge_causes::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::EdgeCauses.def()
+    }
+}
+
 impl Related<super::edges::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Edges.def()
+        super::edge_causes::Relation::Edges.def()
+    }
+    fn via() -> Option<RelationDef> {
+        Some(super::edge_causes::Relation::Causes.def().rev())
     }
 }
 

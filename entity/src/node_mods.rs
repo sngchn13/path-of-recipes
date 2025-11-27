@@ -6,10 +6,11 @@ use serde::{Deserialize, Serialize};
 #[derive(Clone, Debug, PartialEq, Eq, DeriveEntityModel, Serialize, Deserialize)]
 #[sea_orm(table_name = "node_mods")]
 pub struct Model {
-    #[sea_orm(primary_key)]
+    #[sea_orm(primary_key, auto_increment = false)]
     #[serde(skip_deserializing)]
-    pub id: i32,
     pub node_id: i32,
+    #[sea_orm(primary_key, auto_increment = false)]
+    #[serde(skip_deserializing)]
     pub mod_id: i32,
 }
 

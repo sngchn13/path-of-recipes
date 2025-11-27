@@ -13,18 +13,9 @@ impl MigrationTrait for Migration {
                     .if_not_exists()
                     .col(pk_auto(Edge::Id))
                     .col(text(Edge::Note).null())
-                    .col(integer(Edge::CauseId))
                     .col(integer(Edge::SourceId).null())
                     .col(integer(Edge::TargetId).null())
                     .col(integer(Edge::GraphId))
-                    .foreign_key(
-                        ForeignKey::create()
-                            .name("fk_cause_id")
-                            .from("edges", "cause_id")
-                            .to("causes", "id")
-                            .on_update(ForeignKeyAction::Cascade)
-                            .on_delete(ForeignKeyAction::Cascade)
-                    )
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_source_id")
@@ -71,7 +62,6 @@ enum Edge {
     Table,
     Id,
     Note,
-    CauseId,
     SourceId,
     TargetId,
     GraphId,

@@ -9,20 +9,14 @@ pub struct Model {
     #[sea_orm(primary_key)]
     #[serde(skip_deserializing)]
     pub id: i32,
-    pub name: String,
-    pub mod_origin: String,
-    pub affix: String,
-    pub weight: Option<i16>,
     pub req_item_level: i32,
     pub display_en: String,
     pub display_kor: String,
-    #[sea_orm(unique_key = "idx_tier_tier_group_id")]
+    pub weight: Option<i16>,
+    #[sea_orm(unique_key = "idx_tier_mod_group_id")]
     pub tier: Option<i16>,
-    #[sea_orm(unique_key = "idx_tier_tier_group_id")]
-    pub tier_group_id: Option<i32>,
-    pub item_type_id: i32,
-    pub family_id: Option<i32>,
-    pub section_id: i32,
+    #[sea_orm(unique_key = "idx_tier_mod_group_id")]
+    pub mod_group_id: i32,
     pub deprecated_version: Option<String>,
     pub created_at: DateTimeWithTimeZone,
     pub updated_at: Option<DateTimeWithTimeZone>,
@@ -31,58 +25,20 @@ pub struct Model {
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
     #[sea_orm(
-        belongs_to = "super::families::Entity",
-        from = "Column::FamilyId",
-        to = "super::families::Column::Id",
+        belongs_to = "super::mod_groups::Entity",
+        from = "Column::ModGroupId",
+        to = "super::mod_groups::Column::Id",
         on_update = "Cascade",
         on_delete = "Cascade"
     )]
-    Families,
-    #[sea_orm(
-        belongs_to = "super::item_bases::Entity",
-        from = "Column::ItemTypeId",
-        to = "super::item_bases::Column::Id",
-        on_update = "Cascade",
-        on_delete = "Cascade"
-    )]
-    ItemBases,
-    #[sea_orm(has_many = "super::mod_tags::Entity")]
-    ModTags,
+    ModGroups,
     #[sea_orm(has_many = "super::node_mods::Entity")]
     NodeMods,
-    #[sea_orm(
-        belongs_to = "super::sections::Entity",
-        from = "Column::SectionId",
-        to = "super::sections::Column::Id",
-        on_update = "Cascade",
-        on_delete = "Cascade"
-    )]
-    Sections,
-    #[sea_orm(
-        belongs_to = "super::tier_groups::Entity",
-        from = "Column::TierGroupId",
-        to = "super::tier_groups::Column::Id",
-        on_update = "Cascade",
-        on_delete = "Cascade"
-    )]
-    TierGroups,
 }
 
-impl Related<super::families::Entity> for Entity {
+impl Related<super::mod_groups::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Families.def()
-    }
-}
-
-impl Related<super::item_bases::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ItemBases.def()
-    }
-}
-
-impl Related<super::mod_tags::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::ModTags.def()
+        Relation::ModGroups.def()
     }
 }
 
@@ -92,15 +48,12 @@ impl Related<super::node_mods::Entity> for Entity {
     }
 }
 
-impl Related<super::sections::Entity> for Entity {
+impl Related<super::nodes::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Sections.def()
+        super::node_mods::Relation::Nodes.def()
     }
-}
-
-impl Related<super::tier_groups::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::TierGroups.def()
+    fn via() -> Option<RelationDef> {
+        Some(super::node_mods::Relation::Mods.def().rev())
     }
 }
 

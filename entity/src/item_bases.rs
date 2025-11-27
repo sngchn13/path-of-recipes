@@ -26,15 +26,15 @@ pub enum Relation {
         on_delete = "Cascade"
     )]
     SelfRef,
-    #[sea_orm(has_many = "super::mods::Entity")]
-    Mods,
+    #[sea_orm(has_many = "super::mod_groups::Entity")]
+    ModGroups,
     #[sea_orm(has_many = "super::nodes::Entity")]
     Nodes,
 }
 
-impl Related<super::mods::Entity> for Entity {
+impl Related<super::mod_groups::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Mods.def()
+        Relation::ModGroups.def()
     }
 }
 

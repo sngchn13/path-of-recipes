@@ -11,7 +11,6 @@ pub struct Model {
     pub id: i32,
     #[sea_orm(column_type = "Text", nullable)]
     pub note: Option<String>,
-    pub cause_id: i32,
     pub source_id: Option<i32>,
     pub target_id: Option<i32>,
     pub graph_id: i32,
@@ -19,14 +18,8 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
-    #[sea_orm(
-        belongs_to = "super::causes::Entity",
-        from = "Column::CauseId",
-        to = "super::causes::Column::Id",
-        on_update = "Cascade",
-        on_delete = "Cascade"
-    )]
-    Causes,
+    #[sea_orm(has_many = "super::edge_causes::Entity")]
+    EdgeCauses,
     #[sea_orm(
         belongs_to = "super::graphs::Entity",
         from = "Column::GraphId",
@@ -53,15 +46,24 @@ pub enum Relation {
     Nodes1,
 }
 
-impl Related<super::causes::Entity> for Entity {
+impl Related<super::edge_causes::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Causes.def()
+        Relation::EdgeCauses.def()
     }
 }
 
 impl Related<super::graphs::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Graphs.def()
+    }
+}
+
+impl Related<super::causes::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::edge_causes::Relation::Causes.def()
+    }
+    fn via() -> Option<RelationDef> {
+        Some(super::edge_causes::Relation::Edges.def().rev())
     }
 }
 

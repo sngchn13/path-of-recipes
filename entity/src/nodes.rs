@@ -15,7 +15,6 @@ pub struct Model {
     pub item_level: i32,
     #[sea_orm(column_type = "Text", nullable)]
     pub note: Option<String>,
-    pub node_type: String,
     pub position_x: i32,
     pub position_y: i32,
     pub item_base_id: i32,
@@ -59,6 +58,15 @@ impl Related<super::item_bases::Entity> for Entity {
 impl Related<super::node_mods::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::NodeMods.def()
+    }
+}
+
+impl Related<super::mods::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::node_mods::Relation::Mods.def()
+    }
+    fn via() -> Option<RelationDef> {
+        Some(super::node_mods::Relation::Nodes.def().rev())
     }
 }
 

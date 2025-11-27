@@ -4,10 +4,10 @@ mod m20251122_162130_create_item_type_table;
 mod m20251122_162444_create_item_base_table;
 mod m20251122_163531_create_section_table;
 mod m20251122_163915_create_tag_table;
-mod m20251122_164214_create_tier_group_table;
-mod m20251122_164421_create_family_table;
+mod m20251122_164214_create_family_table;
+mod m20251122_164314_create_mod_group_table;
 mod m20251122_165034_create_mod_table;
-mod m20251122_184709_create_mod_tag_table;
+mod m20251122_184709_create_mod_group_tag_table;
 mod m20251123_114800_create_cause_type_table;
 mod m20251123_114838_create_cause_table;
 mod m20251123_115054_create_post_table;
@@ -21,6 +21,9 @@ mod m20251126_191134_seed_section;
 mod m20251127_072541_seed_tag;
 mod m20251127_074022_seed_cause_type;
 mod m20251127_080024_seed_cause;
+mod m20251127_093003_seed_family;
+mod m20251127_093807_seed_mod_group;
+mod m20251123_175358_create_edge_cause_table;
 
 pub struct Migrator;
 
@@ -32,10 +35,10 @@ impl MigratorTrait for Migrator {
             Box::new(m20251122_162444_create_item_base_table::Migration),
             Box::new(m20251122_163531_create_section_table::Migration),
             Box::new(m20251122_163915_create_tag_table::Migration),
-            Box::new(m20251122_164214_create_tier_group_table::Migration),
-            Box::new(m20251122_164421_create_family_table::Migration),
+            Box::new(m20251122_164214_create_family_table::Migration),
+            Box::new(m20251122_164314_create_mod_group_table::Migration),
             Box::new(m20251122_165034_create_mod_table::Migration),
-            Box::new(m20251122_184709_create_mod_tag_table::Migration),
+            Box::new(m20251122_184709_create_mod_group_tag_table::Migration),
             Box::new(m20251123_114800_create_cause_type_table::Migration),
             Box::new(m20251123_114838_create_cause_table::Migration),
             Box::new(m20251123_115054_create_post_table::Migration),
@@ -49,6 +52,9 @@ impl MigratorTrait for Migrator {
             Box::new(m20251127_072541_seed_tag::Migration),
             Box::new(m20251127_074022_seed_cause_type::Migration),
             Box::new(m20251127_080024_seed_cause::Migration),
+            Box::new(m20251127_093003_seed_family::Migration),
+            Box::new(m20251127_093807_seed_mod_group::Migration),
+            Box::new(m20251123_175358_create_edge_cause_table::Migration),
         ]
     }
 }

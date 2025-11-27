@@ -16,7 +16,6 @@ impl MigrationTrait for Migration {
                     .col(string(Node::Rarity))
                     .col(unsigned(Node::ItemLevel))
                     .col(text(Node::Note).null())
-                    .col(string(Node::NodeType))
                     .col(integer(Node::PositionX))
                     .col(integer(Node::PositionY))
                     .col(integer(Node::ItemBaseId))
@@ -62,7 +61,6 @@ enum Node {
     Rarity,
     ItemLevel,
     Note,
-    NodeType,
     PositionX,
     PositionY,
     ItemBaseId,

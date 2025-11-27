@@ -17,6 +17,10 @@ mod m20251123_122743_create_node_mod_table;
 mod m20251123_123245_create_edge_table;
 mod m20251123_190950_seed_item_type;
 mod m20251124_102528_seed_item_base;
+mod m20251126_191134_seed_section;
+mod m20251127_072541_seed_tag;
+mod m20251127_074022_seed_cause_type;
+mod m20251127_080024_seed_cause;
 
 pub struct Migrator;
 
@@ -41,6 +45,10 @@ impl MigratorTrait for Migrator {
             Box::new(m20251123_123245_create_edge_table::Migration),
             Box::new(m20251123_190950_seed_item_type::Migration),
             Box::new(m20251124_102528_seed_item_base::Migration),
+            Box::new(m20251126_191134_seed_section::Migration),
+            Box::new(m20251127_072541_seed_tag::Migration),
+            Box::new(m20251127_074022_seed_cause_type::Migration),
+            Box::new(m20251127_080024_seed_cause::Migration),
         ]
     }
 }

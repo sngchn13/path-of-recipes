@@ -1,6 +1,7 @@
 use std::{env, fs, path::PathBuf};
 
-use sea_orm_migration::{prelude::*};
+use entity::item_bases;
+use sea_orm_migration::{prelude::*, sea_orm::EntityTrait};
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
@@ -43,8 +44,12 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, _manager: &SchemaManager) -> Result<(), DbErr> {
-  
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+        let db = manager.get_connection();
+
+        item_bases::Entity::delete_many()
+            .exec(db)
+            .await?;
         Ok(())
     }
 }

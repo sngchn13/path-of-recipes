@@ -12,13 +12,14 @@ impl MigrationTrait for Migration {
         let db = manager.get_connection();
         
         let section_names = vec![
-            "normal", 
-            "the_shaper", "the_elder", "the_crusader", "the_redeemer", "the_hunter", "the_warlord", 
-            "delve", "incursion", "veiled", 
-            "crafting_bench", 
+            "normal", "master", //작업대임. poedb기준으로 표기함
+            "shaper", "elder", "crusader", "redeemer", "hunter", "warlord", 
+            "delve", "incursion", "veiled",
+            "desecrated", "haunted", "infamous", "scourgeup", "scourgedown", "sentinel", "synthesis_corrupted", "warbands",
+            "enchant",
             "essence", 
             "bestiary",
-            "corrupted", "the_searing_exarch", "the_eater_of_worlds", "synthesis"
+            "corrupted", "searing", "eater", "synthesis"
         ];
 
         for section_name in section_names {

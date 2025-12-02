@@ -10,8 +10,8 @@ pub struct Migration;
 impl MigrationTrait for Migration {
     async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
 
-        let seed_data_directory = env::var("SEED_DATA_DIRECTORY").expect("SEED_DATA_DIRECTORY is not set in .env file");
-        let item_base_directory = PathBuf::from(&seed_data_directory).join("item_base");
+        let resources_directory = env::var("RESOURCES_DIRECTORY").expect("RESOURCES_DIRECTORY is not set in .env file");
+        let item_base_directory = PathBuf::from(&resources_directory).join("sql").join("item_base");
 
         let item_base_directory = match fs::read_dir(&item_base_directory)  {
             Ok(v) => v,

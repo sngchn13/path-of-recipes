@@ -12,6 +12,7 @@ pub struct Model {
     #[sea_orm(primary_key, auto_increment = false)]
     #[serde(skip_deserializing)]
     pub cause_id: i32,
+    pub sequence: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

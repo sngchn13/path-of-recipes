@@ -12,9 +12,11 @@ impl MigrationTrait for Migration {
                     .table(Mod::Table)
                     .if_not_exists()
                     .col(pk_auto(Mod::Id))
-                    .col(unsigned(Mod::ReqItemLevel))
+                    .col(string(Mod::NameEn))
+                    .col(string(Mod::NameKor))
                     .col(string(Mod::DisplayEn))
                     .col(string(Mod::DisplayKor))
+                    .col(unsigned(Mod::ReqItemLevel))
                     .col(small_unsigned(Mod::Weight).null())
                     .col(tiny_unsigned(Mod::Tier).null())
                     .col(integer(Mod::ModGroupId))
@@ -57,9 +59,11 @@ enum Mod {
     #[sea_orm(iden = "mods")]
     Table,
     Id,
-    ReqItemLevel,
+    NameEn,
+    NameKor,
     DisplayEn,
     DisplayKor,
+    ReqItemLevel,
     Weight,
     Tier,
     ModGroupId,

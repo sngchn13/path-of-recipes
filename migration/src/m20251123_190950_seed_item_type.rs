@@ -14,11 +14,11 @@ impl MigrationTrait for Migration {
             "claws", "daggers", "wands", "convoking_wands","one_hand_swords", "one_hand_axes", "one_hand_maces", "sceptres", "rune_daggers", "thrusting_one_hand_swords",
             "bows", "staves", "two_hand_swords", "two_hand_axes", "two_hand_maces", "warstaves", "fishing_rods",
             "amulets", "rings", "bone_rings", "belts",
-            "gloves(str)", "gloves(dex)", "gloves(int)", "gloves(str_dex)", "gloves(str_int)", "gloves(dex_int)",
-            "boots(str)", "boots(dex)", "boots(int)", "boots(str_dex)", "boots(str_int)", "boots(dex_int)",
-            "body_armours(str)", "body_armours(dex)", "body_armours(int)", "body_armours(str_dex)", "body_armours(str_int)", "body_armours(dex_int)", "body_armours(str_dex_int)", 
-            "helmets(str)", "helmets(dex)", "helmets(int)", "helmets(str_dex)", "helmets(str_int)", "helmets(dex_int)", 
-            "quivers", "shields(str)", "shields(dex)", "shields(int)", "shields(str_dex)", "shields(str_int)", "shields(dex_int)",
+            "gloves_str", "gloves_dex", "gloves_int", "gloves_str_dex", "gloves_str_int", "gloves_dex_int",
+            "boots_str", "boots_dex", "boots_int", "boots_str_dex", "boots_str_int", "boots_dex_int",
+            "body_armours_str", "body_armours_dex", "body_armours_int", "body_armours_str_dex", "body_armours_str_int", "body_armours_dex_int", "body_armours_str_dex_int", 
+            "helmets_str", "helmets_dex", "helmets_int", "helmets_str_dex", "helmets_str_int", "helmets_dex_int", 
+            "quivers", "shields_str", "shields_dex", "shields_int", "shields_str_dex", "shields_str_int", "shields_dex_int",
         ];
 
         for name in seed_data {

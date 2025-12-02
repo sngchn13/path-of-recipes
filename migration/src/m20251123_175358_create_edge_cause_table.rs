@@ -13,6 +13,7 @@ impl MigrationTrait for Migration {
                     .if_not_exists()
                     .col(integer(EdgeCause::EdgeId))
                     .col(integer(EdgeCause::CauseId))
+                    .col(integer(EdgeCause::Sequence))
                     .primary_key(
                         Index::create()
                             .col(EdgeCause::EdgeId)
@@ -38,6 +39,17 @@ impl MigrationTrait for Migration {
             )
             .await?;
 
+        manager
+            .create_index(
+                Index::create()
+                    .name("idx_edge_id_sequence")
+                    .table(EdgeCause::Table)
+                    .col(EdgeCause::EdgeId)
+                    .col(EdgeCause::Sequence)
+                    .to_owned(),
+            )
+            .await?;
+
         Ok(())
     }
 
@@ -57,4 +69,5 @@ enum EdgeCause {
     Table,
     EdgeId,
     CauseId,
+    Sequence,
 }

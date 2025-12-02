@@ -9,9 +9,11 @@ pub struct Model {
     #[sea_orm(primary_key)]
     #[serde(skip_deserializing)]
     pub id: i32,
-    pub req_item_level: i32,
+    pub name_en: String,
+    pub name_kor: String,
     pub display_en: String,
     pub display_kor: String,
+    pub req_item_level: i32,
     pub weight: Option<i16>,
     #[sea_orm(unique_key = "idx_tier_mod_group_id")]
     pub tier: Option<i16>,

@@ -13,6 +13,7 @@ impl MigrationTrait for Migration {
                     .if_not_exists()
                     .col(integer(NodeMod::NodeId))
                     .col(integer(NodeMod::ModId))
+                    .col(string(NodeMod::PlacementTypeId))
                     .primary_key(
                         Index::create()
                             .col(NodeMod::NodeId)
@@ -31,6 +32,14 @@ impl MigrationTrait for Migration {
                             .name("fk_mod_id")
                             .from("node_mods", "mod_id")
                             .to("mods", "id")
+                            .on_update(ForeignKeyAction::Cascade)
+                            .on_delete(ForeignKeyAction::Cascade)
+                    )
+                    .foreign_key(
+                        ForeignKey::create()
+                            .name("fk_placement_type_id")
+                            .from("node_mods", "placement_type_id")
+                            .to("placement_types", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
                     )
@@ -56,4 +65,5 @@ enum NodeMod {
     Table,
     NodeId,
     ModId,
+    PlacementTypeId,
 }

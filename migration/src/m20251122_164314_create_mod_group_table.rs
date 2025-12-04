@@ -13,10 +13,8 @@ impl MigrationTrait for Migration {
                     .if_not_exists()
                     .col(pk_auto(ModGroup::Id))
                     .col(string(ModGroup::Value))
-                    .col(string(ModGroup::Affix))
-                    .col(string(ModGroup::ModOrigin))
+                    .col(integer(ModGroup::ModGenerationTypeId))
                     .col(integer(ModGroup::ItemTypeId))
-                    .col(integer(ModGroup::FamilyId).null())
                     .col(integer(ModGroup::SectionId))
                     .foreign_key(
                         ForeignKey::create()
@@ -28,9 +26,9 @@ impl MigrationTrait for Migration {
                     )
                     .foreign_key(
                         ForeignKey::create()
-                            .name("fk_family_id")
-                            .from("mod_groups", "family_id")
-                            .to("families", "id")
+                            .name("fk_mod_generation_type_id")
+                            .from("mod_groups", "mod_generation_type_id")
+                            .to("mod_generation_types", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
                     )
@@ -64,9 +62,7 @@ enum ModGroup {
     Table,
     Id,
     Value,
-    ModOrigin,
-    Affix,
+    ModGenerationTypeId,
     ItemTypeId,
-    FamilyId,
     SectionId,
 }

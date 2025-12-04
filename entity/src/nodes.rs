@@ -61,13 +61,4 @@ impl Related<super::node_mods::Entity> for Entity {
     }
 }
 
-impl Related<super::mods::Entity> for Entity {
-    fn to() -> RelationDef {
-        super::node_mods::Relation::Mods.def()
-    }
-    fn via() -> Option<RelationDef> {
-        Some(super::node_mods::Relation::Nodes.def().rev())
-    }
-}
-
 impl ActiveModelBehavior for ActiveModel {}

@@ -10,23 +10,13 @@ pub struct Model {
     #[serde(skip_deserializing)]
     pub id: i32,
     pub value: String,
-    pub affix: String,
-    pub mod_origin: String,
+    pub mod_generation_type_id: i32,
     pub item_type_id: i32,
-    pub family_id: Option<i32>,
     pub section_id: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
-    #[sea_orm(
-        belongs_to = "super::families::Entity",
-        from = "Column::FamilyId",
-        to = "super::families::Column::Id",
-        on_update = "Cascade",
-        on_delete = "Cascade"
-    )]
-    Families,
     #[sea_orm(
         belongs_to = "super::item_bases::Entity",
         from = "Column::ItemTypeId",
@@ -35,6 +25,16 @@ pub enum Relation {
         on_delete = "Cascade"
     )]
     ItemBases,
+    #[sea_orm(
+        belongs_to = "super::mod_generation_types::Entity",
+        from = "Column::ModGenerationTypeId",
+        to = "super::mod_generation_types::Column::Id",
+        on_update = "Cascade",
+        on_delete = "Cascade"
+    )]
+    ModGenerationTypes,
+    #[sea_orm(has_many = "super::mod_group_families::Entity")]
+    ModGroupFamilies,
     #[sea_orm(has_many = "super::mod_group_tags::Entity")]
     ModGroupTags,
     #[sea_orm(has_many = "super::mods::Entity")]
@@ -49,15 +49,21 @@ pub enum Relation {
     Sections,
 }
 
-impl Related<super::families::Entity> for Entity {
-    fn to() -> RelationDef {
-        Relation::Families.def()
-    }
-}
-
 impl Related<super::item_bases::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::ItemBases.def()
+    }
+}
+
+impl Related<super::mod_generation_types::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ModGenerationTypes.def()
+    }
+}
+
+impl Related<super::mod_group_families::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ModGroupFamilies.def()
     }
 }
 
@@ -76,6 +82,15 @@ impl Related<super::mods::Entity> for Entity {
 impl Related<super::sections::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Sections.def()
+    }
+}
+
+impl Related<super::families::Entity> for Entity {
+    fn to() -> RelationDef {
+        super::mod_group_families::Relation::Families.def()
+    }
+    fn via() -> Option<RelationDef> {
+        Some(super::mod_group_families::Relation::ModGroups.def().rev())
     }
 }
 

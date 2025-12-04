@@ -12,6 +12,7 @@ pub struct Model {
     #[sea_orm(primary_key, auto_increment = false)]
     #[serde(skip_deserializing)]
     pub mod_id: i32,
+    pub placement_type_id: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -32,6 +33,14 @@ pub enum Relation {
         on_delete = "Cascade"
     )]
     Nodes,
+    #[sea_orm(
+        belongs_to = "super::placement_types::Entity",
+        from = "Column::PlacementTypeId",
+        to = "super::placement_types::Column::Id",
+        on_update = "Cascade",
+        on_delete = "Cascade"
+    )]
+    PlacementTypes,
 }
 
 impl Related<super::mods::Entity> for Entity {
@@ -43,6 +52,12 @@ impl Related<super::mods::Entity> for Entity {
 impl Related<super::nodes::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::Nodes.def()
+    }
+}
+
+impl Related<super::placement_types::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::PlacementTypes.def()
     }
 }
 

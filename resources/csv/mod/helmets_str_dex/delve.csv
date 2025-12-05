@@ -1,0 +1,35 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Underground,- 지하,1,2,LocalDisplayNearbyEnemyFireDamageResistance,,Nearby Enemies have -9% to Fire Resistance,주변의 적의 화염 저항 -9%,elemental_damage|damage|elemental|fire|resistance,Damage|Elemental|Fire|Resistance,,Nearby Enemies have -#% to Fire Resistance
+of the Underground,- 지하,1,2,LocalDisplayNearbyEnemyColdDamageResistance,,Nearby Enemies have -9% to Cold Resistance,주변의 적의 냉기 저항 -9%,elemental_damage|damage|elemental|cold|resistance,Damage|Elemental|Cold|Resistance,,Nearby Enemies have -#% to Cold Resistance
+of the Underground,- 지하,1,2,LocalDisplayNearbyEnemyLightningDamageResistance,,Nearby Enemies have -9% to Lightning Resistance,주변의 적의 번개 저항 -9%,elemental_damage|damage|elemental|lightning|resistance,Damage|Elemental|Lightning|Resistance,,Nearby Enemies have -#% to Lightning Resistance
+of the Underground,- 지하,1,2,LocalDisplayNearbyEnemyPhysicalDamageTaken,,Nearby Enemies take 9% increased Physical Damage,주변의 적이 받는 물리 피해 9% 증가,physical_damage|damage|physical,Damage|Physical,,Nearby Enemies take #% increased Physical Damage
+of the Underground,- 지하,1,2,LocalDisplayNearbyEnemyChaosDamageResistance,,Nearby Enemies have -9% to Chaos Resistance,주변의 적의 카오스 저항 -9%,chaos_damage|damage|chaos|resistance,Damage|Chaos|Resistance,,Nearby Enemies have -#% to Chaos Resistance
+of the Underground,- 지하,1,2,LifeRegenerationRatePercentage,,Regenerate 1% of Life per second,1초마다 생명력의 1% 재생,resource|life,Life,,Regenerate #% of Life per second
+of the Underground,- 지하,1,2,EvasionOnFullLife,,(25-50)% increased Global Evasion Rating when on Full Life,최대 생명력인 경우 일반 회피 (25-50)% 증가,defences|evasion,Defences|Evasion,,#% increased Global Evasion Rating when on Full Life
+of the Underground,- 지하,1,2,FortifyEffect,,+(3-5) to maximum Fortification,방어 상승 최대치 +(3-5),,,,+# to maximum Fortification
+of the Underground,- 지하,1,2,ChanceToAvoidPoison,,50% chance to Avoid being Poisoned,50%의 확률로 중독 긴급회피,poison|chaos|ailment,Chaos|Ailment,,#% chance to Avoid being Poisoned
+of the Underground,- 지하,1,2,ChanceToAvoidBleeding,,50% chance to Avoid Bleeding,50%의 확률로 출혈 긴급회피,bleed|physical|attack|ailment,Physical|Attack|Ailment,,#% chance to Avoid Bleeding
+of the Underground,- 지하,1,2,SelfStatusAilmentDuration,,(20-30)% reduced Elemental Ailment Duration on you,플레이어에게 적용되는 원소 상태 이상 지속시간 (20-30)% 감소,elemental|ailment,Elemental|Ailment,,#% reduced Elemental Ailment Duration on you
+of the Underground,- 지하,1,2,SocketedSpellsManaCost,,Socketed Spells have 20% reduced Mana Cost,장착된 주문의 마나 소모 20% 감소,skill|resource|mana|caster|gem,Mana|Caster|Gem,,Socketed Spells have #% reduced Mana Cost
+of the Underground,- 지하,1,2,SocketedAttacksManaCost,,Socketed Attacks have -15 to Total Mana Cost,장착된 공격의 총 마나 소모 -15,skill|resource|mana|attack|gem,Mana|Attack|Gem,,Socketed Attacks have -# to Total Mana Cost
+of the Underground,- 지하,1,2,BaseManaRegeneration,,Regenerate 0.5% of Mana per second,1초마다 마나의 0.5% 재생,resource|mana,Mana,,Regenerate #% of Mana per second
+of the Underground,- 지하,1,2,IgnoreArmourMovementPenalties,,Ignore all Movement Penalties from Armour,갑옷으로 인한 모든 이동 페널티 무시,speed,Speed,,Ignore all Movement Penalties from Armour
+of the Underground,- 지하,1,2,ReducedManaReservationsCost,,(8-10)% increased Mana Reservation Efficiency of Skills,스킬의 마나 점유 효율 (8-10)% 증가,resource|mana,Mana,,#% increased Mana Reservation Efficiency of Skills
+of the Underground,- 지하,1,2,ReducedManaReservationsCost,,10% increased Mana Reservation Efficiency of Skills,스킬의 마나 점유 효율 10% 증가,resource|mana,Mana,,#% increased Mana Reservation Efficiency of Skills
+of the Underground,- 지하,1,2,DelveStrengthGemLevel,,+1 to Level of Socketed Strength Gems,장착된 힘 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Strength Gems
+of the Underground,- 지하,1,2,DelveDexterityGemLevel,,+1 to Level of Socketed Dexterity Gems,장착된 민첩 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Dexterity Gems
+of the Underground,- 지하,1,2,DelveIntelligenceGemLevel,,+1 to Level of Socketed Intelligence Gems,장착된 지능 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Intelligence Gems
+of the Underground,- 지하,1,2,AbyssJewelSocket,,Has 1 Abyssal Socket,심연 홈 1개,,,Tangled Fossil,Has # Abyssal Socket
+of the Underground,- 지하,1,2,AdditionalVaalSoulOnKill,,(5-8)% chance to gain an additional Vaal Soul on Kill,처치 시 (5-8)%의 확률로 바알 영혼 1개 추가 획득,vaal,,Tangled Fossil,#% chance to gain an additional Vaal Soul on Kill
+of the Underground,- 지하,1,2,SpellBlockPercentage,,(3-4)% Chance to Block Spell Damage,(3-4)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+Subterranean,지하의,1,1,ReducedPhysicalDamageTaken,,(3-5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+Subterranean,지하의,60,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Curse Gems,장착된 저주 젬 레벨 +2,caster|gem|curse,Caster|Gem|Curse,,+# to Level of Socketed Curse Gems
+of the Underground,- 지하,60,2,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Aura Gems,장착된 오라 젬 레벨 +2,aura|gem,Aura|Gem,,+# to Level of Socketed Aura Gems
+of the Underground,- 지하,60,2,ManaRegeneration,,(30-50)% increased Mana Regeneration Rate,마나 재생 속도 (30-50)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of the Underground,- 지하,60,2,PercentDamageGoesToMana,,(5-8)% of Damage taken Recouped as Mana,받은 피해의 (5-8)%를 마나로 회생,resource|mana,Mana,,#% of Damage taken Recouped as Mana
+of the Underground,- 지하,60,2,PhysicalDamageTakenAsElement,,10% of Physical Damage from Hits taken as Chaos Damage,피격 시 물리 피해의 10%를 카오스 피해로 받음,physical|chaos,Physical|Chaos,,#% of Physical Damage from Hits taken as Chaos Damage
+of the Underground,- 지하,60,2,PhysicalDamageTakenAsElement,,10% of Physical Damage from Hits taken as Cold Damage,피격 시 물리 피해의 10%를 냉기 피해로 받음,physical|elemental|cold,Physical|Elemental|Cold,,#% of Physical Damage from Hits taken as Cold Damage
+of the Underground,- 지하,60,2,PhysicalDamageTakenAsElement,,10% of Physical Damage from Hits taken as Fire Damage,피격 시 물리 피해의 10%를 화염 피해로 받음,physical|elemental|fire,Physical|Elemental|Fire,,#% of Physical Damage from Hits taken as Fire Damage
+of the Underground,- 지하,60,2,PhysicalDamageTakenAsElement,,10% of Physical Damage from Hits taken as Lightning Damage,피격 시 물리 피해의 10%를 번개 피해로 받음,physical|elemental|lightning,Physical|Elemental|Lightning,,#% of Physical Damage from Hits taken as Lightning Damage
+of the Underground,- 지하,60,2,ReducedPhysicalDamageTaken,,(3-5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+of the Underground,- 지하,60,2,ChaosResistance,,Chaos Resistance is Zero,카오스 저항 0,chaos|resistance,Chaos|Resistance,,Chaos Resistance is Zero

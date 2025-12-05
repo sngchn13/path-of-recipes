@@ -1,0 +1,13 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Haunted,으스스한,24,1,WarcriesOpenChests,,Your Warcries open Chests,플레이어가 함성을 사용하면 상자가 열림,necropolis_exclusive_mod,,,Your Warcries open Chests
+Haunted,으스스한,16,1,IncreasedMaximumPowerCharges,,+1 to Maximum Power Charges,권능 충전 최대치 +1,power_charge|necropolis_exclusive_mod,,,+# to Maximum Power Charges
+of Haunting,- 출몰,1,2,CriticalStrikeChanceIncrease,,(30-50)% increased Global Critical Strike Chance,일반 치명타 확률 (30-50)% 증가,necropolis_exclusive_mod|critical,Critical,,#% increased Global Critical Strike Chance
+of Haunting,- 출몰,1,2,ManaRegeneration,,(40-60)% increased Mana Regeneration Rate,마나 재생 속도 (40-60)% 증가,resource|necropolis_exclusive_mod|mana,Mana,,#% increased Mana Regeneration Rate
+of Haunting,- 출몰,38,2,ImmunityToBlind,,Cannot be Blinded,실명될 수 없음,necropolis_exclusive_mod,,,Cannot be Blinded
+Haunted,으스스한,68,1,IncreasedMana,,+1 to maximum Mana per 2 Intelligence,지능 2당 마나 최대치 +1,resource|necropolis_exclusive_mod|mana,Mana,,+# to maximum Mana per # Intelligence
+of Haunting,- 출몰,68,2,IncreasedAccuracy,,+2 to Accuracy Rating per 2 Dexterity,민첩 2당 정확도 +2,necropolis_exclusive_mod|attack,Attack,,+# to Accuracy Rating per # Dexterity
+Haunted,으스스한,1,1,SpellDamage,,(20-30)% increased Spell Damage,주문 피해 (20-30)% 증가,caster_damage|necropolis_exclusive_mod|damage|caster,Damage|Caster,,#% increased Spell Damage
+of Haunting,- 출몰,1,2,IncreasedCastSpeed,,(8-12)% increased Cast Speed,시전 속도 (8-12)% 증가,necropolis_exclusive_mod|caster|speed,Caster|Speed,,#% increased Cast Speed
+of Haunting,- 출몰,34,2,ArcaneSurgeOnSpendingMana,,Gain Arcane Surge after Spending a total of 400 Mana,총 400의 마나 소모 시 비전 쇄도 획득,resource|necropolis_exclusive_mod|mana,Mana,,Gain Arcane Surge after Spending a total of # Mana
+of Haunting,- 출몰,12,2,AreaOfEffect,,(15-25)% increased Area of Effect,효과 범위 (15-25)% 증가,necropolis_exclusive_mod,,,#% increased Area of Effect
+of Haunting,- 출몰,24,2,CurseEffectiveness,,(5-8)% increased Effect of your Curses,플레이어의 저주 효과 (5-8)% 증가,necropolis_exclusive_mod|caster|curse,Caster|Curse,,#% increased Effect of your Curses

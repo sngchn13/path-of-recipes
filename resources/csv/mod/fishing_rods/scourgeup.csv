@@ -1,0 +1,6 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+HellscapeUpsideDaytimeFishSize___,HellscapeUpsideDaytimeFishSize___,1,24,DaytimeFishSize,,(10-30)% increased Size of Fish caught during Daytime,낮에 잡는 물고기 크기 (10-30)% 증가,,,,#% increased Size of Fish caught during Daytime
+HellscapeUpsideFishingCastDistance,HellscapeUpsideFishingCastDistance,45,24,FishingCastDistance,,(13-16)% increased Fishing Range,낚시 거리 (13-16)% 증가,,,,#% increased Fishing Range
+HellscapeUpsideFishingRarity,HellscapeUpsideFishingRarity,1,24,FishingRarity,,(20-25)% increased Rarity of Fish Caught,포획하는 물고기 희귀도 (20-25)% 증가,drop,Drop,,#% increased Rarity of Fish Caught
+HellscapeUpsideStrengthAppliesToFishingReelSpeed_,HellscapeUpsideStrengthAppliesToFishingReelSpeed_,1,24,StrengthAppliesToFishingReelSpeed,,Strength's Damage bonus also applies to Reeling Speed at 20% of its value,힘의 피해 보너스가 줄 감기 속도에도 20%의 수치로 적용,,,,Strength's Damage bonus also applies to Reeling Speed at #% of its value
+HellscapeUpsideCanCatchScourgedFish,HellscapeUpsideCanCatchScourgedFish,68,24,CanCatchScourgedFish,,You can catch Scourged Fish,스컬지 물고기 포획 가능,,,,You can catch Scourged Fish

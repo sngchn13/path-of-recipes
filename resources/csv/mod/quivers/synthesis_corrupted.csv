@@ -1,0 +1,3 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+SynthesisImplicitVaalSkillCriticalStrikeChance1,SynthesisImplicitVaalSkillCriticalStrikeChance1,36,3,VaalSkillCriticalStrikeChance,,(21-30)% increased Vaal Skill Critical Strike Chance,바알 스킬 치명타 확률 (21-30)% 증가,critical|vaal,Critical,,#% increased Vaal Skill Critical Strike Chance
+SynthesisImplicitGlobalCriticalStrikeChanceCorruptedItem1,SynthesisImplicitGlobalCriticalStrikeChanceCorruptedItem1,60,3,LocalCorruptedBonus,,(40-50)% increased Global Critical Strike Chance if Corrupted,타락 시 일반 치명타 확률 (40-50)% 증가,critical,Critical,,#% increased Global Critical Strike Chance if Corrupted

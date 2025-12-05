@@ -1,0 +1,9 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+of Casting,- 시전,10,2,IncreasedCastSpeed,,(24-28)% increased Cast Speed,시전 속도 (24-28)% 증가,red_herring|caster|speed,Caster|Speed,,#% increased Cast Speed
+Filigree,선조 세공,1,1,FishingLineStrength,,(20-40)% increased Fishing Line Strength,낚싯줄 강도 (20-40)% 증가,,,,#% increased Fishing Line Strength
+Calming,진정시키는,1,1,FishingPoolConsumption,,(15-30)% reduced Fishing Pool Consumption,어장 소비 (15-30)% 감소,,,,#% reduced Fishing Pool Consumption
+Alluring,유혹하는,1,1,FishingLureType,,Rhoa Feather Lure,로아 깃털 루어,,,,Rhoa Feather Lure
+of Snaring,- 올가미,1,2,FishingHookType,,Karui Stone Hook,카루이 돌 낚싯바늘,,,,Karui Stone Hook
+of Flight,- 비행,1,2,FishingCastDistance,,(30-50)% increased Fishing Range,낚시 거리 (30-50)% 증가,,,,#% increased Fishing Range
+of Fascination,- 매혹,1,2,FishingQuantity,,(15-20)% increased Quantity of Fish Caught,포획하는 물고기 수 (15-20)% 증가,drop,Drop,,#% increased Quantity of Fish Caught
+of Bounty,- 하사품,1,2,FishingRarity,,(25-40)% increased Rarity of Fish Caught,포획하는 물고기 희귀도 (25-40)% 증가,drop,Drop,,#% increased Rarity of Fish Caught

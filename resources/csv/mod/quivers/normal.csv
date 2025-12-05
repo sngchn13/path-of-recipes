@@ -1,0 +1,147 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Mongoose,- 몽구스,1,2,Dexterity,,+(8-12) to Dexterity,민첩 +(8-12),attribute,Attribute,,+# to Dexterity
+of the Lynx,- 스라소니,11,2,Dexterity,,+(13-17) to Dexterity,민첩 +(13-17),attribute,Attribute,,+# to Dexterity
+of the Fox,- 여우,22,2,Dexterity,,+(18-22) to Dexterity,민첩 +(18-22),attribute,Attribute,,+# to Dexterity
+of the Falcon,- 매,33,2,Dexterity,,+(23-27) to Dexterity,민첩 +(23-27),attribute,Attribute,,+# to Dexterity
+of the Panther,- 흑표,44,2,Dexterity,,+(28-32) to Dexterity,민첩 +(28-32),attribute,Attribute,,+# to Dexterity
+of the Leopard,- 표범,55,2,Dexterity,,+(33-37) to Dexterity,민첩 +(33-37),attribute,Attribute,,+# to Dexterity
+of the Jaguar,- 재규어,66,2,Dexterity,,+(38-42) to Dexterity,민첩 +(38-42),attribute,Attribute,,+# to Dexterity
+of the Phantom,- 유령,74,2,Dexterity,,+(43-50) to Dexterity,민첩 +(43-50),attribute,Attribute,,+# to Dexterity
+of the Wind,- 바람,82,2,Dexterity,,+(51-55) to Dexterity,민첩 +(51-55),attribute,Attribute,,+# to Dexterity
+of the Blur,- 희미함,85,2,Dexterity,,+(56-60) to Dexterity,민첩 +(56-60),attribute,Attribute,,+# to Dexterity
+Hale,정정한,1,1,IncreasedLife,,+(3-9) to maximum Life,생명력 최대치 +(3-9),resource|life,Life,,+# to maximum Life
+Healthy,건강한,5,1,IncreasedLife,,+(10-24) to maximum Life,생명력 최대치 +(10-24),resource|life,Life,,+# to maximum Life
+Sanguine,혈액 과다의,11,1,IncreasedLife,,+(25-39) to maximum Life,생명력 최대치 +(25-39),resource|life,Life,,+# to maximum Life
+Stalwart,건장한,18,1,IncreasedLife,,+(40-54) to maximum Life,생명력 최대치 +(40-54),resource|life,Life,,+# to maximum Life
+Stout,완강한,24,1,IncreasedLife,,+(55-69) to maximum Life,생명력 최대치 +(55-69),resource|life,Life,,+# to maximum Life
+Robust,왕성한,30,1,IncreasedLife,,+(70-84) to maximum Life,생명력 최대치 +(70-84),resource|life,Life,,+# to maximum Life
+Rotund,퉁퉁한,36,1,IncreasedLife,,+(85-99) to maximum Life,생명력 최대치 +(85-99),resource|life,Life,,+# to maximum Life
+Virile,강건한,44,1,IncreasedLife,,+(100-114) to maximum Life,생명력 최대치 +(100-114),resource|life,Life,,+# to maximum Life
+Athlete's,늠름한,54,1,IncreasedLife,,+(115-129) to maximum Life,생명력 최대치 +(115-129),resource|life,Life,,+# to maximum Life
+Fecund,다산의,64,1,IncreasedLife,,+(130-144) to maximum Life,생명력 최대치 +(130-144),resource|life,Life,,+# to maximum Life
+Glinting,미광의,5,1,PhysicalDamage,,Adds (1-2) to 3 Physical Damage to Attacks,공격 시 물리 피해 (1-2)~3 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Burnished,윤이 나는,13,1,PhysicalDamage,,Adds (3-4) to (6-8) Physical Damage to Attacks,공격 시 물리 피해 (3-4)~(6-8) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Polished,광택 나는,19,1,PhysicalDamage,,Adds (5-6) to (9-10) Physical Damage to Attacks,공격 시 물리 피해 (5-6)~(9-10) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Honed,연마한,28,1,PhysicalDamage,,Adds (6-9) to (13-16) Physical Damage to Attacks,공격 시 물리 피해 (6-9)~(13-16) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Gleaming,번뜩이는,35,1,PhysicalDamage,,Adds (8-11) to (16-18) Physical Damage to Attacks,공격 시 물리 피해 (8-11)~(16-18) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Annealed,담금질한,44,1,PhysicalDamage,,Adds (10-13) to (19-23) Physical Damage to Attacks,공격 시 물리 피해 (10-13)~(19-23) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Razor-sharp,날이 선,52,1,PhysicalDamage,,Adds (11-16) to (23-26) Physical Damage to Attacks,공격 시 물리 피해 (11-16)~(23-26) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Tempered,단조한,64,1,PhysicalDamage,,Adds (14-19) to (28-33) Physical Damage to Attacks,공격 시 물리 피해 (14-19)~(28-33) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Flaring,빛을 뿜는,76,1,PhysicalDamage,,Adds (17-23) to (34-39) Physical Damage to Attacks,공격 시 물리 피해 (17-23)~(34-39) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Heated,달궈진,1,1,FireDamage,,Adds (1-2) to 3 Fire Damage to Attacks,공격 시 화염 피해 (1-2)~3 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Smouldering,그을린,12,1,FireDamage,,Adds (5-7) to (10-12) Fire Damage to Attacks,공격 시 화염 피해 (5-7)~(10-12) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Smoking,연기 나는,20,1,FireDamage,,Adds (8-10) to (15-18) Fire Damage to Attacks,공격 시 화염 피해 (8-10)~(15-18) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Burning,불타는,28,1,FireDamage,,Adds (11-14) to (21-25) Fire Damage to Attacks,공격 시 화염 피해 (11-14)~(21-25) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Flaming,불을 뿜는,35,1,FireDamage,,Adds (13-18) to (27-31) Fire Damage to Attacks,공격 시 화염 피해 (13-18)~(27-31) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Scorching,작열하는,44,1,FireDamage,,Adds (17-22) to (33-38) Fire Damage to Attacks,공격 시 화염 피해 (17-22)~(33-38) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Incinerating,소각하는,52,1,FireDamage,,Adds (20-27) to (40-47) Fire Damage to Attacks,공격 시 화염 피해 (20-27)~(40-47) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Blasting,폭발하는,64,1,FireDamage,,Adds (27-35) to (53-62) Fire Damage to Attacks,공격 시 화염 피해 (27-35)~(53-62) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Cremating,화장하는,76,1,FireDamage,,Adds (37-50) to (74-87) Fire Damage to Attacks,공격 시 화염 피해 (37-50)~(74-87) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Frosted,서리 내린,2,1,ColdDamage,,Adds (1-2) to 3 Cold Damage to Attacks,공격 시 냉기 피해 (1-2)~3 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Chilled,냉각된,13,1,ColdDamage,,Adds (5-6) to (9-10) Cold Damage to Attacks,공격 시 냉기 피해 (5-6)~(9-10) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Icy,얼음 같은,21,1,ColdDamage,,Adds (7-9) to (14-16) Cold Damage to Attacks,공격 시 냉기 피해 (7-9)~(14-16) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Frigid,차디찬,29,1,ColdDamage,,Adds (10-13) to (19-22) Cold Damage to Attacks,공격 시 냉기 피해 (10-13)~(19-22) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Freezing,동결의,36,1,ColdDamage,,Adds (12-16) to (24-28) Cold Damage to Attacks,공격 시 냉기 피해 (12-16)~(24-28) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Frozen,얼어붙은,45,1,ColdDamage,,Adds (15-20) to (30-35) Cold Damage to Attacks,공격 시 냉기 피해 (15-20)~(30-35) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Glaciated,빙하의,53,1,ColdDamage,,Adds (18-24) to (36-42) Cold Damage to Attacks,공격 시 냉기 피해 (18-24)~(36-42) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Polar,극지의,65,1,ColdDamage,,Adds (23-32) to (48-55) Cold Damage to Attacks,공격 시 냉기 피해 (23-32)~(48-55) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Entombing,얼음 무덤의,77,1,ColdDamage,,Adds (33-45) to (67-78) Cold Damage to Attacks,공격 시 냉기 피해 (33-45)~(67-78) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Humming,윙윙대는,3,1,LightningDamage,,Adds 1 to (3-4) Lightning Damage to Attacks,공격 시 번개 피해 1~(3-4) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Buzzing,웅웅대는,13,1,LightningDamage,,Adds 2 to (16-18) Lightning Damage to Attacks,공격 시 번개 피해 2~(16-18) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Snapping,타닥대는,22,1,LightningDamage,,Adds (1-3) to (25-28) Lightning Damage to Attacks,공격 시 번개 피해 (1-3)~(25-28) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Crackling,치직대는,28,1,LightningDamage,,Adds (2-3) to (35-40) Lightning Damage to Attacks,공격 시 번개 피해 (2-3)~(35-40) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Sparking,전기불꽃의,35,1,LightningDamage,,Adds (2-4) to (44-50) Lightning Damage to Attacks,공격 시 번개 피해 (2-4)~(44-50) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Arcing,전호의,44,1,LightningDamage,,Adds (2-5) to (56-62) Lightning Damage to Attacks,공격 시 번개 피해 (2-5)~(56-62) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Shocking,감전의,52,1,LightningDamage,,Adds (2-6) to (66-75) Lightning Damage to Attacks,공격 시 번개 피해 (2-6)~(66-75) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Discharging,방전의,64,1,LightningDamage,,Adds (3-8) to (89-99) Lightning Damage to Attacks,공격 시 번개 피해 (3-8)~(89-99) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Electrocuting,전기 처형의,76,1,LightningDamage,,Adds (5-11) to (124-140) Lightning Damage to Attacks,공격 시 번개 피해 (5-11)~(124-140) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Malicious,악의적인,83,1,ChaosDamage,,Adds (27-41) to (55-69) Chaos Damage to Attacks,공격 시 카오스 피해 (27-41)~(55-69) 추가,chaos_damage|damage|chaos|attack,Damage|Chaos|Attack,,Adds # to # Chaos Damage to Attacks
+of the Remora,- 빨판상어,50,2,LifeLeech,,(0.2-0.4)% of Physical Attack Damage Leeched as Life,물리 공격 피해의 (0.2-0.4)%를 생명력으로 흡수,resource|life|physical|attack,Life|Physical|Attack,,#% of Physical Attack Damage Leeched as Life
+of Thirst,- 목마름,50,2,ManaLeech,,(0.2-0.4)% of Physical Attack Damage Leeched as Mana,물리 공격 피해의 (0.2-0.4)%를 마나로 흡수,resource|mana|physical|attack,Mana|Physical|Attack,,#% of Physical Attack Damage Leeched as Mana
+of Skill,- 스킬,1,2,IncreasedAttackSpeed,,(5-7)% increased Attack Speed,공격 속도 (5-7)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Ease,- 쉬움,11,2,IncreasedAttackSpeed,,(8-10)% increased Attack Speed,공격 속도 (8-10)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Mastery,- 숙련,22,2,IncreasedAttackSpeed,,(11-13)% increased Attack Speed,공격 속도 (11-13)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Grandmastery,- 통달,76,2,IncreasedAttackSpeed,,(14-16)% increased Attack Speed,공격 속도 (14-16)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Steadiness,- 안정감,1,2,IncreasedAccuracy,,+(50-100) to Accuracy Rating,정확도 +(50-100),attack,Attack,,+# to Accuracy Rating
+of Precision,- 정밀함,20,2,IncreasedAccuracy,,+(100-165) to Accuracy Rating,정확도 +(100-165),attack,Attack,,+# to Accuracy Rating
+of the Sniper,- 저격수,40,2,IncreasedAccuracy,,+(166-250) to Accuracy Rating,정확도 +(166-250),attack,Attack,,+# to Accuracy Rating
+of the Marksman,- 지정사수,60,2,IncreasedAccuracy,,+(251-350) to Accuracy Rating,정확도 +(251-350),attack,Attack,,+# to Accuracy Rating
+of the Ranger,- 레인저,75,2,IncreasedAccuracy,,+(351-480) to Accuracy Rating,정확도 +(351-480),attack,Attack,,+# to Accuracy Rating
+of Lioneye,- 라이온아이,85,2,IncreasedAccuracy,,+(481-600) to Accuracy Rating,정확도 +(481-600),attack,Attack,,+# to Accuracy Rating
+of Needling,- 바느질,5,2,CriticalStrikeChanceIncrease,,(10-14)% increased Critical Strike Chance with Bows,활 사용 시 치명타 확률 (10-14)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance with Bows
+of Stinging,- 찌르기,20,2,CriticalStrikeChanceIncrease,,(15-19)% increased Critical Strike Chance with Bows,활 사용 시 치명타 확률 (15-19)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance with Bows
+of Piercing,- 관통,30,2,CriticalStrikeChanceIncrease,,(20-24)% increased Critical Strike Chance with Bows,활 사용 시 치명타 확률 (20-24)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance with Bows
+of Rupturing,- 파열,44,2,CriticalStrikeChanceIncrease,,(25-29)% increased Critical Strike Chance with Bows,활 사용 시 치명타 확률 (25-29)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance with Bows
+of Penetrating,- 침투,58,2,CriticalStrikeChanceIncrease,,(30-34)% increased Critical Strike Chance with Bows,활 사용 시 치명타 확률 (30-34)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance with Bows
+of Incision,- 절개,72,2,CriticalStrikeChanceIncrease,,(35-38)% increased Critical Strike Chance with Bows,활 사용 시 치명타 확률 (35-38)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance with Bows
+of Rending,- 분리,85,2,CriticalStrikeChanceIncrease,,(39-44)% increased Critical Strike Chance with Bows,활 사용 시 치명타 확률 (39-44)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance with Bows
+of the Whelpling,- 새끼용,1,2,FireResistance,,+(6-11)% to Fire Resistance,화염 저항 +(6-11)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Salamander,- 불도마뱀,12,2,FireResistance,,+(12-17)% to Fire Resistance,화염 저항 +(12-17)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Drake,- 비룡,24,2,FireResistance,,+(18-23)% to Fire Resistance,화염 저항 +(18-23)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Kiln,- 가마,36,2,FireResistance,,+(24-29)% to Fire Resistance,화염 저항 +(24-29)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Furnace,- 용광로,48,2,FireResistance,,+(30-35)% to Fire Resistance,화염 저항 +(30-35)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Volcano,- 화산,60,2,FireResistance,,+(36-41)% to Fire Resistance,화염 저항 +(36-41)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Magma,- 마그마,72,2,FireResistance,,+(42-45)% to Fire Resistance,화염 저항 +(42-45)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of Tzteosh,- 체오쉬,84,2,FireResistance,,+(46-48)% to Fire Resistance,화염 저항 +(46-48)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Inuit,- 이누이트,1,2,ColdResistance,,+(6-11)% to Cold Resistance,냉기 저항 +(6-11)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Seal,- 봉인,14,2,ColdResistance,,+(12-17)% to Cold Resistance,냉기 저항 +(12-17)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Penguin,- 펭귄,26,2,ColdResistance,,+(18-23)% to Cold Resistance,냉기 저항 +(18-23)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Yeti,- 설인,38,2,ColdResistance,,+(24-29)% to Cold Resistance,냉기 저항 +(24-29)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Walrus,- 바다코끼리,50,2,ColdResistance,,+(30-35)% to Cold Resistance,냉기 저항 +(30-35)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Polar Bear,- 북극곰,60,2,ColdResistance,,+(36-41)% to Cold Resistance,냉기 저항 +(36-41)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Ice,- 얼음판,72,2,ColdResistance,,+(42-45)% to Cold Resistance,냉기 저항 +(42-45)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of Haast,- 하스트,84,2,ColdResistance,,+(46-48)% to Cold Resistance,냉기 저항 +(46-48)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Cloud,- 구름,1,2,LightningResistance,,+(6-11)% to Lightning Resistance,번개 저항 +(6-11)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Squall,- 돌풍,13,2,LightningResistance,,+(12-17)% to Lightning Resistance,번개 저항 +(12-17)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Storm,- 태풍,25,2,LightningResistance,,+(18-23)% to Lightning Resistance,번개 저항 +(18-23)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Thunderhead,- 뇌운,37,2,LightningResistance,,+(24-29)% to Lightning Resistance,번개 저항 +(24-29)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Tempest,- 폭풍,49,2,LightningResistance,,+(30-35)% to Lightning Resistance,번개 저항 +(30-35)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Maelstrom,- 큰 소용돌이,60,2,LightningResistance,,+(36-41)% to Lightning Resistance,번개 저항 +(36-41)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Lightning,- 번개,72,2,LightningResistance,,+(42-45)% to Lightning Resistance,번개 저항 +(42-45)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of Ephij,- 에피즈,84,2,LightningResistance,,+(46-48)% to Lightning Resistance,번개 저항 +(46-48)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Lost,- 상실,16,2,ChaosResistance,,+(5-10)% to Chaos Resistance,카오스 저항 +(5-10)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Banishment,- 추방,30,2,ChaosResistance,,+(11-15)% to Chaos Resistance,카오스 저항 +(11-15)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Eviction,- 퇴거,44,2,ChaosResistance,,+(16-20)% to Chaos Resistance,카오스 저항 +(16-20)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Expulsion,- 축출,56,2,ChaosResistance,,+(21-25)% to Chaos Resistance,카오스 저항 +(21-25)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Exile,- 유배자,65,2,ChaosResistance,,+(26-30)% to Chaos Resistance,카오스 저항 +(26-30)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Bameth,- 바메스,81,2,ChaosResistance,,+(31-35)% to Chaos Resistance,카오스 저항 +(31-35)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Ire,- 노여움,8,2,CriticalStrikeMultiplier,,+(8-12)% to Critical Strike Multiplier with Bows,활 사용 시 치명타 피해 배율 +(8-12)%,damage|attack|critical,Damage|Attack|Critical,,+#% to Critical Strike Multiplier with Bows
+of Anger,- 분노,21,2,CriticalStrikeMultiplier,,+(13-19)% to Critical Strike Multiplier with Bows,활 사용 시 치명타 피해 배율 +(13-19)%,damage|attack|critical,Damage|Attack|Critical,,+#% to Critical Strike Multiplier with Bows
+of Rage,- 격노,31,2,CriticalStrikeMultiplier,,+(20-24)% to Critical Strike Multiplier with Bows,활 사용 시 치명타 피해 배율 +(20-24)%,damage|attack|critical,Damage|Attack|Critical,,+#% to Critical Strike Multiplier with Bows
+of Fury,- 광분,45,2,CriticalStrikeMultiplier,,+(25-29)% to Critical Strike Multiplier with Bows,활 사용 시 치명타 피해 배율 +(25-29)%,damage|attack|critical,Damage|Attack|Critical,,+#% to Critical Strike Multiplier with Bows
+of Ferocity,- 흉포함,59,2,CriticalStrikeMultiplier,,+(30-34)% to Critical Strike Multiplier with Bows,활 사용 시 치명타 피해 배율 +(30-34)%,damage|attack|critical,Damage|Attack|Critical,,+#% to Critical Strike Multiplier with Bows
+of Destruction,- 파괴,74,2,CriticalStrikeMultiplier,,+(35-38)% to Critical Strike Multiplier with Bows,활 사용 시 치명타 피해 배율 +(35-38)%,damage|attack|critical,Damage|Attack|Critical,,+#% to Critical Strike Multiplier with Bows
+of Impact,- 충격,5,2,StunDurationIncreasePercent,,(11-15)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (11-15)% 증가,,,,#% increased Stun Duration on Enemies
+of Dazing,- 혼미,18,2,StunDurationIncreasePercent,,(16-20)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (16-20)% 증가,,,,#% increased Stun Duration on Enemies
+of Stunning,- 기절,30,2,StunDurationIncreasePercent,,(21-25)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (21-25)% 증가,,,,#% increased Stun Duration on Enemies
+of Slamming,- 강타,44,2,StunDurationIncreasePercent,,(26-30)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (26-30)% 증가,,,,#% increased Stun Duration on Enemies
+of Staggering,- 비틀거림,58,2,StunDurationIncreasePercent,,(31-35)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (31-35)% 증가,,,,#% increased Stun Duration on Enemies
+of Darting,- 사출,14,2,ProjectileSpeed,,(10-17)% increased Projectile Speed,투사체 속도 (10-17)% 증가,speed,Speed,,#% increased Projectile Speed
+of Flight,- 비행,27,2,ProjectileSpeed,,(18-25)% increased Projectile Speed,투사체 속도 (18-25)% 증가,speed,Speed,,#% increased Projectile Speed
+of Propulsion,- 추진,41,2,ProjectileSpeed,,(26-33)% increased Projectile Speed,투사체 속도 (26-33)% 증가,speed,Speed,,#% increased Projectile Speed
+of the Zephyr,- 미풍,55,2,ProjectileSpeed,,(34-41)% increased Projectile Speed,투사체 속도 (34-41)% 증가,speed,Speed,,#% increased Projectile Speed
+of the Gale,- 강풍,82,2,ProjectileSpeed,,(42-46)% increased Projectile Speed,투사체 속도 (42-46)% 증가,speed,Speed,,#% increased Projectile Speed
+of Success,- 성공,1,2,LifeGainedFromEnemyDeath,,Gain (7-10) Life per Enemy Killed,처치한 적 하나당 생명력 (7-10) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Victory,- 승리,23,2,LifeGainedFromEnemyDeath,,Gain (12-18) Life per Enemy Killed,처치한 적 하나당 생명력 (12-18) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Triumph,- 대성공,40,2,LifeGainedFromEnemyDeath,,Gain (24-32) Life per Enemy Killed,처치한 적 하나당 생명력 (24-32) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Conquest,- 정복,52,2,LifeGainedFromEnemyDeath,,Gain (35-44) Life per Enemy Killed,처치한 적 하나당 생명력 (35-44) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Feat,- 개가,66,2,LifeGainedFromEnemyDeath,,Gain (56-72) Life per Enemy Killed,처치한 적 하나당 생명력 (56-72) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Masterstroke,- 묘수,81,2,LifeGainedFromEnemyDeath,,Gain (84-110) Life per Enemy Killed,처치한 적 하나당 생명력 (84-110) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Absorption,- 흡수,1,2,ManaGainedFromEnemyDeath,,Gain (4-6) Mana per Enemy Killed,처치한 적 하나당 마나 (4-6) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Osmosis,- 삼투,24,2,ManaGainedFromEnemyDeath,,Gain (7-10) Mana per Enemy Killed,처치한 적 하나당 마나 (7-10) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Consumption,- 소모,40,2,ManaGainedFromEnemyDeath,,Gain (11-15) Mana per Enemy Killed,처치한 적 하나당 마나 (11-15) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Diffusion,- 유포,52,2,ManaGainedFromEnemyDeath,,Gain (16-25) Mana per Enemy Killed,처치한 적 하나당 마나 (16-25) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Permeation,- 스며듦,66,2,ManaGainedFromEnemyDeath,,Gain (26-37) Mana per Enemy Killed,처치한 적 하나당 마나 (26-37) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Retention,- 잔류,81,2,ManaGainedFromEnemyDeath,,Gain (38-50) Mana per Enemy Killed,처치한 적 하나당 마나 (38-50) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Splintering,- 파편화,70,2,AdditionalArrows,,Bow Attacks fire an additional Arrow,활 공격 시 화살 1개 추가 발사,attack,Attack,,Bow Attacks fire an additional Arrow
+Acute,격심한,4,1,DamageWithWeaponTypeSkill,,(5-10)% increased Damage with Bow Skills,활 스킬로 주는 피해 (5-10)% 증가,damage,Damage,,#% increased Damage with Bow Skills
+Trenchant,신랄한,15,1,DamageWithWeaponTypeSkill,,(11-20)% increased Damage with Bow Skills,활 스킬로 주는 피해 (11-20)% 증가,damage,Damage,,#% increased Damage with Bow Skills
+Perforating,천공하는,30,1,DamageWithWeaponTypeSkill,,(21-30)% increased Damage with Bow Skills,활 스킬로 주는 피해 (21-30)% 증가,damage,Damage,,#% increased Damage with Bow Skills
+Incisive,날선,60,1,DamageWithWeaponTypeSkill,,(31-36)% increased Damage with Bow Skills,활 스킬로 주는 피해 (31-36)% 증가,damage,Damage,,#% increased Damage with Bow Skills
+Lacerating,짓찢는,81,1,DamageWithWeaponTypeSkill,,(37-42)% increased Damage with Bow Skills,활 스킬로 주는 피해 (37-42)% 증가,damage,Damage,,#% increased Damage with Bow Skills
+Impaling,꿰뚫는,86,1,DamageWithWeaponTypeSkill,,(43-50)% increased Damage with Bow Skills,활 스킬로 주는 피해 (43-50)% 증가,damage,Damage,,#% increased Damage with Bow Skills
+of Acrimony,- 신랄,44,2,GlobalDamageOverTimeMultiplier,,+(7-11)% to Damage over Time Multiplier with Attack Skills,공격 스킬의 지속 피해 배율 +(7-11)%,dot_multi|damage|attack,Damage|Attack,,+#% to Damage over Time Multiplier with Attack Skills
+of Dispersion,- 분산,55,2,GlobalDamageOverTimeMultiplier,,+(12-15)% to Damage over Time Multiplier with Attack Skills,공격 스킬의 지속 피해 배율 +(12-15)%,dot_multi|damage|attack,Damage|Attack,,+#% to Damage over Time Multiplier with Attack Skills
+of Liquefaction,- 액화,68,2,GlobalDamageOverTimeMultiplier,,+(16-19)% to Damage over Time Multiplier with Attack Skills,공격 스킬의 지속 피해 배율 +(16-19)%,dot_multi|damage|attack,Damage|Attack,,+#% to Damage over Time Multiplier with Attack Skills
+of Melting,- 융해,76,2,GlobalDamageOverTimeMultiplier,,+(20-23)% to Damage over Time Multiplier with Attack Skills,공격 스킬의 지속 피해 배율 +(20-23)%,dot_multi|damage|attack,Damage|Attack,,+#% to Damage over Time Multiplier with Attack Skills
+of Dissolution,- 파경,82,2,GlobalDamageOverTimeMultiplier,,+(24-26)% to Damage over Time Multiplier with Attack Skills,공격 스킬의 지속 피해 배율 +(24-26)%,dot_multi|damage|attack,Damage|Attack,,+#% to Damage over Time Multiplier with Attack Skills

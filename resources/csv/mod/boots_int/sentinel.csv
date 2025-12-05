@@ -1,0 +1,3 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Sentinel's,파수꾼의,68,1,GlobalAddedDamagePerAttribute,,Adds 2 to 4 Cold Damage to Attacks per 10 Dexterity,민첩 10당 공격 시 냉기 피해 2~4 추가,elemental|cold|attack,Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks per # Dexterity
+Sentinel's,파수꾼의,68,1,GlobalAddedDamagePerAttribute,,Adds 1 to 5 Lightning Damage to Attacks per 10 Intelligence,지능 10당 공격 시 번개 피해 1~5 추가,elemental|lightning|attack,Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks per # Intelligence

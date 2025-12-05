@@ -1,0 +1,31 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Sentinel,- 파수꾼,68,2,Keystone,,Acrobatics,곡예,,,,Acrobatics
+of the Sentinel,- 파수꾼,68,2,Keystone,,Ancestral Bond,선대의 유대,damage,Damage,,Ancestral Bond
+of the Sentinel,- 파수꾼,68,2,Keystone,,Avatar of Fire,불의 화신,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,Avatar of Fire
+of the Sentinel,- 파수꾼,68,2,Keystone,,Blood Magic,혈마법,resource|life|mana,Life|Mana,,Blood Magic
+of the Sentinel,- 파수꾼,68,2,Keystone,,Call to Arms,소집,,,,Call to Arms
+of the Sentinel,- 파수꾼,68,2,Keystone,,Crimson Dance,진홍색 춤,physical_damage|bleed|damage|physical|attack|ailment,Damage|Physical|Attack|Ailment,,Crimson Dance
+of the Sentinel,- 파수꾼,68,2,Keystone,,Divine Shield,신성한 방패,defences|energy_shield,Defences|Energy Shield,,Divine Shield
+of the Sentinel,- 파수꾼,68,2,Keystone,,Hex Master,사술의 대가,curse,Curse,,Hex Master
+of the Sentinel,- 파수꾼,68,2,Keystone,,Eldritch Battery,섬뜩한 충전기,defences|energy_shield,Defences|Energy Shield,,Eldritch Battery
+of the Sentinel,- 파수꾼,68,2,Keystone,,Elemental Equilibrium,원소 균형,elemental_damage|damage|elemental,Damage|Elemental,,Elemental Equilibrium
+of the Sentinel,- 파수꾼,68,2,Keystone,,Elemental Overload,원소 과부하,elemental_damage|damage|elemental|critical,Damage|Elemental|Critical,,Elemental Overload
+of the Sentinel,- 파수꾼,68,2,Keystone,,Ghost Dance,혼의 춤,defences|evasion|energy_shield,Defences|Evasion|Energy Shield,,Ghost Dance
+of the Sentinel,- 파수꾼,68,2,Keystone,,Ghost Reaver,혼 강탈자,resource|life|defences|energy_shield,Life|Defences|Energy Shield,,Ghost Reaver
+of the Sentinel,- 파수꾼,68,2,Keystone,,Iron Grip,강철 손아귀,damage|attack,Damage|Attack,,Iron Grip
+of the Sentinel,- 파수꾼,68,2,Keystone,,Iron Will,강철의 의지,caster,Caster,,Iron Will
+of the Sentinel,- 파수꾼,68,2,Keystone,,Lethe Shade,레테의 그늘,ailment,Ailment,,Lethe Shade
+of the Sentinel,- 파수꾼,68,2,Keystone,,Magebane,마법사 파멸,,,,Magebane
+of the Sentinel,- 파수꾼,68,2,Keystone,,Minion Instability,소환수 불안정,elemental_damage|damage|elemental|fire|minion,Damage|Elemental|Fire|Minion,,Minion Instability
+of the Sentinel,- 파수꾼,68,2,Keystone,,Blood Magic,혈마법,resource|life|mana,Life|Mana,,Blood Magic
+of the Sentinel,- 파수꾼,68,2,Keystone,,Pain Attunement,고통의 조율,caster_damage|damage|caster,Damage|Caster,,Pain Attunement
+of the Sentinel,- 파수꾼,68,2,Keystone,,Perfect Agony,완벽한 고통,damage|critical|ailment,Damage|Critical|Ailment,,Perfect Agony
+of the Sentinel,- 파수꾼,68,2,Keystone,,Point Blank,근접 사격,damage|attack,Damage|Attack,,Point Blank
+of the Sentinel,- 파수꾼,68,2,Keystone,,Resolute Technique,확고한 기술,attack|critical,Attack|Critical,,Resolute Technique
+of the Sentinel,- 파수꾼,68,2,Keystone,,Runebinder,룬 결속사,caster,Caster,,Runebinder
+of the Sentinel,- 파수꾼,68,2,Keystone,,Solipsism,유아론,ailment,Ailment,,Solipsism
+of the Sentinel,- 파수꾼,68,2,Keystone,,Supreme Ego,자만의 정점,resource|mana|aura,Mana|Aura,,Supreme Ego
+of the Sentinel,- 파수꾼,68,2,Keystone,,The Agnostic,불가지론자,resource|life|mana|defences|energy_shield,Life|Mana|Defences|Energy Shield,,The Agnostic
+of the Sentinel,- 파수꾼,68,2,Keystone,,The Impaler,꿰뚫는 자,physical_damage|damage|physical,Damage|Physical,,The Impaler
+of the Sentinel,- 파수꾼,68,2,Keystone,,Vaal Pact,바알의 계약,resource|life,Life,,Vaal Pact
+of the Sentinel,- 파수꾼,68,2,Keystone,,Versatile Combatant,유연한 전투원,block,,,Versatile Combatant

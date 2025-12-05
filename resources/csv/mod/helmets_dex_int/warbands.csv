@@ -1,0 +1,2 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Redblade,적검단,1,1,PhysicalDamageTakenAsElement,,10% of Physical Damage from Hits taken as Fire Damage,피격 시 물리 피해의 10%를 화염 피해로 받음,physical|elemental|fire,Physical|Elemental|Fire,,#% of Physical Damage from Hits taken as Fire Damage

@@ -1,0 +1,27 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Subterranean,지하의,1,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Fire Gems,장착된 화염 속성 젬 레벨 +2,elemental|fire|gem,Elemental|Fire|Gem,,+# to Level of Socketed Fire Gems
+Subterranean,지하의,1,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Cold Gems,장착된 냉기 속성 젬 레벨 +2,elemental|cold|gem,Elemental|Cold|Gem,,+# to Level of Socketed Cold Gems
+Subterranean,지하의,1,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Lightning Gems,장착된 번개 속성 젬 레벨 +2,elemental|lightning|gem,Elemental|Lightning|Gem,,+# to Level of Socketed Lightning Gems
+of the Underground,- 지하,1,2,AdditionalPhysicalDamageReductionWhileMoving,,(3-5)% additional Physical Damage Reduction while moving,이동 중 받는 물리 피해 (3-5)% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction while moving
+Subterranean,지하의,1,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Chaos Gems,장착된 카오스 속성 젬 레벨 +2,chaos|gem,Chaos|Gem,,+# to Level of Socketed Chaos Gems
+of the Underground,- 지하,1,2,LifeRegenerationRatePercentage,,Regenerate 1% of Life per second,1초마다 생명력의 1% 재생,resource|life,Life,,Regenerate #% of Life per second
+of the Underground,- 지하,1,2,ChanceToDodge,,+(4.5-6)% chance to Suppress Spell Damage,주문 피해 억제 확률 +(4.5-6)%,,,,+#% chance to Suppress Spell Damage
+of the Underground,- 지하,1,2,ChanceWhenHitForArmourToBeDoubled,,(10-20)% chance to Defend with 200% of Armour,(10-20)% 확률로 200%의 방어도로 방어,defences|armour,Defences|Armour,,#% chance to Defend with #% of Armour
+of the Underground,- 지하,1,2,ChanceToAvoidPoison,,50% chance to Avoid being Poisoned,50%의 확률로 중독 긴급회피,poison|chaos|ailment,Chaos|Ailment,,#% chance to Avoid being Poisoned
+of the Underground,- 지하,1,2,ChanceToAvoidBleeding,,50% chance to Avoid Bleeding,50%의 확률로 출혈 긴급회피,bleed|physical|attack|ailment,Physical|Attack|Ailment,,#% chance to Avoid Bleeding
+of the Underground,- 지하,1,2,SelfStatusAilmentDuration,,(20-30)% reduced Elemental Ailment Duration on you,플레이어에게 적용되는 원소 상태 이상 지속시간 (20-30)% 감소,elemental|ailment,Elemental|Ailment,,#% reduced Elemental Ailment Duration on you
+of the Underground,- 지하,1,2,SocketedSpellsManaCost,,Socketed Spells have 20% reduced Mana Cost,장착된 주문의 마나 소모 20% 감소,skill|resource|mana|caster|gem,Mana|Caster|Gem,,Socketed Spells have #% reduced Mana Cost
+of the Underground,- 지하,1,2,SocketedAttacksManaCost,,Socketed Attacks have -15 to Total Mana Cost,장착된 공격의 총 마나 소모 -15,skill|resource|mana|attack|gem,Mana|Attack|Gem,,Socketed Attacks have -# to Total Mana Cost
+of the Underground,- 지하,1,2,ManaRegenerationRateWhileMoving,,(50-70)% increased Mana Regeneration Rate while moving,이동 중 마나 재생 속도 (50-70)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate while moving
+of the Underground,- 지하,1,2,MovementSpeedIfHitRecently,,(4-6)% increased Movement Speed if you've Hit an Enemy Recently,최근 4초 이내 적 명중 시 이동 속도 (4-6)% 증가,speed,Speed,,#% increased Movement Speed if you've Hit an Enemy Recently
+of the Underground,- 지하,1,2,MinionGlobalSkillLevel,,+1 to Level of all Raise Spectre Gems,모든 망령 소환 젬 레벨 +1,skill|minion|gem,Minion|Gem,,+# to Level of all Raise Spectre Gems
+of the Underground,- 지하,1,2,DelveStrengthGemLevel,,+1 to Level of Socketed Strength Gems,장착된 힘 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Strength Gems
+of the Underground,- 지하,1,2,DelveDexterityGemLevel,,+1 to Level of Socketed Dexterity Gems,장착된 민첩 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Dexterity Gems
+of the Underground,- 지하,1,2,DelveIntelligenceGemLevel,,+1 to Level of Socketed Intelligence Gems,장착된 지능 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Intelligence Gems
+of the Underground,- 지하,1,2,AbyssJewelSocket,,Has 1 Abyssal Socket,심연 홈 1개,,,Tangled Fossil,Has # Abyssal Socket
+of the Underground,- 지하,1,2,AdditionalVaalSoulOnKill,,(5-8)% chance to gain an additional Vaal Soul on Kill,처치 시 (5-8)%의 확률로 바알 영혼 1개 추가 획득,vaal,,Tangled Fossil,#% chance to gain an additional Vaal Soul on Kill
+of the Underground,- 지하,1,2,EnergyShieldRegeneration,,Regenerate 1% of Energy Shield per second,1초마다 에너지 보호막 1% 재생,defences|energy_shield,Defences|Energy Shield,,Regenerate #% of Energy Shield per second
+Subterranean,지하의,60,1,AllDamage,,(40-60)% increased Damage with Hits and Ailments against Cursed Enemies,저주 받은 적에 대한 적중 및 상태 이상 피해 (40-60)% 증가,damage|curse,Damage|Curse,,#% increased Damage with Hits and Ailments against Cursed Enemies
+Subterranean,지하의,60,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Minion Gems,장착된 소환수 젬 레벨 +2,minion|gem,Minion|Gem,,+# to Level of Socketed Minion Gems
+of the Underground,- 지하,60,2,ManaRegeneration,,(30-50)% increased Mana Regeneration Rate,마나 재생 속도 (30-50)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of the Underground,- 지하,60,2,PercentDamageGoesToMana,,(5-8)% of Damage taken Recouped as Mana,받은 피해의 (5-8)%를 마나로 회생,resource|mana,Mana,,#% of Damage taken Recouped as Mana

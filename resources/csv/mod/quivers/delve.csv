@@ -1,0 +1,15 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Subterranean,지하의,1,1,FireDamageAvoidance,,(8-10)% chance to Avoid Fire Damage from Hits,피격 시 (8-10)% 확률로 화염 피해 긴급회피,elemental|fire,Elemental|Fire,,#% chance to Avoid Fire Damage from Hits
+Subterranean,지하의,1,1,ColdDamageAvoidance,,(6-10)% chance to Avoid Cold Damage from Hits,피격 시 (6-10)% 확률로 냉기 피해 긴급회피,elemental|cold,Elemental|Cold,,#% chance to Avoid Cold Damage from Hits
+Subterranean,지하의,1,1,LightningDamageAvoidance,,(6-10)% chance to Avoid Lightning Damage from Hits,피격 시 (6-10)% 확률로 번개 피해 긴급회피,elemental|lightning,Elemental|Lightning,,#% chance to Avoid Lightning Damage from Hits
+Subterranean,지하의,1,1,ReducedPhysicalDamageTaken,,(3-5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+of the Underground,- 지하,1,2,ChaosResistanceAgainstDamageOverTime,,+(30-40)% Chaos Resistance against Damage Over Time,지속 피해 대응 카오스 저항 +(30-40)%,chaos|resistance,Chaos|Resistance,,+#% Chaos Resistance against Damage Over Time
+of the Underground,- 지하,1,2,LifeRegenerationRatePercentage,,Regenerate 1% of Life per second,1초마다 생명력의 1% 재생,resource|life,Life,,Regenerate #% of Life per second
+of the Underground,- 지하,1,2,AdditionalChanceToEvade,,+(1-2)% chance to Evade Attack Hits,공격 적중 회피 확률 +(1-2)%,defences|evasion,Defences|Evasion,,+#% chance to Evade Attack Hits
+of the Underground,- 지하,1,2,AilmentDamage,,(30-40)% increased Damage with Ailments,상태 이상 피해 (30-40)% 증가,damage|ailment,Damage|Ailment,,#% increased Damage with Ailments
+Subterranean,지하의,1,1,ElementalPenetration,,Damage Penetrates (3-5)% Elemental Resistances,피해가 (3-5)%의 원소 저항 관통,elemental_damage|damage|elemental,Damage|Elemental,,Damage Penetrates #% Elemental Resistances
+of the Underground,- 지하,1,2,MaximumManaIncreasePercent,,(20-30)% increased maximum Mana,최대 마나 (20-30)% 증가,resource|mana,Mana,,#% increased maximum Mana
+of the Underground,- 지하,1,2,FrenzyChargeOnHittingRareOrUnique,,(3-5)% chance to gain a Frenzy Charge when you Hit a Rare or Unique Enemy,희귀 또는 고유 적 명중 시 (3-5)%의 확률로 격분 충전 획득,frenzy_charge,,,#% chance to gain a Frenzy Charge when you Hit a Rare or Unique Enemy
+of the Underground,- 지하,74,2,MinionMovementSpeed,,Minions have (15-30)% increased Movement Speed,소환수의 이동 속도 (15-30)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+of the Underground,- 지하,1,2,VaalSkillCriticalStrikeChance,,(80-120)% increased Vaal Skill Critical Strike Chance,바알 스킬 치명타 확률 (80-120)% 증가,critical|vaal,Critical,Tangled Fossil,#% increased Vaal Skill Critical Strike Chance
+of the Underground,- 지하,60,2,ReducedPhysicalDamageTaken,,(3-5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction

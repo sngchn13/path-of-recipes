@@ -1,0 +1,4 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Deceiver's,사기꾼의,60,1,ColdResistancePenetration,,Damage Penetrates (6-10)% Cold Resistance,피해가 냉기 저항 (6-10)% 관통,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,Damage Penetrates #% Cold Resistance
+Betrayer's,배신자의,60,1,FireResistancePenetration,,Damage Penetrates (6-10)% Fire Resistance,피해가 화염 저항 (6-10)% 관통,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,Damage Penetrates #% Fire Resistance
+Turncoat's,변절자의,60,1,LightningResistancePenetration,,Damage Penetrates (6-10)% Lightning Resistance,피해가 번개 저항 (6-10)% 관통,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,Damage Penetrates #% Lightning Resistance

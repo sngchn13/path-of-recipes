@@ -1,0 +1,16 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Subterranean,지하의,1,1,FireDamagePercentagePrefix,,(20-30)% increased Fire Damage,화염 피해 (20-30)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Subterranean,지하의,1,1,ColdDamagePercentagePrefix,,(20-30)% increased Cold Damage,냉기 피해 (20-30)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Subterranean,지하의,1,1,LightningDamagePercentagePrefix,,(20-30)% increased Lightning Damage,번개 피해 (20-30)% 증가,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
+Subterranean,지하의,1,1,PhysicalDamagePercent,,(20-30)% increased Global Physical Damage,일반 물리 피해 (20-30)% 증가,physical_damage|damage|physical,Damage|Physical,,#% increased Global Physical Damage
+Subterranean,지하의,1,1,IncreasedChaosDamagePrefix,,(20-30)% increased Chaos Damage,카오스 피해 (20-30)% 증가,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
+of the Underground,- 지하,1,2,FlaskLifeRecovery,,(20-30)% increased Life Recovery from Flasks,플라스크로 회복하는 생명력 (20-30)% 증가,flask|resource|life,Life,,#% increased Life Recovery from Flasks
+of the Underground,- 지하,1,2,MaximumEnergyShieldFromBodyArmour,,(20-30)% increased Energy Shield from Equipped Body Armour,장착한 갑옷으로 얻는 에너지 보호막 (20-30)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased Energy Shield from Equipped Body Armour
+of the Underground,- 지하,1,2,ChanceWhenHitForArmourToBeDoubled,,20% chance to Defend with 200% of Armour,20% 확률로 200%의 방어도로 방어,defences|armour,Defences|Armour,,#% chance to Defend with #% of Armour
+of the Underground,- 지하,1,2,AdditionalChanceToEvade,,+(1-2)% chance to Evade Attack Hits,공격 적중 회피 확률 +(1-2)%,defences|evasion,Defences|Evasion,,+#% chance to Evade Attack Hits
+of the Underground,- 지하,1,2,AilmentDamage,,(30-40)% increased Damage with Ailments,상태 이상 피해 (30-40)% 증가,damage|ailment,Damage|Ailment,,#% increased Damage with Ailments
+of the Underground,- 지하,1,2,ElementalDamagePercent,,(25-30)% increased Elemental Damage,원소 피해 (25-30)% 증가,elemental_damage|damage|elemental,Damage|Elemental,,#% increased Elemental Damage
+of the Underground,- 지하,1,2,ManaRecoveryRate,,(8-12)% increased Mana Recovery rate,마나 회복 속도 (8-12)% 증가,resource|mana,Mana,,#% increased Mana Recovery rate
+of the Underground,- 지하,1,2,ChanceToGainOnslaughtOnFlaskUse,,(15-20)% chance to gain Onslaught when you use a Flask,플라스크 사용 시 (15-20)%의 확률로 맹공 획득,flask,,,#% chance to gain Onslaught when you use a Flask
+of the Underground,- 지하,74,2,MinionLife,,Minions have (20-30)% increased maximum Life,소환수의 최대 생명력 (20-30)% 증가,resource|life|minion,Life|Minion,,Minions have #% increased maximum Life
+of the Underground,- 지하,1,2,VaalSkillDamage,,(20-40)% increased Damage with Vaal Skills,바알 스킬로 주는 피해 (20-40)% 증가,damage|vaal,Damage,Tangled Fossil,#% increased Damage with Vaal Skills

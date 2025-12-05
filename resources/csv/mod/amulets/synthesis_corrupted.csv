@@ -1,0 +1,4 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+SynthesisImplicitVaalSkillDuration1,SynthesisImplicitVaalSkillDuration1,36,3,VaalSkillDuration,,Vaal Skills have (5-8)% increased Skill Effect Duration,바알 스킬의 스킬 효과 지속시간 (5-8)% 증가,vaal,,,Vaal Skills have #% increased Skill Effect Duration
+SynthesisImplicitIncreasedLifeCorruptedItem1,SynthesisImplicitIncreasedLifeCorruptedItem1,60,3,LocalCorruptedBonus,,(6-8)% increased maximum Life if Corrupted,타락 시 최대 생명력 (6-8)% 증가,resource|life,Life,,#% increased maximum Life if Corrupted
+SynthesisImplicitIncreasedEnergyShieldCorruptedItem1,SynthesisImplicitIncreasedEnergyShieldCorruptedItem1,60,3,LocalCorruptedBonus,,(8-10)% increased maximum Energy Shield if Corrupted,타락 시 에너지 보호막 최대치 (8-10)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield if Corrupted

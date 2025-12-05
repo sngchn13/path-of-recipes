@@ -1,0 +1,142 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Mongoose,- 몽구스,1,2,Dexterity,,+(8-12) to Dexterity,민첩 +(8-12),attribute,Attribute,,+# to Dexterity
+of the Lynx,- 스라소니,11,2,Dexterity,,+(13-17) to Dexterity,민첩 +(13-17),attribute,Attribute,,+# to Dexterity
+of the Fox,- 여우,22,2,Dexterity,,+(18-22) to Dexterity,민첩 +(18-22),attribute,Attribute,,+# to Dexterity
+of the Falcon,- 매,33,2,Dexterity,,+(23-27) to Dexterity,민첩 +(23-27),attribute,Attribute,,+# to Dexterity
+of the Panther,- 흑표,44,2,Dexterity,,+(28-32) to Dexterity,민첩 +(28-32),attribute,Attribute,,+# to Dexterity
+of the Leopard,- 표범,55,2,Dexterity,,+(33-37) to Dexterity,민첩 +(33-37),attribute,Attribute,,+# to Dexterity
+of the Jaguar,- 재규어,66,2,Dexterity,,+(38-42) to Dexterity,민첩 +(38-42),attribute,Attribute,,+# to Dexterity
+of the Phantom,- 유령,74,2,Dexterity,,+(43-50) to Dexterity,민첩 +(43-50),attribute,Attribute,,+# to Dexterity
+of the Wind,- 바람,82,2,Dexterity,,+(51-55) to Dexterity,민첩 +(51-55),attribute,Attribute,,+# to Dexterity
+Squire's,종자의,1,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(15-19)% increased Physical Damage+(16-20) to Accuracy Rating,물리 피해 (15-19)% 증가정확도 +(16-20),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Journeyman's,숙련공의,11,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(20-24)% increased Physical Damage+(21-46) to Accuracy Rating,물리 피해 (20-24)% 증가정확도 +(21-46),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Reaver's,강탈자의,23,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(25-34)% increased Physical Damage+(47-72) to Accuracy Rating,물리 피해 (25-34)% 증가정확도 +(47-72),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Mercenary's,용병의,35,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(35-44)% increased Physical Damage+(73-97) to Accuracy Rating,물리 피해 (35-44)% 증가정확도 +(73-97),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Champion's,용사의,46,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(45-54)% increased Physical Damage+(98-123) to Accuracy Rating,물리 피해 (45-54)% 증가정확도 +(98-123),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Conqueror's,정복자의,60,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(55-64)% increased Physical Damage+(124-149) to Accuracy Rating,물리 피해 (55-64)% 증가정확도 +(124-149),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Emperor's,황제의,73,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(65-74)% increased Physical Damage+(150-174) to Accuracy Rating,물리 피해 (65-74)% 증가정확도 +(150-174),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Dictator's,독재자의,83,1,LocalIncreasedPhysicalDamagePercentAndAccuracyRating,,(75-79)% increased Physical Damage+(175-200) to Accuracy Rating,물리 피해 (75-79)% 증가정확도 +(175-200),physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage+# to Accuracy Rating
+Heavy,무거운,1,1,LocalPhysicalDamagePercent,,(40-49)% increased Physical Damage,물리 피해 (40-49)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Serrated,톱니의,11,1,LocalPhysicalDamagePercent,,(50-64)% increased Physical Damage,물리 피해 (50-64)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Wicked,사악한,23,1,LocalPhysicalDamagePercent,,(65-84)% increased Physical Damage,물리 피해 (65-84)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Vicious,포악한,35,1,LocalPhysicalDamagePercent,,(85-109)% increased Physical Damage,물리 피해 (85-109)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Bloodthirsty,피에 목마른,46,1,LocalPhysicalDamagePercent,,(110-134)% increased Physical Damage,물리 피해 (110-134)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Cruel,잔혹한,60,1,LocalPhysicalDamagePercent,,(135-154)% increased Physical Damage,물리 피해 (135-154)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Tyrannical,압제적인,73,1,LocalPhysicalDamagePercent,,(155-169)% increased Physical Damage,물리 피해 (155-169)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Merciless,무자비한,83,1,LocalPhysicalDamagePercent,,(170-179)% increased Physical Damage,물리 피해 (170-179)% 증가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,#% increased Physical Damage
+Glinting,미광의,2,1,PhysicalDamage,,Adds 2 to (4-5) Physical Damage,물리 피해 2~(4-5) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Burnished,윤이 나는,13,1,PhysicalDamage,,Adds (6-8) to (12-15) Physical Damage,물리 피해 (6-8)~(12-15) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Polished,광택 나는,21,1,PhysicalDamage,,Adds (10-13) to (21-25) Physical Damage,물리 피해 (10-13)~(21-25) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Honed,연마한,29,1,PhysicalDamage,,Adds (13-17) to (28-32) Physical Damage,물리 피해 (13-17)~(28-32) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Gleaming,번뜩이는,36,1,PhysicalDamage,,Adds (16-22) to (35-40) Physical Damage,물리 피해 (16-22)~(35-40) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Annealed,담금질한,46,1,PhysicalDamage,,Adds (20-28) to (43-51) Physical Damage,물리 피해 (20-28)~(43-51) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Razor-sharp,날이 선,54,1,PhysicalDamage,,Adds (25-33) to (52-61) Physical Damage,물리 피해 (25-33)~(52-61) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Tempered,단조한,65,1,PhysicalDamage,,Adds (30-40) to (63-73) Physical Damage,물리 피해 (30-40)~(63-73) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Flaring,빛을 뿜는,77,1,PhysicalDamage,,Adds (34-47) to (72-84) Physical Damage,물리 피해 (34-47)~(72-84) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage
+Heated,달궈진,1,1,FireDamage,,Adds (3-5) to (6-7) Fire Damage,화염 피해 (3-5)~(6-7) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Smouldering,그을린,11,1,FireDamage,,Adds (14-20) to (29-33) Fire Damage,화염 피해 (14-20)~(29-33) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Smoking,연기 나는,18,1,FireDamage,,Adds (23-31) to (47-54) Fire Damage,화염 피해 (23-31)~(47-54) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Burning,불타는,26,1,FireDamage,,Adds (32-44) to (65-76) Fire Damage,화염 피해 (32-44)~(65-76) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Flaming,불을 뿜는,33,1,FireDamage,,Adds (45-61) to (91-106) Fire Damage,화염 피해 (45-61)~(91-106) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Scorching,작열하는,42,1,FireDamage,,Adds (63-85) to (128-148) Fire Damage,화염 피해 (63-85)~(128-148) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Incinerating,소각하는,51,1,FireDamage,,Adds (85-115) to (172-200) Fire Damage,화염 피해 (85-115)~(172-200) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Blasting,폭발하는,62,1,FireDamage,,Adds (110-150) to (223-260) Fire Damage,화염 피해 (110-150)~(223-260) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Cremating,화장하는,74,1,FireDamage,,Adds (137-188) to (279-325) Fire Damage,화염 피해 (137-188)~(279-325) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Carbonising,탄화한,82,1,FireDamage,,Adds (165-225) to (335-390) Fire Damage,화염 피해 (165-225)~(335-390) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage
+Frosted,서리 내린,2,1,ColdDamage,,Adds (2-3) to (6-7) Cold Damage,냉기 피해 (2-3)~(6-7) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Chilled,냉각된,12,1,ColdDamage,,Adds (12-17) to (26-30) Cold Damage,냉기 피해 (12-17)~(26-30) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Icy,얼음 같은,19,1,ColdDamage,,Adds (21-28) to (42-48) Cold Damage,냉기 피해 (21-28)~(42-48) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Frigid,차디찬,27,1,ColdDamage,,Adds (29-40) to (58-68) Cold Damage,냉기 피해 (29-40)~(58-68) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Freezing,동결의,34,1,ColdDamage,,Adds (41-55) to (81-95) Cold Damage,냉기 피해 (41-55)~(81-95) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Frozen,얼어붙은,43,1,ColdDamage,,Adds (57-77) to (114-132) Cold Damage,냉기 피해 (57-77)~(114-132) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Glaciated,빙하의,52,1,ColdDamage,,Adds (77-104) to (154-178) Cold Damage,냉기 피해 (77-104)~(154-178) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Polar,극지의,63,1,ColdDamage,,Adds (99-136) to (200-232) Cold Damage,냉기 피해 (99-136)~(200-232) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Entombing,얼음 무덤의,75,1,ColdDamage,,Adds (124-170) to (250-290) Cold Damage,냉기 피해 (124-170)~(250-290) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Crystalising,결정화하는,82,1,ColdDamage,,Adds (149-204) to (300-348) Cold Damage,냉기 피해 (149-204)~(300-348) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage
+Humming,윙윙대는,3,1,LightningDamage,,Adds 2 to (10-11) Lightning Damage,번개 피해 2~(10-11) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Buzzing,웅웅대는,13,1,LightningDamage,,Adds 3 to (46-53) Lightning Damage,번개 피해 3~(46-53) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Snapping,타닥대는,19,1,LightningDamage,,Adds (4-5) to (76-88) Lightning Damage,번개 피해 (4-5)~(76-88) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Crackling,치직대는,31,1,LightningDamage,,Adds (5-8) to (106-123) Lightning Damage,번개 피해 (5-8)~(106-123) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Sparking,전기불꽃의,34,1,LightningDamage,,Adds (8-10) to (148-173) Lightning Damage,번개 피해 (8-10)~(148-173) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Arcing,전호의,42,1,LightningDamage,,Adds (11-14) to (208-242) Lightning Damage,번개 피해 (11-14)~(208-242) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Shocking,감전의,51,1,LightningDamage,,Adds (14-20) to (281-327) Lightning Damage,번개 피해 (14-20)~(281-327) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Discharging,방전의,63,1,LightningDamage,,Adds (19-25) to (366-425) Lightning Damage,번개 피해 (19-25)~(366-425) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Electrocuting,전기 처형의,74,1,LightningDamage,,Adds (23-32) to (458-531) Lightning Damage,번개 피해 (23-32)~(458-531) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Vapourising,증발의,82,1,LightningDamage,,Adds (28-38) to (549-638) Lightning Damage,번개 피해 (28-38)~(549-638) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage
+Catalysing,촉진시키는,4,1,IncreasedWeaponElementalDamagePercent,,(19-34)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (19-34)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+Infusing,주입하는,15,1,IncreasedWeaponElementalDamagePercent,,(36-51)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (36-51)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+Empowering,강화하는,30,1,IncreasedWeaponElementalDamagePercent,,(53-61)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (53-61)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+Unleashed,방출된,60,1,IncreasedWeaponElementalDamagePercent,,(63-71)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (63-71)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+Overpowering,압도하는,81,1,IncreasedWeaponElementalDamagePercent,,(73-85)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (73-85)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+Devastating,파괴적인,86,1,IncreasedWeaponElementalDamagePercent,,(87-100)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (87-100)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+of Skill,- 스킬,1,2,IncreasedAttackSpeed,,(5-7)% increased Attack Speed,공격 속도 (5-7)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Ease,- 쉬움,11,2,IncreasedAttackSpeed,,(8-10)% increased Attack Speed,공격 속도 (8-10)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Mastery,- 숙련,22,2,IncreasedAttackSpeed,,(11-13)% increased Attack Speed,공격 속도 (11-13)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Renown,- 명성,30,2,IncreasedAttackSpeed,,(14-16)% increased Attack Speed,공격 속도 (14-16)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Acclaim,- 갈채,37,2,IncreasedAttackSpeed,,(17-19)% increased Attack Speed,공격 속도 (17-19)% 증가,attack|speed,Attack|Speed,,#% increased Attack Speed
+of Impact,- 충격,5,2,StunDurationIncreasePercent,,(11-15)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (11-15)% 증가,,,,#% increased Stun Duration on Enemies
+of Dazing,- 혼미,18,2,StunDurationIncreasePercent,,(16-20)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (16-20)% 증가,,,,#% increased Stun Duration on Enemies
+of Stunning,- 기절,30,2,StunDurationIncreasePercent,,(21-25)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (21-25)% 증가,,,,#% increased Stun Duration on Enemies
+of Slamming,- 강타,44,2,StunDurationIncreasePercent,,(26-30)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (26-30)% 증가,,,,#% increased Stun Duration on Enemies
+of Staggering,- 비틀거림,58,2,StunDurationIncreasePercent,,(31-35)% increased Stun Duration on Enemies,적에게 적용되는 기절 지속시간 (31-35)% 증가,,,,#% increased Stun Duration on Enemies
+of Darting,- 사출,14,2,ProjectileSpeed,,(10-17)% increased Projectile Speed,투사체 속도 (10-17)% 증가,speed,Speed,,#% increased Projectile Speed
+of Flight,- 비행,27,2,ProjectileSpeed,,(18-25)% increased Projectile Speed,투사체 속도 (18-25)% 증가,speed,Speed,,#% increased Projectile Speed
+of Propulsion,- 추진,41,2,ProjectileSpeed,,(26-33)% increased Projectile Speed,투사체 속도 (26-33)% 증가,speed,Speed,,#% increased Projectile Speed
+of the Zephyr,- 미풍,55,2,ProjectileSpeed,,(34-41)% increased Projectile Speed,투사체 속도 (34-41)% 증가,speed,Speed,,#% increased Projectile Speed
+of the Gale,- 강풍,82,2,ProjectileSpeed,,(42-46)% increased Projectile Speed,투사체 속도 (42-46)% 증가,speed,Speed,,#% increased Projectile Speed
+of Rejuvenation,- 회춘,8,2,LifeGainPerTarget,,Grants (2-3) Life per Enemy Hit,명중한 적 하나당 생명력 (2-3) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Restoration,- 재생,20,2,LifeGainPerTarget,,Grants (4-6) Life per Enemy Hit,명중한 적 하나당 생명력 (4-6) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Regrowth,- 재성장,30,2,LifeGainPerTarget,,Grants (7-10) Life per Enemy Hit,명중한 적 하나당 생명력 (7-10) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Nourishment,- 자양분,40,2,LifeGainPerTarget,,Grants (11-14) Life per Enemy Hit,명중한 적 하나당 생명력 (11-14) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Regenesis,- 신생,50,2,LifeGainPerTarget,,Grants (15-18) Life per Enemy Hit,명중한 적 하나당 생명력 (15-18) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Renewal,- 갱신,60,2,LifeGainPerTarget,,Grants (19-22) Life per Enemy Hit,명중한 적 하나당 생명력 (19-22) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Recuperation,- 회생,70,2,LifeGainPerTarget,,Grants (23-26) Life per Enemy Hit,명중한 적 하나당 생명력 (23-26) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Revitalization,- 부흥,80,2,LifeGainPerTarget,,Grants (27-30) Life per Enemy Hit,명중한 적 하나당 생명력 (27-30) 획득,resource|life|attack,Life|Attack,,Grants # Life per Enemy Hit
+of Success,- 성공,1,2,LifeGainedFromEnemyDeath,,Gain (7-10) Life per Enemy Killed,처치한 적 하나당 생명력 (7-10) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Victory,- 승리,23,2,LifeGainedFromEnemyDeath,,Gain (12-18) Life per Enemy Killed,처치한 적 하나당 생명력 (12-18) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Triumph,- 대성공,40,2,LifeGainedFromEnemyDeath,,Gain (24-32) Life per Enemy Killed,처치한 적 하나당 생명력 (24-32) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Conquest,- 정복,52,2,LifeGainedFromEnemyDeath,,Gain (35-44) Life per Enemy Killed,처치한 적 하나당 생명력 (35-44) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Feat,- 개가,66,2,LifeGainedFromEnemyDeath,,Gain (56-72) Life per Enemy Killed,처치한 적 하나당 생명력 (56-72) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Masterstroke,- 묘수,81,2,LifeGainedFromEnemyDeath,,Gain (84-110) Life per Enemy Killed,처치한 적 하나당 생명력 (84-110) 획득,resource|life,Life,,Gain # Life per Enemy Killed
+of Absorption,- 흡수,1,2,ManaGainedFromEnemyDeath,,Gain (4-6) Mana per Enemy Killed,처치한 적 하나당 마나 (4-6) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Osmosis,- 삼투,24,2,ManaGainedFromEnemyDeath,,Gain (7-10) Mana per Enemy Killed,처치한 적 하나당 마나 (7-10) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Consumption,- 소모,40,2,ManaGainedFromEnemyDeath,,Gain (11-15) Mana per Enemy Killed,처치한 적 하나당 마나 (11-15) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Diffusion,- 유포,52,2,ManaGainedFromEnemyDeath,,Gain (16-25) Mana per Enemy Killed,처치한 적 하나당 마나 (16-25) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Permeation,- 스며듦,66,2,ManaGainedFromEnemyDeath,,Gain (26-37) Mana per Enemy Killed,처치한 적 하나당 마나 (26-37) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Retention,- 잔류,81,2,ManaGainedFromEnemyDeath,,Gain (38-50) Mana per Enemy Killed,처치한 적 하나당 마나 (38-50) 획득,resource|mana,Mana,,Gain # Mana per Enemy Killed
+of Needling,- 바느질,1,2,CriticalStrikeChanceIncrease,,(10-14)% increased Critical Strike Chance,치명타 확률 (10-14)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance
+of Stinging,- 찌르기,20,2,CriticalStrikeChanceIncrease,,(15-19)% increased Critical Strike Chance,치명타 확률 (15-19)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance
+of Piercing,- 관통,30,2,CriticalStrikeChanceIncrease,,(20-24)% increased Critical Strike Chance,치명타 확률 (20-24)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance
+of Puncturing,- 구멍,44,2,CriticalStrikeChanceIncrease,,(25-29)% increased Critical Strike Chance,치명타 확률 (25-29)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance
+of Penetrating,- 침투,59,2,CriticalStrikeChanceIncrease,,(30-34)% increased Critical Strike Chance,치명타 확률 (30-34)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance
+of Incision,- 절개,73,2,CriticalStrikeChanceIncrease,,(35-38)% increased Critical Strike Chance,치명타 확률 (35-38)% 증가,attack|critical,Attack|Critical,,#% increased Critical Strike Chance
+of Ire,- 노여움,8,2,CriticalStrikeMultiplier,,+(10-14)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(10-14)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+of Anger,- 분노,21,2,CriticalStrikeMultiplier,,+(15-19)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(15-19)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+of Rage,- 격노,30,2,CriticalStrikeMultiplier,,+(20-24)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(20-24)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+of Fury,- 광분,44,2,CriticalStrikeMultiplier,,+(25-29)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(25-29)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+of Ferocity,- 흉포함,59,2,CriticalStrikeMultiplier,,+(30-34)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(30-34)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+of Destruction,- 파괴,73,2,CriticalStrikeMultiplier,,+(35-38)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(35-38)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+Paragon's,모범의,50,1,IncreaseSocketedGemLevel,,+1 to Level of Socketed Gems,장착된 젬 레벨 +1,gem,Gem,,+# to Level of Socketed Gems
+Fletcher's,화살 제조자의,9,1,IncreaseSpecificSocketedGemLevel,,+1 to Level of Socketed Bow Gems,장착된 활 젬 레벨 +1,attack|gem,Attack|Gem,,+# to Level of Socketed Bow Gems
+Sharpshooter's,저격수의,64,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Bow Gems,장착된 활 젬 레벨 +2,attack|gem,Attack|Gem,,+# to Level of Socketed Bow Gems
+of Steadiness,- 안정감,1,2,IncreasedAccuracy,,+(80-130) to Accuracy Rating,정확도 +(80-130),attack,Attack,,+# to Accuracy Rating
+of Precision,- 정밀함,20,2,IncreasedAccuracy,,+(131-215) to Accuracy Rating,정확도 +(131-215),attack,Attack,,+# to Accuracy Rating
+of the Sniper,- 저격수,40,2,IncreasedAccuracy,,+(216-325) to Accuracy Rating,정확도 +(216-325),attack,Attack,,+# to Accuracy Rating
+of the Marksman,- 지정사수,60,2,IncreasedAccuracy,,+(326-455) to Accuracy Rating,정확도 +(326-455),attack,Attack,,+# to Accuracy Rating
+of the Ranger,- 레인저,75,2,IncreasedAccuracy,,+(456-624) to Accuracy Rating,정확도 +(456-624),attack,Attack,,+# to Accuracy Rating
+of Lioneye,- 라이온아이,85,2,IncreasedAccuracy,,+(625-780) to Accuracy Rating,정확도 +(625-780),attack,Attack,,+# to Accuracy Rating
+of Splintering,- 파편화,70,2,AdditionalArrows,,Bow Attacks fire an additional Arrow,활 공격 시 화살 1개 추가 발사,attack,Attack,,Bow Attacks fire an additional Arrow
+of Many,- 다수,86,2,AdditionalArrows,,Bow Attacks fire 2 additional Arrows,활 공격 시 화살 2개 추가 발사,attack,Attack,,Bow Attacks fire # additional Arrows
+of the Worthy,- 자격자,36,2,LocalAttributeRequirements,,18% reduced Attribute Requirements,능력치 요구사항 18% 감소,,,,#% reduced Attribute Requirements
+of the Apt,- 적격자,60,2,LocalAttributeRequirements,,32% reduced Attribute Requirements,능력치 요구사항 32% 감소,,,,#% reduced Attribute Requirements
+of Radiance,- 광휘,30,2,LightRadiusAndAccuracy,,(16-20)% increased Global Accuracy Rating15% increased Light Radius,일반 정확도 (16-20)% 증가시야 반경 15% 증가,attack,Attack,,#% increased Global Accuracy Rating#% increased Light Radius
+of Shining,- 반짝임,8,2,LightRadiusAndAccuracy,,(9-11)% increased Global Accuracy Rating5% increased Light Radius,일반 정확도 (9-11)% 증가시야 반경 5% 증가,attack,Attack,,#% increased Global Accuracy Rating#% increased Light Radius
+of Light,- 빛,15,2,LightRadiusAndAccuracy,,(12-15)% increased Global Accuracy Rating10% increased Light Radius,일반 정확도 (12-15)% 증가시야 반경 10% 증가,attack,Attack,,#% increased Global Accuracy Rating#% increased Light Radius
+of the Remora,- 빨판상어,20,2,LifeLeech,,(2-2.4)% of Physical Attack Damage Leeched as Life,물리 공격 피해의 (2-2.4)%를 생명력으로 흡수,resource|life|physical|attack,Life|Physical|Attack,,#% of Physical Attack Damage Leeched as Life
+of Thirst,- 목마름,50,2,ManaLeech,,(2.6-3.2)% of Physical Attack Damage Leeched as Mana,물리 공격 피해의 (2.6-3.2)%를 마나로 흡수,resource|mana|physical|attack,Mana|Physical|Attack,,#% of Physical Attack Damage Leeched as Mana
+Malicious,악의적인,83,1,LocalChaosDamage,,Adds (98-149) to (183-280) Chaos Damage,카오스 피해 (98-149)~(183-280) 추가,chaos_damage|damage|chaos|attack,Damage|Chaos|Attack,,Adds # to # Chaos Damage
+of Acrimony,- 신랄,44,2,GlobalDamageOverTimeMultiplier,,+(7-11)% to Damage over Time Multiplier,지속 피해 배율 +(7-11)%,dot_multi|damage,Damage,,+#% to Damage over Time Multiplier
+of Dispersion,- 분산,55,2,GlobalDamageOverTimeMultiplier,,+(12-15)% to Damage over Time Multiplier,지속 피해 배율 +(12-15)%,dot_multi|damage,Damage,,+#% to Damage over Time Multiplier
+of Liquefaction,- 액화,68,2,GlobalDamageOverTimeMultiplier,,+(16-19)% to Damage over Time Multiplier,지속 피해 배율 +(16-19)%,dot_multi|damage,Damage,,+#% to Damage over Time Multiplier
+of Melting,- 융해,76,2,GlobalDamageOverTimeMultiplier,,+(20-23)% to Damage over Time Multiplier,지속 피해 배율 +(20-23)%,dot_multi|damage,Damage,,+#% to Damage over Time Multiplier
+of Dissolution,- 파경,82,2,GlobalDamageOverTimeMultiplier,,+(24-26)% to Damage over Time Multiplier,지속 피해 배율 +(24-26)%,dot_multi|damage,Damage,,+#% to Damage over Time Multiplier

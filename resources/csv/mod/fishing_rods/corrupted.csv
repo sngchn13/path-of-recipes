@@ -1,0 +1,5 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+V2CanCatchCorruptFishCorrupted,V2CanCatchCorruptFishCorrupted,1,5,Other,,You can catch Corrupted Fish,타락한 물고기 포획 가능,vaal|drop,Drop,,You can catch Corrupted Fish
+V2CastSpeedCorrupted,V2CastSpeedCorrupted,1,5,IncreasedCastSpeed,,(10-20)% increased Cast Speed,시전 속도 (10-20)% 증가,red_herring|caster|speed,Caster|Speed,,#% increased Cast Speed
+V2FishingQuantityCorrupted,V2FishingQuantityCorrupted,1,5,FishingQuantity,,(5-10)% increased Quantity of Fish Caught,포획하는 물고기 수 (5-10)% 증가,drop,Drop,,#% increased Quantity of Fish Caught
+V2FishingRarityCorrupted_,V2FishingRarityCorrupted_,1,5,FishingRarity,,(5-10)% increased Rarity of Fish Caught,포획하는 물고기 희귀도 (5-10)% 증가,drop,Drop,,#% increased Rarity of Fish Caught

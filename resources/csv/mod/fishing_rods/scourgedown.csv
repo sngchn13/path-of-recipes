@@ -1,0 +1,6 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+HellscapeDownsideFishingLineStrength,HellscapeDownsideFishingLineStrength,1,25,FishingLineStrength,,(30-40)% reduced Fishing Line Strength,낚싯줄 강도 (30-40)% 감소,,,,#% reduced Fishing Line Strength
+HellscapeDownsideFishingPoolConsumption,HellscapeDownsideFishingPoolConsumption,45,25,FishingPoolConsumption,,(50-100)% increased Fishing Pool Consumption,어장 소비 (50-100)% 증가,,,,#% increased Fishing Pool Consumption
+HellscapeDownsideFishRotWhenCaught,HellscapeDownsideFishRotWhenCaught,1,25,FishRotWhenCaught,,Fish Rot upon being Caught,물고기 포획 시 부패,,,,Fish Rot upon being Caught
+HellscapeDownsideFishingReelStability,HellscapeDownsideFishingReelStability,1,25,FishingReelStability,,(30-60)% reduced Reeling Stability,줄 감기 안정도 (30-60)% 감소,,,,#% reduced Reeling Stability
+HellscapeDownsideCannotFishFromWater_______,HellscapeDownsideCannotFishFromWater_______,68,25,CannotFishFromWater,,Cannot Fish while standing in Water,물속에 서 있는 동안 낚시 불가,,,,Cannot Fish while standing in Water

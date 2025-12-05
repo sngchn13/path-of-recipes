@@ -1,0 +1,4 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Sentinel,- 파수꾼,68,2,ArcaneSurgeEffect,,(50-70)% increased Effect of Arcane Surge on you,자신에게 적용되는 비전 쇄도 효과 (50-70)% 증가,,,,#% increased Effect of Arcane Surge on you
+of the Sentinel,- 파수꾼,68,2,WarcryTauntedEnemiesTakeIncreasedDamage,,Enemies Taunted by your Warcries take (20-25)% increased Damage,함성으로 도발한 적이 받는 피해 (20-25)% 증가,damage,Damage,,Enemies Taunted by your Warcries take #% increased Damage
+of the Sentinel,- 파수꾼,68,2,OnslaughtEffect,,(50-70)% increased Effect of Onslaught on you,플레이어에게 적용되는 맹공 효과 (50-70)% 증가,,,,#% increased Effect of Onslaught on you

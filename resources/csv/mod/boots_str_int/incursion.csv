@@ -1,0 +1,5 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Xopec's,조펙의,50,1,IncreasedMana,,+(69-73) to maximum Mana(7-10)% increased maximum Mana,마나 최대치 +(69-73)최대 마나 (7-10)% 증가,resource|mana,Mana,,+# to maximum Mana#% increased maximum Mana
+Matatl's,마타틀의,50,1,MovementVelocity,,30% increased Movement Speed(10-15)% chance to Avoid Bleeding,이동 속도 30% 증가(10-15)%의 확률로 출혈 긴급회피,speed,Speed,,#% increased Movement Speed#% chance to Avoid Bleeding
+Matatl's,마타틀의,50,1,MovementVelocity,,30% increased Movement Speed5% increased Movement Speed if you haven't been Hit Recently,이동 속도 30% 증가최근 4초 이내 피격되지 않은 경우 이동 속도 5% 증가,speed,Speed,,#% increased Movement Speed#% increased Movement Speed if you haven't been Hit Recently
+Matatl's,마타틀의,50,1,MovementVelocity,,30% increased Movement Speed(10-15)% chance to Avoid being Poisoned,이동 속도 30% 증가(10-15)%의 확률로 중독 긴급회피,speed,Speed,,#% increased Movement Speed#% chance to Avoid being Poisoned

@@ -1,0 +1,189 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Brute,- 짐승,1,2,Strength,,+(8-12) to Strength,힘 +(8-12),attribute,Attribute,,+# to Strength
+of the Wrestler,- 씨름꾼,11,2,Strength,,+(13-17) to Strength,힘 +(13-17),attribute,Attribute,,+# to Strength
+of the Bear,- 곰,22,2,Strength,,+(18-22) to Strength,힘 +(18-22),attribute,Attribute,,+# to Strength
+of the Lion,- 사자,33,2,Strength,,+(23-27) to Strength,힘 +(23-27),attribute,Attribute,,+# to Strength
+of the Gorilla,- 고릴라,44,2,Strength,,+(28-32) to Strength,힘 +(28-32),attribute,Attribute,,+# to Strength
+of the Goliath,- 골리앗,55,2,Strength,,+(33-37) to Strength,힘 +(33-37),attribute,Attribute,,+# to Strength
+of the Leviathan,- 레비아탄,66,2,Strength,,+(38-42) to Strength,힘 +(38-42),attribute,Attribute,,+# to Strength
+of the Titan,- 거신,74,2,Strength,,+(43-50) to Strength,힘 +(43-50),attribute,Attribute,,+# to Strength
+of the Gods,- 신들,82,2,Strength,,+(51-55) to Strength,힘 +(51-55),attribute,Attribute,,+# to Strength
+of the Pupil,- 제자,1,2,Intelligence,,+(8-12) to Intelligence,지능 +(8-12),attribute,Attribute,,+# to Intelligence
+of the Student,- 학생,11,2,Intelligence,,+(13-17) to Intelligence,지능 +(13-17),attribute,Attribute,,+# to Intelligence
+of the Prodigy,- 영재,22,2,Intelligence,,+(18-22) to Intelligence,지능 +(18-22),attribute,Attribute,,+# to Intelligence
+of the Augur,- 점술가,33,2,Intelligence,,+(23-27) to Intelligence,지능 +(23-27),attribute,Attribute,,+# to Intelligence
+of the Philosopher,- 철학자,44,2,Intelligence,,+(28-32) to Intelligence,지능 +(28-32),attribute,Attribute,,+# to Intelligence
+of the Sage,- 현자,55,2,Intelligence,,+(33-37) to Intelligence,지능 +(33-37),attribute,Attribute,,+# to Intelligence
+of the Savant,- 학자,66,2,Intelligence,,+(38-42) to Intelligence,지능 +(38-42),attribute,Attribute,,+# to Intelligence
+of the Virtuoso,- 거장,74,2,Intelligence,,+(43-50) to Intelligence,지능 +(43-50),attribute,Attribute,,+# to Intelligence
+of the Genius,- 천재,82,2,Intelligence,,+(51-55) to Intelligence,지능 +(51-55),attribute,Attribute,,+# to Intelligence
+Hale,정정한,1,1,IncreasedLife,,+(3-9) to maximum Life,생명력 최대치 +(3-9),resource|life,Life,,+# to maximum Life
+Healthy,건강한,5,1,IncreasedLife,,+(10-24) to maximum Life,생명력 최대치 +(10-24),resource|life,Life,,+# to maximum Life
+Sanguine,혈액 과다의,11,1,IncreasedLife,,+(25-39) to maximum Life,생명력 최대치 +(25-39),resource|life,Life,,+# to maximum Life
+Stalwart,건장한,18,1,IncreasedLife,,+(40-54) to maximum Life,생명력 최대치 +(40-54),resource|life,Life,,+# to maximum Life
+Stout,완강한,24,1,IncreasedLife,,+(55-69) to maximum Life,생명력 최대치 +(55-69),resource|life,Life,,+# to maximum Life
+Robust,왕성한,30,1,IncreasedLife,,+(70-84) to maximum Life,생명력 최대치 +(70-84),resource|life,Life,,+# to maximum Life
+Rotund,퉁퉁한,36,1,IncreasedLife,,+(85-99) to maximum Life,생명력 최대치 +(85-99),resource|life,Life,,+# to maximum Life
+Virile,강건한,44,1,IncreasedLife,,+(100-114) to maximum Life,생명력 최대치 +(100-114),resource|life,Life,,+# to maximum Life
+Athlete's,늠름한,54,1,IncreasedLife,,+(115-129) to maximum Life,생명력 최대치 +(115-129),resource|life,Life,,+# to maximum Life
+Fecund,다산의,64,1,IncreasedLife,,+(130-144) to maximum Life,생명력 최대치 +(130-144),resource|life,Life,,+# to maximum Life
+Vigorous,정력적인,73,1,IncreasedLife,,+(145-159) to maximum Life,생명력 최대치 +(145-159),resource|life,Life,,+# to maximum Life
+Beryl,녹주색,1,1,IncreasedMana,,+(15-19) to maximum Mana,마나 최대치 +(15-19),resource|mana,Mana,,+# to maximum Mana
+Cobalt,코발트색,11,1,IncreasedMana,,+(20-24) to maximum Mana,마나 최대치 +(20-24),resource|mana,Mana,,+# to maximum Mana
+Azure,담청색,17,1,IncreasedMana,,+(25-29) to maximum Mana,마나 최대치 +(25-29),resource|mana,Mana,,+# to maximum Mana
+Sapphire,사파이어,23,1,IncreasedMana,,+(30-34) to maximum Mana,마나 최대치 +(30-34),resource|mana,Mana,,+# to maximum Mana
+Cerulean,진청색,29,1,IncreasedMana,,+(35-39) to maximum Mana,마나 최대치 +(35-39),resource|mana,Mana,,+# to maximum Mana
+Aqua,물색,35,1,IncreasedMana,,+(40-44) to maximum Mana,마나 최대치 +(40-44),resource|mana,Mana,,+# to maximum Mana
+Opalescent,오팔색,42,1,IncreasedMana,,+(45-49) to maximum Mana,마나 최대치 +(45-49),resource|mana,Mana,,+# to maximum Mana
+Gentian,용담색,51,1,IncreasedMana,,+(50-54) to maximum Mana,마나 최대치 +(50-54),resource|mana,Mana,,+# to maximum Mana
+Chalybeous,연철청색,60,1,IncreasedMana,,+(55-59) to maximum Mana,마나 최대치 +(55-59),resource|mana,Mana,,+# to maximum Mana
+Mazarine,쪽빛,69,1,IncreasedMana,,+(60-64) to maximum Mana,마나 최대치 +(60-64),resource|mana,Mana,,+# to maximum Mana
+Blue,파란색,75,1,IncreasedMana,,+(65-68) to maximum Mana,마나 최대치 +(65-68),resource|mana,Mana,,+# to maximum Mana
+Zaffre,화감청,81,1,IncreasedMana,,+(69-73) to maximum Mana,마나 최대치 +(69-73),resource|mana,Mana,,+# to maximum Mana
+Infixed,스며든,3,1,DefencesPercent,,(15-26)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (15-26)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Ingrained,물든,19,1,DefencesPercent,,(27-42)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (27-42)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Instilled,침투된,30,1,DefencesPercent,,(43-55)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (43-55)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Infused,주입된,44,1,DefencesPercent,,(56-67)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (56-67)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Inculcated,심어진,60,1,DefencesPercent,,(68-79)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (68-79)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Interpolated,보간된,72,1,DefencesPercent,,(80-91)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (80-91)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Inspired,격려된,84,1,DefencesPercent,,(92-100)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (92-100)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Interpermeated,널리 퍼진,86,1,DefencesPercent,,(101-110)% increased Armour and Energy Shield,방어도 및 에너지 보호막 (101-110)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield
+Pixie's,픽시의,2,1,DefencesPercentAndStunRecovery,,(6-13)% increased Armour and Energy Shield(6-7)% increased Stun and Block Recovery,방어도 및 에너지 보호막 (6-13)% 증가기절 및 막기 회복 (6-7)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield#% increased Stun and Block Recovery
+Gremlin's,그렘린의,19,1,DefencesPercentAndStunRecovery,,(14-20)% increased Armour and Energy Shield(8-9)% increased Stun and Block Recovery,방어도 및 에너지 보호막 (14-20)% 증가기절 및 막기 회복 (8-9)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield#% increased Stun and Block Recovery
+Boggart's,보가트의,30,1,DefencesPercentAndStunRecovery,,(21-26)% increased Armour and Energy Shield(10-11)% increased Stun and Block Recovery,방어도 및 에너지 보호막 (21-26)% 증가기절 및 막기 회복 (10-11)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield#% increased Stun and Block Recovery
+Naga's,나가의,44,1,DefencesPercentAndStunRecovery,,(27-32)% increased Armour and Energy Shield(12-13)% increased Stun and Block Recovery,방어도 및 에너지 보호막 (27-32)% 증가기절 및 막기 회복 (12-13)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield#% increased Stun and Block Recovery
+Djinn's,지니의,60,1,DefencesPercentAndStunRecovery,,(33-38)% increased Armour and Energy Shield(14-15)% increased Stun and Block Recovery,방어도 및 에너지 보호막 (33-38)% 증가기절 및 막기 회복 (14-15)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield#% increased Stun and Block Recovery
+Seraphim's,고위 천사의,78,1,DefencesPercentAndStunRecovery,,(39-42)% increased Armour and Energy Shield(16-17)% increased Stun and Block Recovery,방어도 및 에너지 보호막 (39-42)% 증가기절 및 막기 회복 (16-17)% 증가,defences|armour|energy_shield,Defences|Armour|Energy Shield,,#% increased Armour and Energy Shield#% increased Stun and Block Recovery
+Blessed,축복받은,1,1,BaseLocalDefences,,+(5-9) to Armour+(3-4) to maximum Energy Shield,방어도 +(5-9)에너지 보호막 최대치 +(3-4),defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Anointed,기름 부은,18,1,BaseLocalDefences,,+(10-27) to Armour+(5-12) to maximum Energy Shield,방어도 +(10-27)에너지 보호막 최대치 +(5-12),defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Sanctified,축성된,30,1,BaseLocalDefences,,+(28-48) to Armour+(13-22) to maximum Energy Shield,방어도 +(28-48)에너지 보호막 최대치 +(13-22),defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Hallowed,거룩한,38,1,BaseLocalDefences,,+(49-85) to Armour+(23-28) to maximum Energy Shield,방어도 +(49-85)에너지 보호막 최대치 +(23-28),defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Beatified,시복받은,46,1,BaseLocalDefences,,+(86-145) to Armour+(29-48) to maximum Energy Shield,방어도 +(86-145)에너지 보호막 최대치 +(29-48),defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Consecrated,신성한,58,1,BaseLocalDefences,,+(146-220) to Armour+(49-60) to maximum Energy Shield,방어도 +(146-220)에너지 보호막 최대치 +(49-60),defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Saintly,성인의,69,1,BaseLocalDefences,,+(221-300) to Armour+(61-72) to maximum Energy Shield,방어도 +(221-300)에너지 보호막 최대치 +(61-72),defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Oyster's,굴의,30,1,BaseLocalDefencesAndLife,,+(20-32) to Armour+(18-23) to maximum Life,방어도 +(20-32)생명력 최대치 +(18-23),resource|life|defences|armour,Life|Defences|Armour,,+# to Armour+# to maximum Life
+Urchin's,성게의,46,1,BaseLocalDefencesAndLife,,+(33-48) to Armour+(24-28) to maximum Life,방어도 +(33-48)생명력 최대치 +(24-28),resource|life|defences|armour,Life|Defences|Armour,,+# to Armour+# to maximum Life
+Nautilus's,앵무조개의,62,1,BaseLocalDefencesAndLife,,+(49-96) to Armour+(29-33) to maximum Life,방어도 +(49-96)생명력 최대치 +(29-33),resource|life|defences|armour,Life|Defences|Armour,,+# to Armour+# to maximum Life
+Monk's,수도승의,30,1,BaseLocalDefencesAndLife,,+(8-10) to maximum Energy Shield+(18-23) to maximum Life,에너지 보호막 최대치 +(8-10)생명력 최대치 +(18-23),resource|life|defences|energy_shield,Life|Defences|Energy Shield,,+# to maximum Energy Shield+# to maximum Life
+Prior's,수도원장의,46,1,BaseLocalDefencesAndLife,,+(11-15) to maximum Energy Shield+(24-28) to maximum Life,에너지 보호막 최대치 +(11-15)생명력 최대치 +(24-28),resource|life|defences|energy_shield,Life|Defences|Energy Shield,,+# to maximum Energy Shield+# to maximum Life
+Abbot's,대수도원장의,62,1,BaseLocalDefencesAndLife,,+(16-25) to maximum Energy Shield+(29-33) to maximum Life,에너지 보호막 최대치 +(16-25)생명력 최대치 +(29-33),resource|life|defences|energy_shield,Life|Defences|Energy Shield,,+# to maximum Energy Shield+# to maximum Life
+Acolyte's,조수의,30,1,BaseLocalDefencesAndLife,,+(8-10) to maximum Energy Shield+(11-15) to maximum Mana,에너지 보호막 최대치 +(8-10)마나 최대치 +(11-15),resource|mana|defences|energy_shield,Mana|Defences|Energy Shield,,+# to maximum Energy Shield+# to maximum Mana
+Deacon's,부제의,46,1,BaseLocalDefencesAndLife,,+(11-15) to maximum Energy Shield+(16-19) to maximum Mana,에너지 보호막 최대치 +(11-15)마나 최대치 +(16-19),resource|mana|defences|energy_shield,Mana|Defences|Energy Shield,,+# to maximum Energy Shield+# to maximum Mana
+Priest's,사제의,62,1,BaseLocalDefencesAndLife,,+(16-25) to maximum Energy Shield+(20-22) to maximum Mana,에너지 보호막 최대치 +(16-25)마나 최대치 +(20-22),resource|mana|defences|energy_shield,Mana|Defences|Energy Shield,,+# to maximum Energy Shield+# to maximum Mana
+of the Newt,- 도롱뇽,1,2,LifeRegeneration,,Regenerate (1-2) Life per second,1초마다 생명력 (1-2) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of the Lizard,- 도마뱀,7,2,LifeRegeneration,,Regenerate (2.1-8) Life per second,1초마다 생명력 (2.1-8) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of the Flatworm,- 편형동물,19,2,LifeRegeneration,,Regenerate (8.1-16) Life per second,1초마다 생명력 (8.1-16) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of the Starfish,- 불가사리,31,2,LifeRegeneration,,Regenerate (16.1-24) Life per second,1초마다 생명력 (16.1-24) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of the Hydra,- 히드라,44,2,LifeRegeneration,,Regenerate (24.1-32) Life per second,1초마다 생명력 (24.1-32) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of the Troll,- 트롤,55,2,LifeRegeneration,,Regenerate (32.1-48) Life per second,1초마다 생명력 (32.1-48) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of Ryslatha,- 리슬라사,68,2,LifeRegeneration,,Regenerate (48.1-64) Life per second,1초마다 생명력 (48.1-64) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of the Phoenix,- 불사조,74,2,LifeRegeneration,,Regenerate (64.1-96) Life per second,1초마다 생명력 (64.1-96) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of Recuperation,- 회생,78,2,LifeRegeneration,,Regenerate (96.1-128) Life per second,1초마다 생명력 (96.1-128) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of Life-giving,- 생명 부여,83,2,LifeRegeneration,,Regenerate (128.1-152) Life per second,1초마다 생명력 (128.1-152) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+of Excitement,- 흥분,2,2,ManaRegeneration,,(10-19)% increased Mana Regeneration Rate,마나 재생 속도 (10-19)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of Joy,- 기쁨,18,2,ManaRegeneration,,(20-29)% increased Mana Regeneration Rate,마나 재생 속도 (20-29)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of Elation,- 원기왕성,29,2,ManaRegeneration,,(30-39)% increased Mana Regeneration Rate,마나 재생 속도 (30-39)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of Bliss,- 지복,42,2,ManaRegeneration,,(40-49)% increased Mana Regeneration Rate,마나 재생 속도 (40-49)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of Euphoria,- 환희,55,2,ManaRegeneration,,(50-59)% increased Mana Regeneration Rate,마나 재생 속도 (50-59)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of Nirvana,- 열반,79,2,ManaRegeneration,,(60-69)% increased Mana Regeneration Rate,마나 재생 속도 (60-69)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
+of the Whelpling,- 새끼용,1,2,FireResistance,,+(6-11)% to Fire Resistance,화염 저항 +(6-11)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Salamander,- 불도마뱀,12,2,FireResistance,,+(12-17)% to Fire Resistance,화염 저항 +(12-17)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Drake,- 비룡,24,2,FireResistance,,+(18-23)% to Fire Resistance,화염 저항 +(18-23)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Kiln,- 가마,36,2,FireResistance,,+(24-29)% to Fire Resistance,화염 저항 +(24-29)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Furnace,- 용광로,48,2,FireResistance,,+(30-35)% to Fire Resistance,화염 저항 +(30-35)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Volcano,- 화산,60,2,FireResistance,,+(36-41)% to Fire Resistance,화염 저항 +(36-41)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Magma,- 마그마,72,2,FireResistance,,+(42-45)% to Fire Resistance,화염 저항 +(42-45)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of Tzteosh,- 체오쉬,84,2,FireResistance,,+(46-48)% to Fire Resistance,화염 저항 +(46-48)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of the Inuit,- 이누이트,1,2,ColdResistance,,+(6-11)% to Cold Resistance,냉기 저항 +(6-11)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Seal,- 봉인,14,2,ColdResistance,,+(12-17)% to Cold Resistance,냉기 저항 +(12-17)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Penguin,- 펭귄,26,2,ColdResistance,,+(18-23)% to Cold Resistance,냉기 저항 +(18-23)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Yeti,- 설인,38,2,ColdResistance,,+(24-29)% to Cold Resistance,냉기 저항 +(24-29)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Walrus,- 바다코끼리,50,2,ColdResistance,,+(30-35)% to Cold Resistance,냉기 저항 +(30-35)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Polar Bear,- 북극곰,60,2,ColdResistance,,+(36-41)% to Cold Resistance,냉기 저항 +(36-41)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Ice,- 얼음판,72,2,ColdResistance,,+(42-45)% to Cold Resistance,냉기 저항 +(42-45)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of Haast,- 하스트,84,2,ColdResistance,,+(46-48)% to Cold Resistance,냉기 저항 +(46-48)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of the Cloud,- 구름,1,2,LightningResistance,,+(6-11)% to Lightning Resistance,번개 저항 +(6-11)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Squall,- 돌풍,13,2,LightningResistance,,+(12-17)% to Lightning Resistance,번개 저항 +(12-17)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Storm,- 태풍,25,2,LightningResistance,,+(18-23)% to Lightning Resistance,번개 저항 +(18-23)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Thunderhead,- 뇌운,37,2,LightningResistance,,+(24-29)% to Lightning Resistance,번개 저항 +(24-29)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Tempest,- 폭풍,49,2,LightningResistance,,+(30-35)% to Lightning Resistance,번개 저항 +(30-35)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Maelstrom,- 큰 소용돌이,60,2,LightningResistance,,+(36-41)% to Lightning Resistance,번개 저항 +(36-41)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Lightning,- 번개,72,2,LightningResistance,,+(42-45)% to Lightning Resistance,번개 저항 +(42-45)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of Ephij,- 에피즈,84,2,LightningResistance,,+(46-48)% to Lightning Resistance,번개 저항 +(46-48)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of the Lost,- 상실,16,2,ChaosResistance,,+(5-10)% to Chaos Resistance,카오스 저항 +(5-10)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Banishment,- 추방,30,2,ChaosResistance,,+(11-15)% to Chaos Resistance,카오스 저항 +(11-15)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Eviction,- 퇴거,44,2,ChaosResistance,,+(16-20)% to Chaos Resistance,카오스 저항 +(16-20)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Expulsion,- 축출,56,2,ChaosResistance,,+(21-25)% to Chaos Resistance,카오스 저항 +(21-25)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Exile,- 유배자,65,2,ChaosResistance,,+(26-30)% to Chaos Resistance,카오스 저항 +(26-30)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of Bameth,- 바메스,81,2,ChaosResistance,,+(31-35)% to Chaos Resistance,카오스 저항 +(31-35)%,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance
+of the Crystal,- 결정,12,2,AllResistances,,+(3-5)% to all Elemental Resistances,모든 원소 저항 +(3-5)%,elemental|resistance,Elemental|Resistance,,+#% to all Elemental Resistances
+of the Prism,- 분광기,24,2,AllResistances,,+(6-8)% to all Elemental Resistances,모든 원소 저항 +(6-8)%,elemental|resistance,Elemental|Resistance,,+#% to all Elemental Resistances
+of the Kaleidoscope,- 만화경,36,2,AllResistances,,+(9-11)% to all Elemental Resistances,모든 원소 저항 +(9-11)%,elemental|resistance,Elemental|Resistance,,+#% to all Elemental Resistances
+of Variegation,- 얼룩무늬,48,2,AllResistances,,+(12-14)% to all Elemental Resistances,모든 원소 저항 +(12-14)%,elemental|resistance,Elemental|Resistance,,+#% to all Elemental Resistances
+of the Rainbow,- 무지개,60,2,AllResistances,,+(15-16)% to all Elemental Resistances,모든 원소 저항 +(15-16)%,elemental|resistance,Elemental|Resistance,,+#% to all Elemental Resistances
+of the Span,- 전체 색,85,2,AllResistances,,+(17-18)% to all Elemental Resistances,모든 원소 저항 +(17-18)%,elemental|resistance,Elemental|Resistance,,+#% to all Elemental Resistances
+of Thick Skin,- 두꺼운 가죽,1,2,StunRecovery,,(11-13)% increased Stun and Block Recovery,기절 및 막기 회복 (11-13)% 증가,,,,#% increased Stun and Block Recovery
+of Stone Skin,- 돌 가죽,17,2,StunRecovery,,(14-16)% increased Stun and Block Recovery,기절 및 막기 회복 (14-16)% 증가,,,,#% increased Stun and Block Recovery
+of Iron Skin,- 쇠 가죽,28,2,StunRecovery,,(17-19)% increased Stun and Block Recovery,기절 및 막기 회복 (17-19)% 증가,,,,#% increased Stun and Block Recovery
+of Steel Skin,- 강철 가죽,42,2,StunRecovery,,(20-22)% increased Stun and Block Recovery,기절 및 막기 회복 (20-22)% 증가,,,,#% increased Stun and Block Recovery
+of Adamantite Skin,- 아다만타이트 가죽,56,2,StunRecovery,,(23-25)% increased Stun and Block Recovery,기절 및 막기 회복 (23-25)% 증가,,,,#% increased Stun and Block Recovery
+of Corundum Skin,- 강옥 가죽,79,2,StunRecovery,,(26-28)% increased Stun and Block Recovery,기절 및 막기 회복 (26-28)% 증가,,,,#% increased Stun and Block Recovery
+of Menace,- 위험,11,2,SpellCriticalStrikeChanceIncrease,,(10-19)% increased Spell Critical Strike Chance,주문 치명타 확률 (10-19)% 증가,caster|critical,Caster|Critical,,#% increased Spell Critical Strike Chance
+of Havoc,- 혼란,21,2,SpellCriticalStrikeChanceIncrease,,(20-39)% increased Spell Critical Strike Chance,주문 치명타 확률 (20-39)% 증가,caster|critical,Caster|Critical,,#% increased Spell Critical Strike Chance
+of Disaster,- 재난,28,2,SpellCriticalStrikeChanceIncrease,,(40-59)% increased Spell Critical Strike Chance,주문 치명타 확률 (40-59)% 증가,caster|critical,Caster|Critical,,#% increased Spell Critical Strike Chance
+of Calamity,- 대재난,41,2,SpellCriticalStrikeChanceIncrease,,(60-79)% increased Spell Critical Strike Chance,주문 치명타 확률 (60-79)% 증가,caster|critical,Caster|Critical,,#% increased Spell Critical Strike Chance
+of Ruin,- 폐허,59,2,SpellCriticalStrikeChanceIncrease,,(80-99)% increased Spell Critical Strike Chance,주문 치명타 확률 (80-99)% 증가,caster|critical,Caster|Critical,,#% increased Spell Critical Strike Chance
+of Unmaking,- 멸망,76,2,SpellCriticalStrikeChanceIncrease,,(100-109)% increased Spell Critical Strike Chance,주문 치명타 확률 (100-109)% 증가,caster|critical,Caster|Critical,,#% increased Spell Critical Strike Chance
+Combatant's,전투원의,8,1,IncreaseSpecificSocketedGemLevel,,+1 to Level of Socketed Melee Gems,장착된 근접 젬 레벨 +1,attack|gem,Attack|Gem,,+# to Level of Socketed Melee Gems
+Weaponmaster's,무기의 대가의,63,1,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Melee Gems,장착된 근접 젬 레벨 +2,attack|gem,Attack|Gem,,+# to Level of Socketed Melee Gems
+Thorny,가시 있는,1,1,AttackerTakesDamageNoRange,,Reflects (1-4) Physical Damage to Melee Attackers,근접 공격자에게 (1-4)의 물리 피해 반사,physical_damage|damage|physical,Damage|Physical,,Reflects # Physical Damage to Melee Attackers
+Spiny,가시투성이,10,1,AttackerTakesDamageNoRange,,Reflects (5-10) Physical Damage to Melee Attackers,근접 공격자에게 (5-10)의 물리 피해 반사,physical_damage|damage|physical,Damage|Physical,,Reflects # Physical Damage to Melee Attackers
+Barbed,가시 돋친,20,1,AttackerTakesDamageNoRange,,Reflects (11-24) Physical Damage to Melee Attackers,근접 공격자에게 (11-24)의 물리 피해 반사,physical_damage|damage|physical,Damage|Physical,,Reflects # Physical Damage to Melee Attackers
+Jagged,삐죽삐죽한,35,1,AttackerTakesDamageNoRange,,Reflects (25-50) Physical Damage to Melee Attackers,근접 공격자에게 (25-50)의 물리 피해 반사,physical_damage|damage|physical,Damage|Physical,,Reflects # Physical Damage to Melee Attackers
+of the Worthy,- 자격자,36,2,LocalAttributeRequirements,,18% reduced Attribute Requirements,능력치 요구사항 18% 감소,,,,#% reduced Attribute Requirements
+of the Apt,- 적격자,60,2,LocalAttributeRequirements,,32% reduced Attribute Requirements,능력치 요구사항 32% 감소,,,,#% reduced Attribute Requirements
+Steadfast,요지부동의,2,1,IncreasedShieldBlockPercentage,,(40-45)% increased Chance to Block,막기 확률 (40-45)% 증가,block,,,#% increased Chance to Block
+Unrelenting,가차없는,15,1,IncreasedShieldBlockPercentage,,(46-51)% increased Chance to Block,막기 확률 (46-51)% 증가,block,,,#% increased Chance to Block
+Adamant,견고한,35,1,IncreasedShieldBlockPercentage,,(52-57)% increased Chance to Block,막기 확률 (52-57)% 증가,block,,,#% increased Chance to Block
+Warded,수호받는,48,1,IncreasedShieldBlockPercentage,,(58-63)% increased Chance to Block,막기 확률 (58-63)% 증가,block,,,#% increased Chance to Block
+Unwavering,변함없는,61,1,IncreasedShieldBlockPercentage,,(64-69)% increased Chance to Block,막기 확률 (64-69)% 증가,block,,,#% increased Chance to Block
+Enduring,인내의,77,1,IncreasedShieldBlockPercentage,,(70-75)% increased Chance to Block,막기 확률 (70-75)% 증가,block,,,#% increased Chance to Block
+Unyielding,완고한,86,1,IncreasedShieldBlockPercentage,,(76-81)% increased Chance to Block,막기 확률 (76-81)% 증가,block,,,#% increased Chance to Block
+Mystic,신비한,16,1,SpellBlockPercentage,,(4-5)% Chance to Block Spell Damage,(4-5)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+Clairvoyant,예지력의,28,1,SpellBlockPercentage,,(6-7)% Chance to Block Spell Damage,(6-7)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+Enigmatic,수수께끼의,40,1,SpellBlockPercentage,,(8-9)% Chance to Block Spell Damage,(8-9)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+Enlightened,계몽의,55,1,SpellBlockPercentage,,(10-11)% Chance to Block Spell Damage,(10-11)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+Seer's,예견자의,66,1,SpellBlockPercentage,,(12-13)% Chance to Block Spell Damage,(12-13)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+Oracle's,신탁의,77,1,SpellBlockPercentage,,(14-15)% Chance to Block Spell Damage,(14-15)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+of Stoicism,- 극기,23,2,AvoidElementalStatusAilments,,(16-20)% chance to Avoid Elemental Ailments,(16-20)%의 확률로 원소 상태 이상 긴급회피,elemental|fire|cold|lightning|ailment,Elemental|Fire|Cold|Lightning|Ailment,,#% chance to Avoid Elemental Ailments
+of Resolve,- 결의,41,2,AvoidElementalStatusAilments,,(21-25)% chance to Avoid Elemental Ailments,(21-25)%의 확률로 원소 상태 이상 긴급회피,elemental|fire|cold|lightning|ailment,Elemental|Fire|Cold|Lightning|Ailment,,#% chance to Avoid Elemental Ailments
+of Fortitude,- 강건함,57,2,AvoidElementalStatusAilments,,(26-30)% chance to Avoid Elemental Ailments,(26-30)%의 확률로 원소 상태 이상 긴급회피,elemental|fire|cold|lightning|ailment,Elemental|Fire|Cold|Lightning|Ailment,,#% chance to Avoid Elemental Ailments
+of Will,- 의지,73,2,AvoidElementalStatusAilments,,(31-35)% chance to Avoid Elemental Ailments,(31-35)%의 확률로 원소 상태 이상 긴급회피,elemental|fire|cold|lightning|ailment,Elemental|Fire|Cold|Lightning|Ailment,,#% chance to Avoid Elemental Ailments
+of the Watchman,- 감시원,45,2,ReducedPhysicalDamageTaken,,4% additional Physical Damage Reduction,받는 물리 피해 4% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+of the Sentry,- 보초,58,2,ReducedPhysicalDamageTaken,,5% additional Physical Damage Reduction,받는 물리 피해 5% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+of the Keeper,- 보관자,67,2,ReducedPhysicalDamageTaken,,6% additional Physical Damage Reduction,받는 물리 피해 6% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+of the Protector,- 보호자,77,2,ReducedPhysicalDamageTaken,,7% additional Physical Damage Reduction,받는 물리 피해 7% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+of the Conservator,- 보존자,86,2,ReducedPhysicalDamageTaken,,8% additional Physical Damage Reduction,받는 물리 피해 8% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+of Enlivening,- 활력 부여,45,2,EnergyShieldDelay,,(27-34)% faster start of Energy Shield Recharge,에너지 보호막 재충전 시작 속도 (27-34)% 가속,defences|energy_shield,Defences|Energy Shield,,#% faster start of Energy Shield Recharge
+of Zest,- 생기,58,2,EnergyShieldDelay,,(35-42)% faster start of Energy Shield Recharge,에너지 보호막 재충전 시작 속도 (35-42)% 가속,defences|energy_shield,Defences|Energy Shield,,#% faster start of Energy Shield Recharge
+of Galvanising,- 자극,67,2,EnergyShieldDelay,,(43-50)% faster start of Energy Shield Recharge,에너지 보호막 재충전 시작 속도 (43-50)% 가속,defences|energy_shield,Defences|Energy Shield,,#% faster start of Energy Shield Recharge
+of Vigour,- 활력,77,2,EnergyShieldDelay,,(51-58)% faster start of Energy Shield Recharge,에너지 보호막 재충전 시작 속도 (51-58)% 가속,defences|energy_shield,Defences|Energy Shield,,#% faster start of Energy Shield Recharge
+of Second Wind,- 새로운 활력,86,2,EnergyShieldDelay,,(59-66)% faster start of Energy Shield Recharge,에너지 보호막 재충전 시작 속도 (59-66)% 가속,defences|energy_shield,Defences|Energy Shield,,#% faster start of Energy Shield Recharge
+of Dulling,- 둔화,33,2,ReducedExtraDamageFromCrits,,You take (21-30)% reduced Extra Damage from Critical Strikes,치명타로 받는 추가 피해 (21-30)% 감소,damage|critical,Damage|Critical,,You take #% reduced Extra Damage from Critical Strikes
+of Deadening,- 감쇠,45,2,ReducedExtraDamageFromCrits,,You take (31-40)% reduced Extra Damage from Critical Strikes,치명타로 받는 추가 피해 (31-40)% 감소,damage|critical,Damage|Critical,,You take #% reduced Extra Damage from Critical Strikes
+of Interference,- 방해,67,2,ReducedExtraDamageFromCrits,,You take (41-50)% reduced Extra Damage from Critical Strikes,치명타로 받는 추가 피해 (41-50)% 감소,damage|critical,Damage|Critical,,You take #% reduced Extra Damage from Critical Strikes
+of Obstruction,- 장애물,78,2,ReducedExtraDamageFromCrits,,You take (51-60)% reduced Extra Damage from Critical Strikes,치명타로 받는 추가 피해 (51-60)% 감소,damage|critical,Damage|Critical,,You take #% reduced Extra Damage from Critical Strikes
+of the Bushfire,- 산불,68,2,MaximumFireResist,,+1% to maximum Fire Resistance,화염 저항 최대치 +1%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to maximum Fire Resistance
+of the Molten Core,- 녹아내린 핵,75,2,MaximumFireResist,,+2% to maximum Fire Resistance,화염 저항 최대치 +2%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to maximum Fire Resistance
+of the Solar Storm,- 태양 폭풍,81,2,MaximumFireResist,,+3% to maximum Fire Resistance,화염 저항 최대치 +3%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to maximum Fire Resistance
+of Furs,- 털가죽,68,2,MaximumColdResist,,+1% to maximum Cold Resistance,냉기 저항 최대치 +1%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to maximum Cold Resistance
+of the Tundra,- 동토,75,2,MaximumColdResist,,+2% to maximum Cold Resistance,냉기 저항 최대치 +2%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to maximum Cold Resistance
+of the Mammoth,- 매머드,81,2,MaximumColdResist,,+3% to maximum Cold Resistance,냉기 저항 최대치 +3%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to maximum Cold Resistance
+of Impedance,- 저해,68,2,MaximumLightningResistance,,+1% to maximum Lightning Resistance,번개 저항 최대치 +1%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to maximum Lightning Resistance
+of Shockproofing,- 감전 방지,75,2,MaximumLightningResistance,,+2% to maximum Lightning Resistance,번개 저항 최대치 +2%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to maximum Lightning Resistance
+of the Lightning Rod,- 피뢰침,81,2,MaximumLightningResistance,,+3% to maximum Lightning Resistance,번개 저항 최대치 +3%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to maximum Lightning Resistance
+of Regularity,- 규칙성,68,2,MaximumChaosResistance,,+1% to maximum Chaos Resistance,카오스 저항 최대치 +1%,chaos|resistance,Chaos|Resistance,,+#% to maximum Chaos Resistance
+of Concord,- 화합,75,2,MaximumChaosResistance,,+2% to maximum Chaos Resistance,카오스 저항 최대치 +2%,chaos|resistance,Chaos|Resistance,,+#% to maximum Chaos Resistance
+of Harmony,- 조화,81,2,MaximumChaosResistance,,+3% to maximum Chaos Resistance,카오스 저항 최대치 +3%,chaos|resistance,Chaos|Resistance,,+#% to maximum Chaos Resistance
+of the Sempiternal,- 불후,75,2,MaximumResistances,,+1% to all maximum Resistances,모든 저항 최대치 +1%,resistance,Resistance,,+#% to all maximum Resistances
+of the Deathless,- 불사,81,2,MaximumResistances,,+2% to all maximum Resistances,모든 저항 최대치 +2%,resistance,Resistance,,+#% to all maximum Resistances

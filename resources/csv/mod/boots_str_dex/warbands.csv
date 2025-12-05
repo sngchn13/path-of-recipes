@@ -1,0 +1,2 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
+Mutewind,고요한 바람단,1,1,CannotBeFrozen,,Cannot be Frozen,동결될 수 없음,elemental|cold|ailment,Elemental|Cold|Ailment,,Cannot be Frozen

@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-anyhow = "1.0.100"
+anyhow = { workspace = true }
 axum = { version = "0.8.7", features = ["json", "macros"] }
 dotenvy = "0.15.7"
 serde = { workspace = true }
@@ -13,6 +13,6 @@ tower = { version = "0.5.2", features = ["full"] }
 tower-http = { version = "0.6.6", features = ["full"] }
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.20", features = ["env-filter"] } #로그 출력방식을 설정함. .env로부터 출력방식을 가져오도록 함.
-sea-orm = { workspace = true}
+sea-orm = { workspace = true }
 entity = { path = "../entity" }
 migration = { path = "../migration" }

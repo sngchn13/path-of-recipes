@@ -21,7 +21,7 @@ impl MigrationTrait for Migration {
                     .col(tiny_unsigned(Mod::Tier).null())
                     .col(integer(Mod::ModGroupId))
                     .col(string(Mod::DeprecatedVersion).null())
-                    .col(timestamp_with_time_zone(Mod::CreatedAt))
+                    .col(timestamp_with_time_zone(Mod::CreatedAt).default(Expr::current_timestamp()))
                     .col(timestamp_with_time_zone(Mod::UpdatedAt).null())
                     .foreign_key(
                         ForeignKey::create()

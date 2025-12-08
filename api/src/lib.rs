@@ -1,4 +1,4 @@
-use migration::{Migrator, MigratorTrait};
+//use migration::{Migrator, MigratorTrait};
 
 use crate::{app::{build_router, get_state, startup::host_and_port}};
 
@@ -12,7 +12,7 @@ async fn start() -> anyhow::Result<()> {
     app::startup().ok();
     
     let state = get_state().await;
-    Migrator::up(&state.conn, None).await.unwrap();
+    //Migrator::up(&state.conn, None).await.unwrap();
 
     let router = build_router(state);
 

@@ -9,19 +9,19 @@ impl MigrationTrait for Migration {
         manager
             .create_table(
                 Table::create()
-                    .table(ModTag::Table)
+                    .table(ModGroupTag::Table)
                     .if_not_exists()
-                    .col(integer(ModTag::ModGroupId))
-                    .col(integer(ModTag::TagId))
+                    .col(integer(ModGroupTag::ModGroupId))
+                    .col(integer(ModGroupTag::TagId))
                     .primary_key(
                         Index::create()
-                            .col(ModTag::ModGroupId)
-                            .col(ModTag::TagId)
+                            .col(ModGroupTag::ModGroupId)
+                            .col(ModGroupTag::TagId)
                     )
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_mod_group_id")
-                            .from("mod_tags", "mod_group_id")
+                            .from("mod_group_tags", "mod_group_id")
                             .to("mod_groups", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -29,7 +29,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_tag_id")
-                            .from("mod_tags", "tag_id")
+                            .from("mod_group_tags", "tag_id")
                             .to("tags", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -43,7 +43,7 @@ impl MigrationTrait for Migration {
 
     async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
         manager
-            .drop_table(Table::drop().table(ModTag::Table).to_owned())
+            .drop_table(Table::drop().table(ModGroupTag::Table).to_owned())
             .await?;
 
         Ok(())
@@ -51,7 +51,7 @@ impl MigrationTrait for Migration {
 }
 
 #[derive(DeriveIden)]
-enum ModTag {
+enum ModGroupTag {
     #[sea_orm(iden = "mod_group_tags")]
     Table,
     ModGroupId,

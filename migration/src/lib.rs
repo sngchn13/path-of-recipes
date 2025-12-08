@@ -28,6 +28,7 @@ mod m20251127_080024_seed_cause;
 mod m20251127_093003_seed_family;
 mod m20251205_113229_seed_mod_generation_type;
 mod m20251205_121016_seed_placement_type;
+mod m20251205_123555_seed_mod;
 
 
 
@@ -65,6 +66,7 @@ impl MigratorTrait for Migrator {
             Box::new(m20251127_093003_seed_family::Migration),
             Box::new(m20251205_113229_seed_mod_generation_type::Migration),
             Box::new(m20251205_121016_seed_placement_type::Migration),
+            Box::new(m20251205_123555_seed_mod::Migration),
         ]
     }
 }

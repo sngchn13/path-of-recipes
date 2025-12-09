@@ -111,8 +111,8 @@ fn section_record_transform(csv_records: Vec<CsvRecord>, item_type_name: &str, s
             },
             None => {
 
-                // family_list
-                let family_list: Vec<String> = record
+                // family_set
+                let family_set: HashSet<String> = record
                     .mod_family_list
                     .split('|')
                     .map(|s| s.trim())
@@ -120,20 +120,21 @@ fn section_record_transform(csv_records: Vec<CsvRecord>, item_type_name: &str, s
                     .map(|s| s.to_string())
                     .collect();
 
-                // tag_list (중복 제거)
-                let mut tag_set = HashSet::new();
-                let mut tag_list = Vec::new();
-                for t in record.tags.split('|').map(|s| s.trim()).filter(|s| !s.is_empty()) {
-                    if tag_set.insert(t) {
-                        tag_list.push(t.to_string());
-                    }
-                }
+                // tag_set
+                let tag_set: HashSet<String> = record
+                    .tags
+                    .split('|')
+                    .map(|s| s.trim())
+                    .filter(|s| !s.is_empty())
+                    .map(|s| s.to_string())
+                    .collect();
+
 
                 let mod_group = CsvModGroup::new(
                     record.mod_group.to_string(), 
                     record.mod_generation_type_id, 
-                    family_list, 
-                    tag_list,
+                    family_set, 
+                    tag_set,
                     vec![mod_item], 
                     item_type_name.to_string(), 
                     section_name.to_string(),
@@ -173,7 +174,7 @@ async fn persist_mods_per_mod_group<'c>(csv_mod_groups: Vec<CsvModGroup>, cache:
         let saved_mod_group_model = mod_groups::Entity::insert(mod_group_model).exec_with_returning(db).await?;
         
         //태그 저장
-        for tag_name in csv_mod_group.tag_list {
+        for tag_name in csv_mod_group.tag_set {
             let tag_id = cache.get_tag_id(&tag_name)
                 .ok_or_else(|| anyhow!("tag({}) doesn't exists", &tag_name))?;
             
@@ -187,7 +188,7 @@ async fn persist_mods_per_mod_group<'c>(csv_mod_groups: Vec<CsvModGroup>, cache:
         }
         
         //패밀리 저장
-        for family_name in csv_mod_group.family_list {
+        for family_name in csv_mod_group.family_set {
             let family_id = cache.get_family_id(&family_name)
                 .ok_or_else(|| anyhow!("family({}) doesn't exist", family_name))?;
 
@@ -299,18 +300,18 @@ struct CsvRecord {
 struct CsvModGroup{
     value: String,
     generation_type_id: i32,
-    family_list: Vec<String>,
-    tag_list: Vec<String>,
+    family_set: HashSet<String>,
+    tag_set: HashSet<String>,
     mod_list: Vec<CsvMod>,
     item_type: String,
     section: String,
 }
 
 impl CsvModGroup {
-    fn new(value: String, generation_type_id: i32, family_list: Vec<String>, tag_list: Vec<String>, mod_list: Vec<CsvMod>, item_type: String, section: String)
+    fn new(value: String, generation_type_id: i32, family_set: HashSet<String>, tag_set: HashSet<String>, mod_list: Vec<CsvMod>, item_type: String, section: String)
      -> CsvModGroup 
     {
-        CsvModGroup { value, generation_type_id, family_list, tag_list, mod_list, item_type, section }
+        CsvModGroup { value, generation_type_id, family_set, tag_set, mod_list, item_type, section }
     }
 }
 
@@ -426,8 +427,8 @@ of the Prodigy,- 영재,22,2,Intelligence,,+(18-22) to Intelligence,지능 +(18-
             .expect("group 'of the Brute' not found");
 
         assert_eq!(brute.generation_type_id, 2);
-        assert_eq!(brute.family_list, vec!["Strength".to_string()]);
-        assert_eq!(brute.tag_list, vec!["attribute".to_string()]);
+        assert_eq!(brute.family_set, HashSet::from(["Strength".to_string()]));
+        assert_eq!(brute.tag_set, HashSet::from(["attribute".to_string()]));
         assert_eq!(brute.item_type, item_type_name.to_string());
         assert_eq!(brute.section, section_name.to_string());
         assert_eq!(brute.mod_list.len(), 1);
@@ -445,7 +446,7 @@ of the Prodigy,- 영재,22,2,Intelligence,,+(18-22) to Intelligence,지능 +(18-
             .find(|g| g.value == "of the Prodigy")
             .expect("group 'of the Prodigy' not found");
 
-        assert_eq!(prodigy.family_list, vec!["Intelligence".to_string()]);
+        assert_eq!(prodigy.family_set, HashSet::from(["Intelligence".to_string()]));
         assert_eq!(prodigy.mod_list.len(), 1);
         let pm = &prodigy.mod_list[0];
         assert_eq!(pm.level, 22);

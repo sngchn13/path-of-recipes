@@ -201,7 +201,7 @@ async fn persist_mods_per_mod_group<'c>(csv_mod_groups: Vec<CsvModGroup>, cache:
         }
 
         //mod 저장
-        for csv_mod in csv_mod_group.mod_list {
+        for (idx, csv_mod) in csv_mod_group.mod_list.into_iter().enumerate() {
             let mod_item = mods::ActiveModel{
                 name_en: Set(csv_mod.name_en),
                 name_kor: Set(csv_mod.name_kor),
@@ -209,7 +209,7 @@ async fn persist_mods_per_mod_group<'c>(csv_mod_groups: Vec<CsvModGroup>, cache:
                 display_kor: Set(csv_mod.display_kor),
                 req_item_level: Set(csv_mod.level),
                 weight: Set(None), //weight값 가져오기,
-                tier: Set(None),
+                tier: Set(Some((idx + 1) as i16)),
                 mod_group_id: Set(saved_mod_group_model.id),
                 deprecated_version: Set(None),
                 ..Default::default()

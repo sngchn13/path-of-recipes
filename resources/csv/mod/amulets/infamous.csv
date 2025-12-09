@@ -1,2 +1,2 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Infamous,악명 높은,68,1,MaxBlades,,Skills that leave Lingering Blades have +(5-10) to Maximum Lingering Blades,지속되는 칼날을 남기는 스킬의 지속되는 칼날 개수 최대치 +(5-10),,,,Skills that leave Lingering Blades have +# to Maximum Lingering Blades
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Infamous,악명 높은,68,1,MaxBlades,Skills that leave Lingering Blades have +(5—10) to Maximum Lingering Blades,지속되는 칼날을 남기는 스킬의 지속되는 칼날 개수 최대치 +(5-10),,0,,,,Skills that leave Lingering Blades have +# to Maximum Lingering Blades

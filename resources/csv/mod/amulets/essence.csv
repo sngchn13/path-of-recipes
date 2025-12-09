@@ -1,105 +1,105 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Whispering Essence of Hatred,속삭이는 증오의 에센스,1,2,ColdDamagePercentage,,(6-10)% increased Cold Damage,냉기 피해 (6-10)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Muttering Essence of Hatred,불평하는 증오의 에센스,10,2,ColdDamagePercentage,,(11-14)% increased Cold Damage,냉기 피해 (11-14)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Weeping Essence of Hatred,흐느끼는 증오의 에센스,26,2,ColdDamagePercentage,,(15-18)% increased Cold Damage,냉기 피해 (15-18)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Wailing Essence of Hatred,울부짖는 증오의 에센스,42,2,ColdDamagePercentage,,(19-22)% increased Cold Damage,냉기 피해 (19-22)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Screaming Essence of Hatred,절규하는 증오의 에센스,58,2,ColdDamagePercentage,,(23-26)% increased Cold Damage,냉기 피해 (23-26)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Shrieking Essence of Hatred,악을 쓰는 증오의 에센스,74,2,ColdDamagePercentage,,(27-30)% increased Cold Damage,냉기 피해 (27-30)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Deafening Essence of Hatred,귀를 찢는 증오의 에센스,82,2,ColdDamagePercentage,,(31-34)% increased Cold Damage,냉기 피해 (31-34)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Whispering Essence of Woe,속삭이는 비애의 에센스,3,1,EnergyShieldPercent,,(2-4)% increased maximum Energy Shield,에너지 보호막 최대치 (2-4)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
-Muttering Essence of Woe,불평하는 비애의 에센스,18,1,EnergyShieldPercent,,(5-7)% increased maximum Energy Shield,에너지 보호막 최대치 (5-7)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
-Weeping Essence of Woe,흐느끼는 비애의 에센스,30,1,EnergyShieldPercent,,(8-10)% increased maximum Energy Shield,에너지 보호막 최대치 (8-10)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
-Wailing Essence of Woe,울부짖는 비애의 에센스,42,1,EnergyShieldPercent,,(11-13)% increased maximum Energy Shield,에너지 보호막 최대치 (11-13)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
-Screaming Essence of Woe,절규하는 비애의 에센스,56,1,EnergyShieldPercent,,(14-16)% increased maximum Energy Shield,에너지 보호막 최대치 (14-16)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
-Shrieking Essence of Woe,악을 쓰는 비애의 에센스,77,1,EnergyShieldPercent,,(17-18)% increased maximum Energy Shield,에너지 보호막 최대치 (17-18)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
-Deafening Essence of Woe,귀를 찢는 비애의 에센스,82,1,EnergyShieldPercent,,(18-19)% increased maximum Energy Shield,에너지 보호막 최대치 (18-19)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
-Whispering Essence of Greed,속삭이는 탐욕의 에센스,1,2,LifeRegeneration,,Regenerate (1-2) Life per second,1초마다 생명력 (1-2) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
-Muttering Essence of Greed,불평하는 탐욕의 에센스,7,2,LifeRegeneration,,Regenerate (2.1-8) Life per second,1초마다 생명력 (2.1-8) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
-Weeping Essence of Greed,흐느끼는 탐욕의 에센스,19,2,LifeRegeneration,,Regenerate (8.1-16) Life per second,1초마다 생명력 (8.1-16) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
-Wailing Essence of Greed,울부짖는 탐욕의 에센스,31,2,LifeRegeneration,,Regenerate (16.1-24) Life per second,1초마다 생명력 (16.1-24) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
-Screaming Essence of Greed,절규하는 탐욕의 에센스,44,2,LifeRegeneration,,Regenerate (24.1-32) Life per second,1초마다 생명력 (24.1-32) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
-Shrieking Essence of Greed,악을 쓰는 탐욕의 에센스,55,2,LifeRegeneration,,Regenerate (32.1-48) Life per second,1초마다 생명력 (32.1-48) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
-Deafening Essence of Greed,귀를 찢는 탐욕의 에센스,68,2,LifeRegeneration,,Regenerate (48.1-64) Life per second,1초마다 생명력 (48.1-64) 재생,flat_life_regen|resource|life,Life,,Regenerate # Life per second
-Whispering Essence of Contempt,속삭이는 경멸의 에센스,5,1,PhysicalDamage,,Adds 1 to 2 Physical Damage to Attacks,공격 시 물리 피해 1~2 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
-Muttering Essence of Contempt,불평하는 경멸의 에센스,13,1,PhysicalDamage,,Adds (2-3) to (4-5) Physical Damage to Attacks,공격 시 물리 피해 (2-3)~(4-5) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
-Weeping Essence of Contempt,흐느끼는 경멸의 에센스,28,1,PhysicalDamage,,Adds (4-6) to (9-10) Physical Damage to Attacks,공격 시 물리 피해 (4-6)~(9-10) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
-Wailing Essence of Contempt,울부짖는 경멸의 에센스,44,1,PhysicalDamage,,Adds (6-9) to (13-15) Physical Damage to Attacks,공격 시 물리 피해 (6-9)~(13-15) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
-Screaming Essence of Contempt,절규하는 경멸의 에센스,64,1,PhysicalDamage,,Adds (9-12) to (19-22) Physical Damage to Attacks,공격 시 물리 피해 (9-12)~(19-22) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
-Shrieking Essence of Contempt,악을 쓰는 경멸의 에센스,76,1,PhysicalDamage,,Adds (11-15) to (22-26) Physical Damage to Attacks,공격 시 물리 피해 (11-15)~(22-26) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
-Deafening Essence of Contempt,귀를 찢는 경멸의 에센스,82,1,PhysicalDamage,,Adds (16-18) to (27-30) Physical Damage to Attacks,공격 시 물리 피해 (16-18)~(27-30) 추가,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
-Muttering Essence of Sorrow,불평하는 슬픔의 에센스,11,2,Dexterity,,+(13-17) to Dexterity,민첩 +(13-17),attribute,Attribute,,+# to Dexterity
-Weeping Essence of Sorrow,흐느끼는 슬픔의 에센스,22,2,Dexterity,,+(18-22) to Dexterity,민첩 +(18-22),attribute,Attribute,,+# to Dexterity
-Wailing Essence of Sorrow,울부짖는 슬픔의 에센스,44,2,Dexterity,,+(28-32) to Dexterity,민첩 +(28-32),attribute,Attribute,,+# to Dexterity
-Screaming Essence of Sorrow,절규하는 슬픔의 에센스,55,2,Dexterity,,+(33-37) to Dexterity,민첩 +(33-37),attribute,Attribute,,+# to Dexterity
-Shrieking Essence of Sorrow,악을 쓰는 슬픔의 에센스,74,2,Dexterity,,+(43-50) to Dexterity,민첩 +(43-50),attribute,Attribute,,+# to Dexterity
-Deafening Essence of Sorrow,귀를 찢는 슬픔의 에센스,82,2,Dexterity,,+(51-58) to Dexterity,민첩 +(51-58),attribute,Attribute,,+# to Dexterity
-Muttering Essence of Anger,불평하는 분노의 에센스,10,2,FireDamagePercentage,,(11-14)% increased Fire Damage,화염 피해 (11-14)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
-Weeping Essence of Anger,흐느끼는 분노의 에센스,26,2,FireDamagePercentage,,(15-18)% increased Fire Damage,화염 피해 (15-18)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
-Wailing Essence of Anger,울부짖는 분노의 에센스,42,2,FireDamagePercentage,,(19-22)% increased Fire Damage,화염 피해 (19-22)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
-Screaming Essence of Anger,절규하는 분노의 에센스,58,2,FireDamagePercentage,,(23-26)% increased Fire Damage,화염 피해 (23-26)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
-Shrieking Essence of Anger,악을 쓰는 분노의 에센스,74,2,FireDamagePercentage,,(27-30)% increased Fire Damage,화염 피해 (27-30)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
-Deafening Essence of Anger,귀를 찢는 분노의 에센스,82,2,FireDamagePercentage,,(31-34)% increased Fire Damage,화염 피해 (31-34)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
-Muttering Essence of Torment,불평하는 고뇌의 에센스,13,1,LightningDamage,,Adds 1 to (14-15) Lightning Damage to Attacks,공격 시 번개 피해 1~(14-15) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
-Weeping Essence of Torment,흐느끼는 고뇌의 에센스,28,1,LightningDamage,,Adds (1-2) to (27-28) Lightning Damage to Attacks,공격 시 번개 피해 (1-2)~(27-28) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
-Wailing Essence of Torment,울부짖는 고뇌의 에센스,44,1,LightningDamage,,Adds (1-4) to (40-43) Lightning Damage to Attacks,공격 시 번개 피해 (1-4)~(40-43) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
-Screaming Essence of Torment,절규하는 고뇌의 에센스,64,1,LightningDamage,,Adds (3-6) to (57-61) Lightning Damage to Attacks,공격 시 번개 피해 (3-6)~(57-61) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
-Shrieking Essence of Torment,악을 쓰는 고뇌의 에센스,76,1,LightningDamage,,Adds (3-7) to (68-72) Lightning Damage to Attacks,공격 시 번개 피해 (3-7)~(68-72) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
-Deafening Essence of Torment,귀를 찢는 고뇌의 에센스,82,1,LightningDamage,,Adds (4-8) to (71-76) Lightning Damage to Attacks,공격 시 번개 피해 (4-8)~(71-76) 추가,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
-Muttering Essence of Fear,불평하는 두려움의 에센스,10,2,MinionMovementSpeed,,Minions have (13-15)% increased Movement Speed,소환수의 이동 속도 (13-15)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
-Weeping Essence of Fear,흐느끼는 두려움의 에센스,26,2,MinionMovementSpeed,,Minions have (16-18)% increased Movement Speed,소환수의 이동 속도 (16-18)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
-Wailing Essence of Fear,울부짖는 두려움의 에센스,42,2,MinionMovementSpeed,,Minions have (19-21)% increased Movement Speed,소환수의 이동 속도 (19-21)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
-Screaming Essence of Fear,절규하는 두려움의 에센스,58,2,MinionMovementSpeed,,Minions have (22-24)% increased Movement Speed,소환수의 이동 속도 (22-24)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
-Shrieking Essence of Fear,악을 쓰는 두려움의 에센스,74,2,MinionMovementSpeed,,Minions have (25-27)% increased Movement Speed,소환수의 이동 속도 (25-27)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
-Deafening Essence of Fear,귀를 찢는 두려움의 에센스,82,2,MinionMovementSpeed,,Minions have (28-30)% increased Movement Speed,소환수의 이동 속도 (28-30)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
-Weeping Essence of Suffering,흐느끼는 고통의 에센스,29,1,ColdDamage,,Adds (6-9) to (13-16) Cold Damage to Attacks,공격 시 냉기 피해 (6-9)~(13-16) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
-Wailing Essence of Suffering,울부짖는 고통의 에센스,45,1,ColdDamage,,Adds (10-13) to (20-24) Cold Damage to Attacks,공격 시 냉기 피해 (10-13)~(20-24) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
-Screaming Essence of Suffering,절규하는 고통의 에센스,53,1,ColdDamage,,Adds (12-16) to (24-28) Cold Damage to Attacks,공격 시 냉기 피해 (12-16)~(24-28) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
-Shrieking Essence of Suffering,악을 쓰는 고통의 에센스,77,1,ColdDamage,,Adds (17-22) to (34-40) Cold Damage to Attacks,공격 시 냉기 피해 (17-22)~(34-40) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
-Deafening Essence of Suffering,귀를 찢는 고통의 에센스,82,1,ColdDamage,,Adds (20-24) to (38-44) Cold Damage to Attacks,공격 시 냉기 피해 (20-24)~(38-44) 추가,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
-Weeping Essence of Rage,흐느끼는 격노의 에센스,22,2,Strength,,+(18-22) to Strength,힘 +(18-22),attribute,Attribute,,+# to Strength
-Wailing Essence of Rage,울부짖는 격노의 에센스,44,2,Strength,,+(28-32) to Strength,힘 +(28-32),attribute,Attribute,,+# to Strength
-Screaming Essence of Rage,절규하는 격노의 에센스,55,2,Strength,,+(33-37) to Strength,힘 +(33-37),attribute,Attribute,,+# to Strength
-Shrieking Essence of Rage,악을 쓰는 격노의 에센스,74,2,Strength,,+(43-50) to Strength,힘 +(43-50),attribute,Attribute,,+# to Strength
-Deafening Essence of Rage,귀를 찢는 격노의 에센스,82,2,Strength,,+(51-58) to Strength,힘 +(51-58),attribute,Attribute,,+# to Strength
-Weeping Essence of Wrath,흐느끼는 진노의 에센스,23,2,LightningDamagePercentage,,(13-15)% increased Lightning Damage,번개 피해 (13-15)% 증가,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
-Wailing Essence of Wrath,울부짖는 진노의 에센스,36,2,LightningDamagePercentage,,(16-18)% increased Lightning Damage,번개 피해 (16-18)% 증가,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
-Screaming Essence of Wrath,절규하는 진노의 에센스,64,2,LightningDamagePercentage,,(23-26)% increased Lightning Damage,번개 피해 (23-26)% 증가,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
-Shrieking Essence of Wrath,악을 쓰는 진노의 에센스,76,2,LightningDamagePercentage,,(27-30)% increased Lightning Damage,번개 피해 (27-30)% 증가,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
-Deafening Essence of Wrath,귀를 찢는 진노의 에센스,82,2,LightningDamagePercentage,,(31-34)% increased Lightning Damage,번개 피해 (31-34)% 증가,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
-Weeping Essence of Doubt,흐느끼는 의심의 에센스,30,1,EvasionRatingPercent,,(14-18)% increased Evasion Rating,회피 (14-18)% 증가,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
-Wailing Essence of Doubt,울부짖는 의심의 에센스,42,1,EvasionRatingPercent,,(19-23)% increased Evasion Rating,회피 (19-23)% 증가,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
-Screaming Essence of Doubt,절규하는 의심의 에센스,56,1,EvasionRatingPercent,,(24-28)% increased Evasion Rating,회피 (24-28)% 증가,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
-Shrieking Essence of Doubt,악을 쓰는 의심의 에센스,77,1,EvasionRatingPercent,,(29-31)% increased Evasion Rating,회피 (29-31)% 증가,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
-Deafening Essence of Doubt,귀를 찢는 의심의 에센스,82,1,EvasionRatingPercent,,(32-33)% increased Evasion Rating,회피 (32-33)% 증가,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
-Wailing Essence of Anguish,울부짖는 비통의 에센스,44,1,FireDamage,,Adds (11-15) to (23-27) Fire Damage to Attacks,공격 시 화염 피해 (11-15)~(23-27) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
-Screaming Essence of Anguish,절규하는 비통의 에센스,64,1,FireDamage,,Adds (16-22) to (32-38) Fire Damage to Attacks,공격 시 화염 피해 (16-22)~(32-38) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
-Shrieking Essence of Anguish,악을 쓰는 비통의 에센스,76,1,FireDamage,,Adds (19-25) to (39-45) Fire Damage to Attacks,공격 시 화염 피해 (19-25)~(39-45) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
-Deafening Essence of Anguish,귀를 찢는 비통의 에센스,82,1,FireDamage,,Adds (23-27) to (43-48) Fire Damage to Attacks,공격 시 화염 피해 (23-27)~(43-48) 추가,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
-Wailing Essence of Loathing,울부짖는 혐오의 에센스,44,2,CriticalStrikeChanceIncrease,,(25-29)% increased Global Critical Strike Chance,일반 치명타 확률 (25-29)% 증가,critical,Critical,,#% increased Global Critical Strike Chance
-Screaming Essence of Loathing,절규하는 혐오의 에센스,58,2,CriticalStrikeChanceIncrease,,(30-34)% increased Global Critical Strike Chance,일반 치명타 확률 (30-34)% 증가,critical,Critical,,#% increased Global Critical Strike Chance
-Shrieking Essence of Loathing,악을 쓰는 혐오의 에센스,72,2,CriticalStrikeChanceIncrease,,(35-38)% increased Global Critical Strike Chance,일반 치명타 확률 (35-38)% 증가,critical,Critical,,#% increased Global Critical Strike Chance
-Deafening Essence of Loathing,귀를 찢는 혐오의 에센스,82,2,CriticalStrikeChanceIncrease,,(39-42)% increased Global Critical Strike Chance,일반 치명타 확률 (39-42)% 증가,critical,Critical,,#% increased Global Critical Strike Chance
-Wailing Essence of Spite,울부짖는 악의의 에센스,44,2,Intelligence,,+(28-32) to Intelligence,지능 +(28-32),attribute,Attribute,,+# to Intelligence
-Screaming Essence of Spite,절규하는 악의의 에센스,55,2,Intelligence,,+(33-37) to Intelligence,지능 +(33-37),attribute,Attribute,,+# to Intelligence
-Shrieking Essence of Spite,악을 쓰는 악의의 에센스,74,2,Intelligence,,+(43-50) to Intelligence,지능 +(43-50),attribute,Attribute,,+# to Intelligence
-Deafening Essence of Spite,귀를 찢는 악의의 에센스,82,2,Intelligence,,+(51-58) to Intelligence,지능 +(51-58),attribute,Attribute,,+# to Intelligence
-Wailing Essence of Zeal,울부짖는 열의의 에센스,2,2,IncreasedCastSpeed,,(5-8)% increased Cast Speed,시전 속도 (5-8)% 증가,caster|speed,Caster|Speed,,#% increased Cast Speed
-Screaming Essence of Zeal,절규하는 열의의 에센스,15,2,IncreasedCastSpeed,,(9-12)% increased Cast Speed,시전 속도 (9-12)% 증가,caster|speed,Caster|Speed,,#% increased Cast Speed
-Shrieking Essence of Zeal,악을 쓰는 열의의 에센스,30,2,IncreasedCastSpeed,,(13-16)% increased Cast Speed,시전 속도 (13-16)% 증가,caster|speed,Caster|Speed,,#% increased Cast Speed
-Deafening Essence of Zeal,귀를 찢는 열의의 에센스,40,2,IncreasedCastSpeed,,(17-20)% increased Cast Speed,시전 속도 (17-20)% 증가,caster|speed,Caster|Speed,,#% increased Cast Speed
-Screaming Essence of Misery,절규하는 비참의 에센스,55,2,ManaRegeneration,,(50-59)% increased Mana Regeneration Rate,마나 재생 속도 (50-59)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
-Shrieking Essence of Misery,악을 쓰는 비참의 에센스,79,2,ManaRegeneration,,(60-69)% increased Mana Regeneration Rate,마나 재생 속도 (60-69)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
-Deafening Essence of Misery,귀를 찢는 비참의 에센스,82,2,ManaRegeneration,,(70-76)% increased Mana Regeneration Rate,마나 재생 속도 (70-76)% 증가,resource|mana,Mana,,#% increased Mana Regeneration Rate
-Screaming Essence of Dread,절규하는 불안의 에센스,56,1,IncreasedPhysicalDamageReductionRatingPercent,,(24-28)% increased Armour,방어도 (24-28)% 증가,defences|armour,Defences|Armour,,#% increased Armour
-Shrieking Essence of Dread,악을 쓰는 불안의 에센스,77,1,IncreasedPhysicalDamageReductionRatingPercent,,(29-31)% increased Armour,방어도 (29-31)% 증가,defences|armour,Defences|Armour,,#% increased Armour
-Deafening Essence of Dread,귀를 찢는 불안의 에센스,82,1,IncreasedPhysicalDamageReductionRatingPercent,,(32-33)% increased Armour,방어도 (32-33)% 증가,defences|armour,Defences|Armour,,#% increased Armour
-Screaming Essence of Scorn,절규하는 멸시의 에센스,45,2,CriticalStrikeMultiplier,,+(25-29)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(25-29)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
-Shrieking Essence of Scorn,악을 쓰는 멸시의 에센스,59,2,CriticalStrikeMultiplier,,+(30-34)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(30-34)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
-Deafening Essence of Scorn,귀를 찢는 멸시의 에센스,82,2,CriticalStrikeMultiplier,,+(35-41)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(35-41)%,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
-Screaming Essence of Envy,절규하는 선망의 에센스,58,2,IncreasedChaosDamage,,(23-26)% increased Chaos Damage,카오스 피해 (23-26)% 증가,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
-Shrieking Essence of Envy,악을 쓰는 선망의 에센스,74,2,IncreasedChaosDamage,,(27-30)% increased Chaos Damage,카오스 피해 (27-30)% 증가,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
-Deafening Essence of Envy,귀를 찢는 선망의 에센스,82,2,IncreasedChaosDamage,,(31-34)% increased Chaos Damage,카오스 피해 (31-34)% 증가,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
-Essence of Hysteria,발작의 에센스,63,2,IncreasedLifeLeechRate,,150% increased total Recovery per second from Life Leech,생명력 흡수로 인한 초당 총 회복량 150% 증가,resource|life,Life,,#% increased total Recovery per second from Life Leech
-Essence of Insanity,광기의 에센스,63,2,ChanceToRecoverManaOnSkillUse,,10% chance to Recover 10% of Mana when you use a Skill,스킬 사용 시 10%의 확률로 마나의 10% 회복,resource|mana,Mana,,#% chance to Recover #% of Mana when you use a Skill
-Essence of Horror,경악의 에센스,63,2,CrushOnHitChance,,(15-25)% chance to Crush on Hit,명중 시 (15-25)%의 확률로 타쇄,physical,Physical,,#% chance to Crush on Hit
-Essence of Delirium,섬망의 에센스,63,2,SpellBlockPercentage,,(6-7)% Chance to Block Spell Damage,(6-7)%의 확률로 주문 피해를 막아냄,block,,,#% Chance to Block Spell Damage
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Whispering Essence of Hatred,속삭이는 증오의 에센스,1,2,ColdDamagePercentage,(6—10)% increased Cold Damage,냉기 피해 (6-10)% 증가,,,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Muttering Essence of Hatred,불평하는 증오의 에센스,10,2,ColdDamagePercentage,(11—14)% increased Cold Damage,냉기 피해 (11-14)% 증가,,,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Weeping Essence of Hatred,흐느끼는 증오의 에센스,26,2,ColdDamagePercentage,(15—18)% increased Cold Damage,냉기 피해 (15-18)% 증가,,,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Wailing Essence of Hatred,울부짖는 증오의 에센스,42,2,ColdDamagePercentage,(19—22)% increased Cold Damage,냉기 피해 (19-22)% 증가,,,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Screaming Essence of Hatred,절규하는 증오의 에센스,58,2,ColdDamagePercentage,(23—26)% increased Cold Damage,냉기 피해 (23-26)% 증가,,,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Shrieking Essence of Hatred,악을 쓰는 증오의 에센스,74,2,ColdDamagePercentage,(27—30)% increased Cold Damage,냉기 피해 (27-30)% 증가,,,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Deafening Essence of Hatred,귀를 찢는 증오의 에센스,82,2,ColdDamagePercentage,(31—34)% increased Cold Damage,냉기 피해 (31-34)% 증가,,,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Whispering Essence of Woe,속삭이는 비애의 에센스,3,1,EnergyShieldPercent,(2—4)% increased maximum Energy Shield,에너지 보호막 최대치 (2-4)% 증가,,,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
+Muttering Essence of Woe,불평하는 비애의 에센스,18,1,EnergyShieldPercent,(5—7)% increased maximum Energy Shield,에너지 보호막 최대치 (5-7)% 증가,,,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
+Weeping Essence of Woe,흐느끼는 비애의 에센스,30,1,EnergyShieldPercent,(8—10)% increased maximum Energy Shield,에너지 보호막 최대치 (8-10)% 증가,,,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
+Wailing Essence of Woe,울부짖는 비애의 에센스,42,1,EnergyShieldPercent,(11—13)% increased maximum Energy Shield,에너지 보호막 최대치 (11-13)% 증가,,,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
+Screaming Essence of Woe,절규하는 비애의 에센스,56,1,EnergyShieldPercent,(14—16)% increased maximum Energy Shield,에너지 보호막 최대치 (14-16)% 증가,,,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
+Shrieking Essence of Woe,악을 쓰는 비애의 에센스,77,1,EnergyShieldPercent,(17—18)% increased maximum Energy Shield,에너지 보호막 최대치 (17-18)% 증가,,,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
+Deafening Essence of Woe,귀를 찢는 비애의 에센스,82,1,EnergyShieldPercent,(18—19)% increased maximum Energy Shield,에너지 보호막 최대치 (18-19)% 증가,,,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield
+Whispering Essence of Greed,속삭이는 탐욕의 에센스,1,2,LifeRegeneration,Regenerate (1—2) Life per second,1초마다 생명력 (1-2) 재생,,,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+Muttering Essence of Greed,불평하는 탐욕의 에센스,7,2,LifeRegeneration,Regenerate (2.1—8) Life per second,1초마다 생명력 (2.1-8) 재생,,,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+Weeping Essence of Greed,흐느끼는 탐욕의 에센스,19,2,LifeRegeneration,Regenerate (8.1—16) Life per second,1초마다 생명력 (8.1-16) 재생,,,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+Wailing Essence of Greed,울부짖는 탐욕의 에센스,31,2,LifeRegeneration,Regenerate (16.1—24) Life per second,1초마다 생명력 (16.1-24) 재생,,,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+Screaming Essence of Greed,절규하는 탐욕의 에센스,44,2,LifeRegeneration,Regenerate (24.1—32) Life per second,1초마다 생명력 (24.1-32) 재생,,,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+Shrieking Essence of Greed,악을 쓰는 탐욕의 에센스,55,2,LifeRegeneration,Regenerate (32.1—48) Life per second,1초마다 생명력 (32.1-48) 재생,,,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+Deafening Essence of Greed,귀를 찢는 탐욕의 에센스,68,2,LifeRegeneration,Regenerate (48.1—64) Life per second,1초마다 생명력 (48.1-64) 재생,,,flat_life_regen|resource|life,Life,,Regenerate # Life per second
+Whispering Essence of Contempt,속삭이는 경멸의 에센스,5,1,PhysicalDamage,Adds 1 to 2 Physical Damage to Attacks,공격 시 물리 피해 1~2 추가,,,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Muttering Essence of Contempt,불평하는 경멸의 에센스,13,1,PhysicalDamage,Adds (2—3) to (4—5) Physical Damage to Attacks,공격 시 물리 피해 (2-3)~(4-5) 추가,,,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Weeping Essence of Contempt,흐느끼는 경멸의 에센스,28,1,PhysicalDamage,Adds (4—6) to (9—10) Physical Damage to Attacks,공격 시 물리 피해 (4-6)~(9-10) 추가,,,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Wailing Essence of Contempt,울부짖는 경멸의 에센스,44,1,PhysicalDamage,Adds (6—9) to (13—15) Physical Damage to Attacks,공격 시 물리 피해 (6-9)~(13-15) 추가,,,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Screaming Essence of Contempt,절규하는 경멸의 에센스,64,1,PhysicalDamage,Adds (9—12) to (19—22) Physical Damage to Attacks,공격 시 물리 피해 (9-12)~(19-22) 추가,,,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Shrieking Essence of Contempt,악을 쓰는 경멸의 에센스,76,1,PhysicalDamage,Adds (11—15) to (22—26) Physical Damage to Attacks,공격 시 물리 피해 (11-15)~(22-26) 추가,,,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Deafening Essence of Contempt,귀를 찢는 경멸의 에센스,82,1,PhysicalDamage,Adds (16—18) to (27—30) Physical Damage to Attacks,공격 시 물리 피해 (16-18)~(27-30) 추가,,,physical_damage|damage|physical|attack,Damage|Physical|Attack,,Adds # to # Physical Damage to Attacks
+Muttering Essence of Sorrow,불평하는 슬픔의 에센스,11,2,Dexterity,+(13—17) to Dexterity,민첩 +(13-17),,,attribute,Attribute,,+# to Dexterity
+Weeping Essence of Sorrow,흐느끼는 슬픔의 에센스,22,2,Dexterity,+(18—22) to Dexterity,민첩 +(18-22),,,attribute,Attribute,,+# to Dexterity
+Wailing Essence of Sorrow,울부짖는 슬픔의 에센스,44,2,Dexterity,+(28—32) to Dexterity,민첩 +(28-32),,,attribute,Attribute,,+# to Dexterity
+Screaming Essence of Sorrow,절규하는 슬픔의 에센스,55,2,Dexterity,+(33—37) to Dexterity,민첩 +(33-37),,,attribute,Attribute,,+# to Dexterity
+Shrieking Essence of Sorrow,악을 쓰는 슬픔의 에센스,74,2,Dexterity,+(43—50) to Dexterity,민첩 +(43-50),,,attribute,Attribute,,+# to Dexterity
+Deafening Essence of Sorrow,귀를 찢는 슬픔의 에센스,82,2,Dexterity,+(51—58) to Dexterity,민첩 +(51-58),,,attribute,Attribute,,+# to Dexterity
+Muttering Essence of Anger,불평하는 분노의 에센스,10,2,FireDamagePercentage,(11—14)% increased Fire Damage,화염 피해 (11-14)% 증가,,,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Weeping Essence of Anger,흐느끼는 분노의 에센스,26,2,FireDamagePercentage,(15—18)% increased Fire Damage,화염 피해 (15-18)% 증가,,,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Wailing Essence of Anger,울부짖는 분노의 에센스,42,2,FireDamagePercentage,(19—22)% increased Fire Damage,화염 피해 (19-22)% 증가,,,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Screaming Essence of Anger,절규하는 분노의 에센스,58,2,FireDamagePercentage,(23—26)% increased Fire Damage,화염 피해 (23-26)% 증가,,,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Shrieking Essence of Anger,악을 쓰는 분노의 에센스,74,2,FireDamagePercentage,(27—30)% increased Fire Damage,화염 피해 (27-30)% 증가,,,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Deafening Essence of Anger,귀를 찢는 분노의 에센스,82,2,FireDamagePercentage,(31—34)% increased Fire Damage,화염 피해 (31-34)% 증가,,,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Muttering Essence of Torment,불평하는 고뇌의 에센스,13,1,LightningDamage,Adds 1 to (14—15) Lightning Damage to Attacks,공격 시 번개 피해 1~(14-15) 추가,,,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Weeping Essence of Torment,흐느끼는 고뇌의 에센스,28,1,LightningDamage,Adds (1—2) to (27—28) Lightning Damage to Attacks,공격 시 번개 피해 (1-2)~(27-28) 추가,,,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Wailing Essence of Torment,울부짖는 고뇌의 에센스,44,1,LightningDamage,Adds (1—4) to (40—43) Lightning Damage to Attacks,공격 시 번개 피해 (1-4)~(40-43) 추가,,,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Screaming Essence of Torment,절규하는 고뇌의 에센스,64,1,LightningDamage,Adds (3—6) to (57—61) Lightning Damage to Attacks,공격 시 번개 피해 (3-6)~(57-61) 추가,,,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Shrieking Essence of Torment,악을 쓰는 고뇌의 에센스,76,1,LightningDamage,Adds (3—7) to (68—72) Lightning Damage to Attacks,공격 시 번개 피해 (3-7)~(68-72) 추가,,,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Deafening Essence of Torment,귀를 찢는 고뇌의 에센스,82,1,LightningDamage,Adds (4—8) to (71—76) Lightning Damage to Attacks,공격 시 번개 피해 (4-8)~(71-76) 추가,,,elemental_damage|damage|elemental|lightning|attack,Damage|Elemental|Lightning|Attack,,Adds # to # Lightning Damage to Attacks
+Muttering Essence of Fear,불평하는 두려움의 에센스,10,2,MinionMovementSpeed,Minions have (13—15)% increased Movement Speed,소환수의 이동 속도 (13-15)% 증가,,,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+Weeping Essence of Fear,흐느끼는 두려움의 에센스,26,2,MinionMovementSpeed,Minions have (16—18)% increased Movement Speed,소환수의 이동 속도 (16-18)% 증가,,,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+Wailing Essence of Fear,울부짖는 두려움의 에센스,42,2,MinionMovementSpeed,Minions have (19—21)% increased Movement Speed,소환수의 이동 속도 (19-21)% 증가,,,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+Screaming Essence of Fear,절규하는 두려움의 에센스,58,2,MinionMovementSpeed,Minions have (22—24)% increased Movement Speed,소환수의 이동 속도 (22-24)% 증가,,,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+Shrieking Essence of Fear,악을 쓰는 두려움의 에센스,74,2,MinionMovementSpeed,Minions have (25—27)% increased Movement Speed,소환수의 이동 속도 (25-27)% 증가,,,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+Deafening Essence of Fear,귀를 찢는 두려움의 에센스,82,2,MinionMovementSpeed,Minions have (28—30)% increased Movement Speed,소환수의 이동 속도 (28-30)% 증가,,,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+Weeping Essence of Suffering,흐느끼는 고통의 에센스,29,1,ColdDamage,Adds (6—9) to (13—16) Cold Damage to Attacks,공격 시 냉기 피해 (6-9)~(13-16) 추가,,,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Wailing Essence of Suffering,울부짖는 고통의 에센스,45,1,ColdDamage,Adds (10—13) to (20—24) Cold Damage to Attacks,공격 시 냉기 피해 (10-13)~(20-24) 추가,,,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Screaming Essence of Suffering,절규하는 고통의 에센스,53,1,ColdDamage,Adds (12—16) to (24—28) Cold Damage to Attacks,공격 시 냉기 피해 (12-16)~(24-28) 추가,,,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Shrieking Essence of Suffering,악을 쓰는 고통의 에센스,77,1,ColdDamage,Adds (17—22) to (34—40) Cold Damage to Attacks,공격 시 냉기 피해 (17-22)~(34-40) 추가,,,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Deafening Essence of Suffering,귀를 찢는 고통의 에센스,82,1,ColdDamage,Adds (20—24) to (38—44) Cold Damage to Attacks,공격 시 냉기 피해 (20-24)~(38-44) 추가,,,elemental_damage|damage|elemental|cold|attack,Damage|Elemental|Cold|Attack,,Adds # to # Cold Damage to Attacks
+Weeping Essence of Rage,흐느끼는 격노의 에센스,22,2,Strength,+(18—22) to Strength,힘 +(18-22),,,attribute,Attribute,,+# to Strength
+Wailing Essence of Rage,울부짖는 격노의 에센스,44,2,Strength,+(28—32) to Strength,힘 +(28-32),,,attribute,Attribute,,+# to Strength
+Screaming Essence of Rage,절규하는 격노의 에센스,55,2,Strength,+(33—37) to Strength,힘 +(33-37),,,attribute,Attribute,,+# to Strength
+Shrieking Essence of Rage,악을 쓰는 격노의 에센스,74,2,Strength,+(43—50) to Strength,힘 +(43-50),,,attribute,Attribute,,+# to Strength
+Deafening Essence of Rage,귀를 찢는 격노의 에센스,82,2,Strength,+(51—58) to Strength,힘 +(51-58),,,attribute,Attribute,,+# to Strength
+Weeping Essence of Wrath,흐느끼는 진노의 에센스,23,2,LightningDamagePercentage,(13—15)% increased Lightning Damage,번개 피해 (13-15)% 증가,,,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
+Wailing Essence of Wrath,울부짖는 진노의 에센스,36,2,LightningDamagePercentage,(16—18)% increased Lightning Damage,번개 피해 (16-18)% 증가,,,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
+Screaming Essence of Wrath,절규하는 진노의 에센스,64,2,LightningDamagePercentage,(23—26)% increased Lightning Damage,번개 피해 (23-26)% 증가,,,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
+Shrieking Essence of Wrath,악을 쓰는 진노의 에센스,76,2,LightningDamagePercentage,(27—30)% increased Lightning Damage,번개 피해 (27-30)% 증가,,,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
+Deafening Essence of Wrath,귀를 찢는 진노의 에센스,82,2,LightningDamagePercentage,(31—34)% increased Lightning Damage,번개 피해 (31-34)% 증가,,,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
+Weeping Essence of Doubt,흐느끼는 의심의 에센스,30,1,EvasionRatingPercent,(14—18)% increased Evasion Rating,회피 (14-18)% 증가,,,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
+Wailing Essence of Doubt,울부짖는 의심의 에센스,42,1,EvasionRatingPercent,(19—23)% increased Evasion Rating,회피 (19-23)% 증가,,,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
+Screaming Essence of Doubt,절규하는 의심의 에센스,56,1,EvasionRatingPercent,(24—28)% increased Evasion Rating,회피 (24-28)% 증가,,,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
+Shrieking Essence of Doubt,악을 쓰는 의심의 에센스,77,1,EvasionRatingPercent,(29—31)% increased Evasion Rating,회피 (29-31)% 증가,,,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
+Deafening Essence of Doubt,귀를 찢는 의심의 에센스,82,1,EvasionRatingPercent,(32—33)% increased Evasion Rating,회피 (32-33)% 증가,,,defences|evasion,Defences|Evasion,,#% increased Evasion Rating
+Wailing Essence of Anguish,울부짖는 비통의 에센스,44,1,FireDamage,Adds (11—15) to (23—27) Fire Damage to Attacks,공격 시 화염 피해 (11-15)~(23-27) 추가,,,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Screaming Essence of Anguish,절규하는 비통의 에센스,64,1,FireDamage,Adds (16—22) to (32—38) Fire Damage to Attacks,공격 시 화염 피해 (16-22)~(32-38) 추가,,,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Shrieking Essence of Anguish,악을 쓰는 비통의 에센스,76,1,FireDamage,Adds (19—25) to (39—45) Fire Damage to Attacks,공격 시 화염 피해 (19-25)~(39-45) 추가,,,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Deafening Essence of Anguish,귀를 찢는 비통의 에센스,82,1,FireDamage,Adds (23—27) to (43—48) Fire Damage to Attacks,공격 시 화염 피해 (23-27)~(43-48) 추가,,,elemental_damage|damage|elemental|fire|attack,Damage|Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks
+Wailing Essence of Loathing,울부짖는 혐오의 에센스,44,2,CriticalStrikeChanceIncrease,(25—29)% increased Global Critical Strike Chance,일반 치명타 확률 (25-29)% 증가,,,critical,Critical,,#% increased Global Critical Strike Chance
+Screaming Essence of Loathing,절규하는 혐오의 에센스,58,2,CriticalStrikeChanceIncrease,(30—34)% increased Global Critical Strike Chance,일반 치명타 확률 (30-34)% 증가,,,critical,Critical,,#% increased Global Critical Strike Chance
+Shrieking Essence of Loathing,악을 쓰는 혐오의 에센스,72,2,CriticalStrikeChanceIncrease,(35—38)% increased Global Critical Strike Chance,일반 치명타 확률 (35-38)% 증가,,,critical,Critical,,#% increased Global Critical Strike Chance
+Deafening Essence of Loathing,귀를 찢는 혐오의 에센스,82,2,CriticalStrikeChanceIncrease,(39—42)% increased Global Critical Strike Chance,일반 치명타 확률 (39-42)% 증가,,,critical,Critical,,#% increased Global Critical Strike Chance
+Wailing Essence of Spite,울부짖는 악의의 에센스,44,2,Intelligence,+(28—32) to Intelligence,지능 +(28-32),,,attribute,Attribute,,+# to Intelligence
+Screaming Essence of Spite,절규하는 악의의 에센스,55,2,Intelligence,+(33—37) to Intelligence,지능 +(33-37),,,attribute,Attribute,,+# to Intelligence
+Shrieking Essence of Spite,악을 쓰는 악의의 에센스,74,2,Intelligence,+(43—50) to Intelligence,지능 +(43-50),,,attribute,Attribute,,+# to Intelligence
+Deafening Essence of Spite,귀를 찢는 악의의 에센스,82,2,Intelligence,+(51—58) to Intelligence,지능 +(51-58),,,attribute,Attribute,,+# to Intelligence
+Wailing Essence of Zeal,울부짖는 열의의 에센스,2,2,IncreasedCastSpeed,(5—8)% increased Cast Speed,시전 속도 (5-8)% 증가,,,caster|speed,Caster|Speed,,#% increased Cast Speed
+Screaming Essence of Zeal,절규하는 열의의 에센스,15,2,IncreasedCastSpeed,(9—12)% increased Cast Speed,시전 속도 (9-12)% 증가,,,caster|speed,Caster|Speed,,#% increased Cast Speed
+Shrieking Essence of Zeal,악을 쓰는 열의의 에센스,30,2,IncreasedCastSpeed,(13—16)% increased Cast Speed,시전 속도 (13-16)% 증가,,,caster|speed,Caster|Speed,,#% increased Cast Speed
+Deafening Essence of Zeal,귀를 찢는 열의의 에센스,40,2,IncreasedCastSpeed,(17—20)% increased Cast Speed,시전 속도 (17-20)% 증가,,,caster|speed,Caster|Speed,,#% increased Cast Speed
+Screaming Essence of Misery,절규하는 비참의 에센스,55,2,ManaRegeneration,(50—59)% increased Mana Regeneration Rate,마나 재생 속도 (50-59)% 증가,,,resource|mana,Mana,,#% increased Mana Regeneration Rate
+Shrieking Essence of Misery,악을 쓰는 비참의 에센스,79,2,ManaRegeneration,(60—69)% increased Mana Regeneration Rate,마나 재생 속도 (60-69)% 증가,,,resource|mana,Mana,,#% increased Mana Regeneration Rate
+Deafening Essence of Misery,귀를 찢는 비참의 에센스,82,2,ManaRegeneration,(70—76)% increased Mana Regeneration Rate,마나 재생 속도 (70-76)% 증가,,,resource|mana,Mana,,#% increased Mana Regeneration Rate
+Screaming Essence of Dread,절규하는 불안의 에센스,56,1,IncreasedPhysicalDamageReductionRatingPercent,(24—28)% increased Armour,방어도 (24-28)% 증가,,,defences|armour,Defences|Armour,,#% increased Armour
+Shrieking Essence of Dread,악을 쓰는 불안의 에센스,77,1,IncreasedPhysicalDamageReductionRatingPercent,(29—31)% increased Armour,방어도 (29-31)% 증가,,,defences|armour,Defences|Armour,,#% increased Armour
+Deafening Essence of Dread,귀를 찢는 불안의 에센스,82,1,IncreasedPhysicalDamageReductionRatingPercent,(32—33)% increased Armour,방어도 (32-33)% 증가,,,defences|armour,Defences|Armour,,#% increased Armour
+Screaming Essence of Scorn,절규하는 멸시의 에센스,45,2,CriticalStrikeMultiplier,+(25—29)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(25-29)%,,,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+Shrieking Essence of Scorn,악을 쓰는 멸시의 에센스,59,2,CriticalStrikeMultiplier,+(30—34)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(30-34)%,,,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+Deafening Essence of Scorn,귀를 찢는 멸시의 에센스,82,2,CriticalStrikeMultiplier,+(35—41)% to Global Critical Strike Multiplier,일반 치명타 피해 배율 +(35-41)%,,,damage|critical,Damage|Critical,,+#% to Global Critical Strike Multiplier
+Screaming Essence of Envy,절규하는 선망의 에센스,58,2,IncreasedChaosDamage,(23—26)% increased Chaos Damage,카오스 피해 (23-26)% 증가,,,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
+Shrieking Essence of Envy,악을 쓰는 선망의 에센스,74,2,IncreasedChaosDamage,(27—30)% increased Chaos Damage,카오스 피해 (27-30)% 증가,,,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
+Deafening Essence of Envy,귀를 찢는 선망의 에센스,82,2,IncreasedChaosDamage,(31—34)% increased Chaos Damage,카오스 피해 (31-34)% 증가,,,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
+Essence of Hysteria,발작의 에센스,63,2,IncreasedLifeLeechRate,150% increased total Recovery per second from Life Leech,생명력 흡수로 인한 초당 총 회복량 150% 증가,,,resource|life,Life,,#% increased total Recovery per second from Life Leech
+Essence of Insanity,광기의 에센스,63,2,ChanceToRecoverManaOnSkillUse,10% chance to Recover 10% of Mana when you use a Skill,스킬 사용 시 10%의 확률로 마나의 10% 회복,,,resource|mana,Mana,,#% chance to Recover #% of Mana when you use a Skill
+Essence of Horror,경악의 에센스,63,2,CrushOnHitChance,(15—25)% chance to Crush on Hit,명중 시 (15-25)%의 확률로 타쇄,,,physical,Physical,,#% chance to Crush on Hit
+Essence of Delirium,섬망의 에센스,63,2,SpellBlockPercentage,(6—7)% Chance to Block Spell Damage,(6-7)%의 확률로 주문 피해를 막아냄,,,block,,,#% Chance to Block Spell Damage

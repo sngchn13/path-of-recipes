@@ -1,2 +1,2 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-of the Sentinel,- 파수꾼,68,2,CurseEffectiveness,,(30-40)% increased Effect of your Marks,플레이어의 징표 효과 (30-40)% 증가,caster|curse,Caster|Curse,,#% increased Effect of your Marks
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Sentinel,- 파수꾼,68,2,CurseEffectiveness,(30—40)% increased Effect of your Marks,플레이어의 징표 효과 (30-40)% 증가,,0,caster|curse,Caster|Curse,,#% increased Effect of your Marks

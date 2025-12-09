@@ -1,3 +1,3 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Infamous,악명 높은,68,1,CurseEffect,,Curses on Enemies in your Chilling Areas have 15% increased Effect,냉각 지역에 있는 적에게 적용되는 저주의 효과 15% 증가,curse,Curse,,Curses on Enemies in your Chilling Areas have #% increased Effect
-of Infamy,- 악명,68,2,RecentMinionCrit,,Minions created Recently have (60-100)% increased Critical Hit Chance,최근 4초 이내 생성된 소환수의 치명타 명중 확률 (60-100)% 증가,minion|critical,Minion|Critical,,Minions created Recently have #% increased Critical Hit Chance
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Infamous,악명 높은,68,1,CurseEffect,Curses on Enemies in your Chilling Areas have 15% increased Effect,냉각 지역에 있는 적에게 적용되는 저주의 효과 15% 증가,,0,curse,Curse,,Curses on Enemies in your Chilling Areas have #% increased Effect
+of Infamy,- 악명,68,2,RecentMinionCrit,Minions created Recently have (60—100)% increased Critical Hit Chance,최근 4초 이내 생성된 소환수의 치명타 명중 확률 (60-100)% 증가,,0,minion|critical,Minion|Critical,,Minions created Recently have #% increased Critical Hit Chance

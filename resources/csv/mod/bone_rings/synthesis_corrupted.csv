@@ -1,3 +1,0 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-SynthesisImplicitVaalSkillDamage1,SynthesisImplicitVaalSkillDamage1,24,3,VaalSkillDamage,,(13-16)% increased Damage with Vaal Skills,바알 스킬로 주는 피해 (13-16)% 증가,damage|vaal,Damage,,#% increased Damage with Vaal Skills
-SynthesisImplicitAllDamageCorruptedItem1,SynthesisImplicitAllDamageCorruptedItem1,60,3,LocalCorruptedBonus,,(15-20)% increased Damage if Corrupted,타락 시 피해 (15-20)% 증가,damage,Damage,,#% increased Damage if Corrupted

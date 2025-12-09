@@ -103,7 +103,7 @@ fn section_record_transform(csv_records: Vec<CsvRecord>, item_type_name: &str, s
 
     //섹션 레코드를 모드 그룹으로 바꿔서 벡터에 저장하기
     for record in csv_records {
-        let mod_item = CsvMod::new(record.name_en, record.name_kor, record.str_en,record.str_kor,  record.level);
+        let mod_item = CsvMod::new(record.name_en, record.name_kor, record.str_en,record.str_kor,  record.level, record.weight);
 
         match tmp.get_mut(&record.mod_group) {
             Some(mod_group) => {
@@ -208,7 +208,7 @@ async fn persist_mods_per_mod_group<'c>(csv_mod_groups: Vec<CsvModGroup>, cache:
                 display_en: Set(csv_mod.display_en),
                 display_kor: Set(csv_mod.display_kor),
                 req_item_level: Set(csv_mod.level),
-                weight: Set(None), //weight값 가져오기,
+                weight: Set(csv_mod.weight), //weight값 가져오기,
                 tier: Set(Some((idx + 1) as i16)),
                 mod_group_id: Set(saved_mod_group_model.id),
                 deprecated_version: Set(None),
@@ -283,6 +283,8 @@ struct CsvRecord {
     name_kor: String,
     #[serde(rename = "Level")]
     level: i32,
+    #[serde(rename = "DropChance")]
+    weight: Option<i16>,
     #[serde(rename = "ModGenerationTypeId")]
     mod_generation_type_id: i32,
     #[serde(rename = "ModFamilyList")]
@@ -321,11 +323,12 @@ struct CsvMod{
     display_en: String,
     display_kor: String,
     level: i32,
+    weight: Option<i16>,
 }
 
 impl CsvMod {
-    fn new(name_en: String, name_kor: String, display_en: String, display_kor: String, level: i32) -> CsvMod {
-        CsvMod { name_en, name_kor, display_en, display_kor, level }
+    fn new(name_en: String, name_kor: String, display_en: String, display_kor: String, level: i32, weight: Option<i16>) -> CsvMod {
+        CsvMod { name_en, name_kor, display_en, display_kor, level, weight }
     }
 }
 
@@ -363,17 +366,18 @@ impl PropertyCache {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::collections::HashSet;
 
-    const CSV_DATA: &str = r#"EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,ModGroup
-of the Brute,- 짐승,1,2,Strength,,+(8-12) to Strength,힘 +(8-12),attribute,of the Brute
-of the Wrestler,- 씨름꾼,11,2,Strength,,+(13-17) to Strength,힘 +(13-17),attribute,of the Wrestler
-of the Bear,- 곰,22,2,Strength,,+(18-22) to Strength,힘 +(18-22),attribute,of the Bear
-of the Mongoose,- 몽구스,1,2,Dexterity,,+(8-12) to Dexterity,민첩 +(8-12),attribute,of the Mongoose
-of the Lynx,- 스라소니,11,2,Dexterity,,+(13-17) to Dexterity,민첩 +(13-17),attribute,of the Lynx
-of the Fox,- 여우,22,2,Dexterity,,+(18-22) to Dexterity,민첩 +(18-22),attribute,of the Fox
-of the Pupil,- 제자,1,2,Intelligence,,+(8-12) to Intelligence,지능 +(8-12),attribute,of the Pupil
-of the Student,- 학생,11,2,Intelligence,,+(13-17) to Intelligence,지능 +(13-17),attribute,of the Student
-of the Prodigy,- 영재,22,2,Intelligence,,+(18-22) to Intelligence,지능 +(18-22),attribute,of the Prodigy
+    const CSV_DATA: &str = r#"EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Brute,- 짐승,1,2,Strength,+(8—12) to Strength,힘 +(8-12),,1000,attribute,Attribute,,+# to Strength
+of the Wrestler,- 씨름꾼,11,2,Strength,+(13—17) to Strength,힘 +(13-17),,1000,attribute,Attribute,,+# to Strength
+of the Bear,- 곰,22,2,Strength,+(18—22) to Strength,힘 +(18-22),,1000,attribute,Attribute,,+# to Strength
+of the Mongoose,- 몽구스,1,2,Dexterity,+(8—12) to Dexterity,민첩 +(8-12),,1000,attribute,Attribute,,+# to Dexterity
+of the Lynx,- 스라소니,11,2,Dexterity,+(13—17) to Dexterity,민첩 +(13-17),,1000,attribute,Attribute,,+# to Dexterity
+of the Fox,- 여우,22,2,Dexterity,+(18—22) to Dexterity,민첩 +(18-22),,1000,attribute,Attribute,,+# to Dexterity
+of the Pupil,- 제자,1,2,Intelligence,+(8—12) to Intelligence,지능 +(8-12),,1000,attribute,Attribute,,+# to Intelligence
+of the Student,- 학생,11,2,Intelligence,+(13—17) to Intelligence,지능 +(13-17),,1000,attribute,Attribute,,+# to Intelligence
+of the Prodigy,- 영재,22,2,Intelligence,+(18—22) to Intelligence,지능 +(18-22),,1000,attribute,Attribute,,+# to Intelligence
 "#;
 
     #[test]
@@ -390,10 +394,13 @@ of the Prodigy,- 영재,22,2,Intelligence,,+(18-22) to Intelligence,지능 +(18-
         assert_eq!(r0.level, 1);
         assert_eq!(r0.mod_generation_type_id, 2);
         assert_eq!(r0.mod_family_list, "Strength");
-        assert_eq!(r0.str_en, "+(8-12) to Strength");
+        // em dash 그대로 사용
+        assert_eq!(r0.str_en, "+(8—12) to Strength");
         assert_eq!(r0.str_kor, "힘 +(8-12)");
         assert_eq!(r0.tags, "attribute");
-        assert_eq!(r0.mod_group, "of the Brute");
+        // 여기: 실제 CSV에서는 ModGroup = "+# to Strength"
+        assert_eq!(r0.mod_group, "+# to Strength");
+        assert_eq!(r0.weight.unwrap_or_else(|| panic!("weight is None!")), 1000);
 
         // 3) 마지막 레코드도 확인
         let r8 = &records[8];
@@ -402,54 +409,66 @@ of the Prodigy,- 영재,22,2,Intelligence,,+(18-22) to Intelligence,지능 +(18-
         assert_eq!(r8.level, 22);
         assert_eq!(r8.mod_family_list, "Intelligence");
         assert_eq!(r8.tags, "attribute");
-        assert_eq!(r8.mod_group, "of the Prodigy");
+        // 마지막 줄 ModGroup = "+# to Intelligence"
+        assert_eq!(r8.mod_group, "+# to Intelligence");
+        assert_eq!(r8.weight.unwrap_or_else(|| panic!("weight is None!")), 1000);
     }
 
     #[test]
     fn section_record_transform_groups_records_by_mod_group() {
-        // 1) CSV 문자열을 CsvRecord 벡터로 파싱
         let records = read_csv_from_reader(CSV_DATA.as_bytes());
-
         assert_eq!(records.len(), 9);
 
-        // 2) section_record_transform 실행
         let item_type_name = "attribute";
         let section_name = "normal";
         let groups = section_record_transform(records, item_type_name, section_name);
 
-        // 3) 결과 그룹 개수 확인 (각 모드가 서로 다른 ModGroup 이므로 9개)
-        assert_eq!(groups.len(), 9);
+        assert_eq!(groups.len(), 3);
 
-        // 4) "of the Brute" 그룹 찾아서 필드 검증
-        let brute = groups
+        // Strength 그룹 ("+# to Strength")
+        let strength_group = groups
             .iter()
-            .find(|g| g.value == "of the Brute")
-            .expect("group 'of the Brute' not found");
+            .find(|g| g.value == "+# to Strength")
+            .expect("group '+# to Strength' not found");
 
-        assert_eq!(brute.generation_type_id, 2);
-        assert_eq!(brute.family_set, HashSet::from(["Strength".to_string()]));
-        assert_eq!(brute.tag_set, HashSet::from(["attribute".to_string()]));
-        assert_eq!(brute.item_type, item_type_name.to_string());
-        assert_eq!(brute.section, section_name.to_string());
-        assert_eq!(brute.mod_list.len(), 1);
+        assert_eq!(strength_group.generation_type_id, 2);
+        assert_eq!(
+            strength_group.family_set,
+            HashSet::from(["Strength".to_string()])
+        );
+        assert_eq!(
+            strength_group.tag_set,
+            HashSet::from(["attribute".to_string()])
+        );
+        assert_eq!(strength_group.item_type, item_type_name.to_string());
+        assert_eq!(strength_group.section, section_name.to_string());
+        // Brute / Wrestler / Bear 3개
+        assert_eq!(strength_group.mod_list.len(), 3);
 
-        let m = &brute.mod_list[0];
-        assert_eq!(m.name_en, "of the Brute");
-        assert_eq!(m.name_kor, "- 짐승");
-        assert_eq!(m.display_en, "+(8-12) to Strength");
-        assert_eq!(m.display_kor, "힘 +(8-12)");
-        assert_eq!(m.level, 1);
+        let m0 = &strength_group.mod_list[0];
+        assert_eq!(m0.name_en, "of the Brute");
+        assert_eq!(m0.name_kor, "- 짐승");
+        assert_eq!(m0.display_en, "+(8—12) to Strength");
+        assert_eq!(m0.display_kor, "힘 +(8-12)");
+        assert_eq!(m0.level, 1);
 
-        // 5) Intelligence 계열 중 하나도 샘플로 체크
-        let prodigy = groups
+        // Intelligence 그룹 ("+# to Intelligence") 샘플 체크
+        let int_group = groups
             .iter()
-            .find(|g| g.value == "of the Prodigy")
-            .expect("group 'of the Prodigy' not found");
+            .find(|g| g.value == "+# to Intelligence")
+            .expect("group '+# to Intelligence' not found");
 
-        assert_eq!(prodigy.family_set, HashSet::from(["Intelligence".to_string()]));
-        assert_eq!(prodigy.mod_list.len(), 1);
-        let pm = &prodigy.mod_list[0];
-        assert_eq!(pm.level, 22);
-        assert_eq!(pm.display_kor, "지능 +(18-22)");
+        assert_eq!(
+            int_group.family_set,
+            HashSet::from(["Intelligence".to_string()])
+        );
+        assert_eq!(int_group.mod_list.len(), 3);
+        let last = int_group
+            .mod_list
+            .iter()
+            .find(|m| m.name_en == "of the Prodigy")
+            .expect("mod 'of the Prodigy' not found");
+        assert_eq!(last.level, 22);
+        assert_eq!(last.display_kor, "지능 +(18-22)");
     }
 }

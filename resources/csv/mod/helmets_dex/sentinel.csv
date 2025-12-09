@@ -1,2 +1,2 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-of the Sentinel,- 파수꾼,68,2,FireShocks,,Your Fire Damage can Shock,화염 피해가 감전 유발,elemental|fire|lightning|ailment,Elemental|Fire|Lightning|Ailment,,Your Fire Damage can Shock
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Sentinel,- 파수꾼,68,2,FireShocks,Your Fire Damage can Shock,화염 피해가 감전 유발,,0,elemental|fire|lightning|ailment,Elemental|Fire|Lightning|Ailment,,Your Fire Damage can Shock

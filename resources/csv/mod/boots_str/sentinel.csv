@@ -1,2 +1,2 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Sentinel's,파수꾼의,68,1,GlobalAddedDamagePerAttribute,,Adds 2 to 4 Fire Damage to Attacks per 10 Strength,힘 10당 공격 시 화염 피해 2~4 추가,elemental|fire|attack,Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks per # Strength
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Sentinel's,파수꾼의,68,1,GlobalAddedDamagePerAttribute,Adds 2 to 4 Fire Damage to Attacks per 10 Strength,힘 10당 공격 시 화염 피해 2~4 추가,,0,elemental|fire|attack,Elemental|Fire|Attack,,Adds # to # Fire Damage to Attacks per # Strength

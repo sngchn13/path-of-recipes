@@ -1,86 +1,86 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Upgraded,개량된,15,1,IncreasedLife,,+(15-25) to maximum Life,생명력 최대치 +(15-25),resource|life,Life,,+# to maximum Life
-Upgraded,개량된,40,1,IncreasedLife,,+(26-40) to maximum Life,생명력 최대치 +(26-40),resource|life,Life,,+# to maximum Life
-Upgraded,개량된,68,1,IncreasedLife,,+(41-55) to maximum Life,생명력 최대치 +(41-55),resource|life,Life,,+# to maximum Life
-Upgraded,개량된,20,1,IncreasedMana,,+(25-34) to maximum Mana,마나 최대치 +(25-34),resource|mana,Mana,,+# to maximum Mana
-Upgraded,개량된,40,1,IncreasedMana,,+(35-44) to maximum Mana,마나 최대치 +(35-44),resource|mana,Mana,,+# to maximum Mana
-Upgraded,개량된,60,1,IncreasedMana,,+(45-54) to maximum Mana,마나 최대치 +(45-54),resource|mana,Mana,,+# to maximum Mana
-Upgraded,개량된,30,1,IncreasedWeaponElementalDamagePercent,,(15-23)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (15-23)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
-Upgraded,개량된,50,1,IncreasedWeaponElementalDamagePercent,,(24-32)% increased Elemental Damage with Attack Skills,공격 스킬의 원소 피해 (24-32)% 증가,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
-Upgraded,개량된,60,1,IncreasedPhysicalDamageReductionRating|IncreasedEvasionRating,,+(105-150) to Armour and Evasion Rating,방어도 및 회피 +(105-150),unveiled_mod|defences|armour|evasion,Defences|Armour|Evasion,,+# to Armour and Evasion Rating
-Upgraded,개량된,72,1,IncreasedPhysicalDamageReductionRating|IncreasedEvasionRating,,+(151-213) to Armour and Evasion Rating,방어도 및 회피 +(151-213),unveiled_mod|defences|armour|evasion,Defences|Armour|Evasion,,+# to Armour and Evasion Rating
-Upgraded,개량된,81,1,IncreasedPhysicalDamageReductionRating|IncreasedEvasionRating,,+(214-285) to Armour and Evasion Rating,방어도 및 회피 +(214-285),unveiled_mod|defences|armour|evasion,Defences|Armour|Evasion,,+# to Armour and Evasion Rating
-Upgraded,개량된,60,1,IncreasedPhysicalDamageReductionRating|IncreasedEnergyShield,,+(105-150) to Armour+(11-15) to maximum Energy Shield,방어도 +(105-150)에너지 보호막 최대치 +(11-15),unveiled_mod|defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
-Upgraded,개량된,72,1,IncreasedPhysicalDamageReductionRating|IncreasedEnergyShield,,+(151-213) to Armour+(16-20) to maximum Energy Shield,방어도 +(151-213)에너지 보호막 최대치 +(16-20),unveiled_mod|defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
-Upgraded,개량된,81,1,IncreasedPhysicalDamageReductionRating|IncreasedEnergyShield,,+(214-285) to Armour+(21-25) to maximum Energy Shield,방어도 +(214-285)에너지 보호막 최대치 +(21-25),unveiled_mod|defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
-Upgraded,개량된,60,1,IncreasedEvasionRating|IncreasedEnergyShield,,+(105-150) to Evasion Rating+(11-15) to maximum Energy Shield,회피 +(105-150)에너지 보호막 최대치 +(11-15),unveiled_mod|defences|evasion|energy_shield,Defences|Evasion|Energy Shield,,+# to Evasion Rating+# to maximum Energy Shield
-Upgraded,개량된,72,1,IncreasedEvasionRating|IncreasedEnergyShield,,+(151-213) to Evasion Rating+(16-20) to maximum Energy Shield,회피 +(151-213)에너지 보호막 최대치 +(16-20),unveiled_mod|defences|evasion|energy_shield,Defences|Evasion|Energy Shield,,+# to Evasion Rating+# to maximum Energy Shield
-Upgraded,개량된,81,1,IncreasedEvasionRating|IncreasedEnergyShield,,+(214-285) to Evasion Rating+(21-25) to maximum Energy Shield,회피 +(214-285)에너지 보호막 최대치 +(21-25),unveiled_mod|defences|evasion|energy_shield,Defences|Evasion|Energy Shield,,+# to Evasion Rating+# to maximum Energy Shield
-Upgraded,개량된,60,1,FlaskEffect,,20% reduced Flask Charges gainedFlasks applied to you have (8-10)% increased Effect,플라스크 충전량 20% 감소자신에게 적용된 플라스크의 효과 (8-10)% 증가,flask|unveiled_mod,,,#% reduced Flask Charges gainedFlasks applied to you have #% increased Effect
-Upgraded,개량된,75,1,FlaskEffect,,33% reduced Flask Charges gainedFlasks applied to you have (11-14)% increased Effect,플라스크 충전량 33% 감소자신에게 적용된 플라스크의 효과 (11-14)% 증가,flask|unveiled_mod,,,#% reduced Flask Charges gainedFlasks applied to you have #% increased Effect
-Upgraded,개량된,60,1,IncreasedLife,,+(28-33) to maximum LifeRegenerate 2 Mana per second,생명력 최대치 +(28-33)1초마다 마나 2 재생,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum LifeRegenerate # Mana per second
-Upgraded,개량된,72,1,IncreasedLife,,+(34-40) to maximum LifeRegenerate 3 Mana per second,생명력 최대치 +(34-40)1초마다 마나 3 재생,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum LifeRegenerate # Mana per second
-Upgraded,개량된,81,1,IncreasedLife,,+(41-45) to maximum LifeRegenerate 4 Mana per second,생명력 최대치 +(41-45)1초마다 마나 4 재생,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum LifeRegenerate # Mana per second
-Upgraded,개량된,60,1,IncreasedMana,,+(28-33) to maximum ManaRegenerate 15 Life per second,마나 최대치 +(28-33)1초마다 생명력 15 재생,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum ManaRegenerate # Life per second
-Upgraded,개량된,72,1,IncreasedMana,,+(34-40) to maximum ManaRegenerate 20 Life per second,마나 최대치 +(34-40)1초마다 생명력 20 재생,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum ManaRegenerate # Life per second
-Upgraded,개량된,81,1,IncreasedMana,,+(41-45) to maximum ManaRegenerate 25 Life per second,마나 최대치 +(41-45)1초마다 생명력 25 재생,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum ManaRegenerate # Life per second
-Upgraded,개량된,72,1,AllDamage,,(12-14)% increased Damage,피해 (12-14)% 증가,unveiled_mod|damage,Damage,,#% increased Damage
-Upgraded,개량된,81,1,AllDamage,,(15-17)% increased Damage,피해 (15-17)% 증가,unveiled_mod|damage,Damage,,#% increased Damage
-Suffixed,접미어,1,1,ItemGenerationCannotChangeSuffixes,,Suffixes Cannot Be Changed,접미어 변경 불가,,,,Suffixes Cannot Be Changed
-of Craft,- 제작,15,2,FireResistance,,+(16-20)% to Fire Resistance,화염 저항 +(16-20)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
-of Craft,- 제작,15,2,ColdResistance,,+(16-20)% to Cold Resistance,냉기 저항 +(16-20)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
-of Craft,- 제작,15,2,LightningResistance,,+(16-20)% to Lightning Resistance,번개 저항 +(16-20)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
-of Craft,- 제작,15,2,Strength,,+(15-20) to Strength,힘 +(15-20),attribute,Attribute,,+# to Strength
-of Craft,- 제작,30,2,FireResistance,,+(21-28)% to Fire Resistance,화염 저항 +(21-28)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
-of Craft,- 제작,50,2,FireResistance,,+(29-35)% to Fire Resistance,화염 저항 +(29-35)%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
-of Craft,- 제작,30,2,ColdResistance,,+(21-28)% to Cold Resistance,냉기 저항 +(21-28)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
-of Craft,- 제작,50,2,ColdResistance,,+(29-35)% to Cold Resistance,냉기 저항 +(29-35)%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
-of Craft,- 제작,30,2,LightningResistance,,+(21-28)% to Lightning Resistance,번개 저항 +(21-28)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
-of Craft,- 제작,50,2,LightningResistance,,+(29-35)% to Lightning Resistance,번개 저항 +(29-35)%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
-of Craft,- 제작,30,2,FireAndColdResistance,,+(10-12)% to Fire and Cold Resistances,화염 및 냉기 저항 +(10-12)%,elemental|fire|cold|resistance,Elemental|Fire|Cold|Resistance,,+#% to Fire and Cold Resistances
-of Craft,- 제작,50,2,FireAndColdResistance,,+(13-16)% to Fire and Cold Resistances,화염 및 냉기 저항 +(13-16)%,elemental|fire|cold|resistance,Elemental|Fire|Cold|Resistance,,+#% to Fire and Cold Resistances
-of Craft,- 제작,75,2,FireAndColdResistance,,+(17-20)% to Fire and Cold Resistances,화염 및 냉기 저항 +(17-20)%,elemental|fire|cold|resistance,Elemental|Fire|Cold|Resistance,,+#% to Fire and Cold Resistances
-of Craft,- 제작,30,2,ColdAndLightningResistance,,+(10-12)% to Cold and Lightning Resistances,냉기 및 번개 저항 +(10-12)%,elemental|cold|lightning|resistance,Elemental|Cold|Lightning|Resistance,,+#% to Cold and Lightning Resistances
-of Craft,- 제작,50,2,ColdAndLightningResistance,,+(13-16)% to Cold and Lightning Resistances,냉기 및 번개 저항 +(13-16)%,elemental|cold|lightning|resistance,Elemental|Cold|Lightning|Resistance,,+#% to Cold and Lightning Resistances
-of Craft,- 제작,75,2,ColdAndLightningResistance,,+(17-20)% to Cold and Lightning Resistances,냉기 및 번개 저항 +(17-20)%,elemental|cold|lightning|resistance,Elemental|Cold|Lightning|Resistance,,+#% to Cold and Lightning Resistances
-of Craft,- 제작,30,2,FireAndLightningResistance,,+(10-12)% to Fire and Lightning Resistances,화염 및 번개 저항 +(10-12)%,elemental|fire|lightning|resistance,Elemental|Fire|Lightning|Resistance,,+#% to Fire and Lightning Resistances
-of Craft,- 제작,50,2,FireAndLightningResistance,,+(13-16)% to Fire and Lightning Resistances,화염 및 번개 저항 +(13-16)%,elemental|fire|lightning|resistance,Elemental|Fire|Lightning|Resistance,,+#% to Fire and Lightning Resistances
-of Craft,- 제작,75,2,FireAndLightningResistance,,+(17-20)% to Fire and Lightning Resistances,화염 및 번개 저항 +(17-20)%,elemental|fire|lightning|resistance,Elemental|Fire|Lightning|Resistance,,+#% to Fire and Lightning Resistances
-of Craft,- 제작,20,2,Strength,,+(21-25) to Strength,힘 +(21-25),attribute,Attribute,,+# to Strength
-of Craft,- 제작,40,2,Strength,,+(26-30) to Strength,힘 +(26-30),attribute,Attribute,,+# to Strength
-of Craft,- 제작,50,2,BeltFlaskDuration,,(5-10)% increased Flask Effect Duration,플라스크 효과 지속시간 (5-10)% 증가,flask,,,#% increased Flask Effect Duration
-of Craft,- 제작,68,2,BeltFlaskDuration,,(11-15)% increased Flask Effect Duration,플라스크 효과 지속시간 (11-15)% 증가,flask,,,#% increased Flask Effect Duration
-of Control,통제의,1,2,TravelSkillsCannotBeExerted,,Warcries cannot Exert Travel Skills,함성이 이동 전용 스킬을 전력 공격으로 사용하지 않음,,,,Warcries cannot Exert Travel Skills
-of Craft,- 제작,30,2,ChaosResistanceAgainstDamageOverTime,,+(31-36)% Chaos Resistance against Damage Over Time,지속 피해 대응 카오스 저항 +(31-36)%,chaos|resistance,Chaos|Resistance,,+#% Chaos Resistance against Damage Over Time
-of Craft,- 제작,60,2,ChaosResistanceAgainstDamageOverTime,,+(37-43)% Chaos Resistance against Damage Over Time,지속 피해 대응 카오스 저항 +(37-43)%,chaos|resistance,Chaos|Resistance,,+#% Chaos Resistance against Damage Over Time
-of Craft,- 제작,60,2,Strength|Dexterity,,+(10-15) to Strength and Dexterity,힘 및 민첩 +(10-15),unveiled_mod|attribute,Attribute,,+# to Strength and Dexterity
-of Craft,- 제작,72,2,Strength|Dexterity,,+(16-20) to Strength and Dexterity,힘 및 민첩 +(16-20),unveiled_mod|attribute,Attribute,,+# to Strength and Dexterity
-of Craft,- 제작,81,2,Strength|Dexterity,,+(21-25) to Strength and Dexterity,힘 및 민첩 +(21-25),unveiled_mod|attribute,Attribute,,+# to Strength and Dexterity
-of Craft,- 제작,60,2,Dexterity|Intelligence,,+(10-15) to Dexterity and Intelligence,민첩 및 지능 +(10-15),unveiled_mod|attribute,Attribute,,+# to Dexterity and Intelligence
-of Craft,- 제작,72,2,Dexterity|Intelligence,,+(16-20) to Dexterity and Intelligence,민첩 및 지능 +(16-20),unveiled_mod|attribute,Attribute,,+# to Dexterity and Intelligence
-of Craft,- 제작,81,2,Dexterity|Intelligence,,+(21-25) to Dexterity and Intelligence,민첩 및 지능 +(21-25),unveiled_mod|attribute,Attribute,,+# to Dexterity and Intelligence
-of Craft,- 제작,60,2,Strength|Intelligence,,+(10-15) to Strength and Intelligence,힘 및 지능 +(10-15),unveiled_mod|attribute,Attribute,,+# to Strength and Intelligence
-of Craft,- 제작,72,2,Strength|Intelligence,,+(16-20) to Strength and Intelligence,힘 및 지능 +(16-20),unveiled_mod|attribute,Attribute,,+# to Strength and Intelligence
-of Craft,- 제작,81,2,Strength|Intelligence,,+(21-25) to Strength and Intelligence,힘 및 지능 +(21-25),unveiled_mod|attribute,Attribute,,+# to Strength and Intelligence
-of Craft,- 제작,60,2,CooldownRecovery,,(6-8)% increased Cooldown Recovery Rate,재사용 대기시간 회복 속도 (6-8)% 증가,unveiled_mod,,,#% increased Cooldown Recovery Rate
-of Craft,- 제작,75,2,CooldownRecovery,,(9-12)% increased Cooldown Recovery Rate,재사용 대기시간 회복 속도 (9-12)% 증가,unveiled_mod,,,#% increased Cooldown Recovery Rate
-of Craft,- 제작,60,2,EnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,,Regenerate 90 Energy Shield per second while a Rare or Unique Enemy is Nearby,주변에 희귀 또는 고유 적이 있는 동안 1초마다 에너지 보호막 90 재생,unveiled_mod|defences|energy_shield,Defences|Energy Shield,,Regenerate # Energy Shield per second while a Rare or Unique Enemy is Nearby
-of Craft,- 제작,72,2,EnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,,Regenerate 120 Energy Shield per second while a Rare or Unique Enemy is Nearby,주변에 희귀 또는 고유 적이 있는 동안 1초마다 에너지 보호막 120 재생,unveiled_mod|defences|energy_shield,Defences|Energy Shield,,Regenerate # Energy Shield per second while a Rare or Unique Enemy is Nearby
-of Craft,- 제작,81,2,EnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,,Regenerate 150 Energy Shield per second while a Rare or Unique Enemy is Nearby,주변에 희귀 또는 고유 적이 있는 동안 1초마다 에너지 보호막 150 재생,unveiled_mod|defences|energy_shield,Defences|Energy Shield,,Regenerate # Energy Shield per second while a Rare or Unique Enemy is Nearby
-of Craft,- 제작,72,2,LuckyCriticalsDuringFocus,,Your Critical Strike Chance is Lucky while Focusedgrant focus skill [1],집중하는 동안 치명타 확률에 행운 적용grant focus skill [1],unveiled_mod|critical,Critical,,Your Critical Strike Chance is Lucky while Focusedgrant focus skill [#]
-of Craft,- 제작,60,2,FireAndChaosDamageResistance,,+(9-10)% to Fire and Chaos Resistances,화염 및 카오스 저항 +(9-10)%,unveiled_mod|elemental|fire|chaos|resistance,Elemental|Fire|Chaos|Resistance,,+#% to Fire and Chaos Resistances
-of Craft,- 제작,72,2,FireAndChaosDamageResistance,,+(11-12)% to Fire and Chaos Resistances,화염 및 카오스 저항 +(11-12)%,unveiled_mod|elemental|fire|chaos|resistance,Elemental|Fire|Chaos|Resistance,,+#% to Fire and Chaos Resistances
-of Craft,- 제작,81,2,FireAndChaosDamageResistance,,+(13-15)% to Fire and Chaos Resistances,화염 및 카오스 저항 +(13-15)%,unveiled_mod|elemental|fire|chaos|resistance,Elemental|Fire|Chaos|Resistance,,+#% to Fire and Chaos Resistances
-of Craft,- 제작,60,2,LightningAndChaosDamageResistance,,+(9-10)% to Lightning and Chaos Resistances,번개 및 카오스 저항 +(9-10)%,unveiled_mod|elemental|lightning|chaos|resistance,Elemental|Lightning|Chaos|Resistance,,+#% to Lightning and Chaos Resistances
-of Craft,- 제작,72,2,LightningAndChaosDamageResistance,,+(11-12)% to Lightning and Chaos Resistances,번개 및 카오스 저항 +(11-12)%,unveiled_mod|elemental|lightning|chaos|resistance,Elemental|Lightning|Chaos|Resistance,,+#% to Lightning and Chaos Resistances
-of Craft,- 제작,81,2,LightningAndChaosDamageResistance,,+(13-15)% to Lightning and Chaos Resistances,번개 및 카오스 저항 +(13-15)%,unveiled_mod|elemental|lightning|chaos|resistance,Elemental|Lightning|Chaos|Resistance,,+#% to Lightning and Chaos Resistances
-of Craft,- 제작,60,2,ColdAndChaosDamageResistance,,+(9-10)% to Cold and Chaos Resistances,냉기 및 카오스 저항 +(9-10)%,unveiled_mod|elemental|cold|chaos|resistance,Elemental|Cold|Chaos|Resistance,,+#% to Cold and Chaos Resistances
-of Craft,- 제작,72,2,ColdAndChaosDamageResistance,,+(11-12)% to Cold and Chaos Resistances,냉기 및 카오스 저항 +(11-12)%,unveiled_mod|elemental|cold|chaos|resistance,Elemental|Cold|Chaos|Resistance,,+#% to Cold and Chaos Resistances
-of Craft,- 제작,81,2,ColdAndChaosDamageResistance,,+(13-15)% to Cold and Chaos Resistances,냉기 및 카오스 저항 +(13-15)%,unveiled_mod|elemental|cold|chaos|resistance,Elemental|Cold|Chaos|Resistance,,+#% to Cold and Chaos Resistances
-of Craft,- 제작,60,2,TrapAndMineThrowSpeed,,(7-8)% increased Trap Throwing Speed,덫 투척 속도 (7-8)% 증가,unveiled_mod|speed,Speed,,#% increased Trap Throwing Speed
-of Craft,- 제작,72,2,TrapAndMineThrowSpeed,,(9-10)% increased Trap Throwing Speed,덫 투척 속도 (9-10)% 증가,unveiled_mod|speed,Speed,,#% increased Trap Throwing Speed
-of Craft,- 제작,81,2,TrapAndMineThrowSpeed,,(11-12)% increased Trap Throwing Speed,덫 투척 속도 (11-12)% 증가,unveiled_mod|speed,Speed,,#% increased Trap Throwing Speed
-of Prefixes,- 접두어,1,2,ItemGenerationCannotChangePrefixes,,Prefixes Cannot Be Changed,접두어 변경 불가,,,,Prefixes Cannot Be Changed
-of Crafting,- 제작,1,2,ItemGenerationCanHaveMultipleCraftedMods,,Can have up to 3 Crafted Modifiers,제작 속성 부여 최대 3개 보유 가능,,,,Can have up to # Crafted Modifiers
-of Spellcraft,- 주문제작,1,2,ItemGenerationCannotRollAttackAffixes,,Cannot roll Attack Modifiers,공격 속성 부여 불가,,,,Cannot roll Attack Modifiers
-of Weaponcraft,- 무기제작,1,2,ItemGenerationCannotRollCasterAffixes,,Cannot roll Caster Modifiers,시전 속성 부여 불가,,,,Cannot roll Caster Modifiers
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Upgraded,개량된,15,1,IncreasedLife,+(15—25) to maximum Life,생명력 최대치 +(15-25),,,resource|life,Life,,+# to maximum Life
+of Craft,개량된,15,2,FireResistance,+(16—20)% to Fire Resistance,생명력 최대치 +(26-40),,,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of Craft,개량된,15,2,ColdResistance,+(16—20)% to Cold Resistance,생명력 최대치 +(41-55),,,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of Craft,개량된,15,2,LightningResistance,+(16—20)% to Lightning Resistance,마나 최대치 +(25-34),,,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of Craft,개량된,15,2,Strength,+(15—20) to Strength,마나 최대치 +(35-44),,,attribute,Attribute,,+# to Strength
+of Craft,개량된,30,2,FireResistance,+(21—28)% to Fire Resistance,마나 최대치 +(45-54),,,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of Craft,개량된,50,2,FireResistance,+(29—35)% to Fire Resistance,공격 스킬의 원소 피해 (15-23)% 증가,,,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to Fire Resistance
+of Craft,개량된,30,2,ColdResistance,+(21—28)% to Cold Resistance,공격 스킬의 원소 피해 (24-32)% 증가,,,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of Craft,개량된,50,2,ColdResistance,+(29—35)% to Cold Resistance,방어도 및 회피 +(105-150),,,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to Cold Resistance
+of Craft,개량된,30,2,LightningResistance,+(21—28)% to Lightning Resistance,방어도 및 회피 +(151-213),,,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of Craft,개량된,50,2,LightningResistance,+(29—35)% to Lightning Resistance,방어도 및 회피 +(214-285),,,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to Lightning Resistance
+of Craft,개량된,30,2,FireAndColdResistance,+(10—12)% to Fire and Cold Resistances,방어도 +(105-150)에너지 보호막 최대치 +(11-15),,,elemental|fire|cold|resistance,Elemental|Fire|Cold|Resistance,,+#% to Fire and Cold Resistances
+of Craft,개량된,50,2,FireAndColdResistance,+(13—16)% to Fire and Cold Resistances,방어도 +(151-213)에너지 보호막 최대치 +(16-20),,,elemental|fire|cold|resistance,Elemental|Fire|Cold|Resistance,,+#% to Fire and Cold Resistances
+of Craft,개량된,75,2,FireAndColdResistance,+(17—20)% to Fire and Cold Resistances,방어도 +(214-285)에너지 보호막 최대치 +(21-25),,,elemental|fire|cold|resistance,Elemental|Fire|Cold|Resistance,,+#% to Fire and Cold Resistances
+of Craft,개량된,30,2,ColdAndLightningResistance,+(10—12)% to Cold and Lightning Resistances,회피 +(105-150)에너지 보호막 최대치 +(11-15),,,elemental|cold|lightning|resistance,Elemental|Cold|Lightning|Resistance,,+#% to Cold and Lightning Resistances
+of Craft,개량된,50,2,ColdAndLightningResistance,+(13—16)% to Cold and Lightning Resistances,회피 +(151-213)에너지 보호막 최대치 +(16-20),,,elemental|cold|lightning|resistance,Elemental|Cold|Lightning|Resistance,,+#% to Cold and Lightning Resistances
+of Craft,개량된,75,2,ColdAndLightningResistance,+(17—20)% to Cold and Lightning Resistances,회피 +(214-285)에너지 보호막 최대치 +(21-25),,,elemental|cold|lightning|resistance,Elemental|Cold|Lightning|Resistance,,+#% to Cold and Lightning Resistances
+of Craft,개량된,30,2,FireAndLightningResistance,+(10—12)% to Fire and Lightning Resistances,플라스크 충전량 20% 감소자신에게 적용된 플라스크의 효과 (8-10)% 증가,,,elemental|fire|lightning|resistance,Elemental|Fire|Lightning|Resistance,,+#% to Fire and Lightning Resistances
+of Craft,개량된,50,2,FireAndLightningResistance,+(13—16)% to Fire and Lightning Resistances,플라스크 충전량 33% 감소자신에게 적용된 플라스크의 효과 (11-14)% 증가,,,elemental|fire|lightning|resistance,Elemental|Fire|Lightning|Resistance,,+#% to Fire and Lightning Resistances
+of Craft,개량된,75,2,FireAndLightningResistance,+(17—20)% to Fire and Lightning Resistances,생명력 최대치 +(28-33)1초마다 마나 2 재생,,,elemental|fire|lightning|resistance,Elemental|Fire|Lightning|Resistance,,+#% to Fire and Lightning Resistances
+of Craft,개량된,20,2,Strength,+(21—25) to Strength,생명력 최대치 +(34-40)1초마다 마나 3 재생,,,attribute,Attribute,,+# to Strength
+of Craft,개량된,40,2,Strength,+(26—30) to Strength,생명력 최대치 +(41-45)1초마다 마나 4 재생,,,attribute,Attribute,,+# to Strength
+Upgraded,개량된,40,1,IncreasedLife,+(26—40) to maximum Life,마나 최대치 +(28-33)1초마다 생명력 15 재생,,,resource|life,Life,,+# to maximum Life
+Upgraded,개량된,68,1,IncreasedLife,+(41—55) to maximum Life,마나 최대치 +(34-40)1초마다 생명력 20 재생,,,resource|life,Life,,+# to maximum Life
+Upgraded,개량된,20,1,IncreasedMana,+(25—34) to maximum Mana,마나 최대치 +(41-45)1초마다 생명력 25 재생,,,resource|mana,Mana,,+# to maximum Mana
+Upgraded,개량된,40,1,IncreasedMana,+(35—44) to maximum Mana,피해 (12-14)% 증가,,,resource|mana,Mana,,+# to maximum Mana
+Upgraded,개량된,60,1,IncreasedMana,+(45—54) to maximum Mana,피해 (15-17)% 증가,,,resource|mana,Mana,,+# to maximum Mana
+Upgraded,접미어,30,1,IncreasedWeaponElementalDamagePercent,(15—23)% increased Elemental Damage with Attack Skills,접미어 변경 불가,,,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+Upgraded,- 제작,50,1,IncreasedWeaponElementalDamagePercent,(24—32)% increased Elemental Damage with Attack Skills,화염 저항 +(16-20)%,,,elemental_damage|damage|elemental|attack,Damage|Elemental|Attack,,#% increased Elemental Damage with Attack Skills
+of Craft,- 제작,50,2,BeltFlaskDuration,(5—10)% increased Flask Effect Duration,냉기 저항 +(16-20)%,,,flask,,,#% increased Flask Effect Duration
+of Craft,- 제작,68,2,BeltFlaskDuration,(11—15)% increased Flask Effect Duration,번개 저항 +(16-20)%,,,flask,,,#% increased Flask Effect Duration
+of Control,- 제작,1,2,TravelSkillsCannotBeExerted,Warcries cannot Exert Travel Skills,힘 +(15-20),,,,,,Warcries cannot Exert Travel Skills
+of Craft,- 제작,30,2,ChaosResistanceAgainstDamageOverTime,+(31—36)% Chaos Resistance against Damage Over Time,화염 저항 +(21-28)%,,,chaos|resistance,Chaos|Resistance,,+#% Chaos Resistance against Damage Over Time
+of Craft,- 제작,60,2,ChaosResistanceAgainstDamageOverTime,+(37—43)% Chaos Resistance against Damage Over Time,화염 저항 +(29-35)%,,,chaos|resistance,Chaos|Resistance,,+#% Chaos Resistance against Damage Over Time
+of Craft,- 제작,60,2,Strength|Dexterity,+(10—15) to Strength and Dexterity,냉기 저항 +(21-28)%,,,unveiled_mod|attribute,Attribute,,+# to Strength and Dexterity
+of Craft,- 제작,72,2,Strength|Dexterity,+(16—20) to Strength and Dexterity,냉기 저항 +(29-35)%,,,unveiled_mod|attribute,Attribute,,+# to Strength and Dexterity
+of Craft,- 제작,81,2,Strength|Dexterity,+(21—25) to Strength and Dexterity,번개 저항 +(21-28)%,,,unveiled_mod|attribute,Attribute,,+# to Strength and Dexterity
+of Craft,- 제작,60,2,Dexterity|Intelligence,+(10—15) to Dexterity and Intelligence,번개 저항 +(29-35)%,,,unveiled_mod|attribute,Attribute,,+# to Dexterity and Intelligence
+of Craft,- 제작,72,2,Dexterity|Intelligence,+(16—20) to Dexterity and Intelligence,화염 및 냉기 저항 +(10-12)%,,,unveiled_mod|attribute,Attribute,,+# to Dexterity and Intelligence
+of Craft,- 제작,81,2,Dexterity|Intelligence,+(21—25) to Dexterity and Intelligence,화염 및 냉기 저항 +(13-16)%,,,unveiled_mod|attribute,Attribute,,+# to Dexterity and Intelligence
+of Craft,- 제작,60,2,Strength|Intelligence,+(10—15) to Strength and Intelligence,화염 및 냉기 저항 +(17-20)%,,,unveiled_mod|attribute,Attribute,,+# to Strength and Intelligence
+of Craft,- 제작,72,2,Strength|Intelligence,+(16—20) to Strength and Intelligence,냉기 및 번개 저항 +(10-12)%,,,unveiled_mod|attribute,Attribute,,+# to Strength and Intelligence
+of Craft,- 제작,81,2,Strength|Intelligence,+(21—25) to Strength and Intelligence,냉기 및 번개 저항 +(13-16)%,,,unveiled_mod|attribute,Attribute,,+# to Strength and Intelligence
+Upgraded,- 제작,60,1,IncreasedPhysicalDamageReductionRating|IncreasedEvasionRating,+(105—150) to Armour and Evasion Rating,냉기 및 번개 저항 +(17-20)%,,,unveiled_mod|defences|armour|evasion,Defences|Armour|Evasion,,+# to Armour and Evasion Rating
+Upgraded,- 제작,72,1,IncreasedPhysicalDamageReductionRating|IncreasedEvasionRating,+(151—213) to Armour and Evasion Rating,화염 및 번개 저항 +(10-12)%,,,unveiled_mod|defences|armour|evasion,Defences|Armour|Evasion,,+# to Armour and Evasion Rating
+Upgraded,- 제작,81,1,IncreasedPhysicalDamageReductionRating|IncreasedEvasionRating,+(214—285) to Armour and Evasion Rating,화염 및 번개 저항 +(13-16)%,,,unveiled_mod|defences|armour|evasion,Defences|Armour|Evasion,,+# to Armour and Evasion Rating
+Upgraded,- 제작,60,1,IncreasedPhysicalDamageReductionRating|IncreasedEnergyShield,+(105—150) to Armour+(11—15) to maximum Energy Shield,화염 및 번개 저항 +(17-20)%,,,unveiled_mod|defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Upgraded,- 제작,72,1,IncreasedPhysicalDamageReductionRating|IncreasedEnergyShield,+(151—213) to Armour+(16—20) to maximum Energy Shield,힘 +(21-25),,,unveiled_mod|defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Upgraded,- 제작,81,1,IncreasedPhysicalDamageReductionRating|IncreasedEnergyShield,+(214—285) to Armour+(21—25) to maximum Energy Shield,힘 +(26-30),,,unveiled_mod|defences|armour|energy_shield,Defences|Armour|Energy Shield,,+# to Armour+# to maximum Energy Shield
+Upgraded,- 제작,60,1,IncreasedEvasionRating|IncreasedEnergyShield,+(105—150) to Evasion Rating+(11—15) to maximum Energy Shield,플라스크 효과 지속시간 (5-10)% 증가,,,unveiled_mod|defences|evasion|energy_shield,Defences|Evasion|Energy Shield,,+# to Evasion Rating+# to maximum Energy Shield
+Upgraded,- 제작,72,1,IncreasedEvasionRating|IncreasedEnergyShield,+(151—213) to Evasion Rating+(16—20) to maximum Energy Shield,플라스크 효과 지속시간 (11-15)% 증가,,,unveiled_mod|defences|evasion|energy_shield,Defences|Evasion|Energy Shield,,+# to Evasion Rating+# to maximum Energy Shield
+Upgraded,통제의,81,1,IncreasedEvasionRating|IncreasedEnergyShield,+(214—285) to Evasion Rating+(21—25) to maximum Energy Shield,함성이 이동 전용 스킬을 전력 공격으로 사용하지 않음,,,unveiled_mod|defences|evasion|energy_shield,Defences|Evasion|Energy Shield,,+# to Evasion Rating+# to maximum Energy Shield
+Upgraded,- 제작,60,1,FlaskEffect,20% reduced Flask Charges gainedFlasks applied to you have (8—10)% increased Effect,지속 피해 대응 카오스 저항 +(31-36)%,,,flask|unveiled_mod,,,#% reduced Flask Charges gainedFlasks applied to you have #% increased Effect
+Upgraded,- 제작,75,1,FlaskEffect,33% reduced Flask Charges gainedFlasks applied to you have (11—14)% increased Effect,지속 피해 대응 카오스 저항 +(37-43)%,,,flask|unveiled_mod,,,#% reduced Flask Charges gainedFlasks applied to you have #% increased Effect
+of Craft,- 제작,60,2,CooldownRecovery,(6—8)% increased Cooldown Recovery Rate,힘 및 민첩 +(10-15),,,unveiled_mod,,,#% increased Cooldown Recovery Rate
+of Craft,- 제작,75,2,CooldownRecovery,(9—12)% increased Cooldown Recovery Rate,힘 및 민첩 +(16-20),,,unveiled_mod,,,#% increased Cooldown Recovery Rate
+of Craft,- 제작,60,2,EnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,Regenerate 90 Energy Shield per second while a Rare or Unique Enemy is Nearby,힘 및 민첩 +(21-25),,,unveiled_mod|defences|energy_shield,Defences|Energy Shield,,Regenerate # Energy Shield per second while a Rare or Unique Enemy is Nearby
+of Craft,- 제작,72,2,EnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,Regenerate 120 Energy Shield per second while a Rare or Unique Enemy is Nearby,민첩 및 지능 +(10-15),,,unveiled_mod|defences|energy_shield,Defences|Energy Shield,,Regenerate # Energy Shield per second while a Rare or Unique Enemy is Nearby
+of Craft,- 제작,81,2,EnergyShieldRegenerationRatePerMinuteIfRareOrUniqueEnemyNearby,Regenerate 150 Energy Shield per second while a Rare or Unique Enemy is Nearby,민첩 및 지능 +(16-20),,,unveiled_mod|defences|energy_shield,Defences|Energy Shield,,Regenerate # Energy Shield per second while a Rare or Unique Enemy is Nearby
+Upgraded,- 제작,60,1,IncreasedLife,+(28—33) to maximum LifeRegenerate 2 Mana per second,민첩 및 지능 +(21-25),,,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum LifeRegenerate # Mana per second
+Upgraded,- 제작,72,1,IncreasedLife,+(34—40) to maximum LifeRegenerate 3 Mana per second,힘 및 지능 +(10-15),,,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum LifeRegenerate # Mana per second
+Upgraded,- 제작,81,1,IncreasedLife,+(41—45) to maximum LifeRegenerate 4 Mana per second,힘 및 지능 +(16-20),,,resource|unveiled_mod|life|mana,Life|Mana,,+# to maximum LifeRegenerate # Mana per second
+Upgraded,- 제작,60,1,IncreasedMana,Regenerate 15 Life per second+(28—33) to maximum Mana,힘 및 지능 +(21-25),,,resource|unveiled_mod|life|mana,Life|Mana,,Regenerate # Life per second+# to maximum Mana
+Upgraded,- 제작,72,1,IncreasedMana,Regenerate 20 Life per second+(34—40) to maximum Mana,재사용 대기시간 회복 속도 (6-8)% 증가,,,resource|unveiled_mod|life|mana,Life|Mana,,Regenerate # Life per second+# to maximum Mana
+Upgraded,- 제작,81,1,IncreasedMana,Regenerate 25 Life per second+(41—45) to maximum Mana,재사용 대기시간 회복 속도 (9-12)% 증가,,,resource|unveiled_mod|life|mana,Life|Mana,,Regenerate # Life per second+# to maximum Mana
+of Craft,- 제작,72,2,LuckyCriticalsDuringFocus,Your Critical Strike Chance is Lucky while Focusedgrant focus skill [1],주변에 희귀 또는 고유 적이 있는 동안 1초마다 에너지 보호막 90 재생,,,unveiled_mod|critical,Critical,,Your Critical Strike Chance is Lucky while Focusedgrant focus skill [#]
+Upgraded,- 제작,72,1,AllDamage,(12—14)% increased Damage,주변에 희귀 또는 고유 적이 있는 동안 1초마다 에너지 보호막 120 재생,,,unveiled_mod|damage,Damage,,#% increased Damage
+Upgraded,- 제작,81,1,AllDamage,(15—17)% increased Damage,주변에 희귀 또는 고유 적이 있는 동안 1초마다 에너지 보호막 150 재생,,,unveiled_mod|damage,Damage,,#% increased Damage
+of Craft,- 제작,60,2,FireAndChaosDamageResistance,+(9—10)% to Fire and Chaos Resistances,집중하는 동안 치명타 확률에 행운 적용grant focus skill [1],,,unveiled_mod|elemental|fire|chaos|resistance,Elemental|Fire|Chaos|Resistance,,+#% to Fire and Chaos Resistances
+of Craft,- 제작,72,2,FireAndChaosDamageResistance,+(11—12)% to Fire and Chaos Resistances,화염 및 카오스 저항 +(9-10)%,,,unveiled_mod|elemental|fire|chaos|resistance,Elemental|Fire|Chaos|Resistance,,+#% to Fire and Chaos Resistances
+of Craft,- 제작,81,2,FireAndChaosDamageResistance,+(13—15)% to Fire and Chaos Resistances,화염 및 카오스 저항 +(11-12)%,,,unveiled_mod|elemental|fire|chaos|resistance,Elemental|Fire|Chaos|Resistance,,+#% to Fire and Chaos Resistances
+of Craft,- 제작,60,2,LightningAndChaosDamageResistance,+(9—10)% to Lightning and Chaos Resistances,화염 및 카오스 저항 +(13-15)%,,,unveiled_mod|elemental|lightning|chaos|resistance,Elemental|Lightning|Chaos|Resistance,,+#% to Lightning and Chaos Resistances
+of Craft,- 제작,72,2,LightningAndChaosDamageResistance,+(11—12)% to Lightning and Chaos Resistances,번개 및 카오스 저항 +(9-10)%,,,unveiled_mod|elemental|lightning|chaos|resistance,Elemental|Lightning|Chaos|Resistance,,+#% to Lightning and Chaos Resistances
+of Craft,- 제작,81,2,LightningAndChaosDamageResistance,+(13—15)% to Lightning and Chaos Resistances,번개 및 카오스 저항 +(11-12)%,,,unveiled_mod|elemental|lightning|chaos|resistance,Elemental|Lightning|Chaos|Resistance,,+#% to Lightning and Chaos Resistances
+of Craft,- 제작,60,2,ColdAndChaosDamageResistance,+(9—10)% to Cold and Chaos Resistances,번개 및 카오스 저항 +(13-15)%,,,unveiled_mod|elemental|cold|chaos|resistance,Elemental|Cold|Chaos|Resistance,,+#% to Cold and Chaos Resistances
+of Craft,- 제작,72,2,ColdAndChaosDamageResistance,+(11—12)% to Cold and Chaos Resistances,냉기 및 카오스 저항 +(9-10)%,,,unveiled_mod|elemental|cold|chaos|resistance,Elemental|Cold|Chaos|Resistance,,+#% to Cold and Chaos Resistances
+of Craft,- 제작,81,2,ColdAndChaosDamageResistance,+(13—15)% to Cold and Chaos Resistances,냉기 및 카오스 저항 +(11-12)%,,,unveiled_mod|elemental|cold|chaos|resistance,Elemental|Cold|Chaos|Resistance,,+#% to Cold and Chaos Resistances
+of Craft,- 제작,60,2,TrapAndMineThrowSpeed,(7—8)% increased Trap Throwing Speed,냉기 및 카오스 저항 +(13-15)%,,,unveiled_mod|speed,Speed,,#% increased Trap Throwing Speed
+of Craft,- 제작,72,2,TrapAndMineThrowSpeed,(9—10)% increased Trap Throwing Speed,덫 투척 속도 (7-8)% 증가,,,unveiled_mod|speed,Speed,,#% increased Trap Throwing Speed
+of Craft,- 제작,81,2,TrapAndMineThrowSpeed,(11—12)% increased Trap Throwing Speed,덫 투척 속도 (9-10)% 증가,,,unveiled_mod|speed,Speed,,#% increased Trap Throwing Speed
+of Prefixes,- 제작,1,2,ItemGenerationCannotChangePrefixes,Prefixes Cannot Be Changed,덫 투척 속도 (11-12)% 증가,,,,,,Prefixes Cannot Be Changed
+Suffixed,- 접두어,1,1,ItemGenerationCannotChangeSuffixes,Suffixes Cannot Be Changed,접두어 변경 불가,,,,,,Suffixes Cannot Be Changed
+of Crafting,- 제작,1,2,ItemGenerationCanHaveMultipleCraftedMods,Can have up to 3 Crafted Modifiers,제작 속성 부여 최대 3개 보유 가능,,,,,,Can have up to # Crafted Modifiers
+of Spellcraft,- 주문제작,1,2,ItemGenerationCannotRollAttackAffixes,Cannot roll Attack Modifiers,공격 속성 부여 불가,,,,,,Cannot roll Attack Modifiers
+of Weaponcraft,- 무기제작,1,2,ItemGenerationCannotRollCasterAffixes,Cannot roll Caster Modifiers,시전 속성 부여 불가,,,,,,Cannot roll Caster Modifiers

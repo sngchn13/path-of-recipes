@@ -1,0 +1,21 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+V2DeterminationSkillCorrupted__,V2DeterminationSkillCorrupted__,56,5,GrantedSkill,Grants Level 23 Determination Skill,23레벨 결의 스킬 사용 가능,,333,skill,,,Grants Level # Determination Skill
+V2DisciplineSkillCorrupted,V2DisciplineSkillCorrupted,56,5,GrantedSkill,Grants Level 23 Discipline Skill,23레벨 단련 스킬 사용 가능,,333,skill,,,Grants Level # Discipline Skill
+V2GemLevelCorrupted,V2GemLevelCorrupted,1,5,IncreaseSocketedGemLevel,+1 to Level of Socketed Gems,장착된 젬 레벨 +1,,1000,gem,Gem,,+# to Level of Socketed Gems
+V2GraceSkillCorrupted,V2GraceSkillCorrupted,56,5,GrantedSkill,Grants Level 23 Grace Skill,23레벨 은총 스킬 사용 가능,,333,skill,,,Grants Level # Grace Skill
+V2LocalBlockChanceCorrupted,V2LocalBlockChanceCorrupted,1,5,IncreasedShieldBlockPercentage,+(4—5)% Chance to Block,막기 확률 +(4-5)%,,1000,block,,,+#% Chance to Block
+V2MaximumBlockCorruption,V2MaximumBlockCorruption,60,5,MaximumBlockChance,+1% to maximum Chance to Block Attack Damage,공격 피해 막기 확률 최대치 +1%,,1000,block,,,+#% to maximum Chance to Block Attack Damage
+V2SpellBlockPercentageCorrupted,V2SpellBlockPercentageCorrupted,1,5,SpellBlockPercentage,(4—5)% Chance to Block Spell Damage,(4-5)%의 확률로 주문 피해를 막아냄,,1000,block,,,#% Chance to Block Spell Damage
+V2ReducedDamageFromAreaOfEffectCorrupted,V2ReducedDamageFromAreaOfEffectCorrupted,20,5,ReducedDamageFromAreaOfEffect,(4—6)% reduced Area Damage taken from Hits,피격 시 받는 범위 피해 (4-6)% 감소,,1000,,,,#% reduced Area Damage taken from Hits
+V2ReducedDamageFromProjectilesCorrupted,V2ReducedDamageFromProjectilesCorrupted,20,5,ProjectileDamageTaken,(4—6)% reduced Damage taken from Projectile Hits,투사체 피격 시 받는 피해 (4-6)% 감소,,1000,,,,#% reduced Damage taken from Projectile Hits
+V2ReducedExtraDamageFromCriticalStrikesShieldCorrupted,V2ReducedExtraDamageFromCriticalStrikesShieldCorrupted,20,5,ReducedExtraDamageFromCrits,You take (20—30)% reduced Extra Damage from Critical Strikes,치명타로 받는 추가 피해 (20-30)% 감소,,1000,damage|critical,Damage|Critical,,You take #% reduced Extra Damage from Critical Strikes
+V2SocketedDurationGemCorrupted,V2SocketedDurationGemCorrupted,20,5,IncreaseSocketedDurationGemLevel,+2 to Level of Socketed Duration Gems,장착된 지속시간 젬 레벨 +2,,1000,gem,Gem,,+# to Level of Socketed Duration Gems
+V2SocketedAoEGemCorrupted,V2SocketedAoEGemCorrupted,20,5,IncreasedSocketedAoEGemLevel,+2 to Level of Socketed AoE Gems,장착된 효과 범위 젬 레벨 +2,,1000,gem,Gem,,+# to Level of Socketed AoE Gems
+V2SocketedAuraGemCorrupted,V2SocketedAuraGemCorrupted,20,5,IncreaseSocketedAuraGemLevel,+2 to Level of Socketed Aura Gems,장착된 오라 젬 레벨 +2,,1000,aura|gem,Aura|Gem,,+# to Level of Socketed Aura Gems
+V2SocketedCurseGemCorrupted,V2SocketedCurseGemCorrupted,20,5,IncreaseSocketedCurseGemLevel,+2 to Level of Socketed Curse Gems,장착된 저주 젬 레벨 +2,,1000,caster|gem|curse,Caster|Gem|Curse,,+# to Level of Socketed Curse Gems
+V2SocketedTrapOrMineGemCorrupted,V2SocketedTrapOrMineGemCorrupted,20,5,IncreasedSocketedTrapOrMineGemLevel,+2 to Level of Socketed Trap or Mine Gems,장착된 덫 또는 지뢰 젬 레벨 +2,,1000,gem,Gem,,+# to Level of Socketed Trap or Mine Gems
+V2SocketedMinionGemCorrupted,V2SocketedMinionGemCorrupted,20,5,IncreaseSpecificSocketedGemLevel,+2 to Level of Socketed Minion Gems,장착된 소환수 젬 레벨 +2,,1000,minion|gem,Minion|Gem,,+# to Level of Socketed Minion Gems
+V2SocketedWarcryGemCorrupted,V2SocketedWarcryGemCorrupted,20,5,LocalSocketedWarcryGemLevel,+2 to Level of Socketed Warcry Gems,장착된 함성 젬 레벨 +2,,1000,gem,Gem,,+# to Level of Socketed Warcry Gems
+V2SocketedProjectileGemCorrupted_,V2SocketedProjectileGemCorrupted_,20,5,IncreaseSocketedProjectileGemLevel,+2 to Level of Socketed Projectile Gems,장착된 투사체 젬 레벨 +2,,1000,gem,Gem,,+# to Level of Socketed Projectile Gems
+V2IncreasedMaximumLifeCorrupted,V2IncreasedMaximumLifeCorrupted,1,5,MaximumLifeIncreasePercent,(4—6)% increased maximum Life,최대 생명력 (4-6)% 증가,,1000,resource|life,Life,,#% increased maximum Life
+V2IncreasedMaximumEnergyShieldCorrupted,V2IncreasedMaximumEnergyShieldCorrupted,1,5,MaximumEnergyShieldPercent,(4—6)% increased maximum Energy Shield,에너지 보호막 최대치 (4-6)% 증가,,1000,defences|energy_shield,Defences|Energy Shield,,#% increased maximum Energy Shield

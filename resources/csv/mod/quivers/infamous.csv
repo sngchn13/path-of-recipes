@@ -1,2 +1,2 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Infamous,악명 높은,68,1,ClonesInheritGloves,,Your Blink and Mirror arrow clones use your Gloves,플레이어의 점멸 및 거울 화살 분신이 플레이어의 장갑 사용,minion,Minion,,Your Blink and Mirror arrow clones use your Gloves
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Infamous,악명 높은,68,1,ClonesInheritGloves,Your Blink and Mirror arrow clones use your Gloves,플레이어의 점멸 및 거울 화살 분신이 플레이어의 장갑 사용,,0,minion,Minion,,Your Blink and Mirror arrow clones use your Gloves

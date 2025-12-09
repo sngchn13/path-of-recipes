@@ -1,4 +1,4 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-of Tacati,- 타카티,50,2,ChaosResistance,,+(31-35)% to Chaos Resistance(5-7)% reduced Chaos Damage taken over time,카오스 저항 +(31-35)%받는 지속 카오스 피해 (5-7)% 감소,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance#% reduced Chaos Damage taken over time
-of Tacati,- 타카티,1,2,ChaosResistance,,+(31-35)% to Chaos Resistance(9-10)% reduced Chaos Damage taken over time,카오스 저항 +(31-35)%받는 지속 카오스 피해 (9-10)% 감소,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance#% reduced Chaos Damage taken over time
-Guatelitzi's,과텔리치의,50,1,IncreasedLife,,+(110-119) to maximum Life(8-10)% increased maximum Life,생명력 최대치 +(110-119)최대 생명력 (8-10)% 증가,resource|life,Life,,+# to maximum Life#% increased maximum Life
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of Tacati,- 타카티,50,2,ChaosResistance,+(31—35)% to Chaos Resistance(5—7)% reduced Chaos Damage taken over time,카오스 저항 +(31-35)%받는 지속 카오스 피해 (5-7)% 감소,,,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance#% reduced Chaos Damage taken over time
+of Tacati,- 타카티,1,2,ChaosResistance,+(31—35)% to Chaos Resistance(9—10)% reduced Chaos Damage taken over time,카오스 저항 +(31-35)%받는 지속 카오스 피해 (9-10)% 감소,,,chaos|resistance,Chaos|Resistance,,+#% to Chaos Resistance#% reduced Chaos Damage taken over time
+Guatelitzi's,과텔리치의,50,1,IncreasedLife,+(110—119) to maximum Life(8—10)% increased maximum Life,생명력 최대치 +(110-119)최대 생명력 (8-10)% 증가,,,resource|life,Life,,+# to maximum Life#% increased maximum Life

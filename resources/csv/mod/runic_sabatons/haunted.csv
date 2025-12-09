@@ -1,0 +1,15 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of Haunting,- 출몰,1,2,IncreasedStunThreshold,(80—120)% increased Stun Threshold,기절 한계치 (80-120)% 증가,,750,necropolis_exclusive_mod,,,#% increased Stun Threshold
+Haunted,으스스한,50,1,CannotBeKnockedBack,Cannot be Knocked Back,밀려날 수 없음,,250,necropolis_exclusive_mod,,,Cannot be Knocked Back
+Haunted,으스스한,16,1,MaximumEnduranceCharges,+1 to Maximum Endurance Charges,인내 충전 최대치 +1,,250,endurance_charge|necropolis_exclusive_mod,,,+# to Maximum Endurance Charges
+of Haunting,- 출몰,34,2,NoExtraBleedDamageWhileMoving,Moving while Bleeding doesn't cause you to take extra Damage,출혈 상태에서 이동해도 추가 피해를 받지 않음,,250,bleed|necropolis_exclusive_mod|physical|attack|ailment,Physical|Attack|Ailment,,Moving while Bleeding doesn't cause you to take extra Damage
+of Haunting,- 출몰,16,2,AvoidIgnite,(60—75)% chance to Avoid being Ignited,(60-75)%의 확률로 점화 긴급회피,,500,necropolis_exclusive_mod|elemental|fire|ailment,Elemental|Fire|Ailment,,#% chance to Avoid being Ignited
+of Haunting,- 출몰,16,2,AvoidFreeze,(60—75)% chance to Avoid being Frozen,(60-75)%의 확률로 동결 긴급회피,,500,necropolis_exclusive_mod|elemental|cold|ailment,Elemental|Cold|Ailment,,#% chance to Avoid being Frozen
+of Haunting,- 출몰,16,2,AvoidShock,(60—75)% chance to Avoid being Shocked,(60-75)%의 확률로 감전 긴급회피,,500,necropolis_exclusive_mod|elemental|lightning|ailment,Elemental|Lightning|Ailment,,#% chance to Avoid being Shocked
+of Haunting,- 출몰,24,2,ReducedBleedDuration,(60—75)% reduced Bleed Duration on you,플레이어에게 적용되는 출혈 지속시간 (60-75)% 감소,,350,bleed|necropolis_exclusive_mod|physical|ailment,Physical|Ailment,,#% reduced Bleed Duration on you
+of Haunting,- 출몰,24,2,ReducedPoisonDuration,(60—75)% reduced Poison Duration on you,플레이어에게 적용되는 중독 지속시간 (60-75)% 감소,,350,poison|necropolis_exclusive_mod|chaos|ailment,Chaos|Ailment,,#% reduced Poison Duration on you
+Haunted,으스스한,68,1,GroundEffectEffectiveness,Unaffected by Burning Ground,용암 지대의 영향을 받지 않음,,250,necropolis_exclusive_mod|elemental|fire,Elemental|Fire,,Unaffected by Burning Ground
+Haunted,으스스한,68,1,GroundEffectEffectiveness,Unaffected by Shocked Ground,감전 지대의 영향을 받지 않음,,250,necropolis_exclusive_mod|elemental|lightning|ailment,Elemental|Lightning|Ailment,,Unaffected by Shocked Ground
+Haunted,으스스한,68,1,GroundEffectEffectiveness,Unaffected by Chilled Ground,얼음 지대의 영향을 받지 않음,,250,necropolis_exclusive_mod|elemental|cold|ailment,Elemental|Cold|Ailment,,Unaffected by Chilled Ground
+Haunted,으스스한,68,1,GroundEffectEffectiveness,Unaffected by Desecrated Ground,훼손된 지대의 영향을 받지 않음,,250,necropolis_exclusive_mod|chaos,Chaos,,Unaffected by Desecrated Ground
+Haunted,으스스한,45,1,MovementCannotBeSlowedBelowBase,Movement Speed cannot be modified to below Base Value,이동 속도가 기본 수치 밑으로 내려가지 않음,,250,necropolis_exclusive_mod|speed,Speed,,Movement Speed cannot be modified to below Base Value

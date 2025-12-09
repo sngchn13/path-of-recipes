@@ -1,0 +1,7 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of Infamy,- 악명,68,2,AddCritPerExert,Skills have +(2—3)% to Critical Strike Chance for each Warcry Exerting them,스킬을 전력 공격으로 만드는 함성 하나당 스킬의 치명타 확률 +(2-3)%,,0,critical,Critical,,Skills have +#% to Critical Strike Chance for each Warcry Exerting them
+of Infamy,- 악명,68,2,CoverInAshWarcry,Your Warcries cover Enemies in Ash for 5 seconds,함성이 5초 동안 적을 재로 덮음,,0,elemental|fire,Elemental|Fire,,Your Warcries cover Enemies in Ash for # seconds
+of Infamy,- 악명,68,2,FortificationDamageAura,Nearby Enemies take 1% increased Physical Damage per two Fortification on you,플레이어에게 걸린 방어 상승 2당 주변의 적이 받는 물리 피해 1% 증가,,0,physical,Physical,,Nearby Enemies take #% increased Physical Damage per two Fortification on you
+Infamous,악명 높은,68,1,MineLifeReserve,Your Skills that throw Mines reserve Life instead of Mana,지뢰를 투척하는 스킬이 마나 대신 생명력 점유,,0,resource|life,Life,,Your Skills that throw Mines reserve Life instead of Mana
+Infamous,악명 높은,68,1,RageDecaySpeed,Inherent loss of Rage is 20% slower,기본적으로 상실하는 격노를 20% 더 느리게 상실,,0,,,,Inherent loss of Rage is #% slower
+of Infamy,- 악명,68,2,SkillEnchantment,20% increased Mana Reservation Efficiency of Skills Supported by Spellslinger,주문투척 보조 효과가 적용되는 스킬의 마나 점유 효율 20% 증가,,0,resource|mana|attack|caster,Mana|Attack|Caster,,#% increased Mana Reservation Efficiency of Skills Supported by Spellslinger

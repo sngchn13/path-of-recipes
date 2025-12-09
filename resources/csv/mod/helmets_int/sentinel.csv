@@ -1,2 +1,2 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-of the Sentinel,- 파수꾼,68,2,LightningFreezes,,Your Lightning Damage can Freeze,번개 피해가 동결 유발,elemental|cold|lightning|ailment,Elemental|Cold|Lightning|Ailment,,Your Lightning Damage can Freeze
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of the Sentinel,- 파수꾼,68,2,LightningFreezes,Your Lightning Damage can Freeze,번개 피해가 동결 유발,,0,elemental|cold|lightning|ailment,Elemental|Cold|Lightning|Ailment,,Your Lightning Damage can Freeze

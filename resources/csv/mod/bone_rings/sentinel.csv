@@ -1,4 +1,0 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Sentinel's,파수꾼의,68,1,MaximumEnduranceCharges,,+1 to Maximum Endurance Charges,인내 충전 최대치 +1,endurance_charge,,,+# to Maximum Endurance Charges
-Sentinel's,파수꾼의,68,1,MaximumFrenzyCharges,,+1 to Maximum Frenzy Charges,격분 충전 최대치 +1,frenzy_charge,,,+# to Maximum Frenzy Charges
-Sentinel's,파수꾼의,68,1,IncreasedMaximumPowerCharges,,+1 to Maximum Power Charges,권능 충전 최대치 +1,power_charge,,,+# to Maximum Power Charges

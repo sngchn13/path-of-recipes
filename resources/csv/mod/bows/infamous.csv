@@ -1,2 +1,2 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-of Infamy,- 악명,68,2,SingleProjAOE,,30% more Area of Effect with Bow Attacks that fire a single Projectile,투사체 1개를 발사하는 활 공격의 효과 범위 30% 증폭,,,,#% more Area of Effect with Bow Attacks that fire a single Projectile
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+of Infamy,- 악명,68,2,SingleProjAOE,30% more Area of Effect with Bow Attacks that fire a single Projectile,투사체 1개를 발사하는 활 공격의 효과 범위 30% 증폭,,0,,,,#% more Area of Effect with Bow Attacks that fire a single Projectile

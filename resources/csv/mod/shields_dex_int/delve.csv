@@ -1,29 +1,29 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Subterranean,지하의,1,1,FireDamageAvoidance,,(8-10)% chance to Avoid Fire Damage from Hits,피격 시 (8-10)% 확률로 화염 피해 긴급회피,elemental|fire,Elemental|Fire,,#% chance to Avoid Fire Damage from Hits
-Subterranean,지하의,1,1,ColdDamageAvoidance,,(6-10)% chance to Avoid Cold Damage from Hits,피격 시 (6-10)% 확률로 냉기 피해 긴급회피,elemental|cold,Elemental|Cold,,#% chance to Avoid Cold Damage from Hits
-Subterranean,지하의,1,1,LightningDamageAvoidance,,(6-10)% chance to Avoid Lightning Damage from Hits,피격 시 (6-10)% 확률로 번개 피해 긴급회피,elemental|lightning,Elemental|Lightning,,#% chance to Avoid Lightning Damage from Hits
-Subterranean,지하의,1,1,ReducedPhysicalDamageTaken,,(3-5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
-of the Underground,- 지하,1,2,ChaosResistanceAgainstDamageOverTime,,+(30-40)% Chaos Resistance against Damage Over Time,지속 피해 대응 카오스 저항 +(30-40)%,chaos|resistance,Chaos|Resistance,,+#% Chaos Resistance against Damage Over Time
-of the Underground,- 지하,1,2,LifeRegenerationRatePercentage,,Regenerate 1% of Life per second,1초마다 생명력의 1% 재생,resource|life,Life,,Regenerate #% of Life per second
-of the Underground,- 지하,1,2,IncreasedQuality,,+(10-20)% to Quality,퀄리티 +(10-20)%,,,,+#% to Quality
-of the Underground,- 지하,1,2,ChanceToAvoidPoison,,50% chance to Avoid being Poisoned,50%의 확률로 중독 긴급회피,poison|chaos|ailment,Chaos|Ailment,,#% chance to Avoid being Poisoned
-of the Underground,- 지하,1,2,ChanceToAvoidBleeding,,50% chance to Avoid Bleeding,50%의 확률로 출혈 긴급회피,bleed|physical|attack|ailment,Physical|Attack|Ailment,,#% chance to Avoid Bleeding
-of the Underground,- 지하,1,2,SelfStatusAilmentDuration,,(20-30)% reduced Elemental Ailment Duration on you,플레이어에게 적용되는 원소 상태 이상 지속시간 (20-30)% 감소,elemental|ailment,Elemental|Ailment,,#% reduced Elemental Ailment Duration on you
-of the Underground,- 지하,1,2,SocketedSpellsManaCost,,Socketed Spells have 20% reduced Mana Cost,장착된 주문의 마나 소모 20% 감소,skill|resource|mana|caster|gem,Mana|Caster|Gem,,Socketed Spells have #% reduced Mana Cost
-of the Underground,- 지하,1,2,SocketedAttacksManaCost,,Socketed Attacks have -15 to Total Mana Cost,장착된 공격의 총 마나 소모 -15,skill|resource|mana|attack|gem,Mana|Attack|Gem,,Socketed Attacks have -# to Total Mana Cost
-of the Underground,- 지하,1,2,BaseManaRegeneration,,Regenerate 0.4% of Mana per second if you've Hit an Enemy Recently,최근 4초 이내 적 명중 시 1초마다 마나의 0.4% 재생,resource|mana,Mana,,Regenerate #% of Mana per second if you've Hit an Enemy Recently
-of the Underground,- 지하,1,2,ChanceToGainOnslaughtOnKill,,10% chance to gain Onslaught for 4 seconds on Kill,처치 시 10%의 확률로 4초 동안 맹공 획득,,,,#% chance to gain Onslaught for # seconds on Kill
-of the Underground,- 지하,74,2,MinionLife,,Minions have (20-30)% increased maximum Life,소환수의 최대 생명력 (20-30)% 증가,resource|life|minion,Life|Minion,,Minions have #% increased maximum Life
-of the Underground,- 지하,1,2,DelveStrengthGemLevel,,+1 to Level of Socketed Strength Gems,장착된 힘 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Strength Gems
-of the Underground,- 지하,1,2,DelveDexterityGemLevel,,+1 to Level of Socketed Dexterity Gems,장착된 민첩 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Dexterity Gems
-of the Underground,- 지하,1,2,DelveIntelligenceGemLevel,,+1 to Level of Socketed Intelligence Gems,장착된 지능 젬 레벨 +1,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Intelligence Gems
-of the Underground,- 지하,1,2,AdditionalVaalSoulOnKill,,(5-8)% chance to gain an additional Vaal Soul on Kill,처치 시 (5-8)%의 확률로 바알 영혼 1개 추가 획득,vaal,,Tangled Fossil,#% chance to gain an additional Vaal Soul on Kill
-of the Underground,- 지하,60,2,CorruptedBloodImmunity,,Corrupted Blood cannot be inflicted on you,타락한 피가 플레이어에게 유발될 수 없음,bleed|physical|ailment,Physical|Ailment,,Corrupted Blood cannot be inflicted on you
-of the Underground,- 지하,60,2,CurseEffectiveness,,(10-15)% increased Effect of your Curses,플레이어의 저주 효과 (10-15)% 증가,caster|curse,Caster|Curse,,#% increased Effect of your Curses
-of the Underground,- 지하,60,2,IncreaseSpecificSocketedGemLevel,,+2 to Level of Socketed Aura Gems,장착된 오라 젬 레벨 +2,aura|gem,Aura|Gem,,+# to Level of Socketed Aura Gems
-of the Underground,- 지하,60,2,CurseEffectiveness,,(15-25)% increased Effect of your Marks,플레이어의 징표 효과 (15-25)% 증가,caster|curse,Caster|Curse,,#% increased Effect of your Marks
-Subterranean,지하의,60,1,MaximumChaosResistance,,+3% to maximum Chaos Resistance,카오스 저항 최대치 +3%,chaos|resistance,Chaos|Resistance,,+#% to maximum Chaos Resistance
-Subterranean,지하의,60,1,MaximumColdResist,,+3% to maximum Cold Resistance,냉기 저항 최대치 +3%,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to maximum Cold Resistance
-Subterranean,지하의,60,1,MaximumFireResist,,+3% to maximum Fire Resistance,화염 저항 최대치 +3%,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to maximum Fire Resistance
-Subterranean,지하의,60,1,MaximumLightningResistance,,+3% to maximum Lightning Resistance,번개 저항 최대치 +3%,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to maximum Lightning Resistance
-of the Underground,- 지하,60,2,ReducedPhysicalDamageTaken,,(3-5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,physical,Physical,,#% additional Physical Damage Reduction
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Subterranean,지하의,1,1,FireDamageAvoidance,(8—10)% chance to Avoid Fire Damage from Hits,피격 시 (8-10)% 확률로 화염 피해 긴급회피,,2000,elemental|fire,Elemental|Fire,,#% chance to Avoid Fire Damage from Hits
+Subterranean,지하의,1,1,ColdDamageAvoidance,(6—10)% chance to Avoid Cold Damage from Hits,피격 시 (6-10)% 확률로 냉기 피해 긴급회피,,2000,elemental|cold,Elemental|Cold,,#% chance to Avoid Cold Damage from Hits
+Subterranean,지하의,1,1,LightningDamageAvoidance,(6—10)% chance to Avoid Lightning Damage from Hits,피격 시 (6-10)% 확률로 번개 피해 긴급회피,,2000,elemental|lightning,Elemental|Lightning,,#% chance to Avoid Lightning Damage from Hits
+Subterranean,지하의,1,1,ReducedPhysicalDamageTaken,(3—5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,,2000,physical,Physical,,#% additional Physical Damage Reduction
+of the Underground,- 지하,1,2,ChaosResistanceAgainstDamageOverTime,+(30—40)% Chaos Resistance against Damage Over Time,지속 피해 대응 카오스 저항 +(30-40)%,,2000,chaos|resistance,Chaos|Resistance,,+#% Chaos Resistance against Damage Over Time
+of the Underground,- 지하,1,2,LifeRegenerationRatePercentage,Regenerate 1% of Life per second,1초마다 생명력의 1% 재생,,2000,resource|life,Life,,Regenerate #% of Life per second
+of the Underground,- 지하,1,2,IncreasedQuality,+(10—20)% to Quality,퀄리티 +(10-20)%,,2000,,,,+#% to Quality
+of the Underground,- 지하,1,2,ChanceToAvoidPoison,50% chance to Avoid being Poisoned,50%의 확률로 중독 긴급회피,,1600,poison|chaos|ailment,Chaos|Ailment,,#% chance to Avoid being Poisoned
+of the Underground,- 지하,1,2,ChanceToAvoidBleeding,50% chance to Avoid Bleeding,50%의 확률로 출혈 긴급회피,,1600,bleed|physical|attack|ailment,Physical|Attack|Ailment,,#% chance to Avoid Bleeding
+of the Underground,- 지하,1,2,SelfStatusAilmentDuration,(20—30)% reduced Elemental Ailment Duration on you,플레이어에게 적용되는 원소 상태 이상 지속시간 (20-30)% 감소,,2000,elemental|ailment,Elemental|Ailment,,#% reduced Elemental Ailment Duration on you
+of the Underground,- 지하,1,2,SocketedSpellsManaCost,Socketed Spells have 20% reduced Mana Cost,장착된 주문의 마나 소모 20% 감소,,2000,skill|resource|mana|caster|gem,Mana|Caster|Gem,,Socketed Spells have #% reduced Mana Cost
+of the Underground,- 지하,1,2,SocketedAttacksManaCost,Socketed Attacks have -15 to Total Mana Cost,장착된 공격의 총 마나 소모 -15,,2000,skill|resource|mana|attack|gem,Mana|Attack|Gem,,Socketed Attacks have -# to Total Mana Cost
+of the Underground,- 지하,1,2,BaseManaRegeneration,Regenerate 0.4% of Mana per second if you've Hit an Enemy Recently,최근 4초 이내 적 명중 시 1초마다 마나의 0.4% 재생,,2000,resource|mana,Mana,,Regenerate #% of Mana per second if you've Hit an Enemy Recently
+of the Underground,- 지하,1,2,ChanceToGainOnslaughtOnKill,10% chance to gain Onslaught for 4 seconds on Kill,처치 시 10%의 확률로 4초 동안 맹공 획득,,2000,,,,#% chance to gain Onslaught for # seconds on Kill
+of the Underground,- 지하,74,2,MinionLife,Minions have (20—30)% increased maximum Life,소환수의 최대 생명력 (20-30)% 증가,,2000,resource|life|minion,Life|Minion,,Minions have #% increased maximum Life
+of the Underground,- 지하,1,2,DelveStrengthGemLevel,+1 to Level of Socketed Strength Gems,장착된 힘 젬 레벨 +1,,750,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Strength Gems
+of the Underground,- 지하,1,2,DelveDexterityGemLevel,+1 to Level of Socketed Dexterity Gems,장착된 민첩 젬 레벨 +1,,1000,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Dexterity Gems
+of the Underground,- 지하,1,2,DelveIntelligenceGemLevel,+1 to Level of Socketed Intelligence Gems,장착된 지능 젬 레벨 +1,,1000,attribute|gem,Attribute|Gem,Faceted Fossil|Tangled Fossil,+# to Level of Socketed Intelligence Gems
+of the Underground,- 지하,1,2,AdditionalVaalSoulOnKill,(5—8)% chance to gain an additional Vaal Soul on Kill,처치 시 (5-8)%의 확률로 바알 영혼 1개 추가 획득,,2000,vaal,,Tangled Fossil,#% chance to gain an additional Vaal Soul on Kill
+of the Underground,- 지하,60,2,CorruptedBloodImmunity,Corrupted Blood cannot be inflicted on you,타락한 피가 플레이어에게 유발될 수 없음,,,bleed|physical|ailment,Physical|Ailment,,Corrupted Blood cannot be inflicted on you
+of the Underground,- 지하,60,2,CurseEffectiveness,(10—15)% increased Effect of your Curses,플레이어의 저주 효과 (10-15)% 증가,,,caster|curse,Caster|Curse,,#% increased Effect of your Curses
+of the Underground,- 지하,60,2,IncreaseSpecificSocketedGemLevel,+2 to Level of Socketed Aura Gems,장착된 오라 젬 레벨 +2,,,aura|gem,Aura|Gem,,+# to Level of Socketed Aura Gems
+of the Underground,- 지하,60,2,CurseEffectiveness,(15—25)% increased Effect of your Marks,플레이어의 징표 효과 (15-25)% 증가,,,caster|curse,Caster|Curse,,#% increased Effect of your Marks
+Subterranean,지하의,60,1,MaximumChaosResistance,+3% to maximum Chaos Resistance,카오스 저항 최대치 +3%,,,chaos|resistance,Chaos|Resistance,,+#% to maximum Chaos Resistance
+Subterranean,지하의,60,1,MaximumColdResist,+3% to maximum Cold Resistance,냉기 저항 최대치 +3%,,,elemental|cold|resistance,Elemental|Cold|Resistance,,+#% to maximum Cold Resistance
+Subterranean,지하의,60,1,MaximumFireResist,+3% to maximum Fire Resistance,화염 저항 최대치 +3%,,,elemental|fire|resistance,Elemental|Fire|Resistance,,+#% to maximum Fire Resistance
+Subterranean,지하의,60,1,MaximumLightningResistance,+3% to maximum Lightning Resistance,번개 저항 최대치 +3%,,,elemental|lightning|resistance,Elemental|Lightning|Resistance,,+#% to maximum Lightning Resistance
+of the Underground,- 지하,60,2,ReducedPhysicalDamageTaken,(3—5)% additional Physical Damage Reduction,받는 물리 피해 (3-5)% 추가 감소,,,physical,Physical,,#% additional Physical Damage Reduction

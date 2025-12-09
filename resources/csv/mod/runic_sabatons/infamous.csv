@@ -1,0 +1,2 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Infamous,악명 높은,68,1,TravelSkillCrit,Your Travel Skills Critically Strike once every 3 uses,이동 전용 스킬이 3번 사용할 때마다 치명타를 줌,,0,critical,Critical,,Your Travel Skills Critically Strike once every # uses

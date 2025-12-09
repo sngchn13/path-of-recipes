@@ -1,29 +1,29 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-Subterranean,지하의,1,1,FireDamagePercentagePrefix,,(20-30)% increased Fire Damage,화염 피해 (20-30)% 증가,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
-Subterranean,지하의,1,1,ColdDamagePercentagePrefix,,(20-30)% increased Cold Damage,냉기 피해 (20-30)% 증가,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
-Subterranean,지하의,1,1,LightningDamagePercentagePrefix,,(20-30)% increased Lightning Damage,번개 피해 (20-30)% 증가,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
-Subterranean,지하의,1,1,PhysicalDamagePercent,,(20-30)% increased Global Physical Damage,일반 물리 피해 (20-30)% 증가,physical_damage|damage|physical,Damage|Physical,,#% increased Global Physical Damage
-Subterranean,지하의,1,1,IncreasedChaosDamagePrefix,,(20-30)% increased Chaos Damage,카오스 피해 (20-30)% 증가,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
-of the Underground,- 지하,1,2,FlaskLifeRecovery,,(20-30)% increased Life Recovery from Flasks,플라스크로 회복하는 생명력 (20-30)% 증가,flask|resource|life,Life,,#% increased Life Recovery from Flasks
-of the Underground,- 지하,1,2,MaximumEnergyShieldFromBodyArmour,,(20-30)% increased Energy Shield from Equipped Body Armour,장착한 갑옷으로 얻는 에너지 보호막 (20-30)% 증가,defences|energy_shield,Defences|Energy Shield,,#% increased Energy Shield from Equipped Body Armour
-of the Underground,- 지하,1,2,ChanceWhenHitForArmourToBeDoubled,,20% chance to Defend with 200% of Armour,20% 확률로 200%의 방어도로 방어,defences|armour,Defences|Armour,,#% chance to Defend with #% of Armour
-of the Underground,- 지하,1,2,AdditionalChanceToEvade,,+(1-2)% chance to Evade Attack Hits,공격 적중 회피 확률 +(1-2)%,defences|evasion,Defences|Evasion,,+#% chance to Evade Attack Hits
-of the Underground,- 지하,1,2,AilmentDamage,,(30-40)% increased Damage with Ailments,상태 이상 피해 (30-40)% 증가,damage|ailment,Damage|Ailment,,#% increased Damage with Ailments
-Subterranean,지하의,1,1,ElementalPenetration,,Damage Penetrates (3-5)% Elemental Resistances,피해가 (3-5)%의 원소 저항 관통,elemental_damage|damage|elemental,Damage|Elemental,,Damage Penetrates #% Elemental Resistances
-of the Underground,- 지하,1,2,ManaRecoveryRate,,(8-12)% increased Mana Recovery rate,마나 회복 속도 (8-12)% 증가,resource|mana,Mana,,#% increased Mana Recovery rate
-of the Underground,- 지하,1,2,CannotBeChilledOrFrozenWhileMoving,,Cannot be Chilled or Frozen while moving,이동 중 냉각 또는 동결될 수 없음,elemental|cold|ailment,Elemental|Cold|Ailment,,Cannot be Chilled or Frozen while moving
-of the Underground,- 지하,74,2,MinionMovementSpeed,,Minions have (15-30)% increased Movement Speed,소환수의 이동 속도 (15-30)% 증가,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
-of the Underground,- 지하,1,2,VaalSkillDuration,,Vaal Skills have (15-25)% increased Skill Effect Duration,바알 스킬의 스킬 효과 지속시간 (15-25)% 증가,vaal,,Tangled Fossil,Vaal Skills have #% increased Skill Effect Duration
-of the Underground,- 지하,60,2,ManaRegeneration,,Regenerate (3-5) Mana per second,1초마다 마나 (3-5) 재생,resource|mana,Mana,,Regenerate # Mana per second
-Subterranean,지하의,60,1,ChaosDamageLifeLeech,,0.4% of Chaos Damage Leeched as Life,카오스 피해의 0.4%를 생명력으로 흡수,resource|life|chaos,Life|Chaos,,#% of Chaos Damage Leeched as Life
-Subterranean,지하의,60,1,ColdDamageLifeLeech,,0.4% of Cold Damage Leeched as Life,냉기 피해의 0.4%를 생명력으로 흡수,resource|life|elemental|cold,Life|Elemental|Cold,,#% of Cold Damage Leeched as Life
-Subterranean,지하의,60,1,FireDamageLifeLeech,,0.4% of Fire Damage Leeched as Life,화염 피해의 0.4%를 생명력으로 흡수,resource|life|elemental|fire,Life|Elemental|Fire,,#% of Fire Damage Leeched as Life
-Subterranean,지하의,60,1,DamageToEnemiesPerCurse,,(8-10)% increased Damage with Hits and Ailments per Curse on Enemy,적에게 걸린 저주 하나당 적중 피해 및 상태 이상 피해 (8-10)% 증가,damage,Damage,,#% increased Damage with Hits and Ailments per Curse on Enemy
-Subterranean,지하의,60,1,LightningDamageLifeLeech,,0.4% of Lightning Damage Leeched as Life,번개 피해의 0.4%를 생명력으로 흡수,resource|life|elemental|lightning,Life|Elemental|Lightning,,#% of Lightning Damage Leeched as Life
-Subterranean,지하의,60,1,MaximumManaIncreasePercent,,(10-15)% increased maximum Mana,최대 마나 (10-15)% 증가,resource|mana,Mana,,#% increased maximum Mana
-Subterranean,지하의,60,1,MaximumMinionCount,,+1 to maximum number of Skeletons,해골 최대치 +1,minion,Minion,,+# to maximum number of Skeletons
-Subterranean,지하의,60,1,MaximumMinionCount,,+1 to maximum number of Raised Zombies,소환 가능한 좀비 최대치 +1,minion,Minion,,+# to maximum number of Raised Zombies
-Subterranean,지하의,60,1,MaximumMinionCount,,+1 to maximum number of Skeletons,해골 최대치 +1,minion,Minion,,+# to maximum number of Skeletons
-Subterranean,지하의,60,1,MaximumMinionCount,,+1 to maximum number of Raised Zombies,소환 가능한 좀비 최대치 +1,minion,Minion,,+# to maximum number of Raised Zombies
-of the Underground,- 지하,60,2,MinionDamage,,Minions deal (25-35)% increased Damage,소환수가 주는 피해 (25-35)% 증가,damage|minion,Damage|Minion,,Minions deal #% increased Damage
-Subterranean,지하의,60,1,PhysicalDamageLifeLeech,,0.4% of Physical Damage Leeched as Life,물리 피해의 0.4%를 생명력으로 흡수,resource|life|physical,Life|Physical,,#% of Physical Damage Leeched as Life
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Subterranean,지하의,1,1,FireDamagePercentagePrefix,(20—30)% increased Fire Damage,화염 피해 (20-30)% 증가,,2000,elemental_damage|damage|elemental|fire,Damage|Elemental|Fire,,#% increased Fire Damage
+Subterranean,지하의,1,1,ColdDamagePercentagePrefix,(20—30)% increased Cold Damage,냉기 피해 (20-30)% 증가,,2000,elemental_damage|damage|elemental|cold,Damage|Elemental|Cold,,#% increased Cold Damage
+Subterranean,지하의,1,1,LightningDamagePercentagePrefix,(20—30)% increased Lightning Damage,번개 피해 (20-30)% 증가,,2000,elemental_damage|damage|elemental|lightning,Damage|Elemental|Lightning,,#% increased Lightning Damage
+Subterranean,지하의,1,1,PhysicalDamagePercent,(20—30)% increased Global Physical Damage,일반 물리 피해 (20-30)% 증가,,2000,physical_damage|damage|physical,Damage|Physical,,#% increased Global Physical Damage
+Subterranean,지하의,1,1,IncreasedChaosDamagePrefix,(20—30)% increased Chaos Damage,카오스 피해 (20-30)% 증가,,2000,chaos_damage|damage|chaos,Damage|Chaos,,#% increased Chaos Damage
+of the Underground,- 지하,1,2,FlaskLifeRecovery,(20—30)% increased Life Recovery from Flasks,플라스크로 회복하는 생명력 (20-30)% 증가,,2000,flask|resource|life,Life,,#% increased Life Recovery from Flasks
+of the Underground,- 지하,1,2,MaximumEnergyShieldFromBodyArmour,(20—30)% increased Energy Shield from Equipped Body Armour,장착한 갑옷으로 얻는 에너지 보호막 (20-30)% 증가,,1600,defences|energy_shield,Defences|Energy Shield,,#% increased Energy Shield from Equipped Body Armour
+of the Underground,- 지하,1,2,ChanceWhenHitForArmourToBeDoubled,20% chance to Defend with 200% of Armour,20% 확률로 200%의 방어도로 방어,,1600,defences|armour,Defences|Armour,,#% chance to Defend with #% of Armour
+of the Underground,- 지하,1,2,AdditionalChanceToEvade,+(1—2)% chance to Evade Attack Hits,공격 적중 회피 확률 +(1-2)%,,1600,defences|evasion,Defences|Evasion,,+#% chance to Evade Attack Hits
+of the Underground,- 지하,1,2,AilmentDamage,(30—40)% increased Damage with Ailments,상태 이상 피해 (30-40)% 증가,,1600,damage|ailment,Damage|Ailment,,#% increased Damage with Ailments
+Subterranean,지하의,1,1,ElementalPenetration,Damage Penetrates (3—5)% Elemental Resistances,피해가 (3-5)%의 원소 저항 관통,,1600,elemental_damage|damage|elemental,Damage|Elemental,,Damage Penetrates #% Elemental Resistances
+of the Underground,- 지하,1,2,ManaRecoveryRate,(8—12)% increased Mana Recovery rate,마나 회복 속도 (8-12)% 증가,,2000,resource|mana,Mana,,#% increased Mana Recovery rate
+of the Underground,- 지하,1,2,CannotBeChilledOrFrozenWhileMoving,Cannot be Chilled or Frozen while moving,이동 중 냉각 또는 동결될 수 없음,,2000,elemental|cold|ailment,Elemental|Cold|Ailment,,Cannot be Chilled or Frozen while moving
+of the Underground,- 지하,74,2,MinionMovementSpeed,Minions have (15—30)% increased Movement Speed,소환수의 이동 속도 (15-30)% 증가,,2000,speed|minion,Speed|Minion,,Minions have #% increased Movement Speed
+of the Underground,- 지하,1,2,VaalSkillDuration,Vaal Skills have (15—25)% increased Skill Effect Duration,바알 스킬의 스킬 효과 지속시간 (15-25)% 증가,,2000,vaal,,Tangled Fossil,Vaal Skills have #% increased Skill Effect Duration
+of the Underground,- 지하,60,2,ManaRegeneration,Regenerate (3—5) Mana per second,1초마다 마나 (3-5) 재생,,,resource|mana,Mana,,Regenerate # Mana per second
+Subterranean,지하의,60,1,ChaosDamageLifeLeech,0.4% of Chaos Damage Leeched as Life,카오스 피해의 0.4%를 생명력으로 흡수,,,resource|life|chaos,Life|Chaos,,#% of Chaos Damage Leeched as Life
+Subterranean,지하의,60,1,ColdDamageLifeLeech,0.4% of Cold Damage Leeched as Life,냉기 피해의 0.4%를 생명력으로 흡수,,,resource|life|elemental|cold,Life|Elemental|Cold,,#% of Cold Damage Leeched as Life
+Subterranean,지하의,60,1,FireDamageLifeLeech,0.4% of Fire Damage Leeched as Life,화염 피해의 0.4%를 생명력으로 흡수,,,resource|life|elemental|fire,Life|Elemental|Fire,,#% of Fire Damage Leeched as Life
+Subterranean,지하의,60,1,DamageToEnemiesPerCurse,(8—10)% increased Damage with Hits and Ailments per Curse on Enemy,적에게 걸린 저주 하나당 적중 피해 및 상태 이상 피해 (8-10)% 증가,,,damage,Damage,,#% increased Damage with Hits and Ailments per Curse on Enemy
+Subterranean,지하의,60,1,LightningDamageLifeLeech,0.4% of Lightning Damage Leeched as Life,번개 피해의 0.4%를 생명력으로 흡수,,,resource|life|elemental|lightning,Life|Elemental|Lightning,,#% of Lightning Damage Leeched as Life
+Subterranean,지하의,60,1,MaximumManaIncreasePercent,(10—15)% increased maximum Mana,최대 마나 (10-15)% 증가,,,resource|mana,Mana,,#% increased maximum Mana
+Subterranean,지하의,60,1,MaximumMinionCount,+1 to maximum number of Skeletons,해골 최대치 +1,,,minion,Minion,,+# to maximum number of Skeletons
+Subterranean,지하의,60,1,MaximumMinionCount,+1 to maximum number of Raised Zombies,소환 가능한 좀비 최대치 +1,,,minion,Minion,,+# to maximum number of Raised Zombies
+Subterranean,지하의,60,1,MaximumMinionCount,+1 to maximum number of Skeletons,해골 최대치 +1,,,minion,Minion,,+# to maximum number of Skeletons
+Subterranean,지하의,60,1,MaximumMinionCount,+1 to maximum number of Raised Zombies,소환 가능한 좀비 최대치 +1,,,minion,Minion,,+# to maximum number of Raised Zombies
+of the Underground,- 지하,60,2,MinionDamage,Minions deal (25—35)% increased Damage,소환수가 주는 피해 (25-35)% 증가,,,damage|minion,Damage|Minion,,Minions deal #% increased Damage
+Subterranean,지하의,60,1,PhysicalDamageLifeLeech,0.4% of Physical Damage Leeched as Life,물리 피해의 0.4%를 생명력으로 흡수,,,resource|life|physical,Life|Physical,,#% of Physical Damage Leeched as Life

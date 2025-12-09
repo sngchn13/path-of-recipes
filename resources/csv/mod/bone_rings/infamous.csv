@@ -1,2 +1,0 @@
-EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StatsStr,StrEn,StrKor,fossil_no,mod_no,mod_fossil_item,ModGroup
-of Infamy,- 악명,68,2,LifeGainOnHitVsIgnitedEnemies,,Gain (5-10) Life for each Ignited Enemy hit with Attacks,공격으로 명중한 점화된 적 하나당 생명력 (5-10) 획득,resource|life,Life,,Gain # Life for each Ignited Enemy hit with Attacks

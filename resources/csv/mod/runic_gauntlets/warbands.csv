@@ -1,0 +1,2 @@
+EnName,KorName,Level,ModGenerationTypeId,ModFamilyList,StrEn,StrKor,StatsStr,DropChance,fossil_no,mod_no,mod_fossil_item,ModGroup
+Brinerot,부패한 염수단,1,1,DamageDuringFlaskEffect,(20—25)% increased Damage during any Flask Effect,아무 플라스크나 효과를 받는 동안 피해 (20-25)% 증가,,0,flask|damage,Damage,,#% increased Damage during any Flask Effect

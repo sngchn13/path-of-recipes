@@ -112,22 +112,28 @@ fn section_record_transform(csv_records: Vec<CsvRecord>, item_type_name: &str, s
             None => {
 
                 // family_set
-                let family_set: HashSet<String> = record
-                    .mod_family_list
-                    .split('|')
-                    .map(|s| s.trim())
-                    .filter(|s| !s.is_empty())
-                    .map(|s| s.to_string())
-                    .collect();
+                let family_set: HashSet<String> = match record.mod_family_list {
+                    Some(str) => {
+                        str.split('|')
+                        .map(|s| s.trim())
+                        .filter(|s| !s.is_empty())
+                        .map(|s| s.to_string())
+                        .collect()
+                    },
+                    None => HashSet::new(),
+                }; 
 
                 // tag_set
-                let tag_set: HashSet<String> = record
-                    .tags
-                    .split('|')
-                    .map(|s| s.trim())
-                    .filter(|s| !s.is_empty())
-                    .map(|s| s.to_string())
-                    .collect();
+                let tag_set: HashSet<String> = match record.tags {
+                    Some(str) => {
+                        str.split('|')
+                            .map(|s| s.trim())
+                            .filter(|s| !s.is_empty())
+                            .map(|s| s.to_string())
+                            .collect()
+                    },
+                    None => HashSet::new(),
+                };
 
 
                 let mod_group = CsvModGroup::new(
@@ -288,13 +294,13 @@ struct CsvRecord {
     #[serde(rename = "ModGenerationTypeId")]
     mod_generation_type_id: i32,
     #[serde(rename = "ModFamilyList")]
-    mod_family_list: String,
+    mod_family_list: Option<String>,
     #[serde(rename = "StrEn")]
     str_en: String,
     #[serde(rename = "StrKor")]
     str_kor: String,
     #[serde(rename = "fossil_no")]
-    tags: String,
+    tags: Option<String>,
     #[serde(rename = "ModGroup")]
     mod_group: String,
 }
@@ -393,12 +399,10 @@ of the Prodigy,- 영재,22,2,Intelligence,+(18—22) to Intelligence,지능 +(18
         assert_eq!(r0.name_kor, "- 짐승");
         assert_eq!(r0.level, 1);
         assert_eq!(r0.mod_generation_type_id, 2);
-        assert_eq!(r0.mod_family_list, "Strength");
-        // em dash 그대로 사용
+        assert_eq!(r0.mod_family_list.as_deref(), Some("Strength"));
         assert_eq!(r0.str_en, "+(8—12) to Strength");
         assert_eq!(r0.str_kor, "힘 +(8-12)");
-        assert_eq!(r0.tags, "attribute");
-        // 여기: 실제 CSV에서는 ModGroup = "+# to Strength"
+        assert_eq!(r0.tags.as_deref(), Some("attribute"));
         assert_eq!(r0.mod_group, "+# to Strength");
         assert_eq!(r0.weight.unwrap_or_else(|| panic!("weight is None!")), 1000);
 
@@ -407,9 +411,8 @@ of the Prodigy,- 영재,22,2,Intelligence,+(18—22) to Intelligence,지능 +(18
         assert_eq!(r8.name_en, "of the Prodigy");
         assert_eq!(r8.name_kor, "- 영재");
         assert_eq!(r8.level, 22);
-        assert_eq!(r8.mod_family_list, "Intelligence");
-        assert_eq!(r8.tags, "attribute");
-        // 마지막 줄 ModGroup = "+# to Intelligence"
+        assert_eq!(r8.mod_family_list.as_deref(), Some("Intelligence"));
+        assert_eq!(r8.tags.as_deref(), Some("attribute"));
         assert_eq!(r8.mod_group, "+# to Intelligence");
         assert_eq!(r8.weight.unwrap_or_else(|| panic!("weight is None!")), 1000);
     }

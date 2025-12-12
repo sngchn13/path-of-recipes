@@ -5,6 +5,7 @@ use crate::{app::{build_router, get_state, startup::host_and_port}};
 mod config;
 mod app;
 mod infrastructure;
+mod domain;
 
 
 #[tokio::main]

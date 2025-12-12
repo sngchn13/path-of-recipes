@@ -16,3 +16,7 @@ tracing-subscriber = { version = "0.3.20", features = ["env-filter"] } #로그 �
 sea-orm = { workspace = true }
 entity = { path = "../entity" }
 migration = { path = "../migration" }
+thiserror = "2.0.17"
+time = "0.3.44"
+chrono = "0.4.42"
+async-trait = "0.1.89"

@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use time::OffsetDateTime;
+use time::{OffsetDateTime, serde::rfc3339};
 
 #[derive(Debug, Clone, PartialEq, Eq, Hash, Deserialize, Serialize)]
 pub struct Mod{
@@ -12,7 +12,9 @@ pub struct Mod{
     pub weight: Option<i16>,
     pub tier: Option<i16>,
     pub deprecated_version: Option<String>,
+    #[serde(with = "rfc3339")]
     pub created_at: OffsetDateTime,
+    #[serde(with = "rfc3339::option")]
     pub updated_at: Option<OffsetDateTime>,
 }
 

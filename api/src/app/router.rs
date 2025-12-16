@@ -7,8 +7,8 @@ use crate::{app::state::AppState, domain::mod_groups::get_mod_groups_by_item_typ
 
 pub fn build_router(state: AppState) -> Router{
     Router::new()
-        .route("/", get(|| async move {"hello world"}))
-        .route("/mod-groups", get( get_mod_groups_by_item_type))
+        .route("/api", get(|| async move {"hello world"}))
+        .route("/api/mod-groups", get( get_mod_groups_by_item_type))
         .layer(TimeoutLayer::new(Duration::from_millis(3000)))
         .layer(TraceLayer::new_for_http())
         .with_state(state)

@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use crate::domain::mods::Mod;
+use crate::domain::{item_types::ItemType, mods::Mod};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ModGroup{
@@ -42,18 +42,6 @@ pub struct Section{
 impl Section {
     pub fn new(id: i32, name: String) -> Self {
         Section { id, name }
-    }
-}
-
-#[derive(Debug, Clone, PartialEq, Eq, Hash)]
-pub struct ItemType{
-    pub id: i32,
-    pub name: String,
-}
-
-impl ItemType {
-    pub fn new(id: i32, name: String) -> Self {
-        ItemType { id, name }
     }
 }
 

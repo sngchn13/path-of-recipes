@@ -25,7 +25,7 @@ FROM (
     ('royal_plate', 'Royal Plate', '왕실 판금 갑옷'),
     ('kaoms_plate', 'Kaom''s Plate', '카옴의 판금 갑옷')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'body_armours(str)';
+JOIN item_types t ON t.name = 'body_armours_str';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -53,7 +53,7 @@ FROM (
     ('astral_leather', 'Astral Leather', '우주의 가죽 갑옷'),
     ('syndicates_garb', 'Syndicate''s Garb', '연합의 의복')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'body_armours(dex)';
+JOIN item_types t ON t.name = 'body_armours_dex';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -81,7 +81,7 @@ FROM (
     ('nightweave_robe', 'Nightweave Robe', '밤의 직물 로브'),
     ('twilight_regalia', 'Twilight Regalia', '황혼의 예복')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'body_armours(int)';
+JOIN item_types t ON t.name = 'body_armours_int';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -109,7 +109,7 @@ FROM (
     ('marshalls_brigandine', 'Marshall''s Brigandine', '원수의 브리간딘'),
     ('conquest_lamellar', 'Conquest Lamellar', '정복 라멜라')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'body_armours(str_dex)';
+JOIN item_types t ON t.name = 'body_armours_str_dex';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -137,7 +137,7 @@ FROM (
     ('paladins_hauberk', 'Paladin''s Hauberk', '성기사의 호버크'),
     ('sacred_chainmail', 'Sacred Chainmail', '성스러운 사슬 갑옷')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'body_armours(str_int)';
+JOIN item_types t ON t.name = 'body_armours_str_int';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -165,7 +165,7 @@ FROM (
     ('torturer_garb', 'Torturer Garb', '고문자의 의복'),
     ('necrotic_armour', 'Necrotic Armour', '괴사의 방어구')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'body_armours(dex_int)';
+JOIN item_types t ON t.name = 'body_armours_dex_int';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -176,4 +176,4 @@ FROM (
     ('golden_mantle', 'Golden Mantle', '황금 외투'),
     ('grasping_mail', 'Grasping Mail', '탐욕스러운 사슬옷')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'body_armours(str_dex_int)';
+JOIN item_types t ON t.name = 'body_armours_str_dex_int';

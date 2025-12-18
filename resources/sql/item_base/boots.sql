@@ -18,7 +18,7 @@ FROM (
     ('brimstone_treads', 'Brimstone Treads', '유황 발 보호대'),
     ('kaoms_greaves', 'Kaom''s Greaves', '카옴의 각반')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'boots(str)';
+JOIN item_types t ON t.name = 'boots_str';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -39,7 +39,7 @@ FROM (
     ('windbreak_boots', 'Windbreak Boots', '바람가름 장화'),
     ('stormrider_boots', 'Stormrider Boots', '태풍의 기수 장화')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'boots(dex)';
+JOIN item_types t ON t.name = 'boots_dex';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -60,7 +60,7 @@ FROM (
     ('nightwind_slippers', 'Nightwind Slippers', '밤바람 슬리퍼'),
     ('dreamquest_slippers', 'Dreamquest Slippers', '꿈의 정벌 슬리퍼')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'boots(int)';
+JOIN item_types t ON t.name = 'boots_int';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -78,7 +78,7 @@ FROM (
     ('wyvernscale_boots', 'Wyvernscale Boots', '비룡비늘 장화'),
     ('two_toned_boots_fire_cold', 'Two-Toned Boots', '두 가지 색 장화')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'boots(str_dex)';
+JOIN item_types t ON t.name = 'boots_str_dex';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -96,7 +96,7 @@ FROM (
     ('paladin_boots', 'Paladin Boots', '성기사 장화'),
     ('two_toned_boots_fire_lightning', 'Two-Toned Boots', '두 가지 색 장화')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'boots(str_int)';
+JOIN item_types t ON t.name = 'boots_str_int';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -116,4 +116,4 @@ FROM (
     ('two_toned_boots_cold_lightning', 'Two-Toned Boots', '두 가지 색 장화'),
     ('fugitive_boots', 'Fugitive Boots', '도망자 장화')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'boots(dex_int)';
+JOIN item_types t ON t.name = 'boots_dex_int';

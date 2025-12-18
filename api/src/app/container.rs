@@ -19,7 +19,7 @@ impl Services {
         let item_base_repository = Arc::new(ItemBaseRepositoryImpl::new(conn.clone())) as Arc<dyn ItemBaseRepository>;
 
         Self { 
-            mod_group_service:  Arc::new(ModGroupServiceImpl::new(Arc::clone(&mod_group_repository))),
+            mod_group_service:  Arc::new(ModGroupServiceImpl::new(Arc::clone(&mod_group_repository), Arc::clone(&item_type_repository))),
             item_base_service: Arc::new(ItemBaseServiceImpl::new(Arc::clone(&item_base_repository), Arc::clone(&item_type_repository)))
         }
     }

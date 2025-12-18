@@ -1,6 +1,8 @@
 use axum::{http::StatusCode, response::IntoResponse};
 use thiserror::Error;
 
+use crate::domain::item_types::error::ItemTypeRepositoryError;
+
 
 #[derive(Debug, Error)]
 pub enum ModGroupHandlerError {
@@ -11,6 +13,11 @@ pub enum ModGroupHandlerError {
 
     #[error(transparent)]
     ItemTypeNotFound {
+        source: ModGroupServiceError,
+    },
+
+    #[error(transparent)]
+    ItemTypeRepositoryErr {
         source: ModGroupServiceError,
     },
 
@@ -30,6 +37,7 @@ impl IntoResponse for ModGroupHandlerError {
             ModGroupHandlerError::ItemTypeNotFound { .. } => (StatusCode::BAD_REQUEST, self.to_string()).into_response(),
             ModGroupHandlerError::AssembleError { .. } => (StatusCode::INTERNAL_SERVER_ERROR, "something went wrong").into_response(),
             ModGroupHandlerError::MissingRequiredParameter(_) => (StatusCode::BAD_REQUEST, self.to_string()).into_response(),
+            ModGroupHandlerError::ItemTypeRepositoryErr { .. } => (StatusCode::INTERNAL_SERVER_ERROR, "something went wrong").into_response(),
         }
     }
 }
@@ -37,9 +45,10 @@ impl IntoResponse for ModGroupHandlerError {
 impl From<ModGroupServiceError> for ModGroupHandlerError {
     fn from(err: ModGroupServiceError) -> Self {
         match err {
-            ModGroupServiceError::Db{source: _} => ModGroupHandlerError::Db { source: err },
-            ModGroupServiceError::ItemTypeNotFound{source: _} => ModGroupHandlerError::ItemTypeNotFound { source: err },
+            ModGroupServiceError::Db{ .. } => ModGroupHandlerError::Db { source: err },
+            ModGroupServiceError::ItemTypeNotFound(_) => ModGroupHandlerError::ItemTypeNotFound { source: err },
             ModGroupServiceError::AssembleError{source: _} => ModGroupHandlerError::AssembleError { source: err },
+            ModGroupServiceError::ItemTypeRepositoryErr(_) => ModGroupHandlerError::ItemTypeRepositoryErr { source: err },
         }
     }
 }
@@ -51,10 +60,11 @@ pub enum ModGroupServiceError {
         source: ModGroupRepositoryError,
     },
 
-    #[error(transparent)]
-    ItemTypeNotFound {
-        source: ModGroupRepositoryError,
-    },
+    #[error("item type not found name: {0}")]
+    ItemTypeNotFound(String),
+
+    #[error("")]
+    ItemTypeRepositoryErr(#[from] ItemTypeRepositoryError),
 
     #[error(transparent)]
     AssembleError {
@@ -66,7 +76,6 @@ impl From<ModGroupRepositoryError> for ModGroupServiceError {
     fn from(err: ModGroupRepositoryError) -> Self {
         match err {
             ModGroupRepositoryError::Db(_) => ModGroupServiceError::Db { source: err },
-            ModGroupRepositoryError::ItemTypeNotFound(_) => ModGroupServiceError::ItemTypeNotFound { source: err },
             ModGroupRepositoryError::AssembleError(_) => ModGroupServiceError::AssembleError { source: err },
         }
     }
@@ -76,9 +85,6 @@ impl From<ModGroupRepositoryError> for ModGroupServiceError {
 pub enum ModGroupRepositoryError {
     #[error(transparent)]
     Db(#[from] sea_orm::DbErr),
-
-    #[error("not found item type: {0}")]
-    ItemTypeNotFound(String),
 
     #[error("assemble fail: {0}")]
     AssembleError(String),

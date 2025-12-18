@@ -17,7 +17,7 @@ FROM (
     ('conquerors_helmet', 'Conqueror''s Helmet', '정복자의 투구'),
     ('giantslayer_helmet', 'Giantslayer Helmet', '거인 처형자 투구')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'helmets(str)';
+JOIN item_types t ON t.name = 'helmets_str';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -37,7 +37,7 @@ FROM (
     ('grizzly_pelt', 'Grizzly Pelt', '반백의 가죽모'),
     ('majestic_pelt', 'Majestic Pelt', '압도적인 가죽모')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'helmets(dex)';
+JOIN item_types t ON t.name = 'helmets_dex';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -58,7 +58,7 @@ FROM (
     ('sunfire_circlet', 'Sunfire Circlet', '태양불 관'),
     ('lichs_circlet', 'Lich''s Circlet', '리치의 관')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'helmets(int)';
+JOIN item_types t ON t.name = 'helmets_int';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -81,7 +81,7 @@ FROM (
     ('atonement_mask', 'Atonement Mask', '속죄 가면'),
     ('penitent_mask', 'Penitent Mask', '참회 가면')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'helmets(str_dex)';
+JOIN item_types t ON t.name = 'helmets_str_dex';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -105,7 +105,7 @@ FROM (
     ('archdemon_crown', 'Archdemon Crown', '대악마 왕관'),
     ('bone_helmet', 'Bone Helmet', '뼈 투구')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'helmets(str_int)';
+JOIN item_types t ON t.name = 'helmets_str_int';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -129,4 +129,4 @@ FROM (
     ('winter_crown', 'Winter Crown', '겨울 왕관'),
     ('blizzard_crown', 'Blizzard Crown', '눈보라 왕관')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'helmets(dex_int)';
+JOIN item_types t ON t.name = 'helmets_dex_int';

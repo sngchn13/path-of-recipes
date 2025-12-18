@@ -18,7 +18,7 @@ FROM (
     ('thwarting_gauntlets', 'Thwarting Gauntlets', '좌절의 건틀릿'),
     ('spiked_gloves', 'Spiked Gloves', '가시 장갑')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'gloves(str)';
+JOIN item_types t ON t.name = 'gloves_str';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -40,7 +40,7 @@ FROM (
     ('trapsetter_gloves', 'Trapsetter Gloves', '덫꾼 장갑'),
     ('gripped_gloves', 'Gripped Gloves', '움켜쥔 장갑')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'gloves(dex)';
+JOIN item_types t ON t.name = 'gloves_dex';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -62,7 +62,7 @@ FROM (
     ('nexus_gloves', 'Nexus Gloves', '연결부 장갑'),
     ('fingerless_silk_gloves', 'Fingerless Silk Gloves', '손가락 없는 실크 장갑')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'gloves(int)';
+JOIN item_types t ON t.name = 'gloves_int';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -79,7 +79,7 @@ FROM (
     ('chimerascale_gauntlets', 'Chimerascale Gauntlets', '키메라비늘 건틀릿'),
     ('wyvernscale_gauntlets', 'Wyvernscale Gauntlets', '비룡비늘 건틀릿')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'gloves(str_dex)';
+JOIN item_types t ON t.name = 'gloves_str_dex';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -97,7 +97,7 @@ FROM (
     ('paladin_gloves', 'Paladin Gloves', '성기사 장갑'),
     ('apothecarys_gloves', 'Apothecary''s Gloves', '약제상의 장갑')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'gloves(str_int)';
+JOIN item_types t ON t.name = 'gloves_str_int';
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
 SELECT v.name, v.display_en, v.display_kor, t.id
@@ -114,4 +114,4 @@ FROM (
     ('infiltrator_mitts', 'Infiltrator Mitts', '잠입자 미트'),
     ('phantom_mitts', 'Phantom Mitts', '혼령 미트')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'gloves(dex_int)';
+JOIN item_types t ON t.name = 'gloves_dex_int';

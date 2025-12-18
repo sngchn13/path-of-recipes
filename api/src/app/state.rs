@@ -3,7 +3,7 @@ use std::sync::Arc;
 use axum::{extract::FromRef};
 use sea_orm::DatabaseConnection;
 
-use crate::{app::Services, domain::mod_groups::ModGroupService, infrastructure::get_connection};
+use crate::{app::Services, domain::{item_bases::ItemBaseService, mod_groups::ModGroupService}, infrastructure::get_connection};
 
 #[derive(Clone, FromRef)]
 pub struct AppState{
@@ -23,6 +23,12 @@ impl AppState {
 impl FromRef<AppState> for Arc<dyn ModGroupService> {
     fn from_ref(input: &AppState) -> Self {
         input.services.mod_group_service.clone()
+    }
+}
+
+impl FromRef<AppState> for Arc<dyn ItemBaseService> {
+    fn from_ref(input: &AppState) -> Self {
+        input.services.item_base_service.clone()
     }
 }
 

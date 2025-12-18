@@ -45,7 +45,7 @@ FROM (
     ('magmatic_tower_shield', 'Magmatic Tower Shield', '마그마 거대 방패'),
     ('heat_attuned_tower_shield', 'Heat-attuned Tower Shield', '조율된 열기 거대 방패')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'shields(str)';
+JOIN item_types t ON t.name = 'shields_str';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -72,7 +72,7 @@ FROM (
     ('polar_buckler', 'Polar Buckler', '극지의 버클러'),
     ('cold_attuned_buckler', 'Cold-attuned Buckler', '조율된 냉기 버클러')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'shields(dex)';
+JOIN item_types t ON t.name = 'shields_dex';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -99,7 +99,7 @@ FROM (
     ('subsuming_spirit_shield', 'Subsuming Spirit Shield', '아우르는 영혼 방패'),
     ('transfer_attuned_spirit_shield', 'Transfer-attuned Spirit Shield', '조율된 전이 영혼 방패')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'shields(int)';
+JOIN item_types t ON t.name = 'shields_int';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -120,7 +120,7 @@ FROM (
     ('cardinal_round_shield', 'Cardinal Round Shield', '선홍색 원형 방패'),
     ('elegant_round_shield', 'Elegant Round Shield', '고상한 원형 방패')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'shields(str_dex)';
+JOIN item_types t ON t.name = 'shields_str_dex';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -141,7 +141,7 @@ FROM (
     ('mosaic_kite_shield', 'Mosaic Kite Shield', '조각무늬 연모양 방패'),
     ('archon_kite_shield', 'Archon Kite Shield', '집정관의 연모양 방패')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'shields(str_int)';
+JOIN item_types t ON t.name = 'shields_str_int';
 
 
 INSERT INTO item_bases (name, display_en, display_kor, item_type_id)
@@ -162,4 +162,4 @@ FROM (
     ('mirrored_spiked_shield', 'Mirrored Spiked Shield', '거울 같은 가시 방패'),
     ('supreme_spiked_shield', 'Supreme Spiked Shield', '최상급 가시 방패')
 ) AS v(name, display_en, display_kor)
-JOIN item_types t ON t.name = 'shields(dex_int)';
+JOIN item_types t ON t.name = 'shields_dex_int';

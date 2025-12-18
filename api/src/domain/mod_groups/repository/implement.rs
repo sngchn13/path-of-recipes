@@ -122,8 +122,7 @@ mod orm_to_domain {
     };
 
     use crate::domain::{
-        mod_groups::entity::*,
-        mods::entity::Mod,
+        item_types::ItemType, mod_groups::entity::*, mods::entity::Mod
     };
 
     pub fn to_mod_group(

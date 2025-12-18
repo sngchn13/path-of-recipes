@@ -1,9 +1,9 @@
 use std::collections::HashSet;
 
-use entity::{families, item_types, mod_generation_types, mod_group_families, mod_group_tags, mod_groups, mods, sections, tags};
+use entity::{families, mod_generation_types, mod_group_families, mod_group_tags, mod_groups, mods, sections, tags};
 use sea_orm::{ColumnTrait, DatabaseConnection, EntityTrait, LoaderTrait, QueryFilter, QueryOrder};
 
-use crate::domain::mod_groups::{ModGroup, error::ModGroupRepositoryError, repository::ModGroupRepository};
+use crate::domain::{item_types::ItemType, mod_groups::{ModGroup, error::ModGroupRepositoryError, repository::ModGroupRepository}};
 
 pub struct ModGroupRepositoryImpl{ 
     database_connection: DatabaseConnection,
@@ -17,14 +17,7 @@ impl ModGroupRepositoryImpl {
 
 #[async_trait::async_trait]
 impl ModGroupRepository for ModGroupRepositoryImpl {
-    async fn find_all_by_item_type(&self, item_type_name: &str) -> Result<Vec<ModGroup>, super::ModGroupRepositoryError> {
-        //아이템 타입
-        let item_type = item_types::Entity::find()
-            .filter(item_types::Column::Name.eq(item_type_name))
-            .one(&self.database_connection)
-            .await
-            .map_err(ModGroupRepositoryError::Db)?
-            .ok_or_else(||ModGroupRepositoryError::ItemTypeNotFound(item_type_name.to_string()))?;
+    async fn find_all_by_item_type(&self, item_type: &ItemType) -> Result<Vec<ModGroup>, super::ModGroupRepositoryError> {
 
         //모드 그룹
         let mod_group_list: Vec<mod_groups::Model> = mod_groups::Entity::find()
@@ -43,7 +36,6 @@ impl ModGroupRepository for ModGroupRepositoryImpl {
         let mods_list = mod_group_list.load_many(mods::Entity, &self.database_connection).await.map_err(ModGroupRepositoryError::Db)?;
 
         //조립
-        let item_type = orm_to_domain::to_item_type(&item_type);
         let mut result = Vec::with_capacity(mod_group_list.len());
         for (idx, mod_group) in mod_group_list.into_iter().enumerate() {
             let mod_generation_type = mod_generation_type_list
@@ -113,7 +105,6 @@ mod orm_to_domain {
 
     use entity::{
         families::Model as FamilyOrm,
-        item_types::Model as ItemTypeOrm,
         mod_generation_types::Model as ModGenerationTypeOrm,
         mods::Model as ModOrm,
         sections::Model as SectionOrm,
@@ -155,12 +146,7 @@ mod orm_to_domain {
     pub fn to_section(orm: &SectionOrm) -> Section {
         Section::new(orm.id, orm.name.clone())
     }
-
-    /// ORM ItemType → 도메인 ItemType
-    pub fn to_item_type(orm: &ItemTypeOrm) -> ItemType {
-        ItemType::new(orm.id, orm.name.clone())
-    }
-
+    
     /// ORM Tag → 도메인 Tag
     pub fn to_tag(orm: &TagOrm) -> Tag {
         Tag::new(orm.id, orm.name.clone())

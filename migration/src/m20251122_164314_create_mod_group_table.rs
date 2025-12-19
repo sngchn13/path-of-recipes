@@ -19,7 +19,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_item_type_id")
-                            .from("mod_groups", "item_type_id")
+                            .from(ModGroup::Table, ModGroup::ItemTypeId)
                             .to("item_types", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -27,7 +27,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_mod_generation_type_id")
-                            .from("mod_groups", "mod_generation_type_id")
+                            .from(ModGroup::Table, ModGroup::ModGenerationTypeId)
                             .to("mod_generation_types", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -35,7 +35,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_section_id")
-                            .from("mod_groups", "section_id")
+                            .from(ModGroup::Table, ModGroup::SectionId)
                             .to("sections", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

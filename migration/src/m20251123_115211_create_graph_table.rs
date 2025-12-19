@@ -18,7 +18,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_post_id")
-                            .from("graphs", "post_id")
+                            .from(Graph::Table, Graph::PostId)
                             .to("posts", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

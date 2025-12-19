@@ -18,13 +18,13 @@ pub struct Model {
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
     #[sea_orm(
-        belongs_to = "super::item_bases::Entity",
+        belongs_to = "super::item_types::Entity",
         from = "Column::ItemTypeId",
-        to = "super::item_bases::Column::Id",
+        to = "super::item_types::Column::Id",
         on_update = "Cascade",
         on_delete = "Cascade"
     )]
-    ItemBases,
+    ItemTypes,
     #[sea_orm(
         belongs_to = "super::mod_generation_types::Entity",
         from = "Column::ModGenerationTypeId",
@@ -49,9 +49,9 @@ pub enum Relation {
     Sections,
 }
 
-impl Related<super::item_bases::Entity> for Entity {
+impl Related<super::item_types::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::ItemBases.def()
+        Relation::ItemTypes.def()
     }
 }
 

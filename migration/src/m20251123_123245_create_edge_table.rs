@@ -19,7 +19,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_source_id")
-                            .from("edges", "source_id")
+                            .from(Edge::Table, Edge::SourceId)
                             .to("nodes", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -27,7 +27,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_target_id")
-                            .from("edges", "target_id")
+                            .from(Edge::Table, Edge::TargetId)
                             .to("nodes", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -35,7 +35,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_graph_id")
-                            .from("edges", "graph_id")
+                            .from(Edge::Table, Edge::GraphId)
                             .to("graphs", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

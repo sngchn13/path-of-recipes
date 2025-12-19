@@ -23,7 +23,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_item_base_id")
-                            .from("nodes", "item_base_id")
+                            .from(Node::Table, Node::ItemBaseId)
                             .to("item_bases", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -31,7 +31,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_graph_id")
-                            .from("nodes", "graph_id")
+                            .from(Node::Table, Node::GraphId)
                             .to("graphs", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

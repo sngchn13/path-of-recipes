@@ -26,7 +26,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_mof_group_id")
-                            .from("mods", "mod_group_id")
+                            .from(Mod::Table, Mod::ModGroupId)
                             .to("mod_groups", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

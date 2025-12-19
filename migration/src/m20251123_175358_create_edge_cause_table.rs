@@ -22,7 +22,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_edge_id")
-                            .from("edge_causes", "edge_id")
+                            .from(EdgeCause::Table, EdgeCause::EdgeId)
                             .to("edges", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -30,7 +30,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_cause_id")
-                            .from("edge_causes", "cause_id")
+                            .from(EdgeCause::Table, EdgeCause::CauseId)
                             .to("causes", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

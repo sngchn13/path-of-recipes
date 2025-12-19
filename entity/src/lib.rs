@@ -8,6 +8,7 @@ pub mod edge_causes;
 pub mod edges;
 pub mod families;
 pub mod graphs;
+pub mod images;
 pub mod item_bases;
 pub mod item_types;
 pub mod mod_generation_types;

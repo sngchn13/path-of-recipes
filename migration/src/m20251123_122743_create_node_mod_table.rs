@@ -22,7 +22,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_node_id")
-                            .from("node_mods", "node_id")
+                            .from(NodeMod::Table, NodeMod::NodeId)
                             .to("nodes", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -30,7 +30,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_mod_id")
-                            .from("node_mods", "mod_id")
+                            .from(NodeMod::Table, NodeMod::ModId)
                             .to("mods", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
@@ -38,7 +38,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_placement_type_id")
-                            .from("node_mods", "placement_type_id")
+                            .from(NodeMod::Table, NodeMod::PlacementTypeId)
                             .to("placement_types", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

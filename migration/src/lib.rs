@@ -1,6 +1,7 @@
 pub use sea_orm_migration::prelude::*;
 
 mod m20251122_162130_create_item_type_table;
+mod m20251122_162135_create_image_table;
 mod m20251122_162444_create_item_base_table;
 mod m20251122_162449_create_mod_genration_type_table;
 mod m20251122_163531_create_section_table;
@@ -30,8 +31,6 @@ mod m20251205_113229_seed_mod_generation_type;
 mod m20251205_121016_seed_placement_type;
 mod m20251205_123555_seed_mod;
 
-
-
 pub struct Migrator;
 
 #[async_trait::async_trait]
@@ -39,6 +38,7 @@ impl MigratorTrait for Migrator {
     fn migrations() -> Vec<Box<dyn MigrationTrait>> {
         vec![
             Box::new(m20251122_162130_create_item_type_table::Migration),
+            Box::new(m20251122_162135_create_image_table::Migration),
             Box::new(m20251122_162444_create_item_base_table::Migration),
             Box::new(m20251122_162449_create_mod_genration_type_table::Migration),
             Box::new(m20251122_163531_create_section_table::Migration),

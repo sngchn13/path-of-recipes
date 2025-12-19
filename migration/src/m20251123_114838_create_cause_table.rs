@@ -17,7 +17,7 @@ impl MigrationTrait for Migration {
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_cause_type_id")
-                            .from("causes", "cause_type_id")
+                            .from(Cause::Table, Cause::CauseTypeId)
                             .to("cause_types", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)

@@ -16,11 +16,20 @@ impl MigrationTrait for Migration {
                     .col(string(ItemBase::DisplayEn).null())
                     .col(string(ItemBase::DisplayKor).null())
                     .col(integer(ItemBase::ItemTypeId))
+                    .col(uuid(ItemBase::ImageId).null()) //todo null삭제
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_item_type_id")
-                            .from("item_types", "item_type_id")
-                            .to("item_bases", "id")
+                            .from(ItemBase::Table, ItemBase::ItemTypeId)
+                            .to("item_types", "id")
+                            .on_update(ForeignKeyAction::Cascade)
+                            .on_delete(ForeignKeyAction::Cascade)
+                    )
+                    .foreign_key(
+                        ForeignKey::create()
+                            .name("fk_image_id")
+                            .from(ItemBase::Table, ItemBase::ImageId)
+                            .to("images", "id")
                             .on_update(ForeignKeyAction::Cascade)
                             .on_delete(ForeignKeyAction::Cascade)
                     )
@@ -49,4 +58,5 @@ enum ItemBase {
     DisplayEn,
     DisplayKor,
     ItemTypeId,
+    ImageId,
 }

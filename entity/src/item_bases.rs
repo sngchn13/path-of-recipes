@@ -14,27 +14,40 @@ pub struct Model {
     pub display_en: Option<String>,
     pub display_kor: Option<String>,
     pub item_type_id: i32,
+    pub image_id: Option<Uuid>,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
     #[sea_orm(
-        belongs_to = "Entity",
-        from = "Column::ItemTypeId",
-        to = "Column::Id",
+        belongs_to = "super::images::Entity",
+        from = "Column::ImageId",
+        to = "super::images::Column::Id",
         on_update = "Cascade",
         on_delete = "Cascade"
     )]
-    SelfRef,
-    #[sea_orm(has_many = "super::mod_groups::Entity")]
-    ModGroups,
+    Images,
+    #[sea_orm(
+        belongs_to = "super::item_types::Entity",
+        from = "Column::ItemTypeId",
+        to = "super::item_types::Column::Id",
+        on_update = "Cascade",
+        on_delete = "Cascade"
+    )]
+    ItemTypes,
     #[sea_orm(has_many = "super::nodes::Entity")]
     Nodes,
 }
 
-impl Related<super::mod_groups::Entity> for Entity {
+impl Related<super::images::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::ModGroups.def()
+        Relation::Images.def()
+    }
+}
+
+impl Related<super::item_types::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ItemTypes.def()
     }
 }
 

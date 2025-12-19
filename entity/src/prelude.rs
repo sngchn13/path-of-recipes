@@ -6,6 +6,7 @@ pub use super::edge_causes::Entity as EdgeCauses;
 pub use super::edges::Entity as Edges;
 pub use super::families::Entity as Families;
 pub use super::graphs::Entity as Graphs;
+pub use super::images::Entity as Images;
 pub use super::item_bases::Entity as ItemBases;
 pub use super::item_types::Entity as ItemTypes;
 pub use super::mod_generation_types::Entity as ModGenerationTypes;

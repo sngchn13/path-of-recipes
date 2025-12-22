@@ -10,7 +10,13 @@ pub struct Model {
     #[serde(skip_deserializing)]
     pub id: Uuid,
     pub relative_path: String,
-    pub alt_text: String,
+    #[sea_orm(unique)]
+    pub name: String,
+    pub width: i32,
+    pub height: i32,
+    pub size: i32,
+    pub extension: String,
+    pub desc: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

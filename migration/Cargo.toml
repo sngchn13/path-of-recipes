@@ -15,6 +15,7 @@ entity = { path = "../entity" }
 csv = "1.4.0"
 serde = { workspace = true, features = ["derive"] }
 anyhow = { workspace = true }
+uuid = { workspace = true, features = ["v4"] }
 
 [dependencies.sea-orm-migration]
 version = "2.0.0-rc.18"

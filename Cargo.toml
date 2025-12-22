@@ -11,6 +11,7 @@ sea-orm = { version = "2.0.0-rc", features = ["sqlx-postgres", "runtime-tokio-ru
 serde = "1.0.228"
 dotenvy = "0.15.7"
 anyhow = "1.0.100"
+uuid = "1.19.0"
 
 [dependencies]
 path-of-recipes-api = { path = "api" }

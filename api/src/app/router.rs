@@ -3,7 +3,7 @@ use std::time::Duration;
 use axum::{Router, http::HeaderValue, routing::get};
 use tower_http::{cors::{Any, CorsLayer}, timeout::TimeoutLayer, trace::TraceLayer};
 
-use crate::{app::state::AppState, domain::{item_bases::get_item_bases_by_item_name, mod_groups::get_mod_groups_by_item_type}};
+use crate::{app::state::AppState, domain::{images::get_image_by_id, item_bases::get_item_bases_by_item_name, mod_groups::get_mod_groups_by_item_type}};
 
 pub fn build_router(state: AppState) -> Router{
 
@@ -18,6 +18,7 @@ pub fn build_router(state: AppState) -> Router{
         .route("/api", get(|| async move {"hello world"}))
         .route("/api/mod-groups", get( get_mod_groups_by_item_type))
         .route("/api/item-bases", get(get_item_bases_by_item_name))
+        .route("/api/images/{id}", get(get_image_by_id))
         .layer(TimeoutLayer::new(Duration::from_millis(3000)))
         .layer(TraceLayer::new_for_http())
         .layer(cors)

@@ -14,7 +14,7 @@ impl MigrationTrait for Migration {
                     .col(pk_auto(Post::Id))
                     .col(string(Post::Title))
                     .col(text(Post::Content))
-                    .col(string(Post::Password).null())
+                    .col(string(Post::Password))
                     .col(integer(Post::View).default(1))
                     .col(integer(Post::Like).default(0))
                     .col(integer(Post::Dislike).default(0))

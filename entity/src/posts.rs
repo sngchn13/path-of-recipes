@@ -12,7 +12,7 @@ pub struct Model {
     pub title: String,
     #[sea_orm(column_type = "Text")]
     pub content: String,
-    pub password: Option<String>,
+    pub password: String,
     pub view: i32,
     pub like: i32,
     pub dislike: i32,

@@ -3,7 +3,7 @@
 use sea_orm::entity::prelude::*;
 use serde::{Deserialize, Serialize};
 
-#[derive(Clone, Debug, PartialEq, Eq, DeriveEntityModel, Serialize, Deserialize)]
+#[derive(Clone, Debug, PartialEq, DeriveEntityModel, Serialize, Deserialize)]
 #[sea_orm(table_name = "nodes")]
 pub struct Model {
     #[sea_orm(primary_key)]
@@ -15,8 +15,10 @@ pub struct Model {
     pub item_level: i32,
     #[sea_orm(column_type = "Text", nullable)]
     pub note: Option<String>,
-    pub position_x: i32,
-    pub position_y: i32,
+    #[sea_orm(column_type = "Float")]
+    pub position_x: f32,
+    #[sea_orm(column_type = "Float")]
+    pub position_y: f32,
     pub item_base_id: i32,
     pub graph_id: i32,
 }

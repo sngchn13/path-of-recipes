@@ -14,7 +14,6 @@ mod m20251123_114800_create_cause_type_table;
 mod m20251123_114838_create_cause_table;
 mod m20251123_115054_create_post_table;
 mod m20251123_115211_create_graph_table;
-mod m20251123_117000_create_placement_type_table;
 mod m20251123_120144_create_node_table;
 mod m20251123_122743_create_node_mod_table;
 mod m20251123_123245_create_edge_table;
@@ -29,7 +28,6 @@ mod m20251127_074022_seed_cause_type;
 mod m20251127_080024_seed_cause;
 mod m20251127_093003_seed_family;
 mod m20251205_113229_seed_mod_generation_type;
-mod m20251205_121016_seed_placement_type;
 mod m20251205_123555_seed_mod;
 
 pub struct Migrator;
@@ -52,7 +50,6 @@ impl MigratorTrait for Migrator {
             Box::new(m20251123_114838_create_cause_table::Migration),
             Box::new(m20251123_115054_create_post_table::Migration),
             Box::new(m20251123_115211_create_graph_table::Migration),
-            Box::new(m20251123_117000_create_placement_type_table::Migration),
             Box::new(m20251123_120144_create_node_table::Migration),
             Box::new(m20251123_122743_create_node_mod_table::Migration),
             Box::new(m20251123_123245_create_edge_table::Migration),
@@ -67,7 +64,6 @@ impl MigratorTrait for Migrator {
             Box::new(m20251127_080024_seed_cause::Migration),
             Box::new(m20251127_093003_seed_family::Migration),
             Box::new(m20251205_113229_seed_mod_generation_type::Migration),
-            Box::new(m20251205_121016_seed_placement_type::Migration),
             Box::new(m20251205_123555_seed_mod::Migration),
         ]
     }

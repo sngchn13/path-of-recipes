@@ -7,7 +7,6 @@ FROM (
     ('reforge_lightning_mod'),
     ('reforge_cold_mod'),
     ('reforge_fire_mod'),
-    ('reforge_chaos_mod'),
     ('reforge_defense_mod'),
     ('reforge_chaos_mod'),
     ('reforge_attack_mod'),

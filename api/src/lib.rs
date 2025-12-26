@@ -6,6 +6,7 @@ mod config;
 mod app;
 mod infrastructure;
 mod domain;
+mod shared;
 
 
 #[tokio::main]

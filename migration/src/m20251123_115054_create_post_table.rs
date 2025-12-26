@@ -11,7 +11,7 @@ impl MigrationTrait for Migration {
                 Table::create()
                     .table(Post::Table)
                     .if_not_exists()
-                    .col(pk_auto(Post::Id))
+                    .col(pk_uuid(Post::Id))
                     .col(string(Post::Title))
                     .col(text(Post::Content))
                     .col(string(Post::Password))

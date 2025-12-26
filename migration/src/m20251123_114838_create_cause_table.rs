@@ -12,8 +12,8 @@ impl MigrationTrait for Migration {
                     .table(Cause::Table)
                     .if_not_exists()
                     .col(pk_auto(Cause::Id))
-                    .col(string(Cause::Name))
-                    .col(integer(Cause::CauseTypeId).null())
+                    .col(string(Cause::Name).unique_key())
+                    .col(integer(Cause::CauseTypeId))
                     .foreign_key(
                         ForeignKey::create()
                             .name("fk_cause_type_id")

@@ -5,12 +5,14 @@ use crate::domain::images::{ImageRepository, ImageRepositoryImpl, ImageService, 
 use crate::domain::item_types::{ItemTypeRepository, ItemTypeRepositoryImpl};
 use crate::domain::mod_groups::{ModGroupRepository, ModGroupRepositoryImpl, ModGroupService, ModGroupServiceImpl};
 use crate::domain::item_bases::{ItemBaseRepository, ItemBaseRepositoryImpl, ItemBaseService, ItemBaseServiceImpl};
+use crate::domain::posts::{PostService, PostServiceImpl};
 
 #[derive(Clone)]
 pub struct Services {
     pub mod_group_service: Arc<dyn ModGroupService + Send + Sync>,
     pub item_base_service: Arc<dyn ItemBaseService + Send + Sync>,
     pub image_service: Arc<dyn ImageService + Send + Sync>,
+    pub post_service: Arc<dyn PostService + Send + Sync>,
 }
 
 impl Services {
@@ -25,6 +27,7 @@ impl Services {
             mod_group_service:  Arc::new(ModGroupServiceImpl::new(Arc::clone(&mod_group_repository), Arc::clone(&item_type_repository))),
             item_base_service: Arc::new(ItemBaseServiceImpl::new(Arc::clone(&item_base_repository), Arc::clone(&item_type_repository))),
             image_service: Arc::new(ImageServiceImpl::new(Arc::clone(&image_repository))),
+            post_service: Arc::new(PostServiceImpl::new(conn)),
         }
     }
 }

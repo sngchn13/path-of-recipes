@@ -16,7 +16,6 @@ pub use super::mod_groups::Entity as ModGroups;
 pub use super::mods::Entity as Mods;
 pub use super::node_mods::Entity as NodeMods;
 pub use super::nodes::Entity as Nodes;
-pub use super::placement_types::Entity as PlacementTypes;
 pub use super::posts::Entity as Posts;
 pub use super::sections::Entity as Sections;
 pub use super::tags::Entity as Tags;

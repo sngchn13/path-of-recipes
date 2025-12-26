@@ -1,4 +1,4 @@
-use sea_orm_migration::{prelude::*, schema::*};
+use sea_orm_migration::{prelude::{extension::postgres::Type, *}, schema::*};
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
@@ -6,6 +6,18 @@ pub struct Migration;
 #[async_trait::async_trait]
 impl MigrationTrait for Migration {
     async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+
+        manager.create_type(
+            Type::create()
+            .as_enum(Rarity::Table)
+            .values([
+                Rarity::Normal,
+                Rarity::Magic,
+                Rarity::Rare,
+            ])
+            .to_owned(),
+        ).await?;
+
         manager
             .create_table(
                 Table::create()
@@ -13,7 +25,11 @@ impl MigrationTrait for Migration {
                     .if_not_exists()
                     .col(pk_auto(Node::Id))
                     .col(text(Node::Context).null())
-                    .col(string(Node::Rarity))
+                    .col(
+                        ColumnDef::new(Node::Rarity)
+                            .custom(Rarity::Table)
+                            .not_null(),
+                    )
                     .col(unsigned(Node::ItemLevel))
                     .col(text(Node::Note).null())
                     .col(float(Node::PositionX))
@@ -48,6 +64,13 @@ impl MigrationTrait for Migration {
             .drop_table(Table::drop().table(Node::Table).to_owned())
             .await?;
 
+        manager
+            .drop_type(
+                Type::drop()
+                .name(Rarity::Table)
+                .to_owned(),
+            ).await?;
+
         Ok(())
     }
 }
@@ -65,4 +88,12 @@ enum Node {
     PositionY,
     ItemBaseId,
     GraphId,
+}
+
+#[derive(DeriveIden)]
+enum Rarity {
+    Table,
+    Normal,
+    Magic,
+    Rare,
 }

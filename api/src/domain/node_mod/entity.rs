@@ -2,21 +2,19 @@ use std::fmt;
 
 use serde::{Deserialize, Serialize};
 
+#[derive(Debug)]
 pub struct NodeMod{
     pub node_id: i32,
     pub mod_id: i32,
     pub placement: Placement,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq, Eq)]
+#[serde(rename_all = "lowercase")]
 pub enum Placement {
-    #[serde(alias = "implicit")]
     Implicit,
-    #[serde(alias = "explicit")]
     Explicit,
-    #[serde(alias = "enchantment")]
     Enchantment,
-    #[serde(alias = "others")]
     Others,
 }
 

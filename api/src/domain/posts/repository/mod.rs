@@ -1,11 +1,11 @@
 use entity::posts;
-use sea_orm::{ActiveValue::Set, DatabaseTransaction, EntityTrait};
+use sea_orm::{ActiveValue::Set, DatabaseConnection, DatabaseTransaction, EntityTrait};
 use uuid::Uuid;
 
-use crate::{domain::posts::{Post, error::PostRepositoryError, presentation::NewPost, repository::orm_to_domain::to_post}, shared::hash_password};
+use crate::{domain::{graphs::Graph, posts::{Post, error::PostRepositoryError, presentation::NewPost}}, shared::{hash_password, to_post}};
 
 
-pub async fn save_post(txn: &DatabaseTransaction , new_post: &NewPost) -> Result<Post, PostRepositoryError>{
+pub async fn save_post(txn: &DatabaseTransaction, new_post: &NewPost) -> Result<Post, PostRepositoryError>{
     let id = Uuid::new_v4();
     let hashed_password = hash_password(&new_post.password)?;
 
@@ -22,25 +22,6 @@ pub async fn save_post(txn: &DatabaseTransaction , new_post: &NewPost) -> Result
     Ok(to_post(saved))
 }
 
-mod orm_to_domain {
-
-    use entity::{ posts::Model as PostOrm };
-
-    use crate::{domain::posts::Post, shared::{fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime}};
-
-    pub fn to_post(orm: PostOrm)
-        -> Post {
-            Post::new(
-                orm.id,
-                orm.title,
-                orm.content,
-                orm.password,
-                orm.view,
-                orm.like,
-                orm.dislike,
-                fixed_offset_to_offset_datetime(orm.created_at),
-                fixed_offset_opt_to_offset_opt(orm.updated_at)
-            )
-        }
-
+pub async fn find_post_by_id(post_id: Uuid, conn: &DatabaseConnection) -> Result<Option<Post>, PostRepositoryError>{
+    Ok(posts::Entity::find_by_id(post_id).one(conn).await?.and_then(|v| Some(to_post(v))))
 }

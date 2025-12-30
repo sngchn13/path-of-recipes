@@ -1,8 +1,11 @@
 use entity::{graphs, sea_orm_active_enums::Verification};
-use sea_orm::{ActiveValue::Set, DatabaseTransaction, EntityTrait};
+use sea_orm::{ActiveValue::Set, DatabaseConnection, DatabaseTransaction, EntityTrait, QueryFilter, ColumnTrait};
+use uuid::Uuid;
 
-use crate::domain::{graphs::{Graph, error::GraphRepositoryError, repository::orm_to_domain::to_post}, posts::{NewGraph, Post}};
+use crate::{domain::{graphs::{Graph, error::GraphRepositoryError}, posts::{NewGraph, Post}}, shared::to_graph};
 
+mod dto;
+pub use dto::*;
 
 
 pub async fn save_graph(txn: &DatabaseTransaction, new_graph: &NewGraph, post: &Post) -> Result<Graph, GraphRepositoryError>{
@@ -16,23 +19,12 @@ pub async fn save_graph(txn: &DatabaseTransaction, new_graph: &NewGraph, post: &
 
     let saved = graphs::Entity::insert(model).exec_with_returning(txn).await?;
 
-    Ok(to_post(saved))
+    Ok(to_graph(saved))
 }
 
-mod orm_to_domain {
+pub async fn find_graph_by_id(post_id: &Uuid, conn: &DatabaseConnection) -> Result<Option<Graph>, GraphRepositoryError>{
+    let graph = graphs::Entity::find().filter(graphs::Column::PostId.eq(*post_id)).one(conn).await?.and_then(|v| Some(to_graph(v)));
 
-    use entity::{ graphs::Model as GraphOrm };
-
-    use crate::domain::graphs::{Graph, Verification};
-
-    pub fn to_post(orm: GraphOrm)
-        -> Graph {
-            Graph::new(
-                orm.id,
-                orm.description,
-                Verification::from(orm.verification),
-                orm.post_id,
-            )
-        }
-
+    Ok(graph)
 }
+

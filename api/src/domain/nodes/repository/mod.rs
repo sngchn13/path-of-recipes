@@ -1,9 +1,12 @@
 use std::collections::HashMap;
 
-use entity::{node_mods, nodes};
-use sea_orm::{ActiveValue::Set, DatabaseTransaction, EntityTrait};
+use entity::{item_bases, item_types, node_mods, nodes};
+use sea_orm::{ActiveValue::Set, DatabaseConnection, DatabaseTransaction, EntityTrait, QueryFilter, ColumnTrait};
 
-use crate::domain::{graphs::Graph, nodes::{Node, error::NodeRepositoryError, repository::orm_to_domain::to_node}, posts::NewNode};
+use crate::{domain::{graphs::Graph, item_bases::ItemBase, item_types::ItemType, nodes::{Node, error::NodeRepositoryError}, posts::NewNode}, shared::to_node};
+
+mod dto;
+pub use dto::*;
 
 pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn: &DatabaseTransaction) -> Result<HashMap<String, Node>, NodeRepositoryError>{
     
@@ -39,6 +42,7 @@ pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn
 
             node_mods.push(node_mod);
         }
+        node_mods::Entity::insert_many(node_mods).exec(txn).await?;
         
         result.insert(map_id, to_node(model));
     }
@@ -46,15 +50,39 @@ pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn
     Ok(result)
 }
 
-mod orm_to_domain {
+pub async fn find_nodes_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -> Result<Vec<Node>, NodeRepositoryError>{
+    
+    let nodes: Vec<Node> = nodes::Entity::find().filter(nodes::Column::GraphId.eq(*graph_id)).all(conn).await?
+        .into_iter()
+        .map(|orm| to_node(orm))
+        .collect();
+    
+    Ok(nodes)
+}
 
-    use entity::{ nodes::Model as NodeOrm };
+pub async fn find_nodes_with_related_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) 
+-> Result<Vec<RawNodeAggregate>, NodeRepositoryError>
+{
+    
+    let rows = nodes::Entity::find()
+        .filter(nodes::Column::GraphId.eq(*graph_id))
+        .find_also(nodes::Entity, item_bases::Entity)
+        .find_also(item_bases::Entity, item_types::Entity)
+        .all(conn)
+        .await?;
 
-    use crate::domain::nodes::{Node, Rarity};
+    let mut result = Vec::new();
+    for (node, item_base, item_type) in rows {
+        let node = to_node(node);
+        let item_base = item_base
+            .and_then(|orm| Some(ItemBase::new(orm.id, orm.name, orm.display_en, orm.display_kor, orm.item_type_id)))
+            .ok_or(NodeRepositoryError::ItemBaseNotFound(node.id.to_string()))?;
+        let item_type = item_type
+            .and_then(|orm| Some(ItemType::new(orm.id, orm.name)))
+            .ok_or(NodeRepositoryError::ItemTypeNotFound(item_base.id.to_string()))?;
 
-    pub fn to_node(orm: NodeOrm)
-        -> Node {
-            Node { id: orm.id, context: orm.context, rarity: Rarity::from(orm.rarity), item_level: orm.item_level, note: orm.note, position_x: orm.position_x, position_y: orm.position_y, item_base_id: orm.item_base_id }
-        }
+        result.push(RawNodeAggregate::assembly(node, item_base, item_type));
+    }
 
+    Ok(result)
 }

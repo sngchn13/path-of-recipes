@@ -1,7 +1,7 @@
 use axum::{http::StatusCode, response::IntoResponse};
 use thiserror::Error;
 
-use crate::domain::{causes::CauseRepositoryError, edges::EdgeRepositoryError, graphs::GraphRepositoryError, nodes::NodeRepositoryError};
+use crate::domain::{causes::CauseRepositoryError, edges::EdgeRepositoryError, graphs::GraphRepositoryError, mods::ModRepositoryError, node_mod::NodeModRepositoryError, nodes::NodeRepositoryError};
 
 
 #[derive(Debug, Error)]
@@ -35,6 +35,21 @@ pub enum PostServiceError {
 
     #[error(transparent)]
     CauseRepositoryErr(#[from] CauseRepositoryError),
+    
+    #[error(transparent)]
+    NodeModRepositoryErr(#[from] NodeModRepositoryError),
+
+    #[error(transparent)]
+    ModRepositoryErr(#[from] ModRepositoryError),
+
+    #[error("post_id({0}) not found")]
+    NotFoundPost(String),
+
+    #[error("graph not found with post_id({0})")]
+    NotFoundGraph(String),
+
+    #[error("{0}")]
+    AssembleErr(String)
 }
 
 #[derive(Debug, Error)]

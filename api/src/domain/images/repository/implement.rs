@@ -2,7 +2,7 @@ use entity::images;
 use sea_orm::{DatabaseConnection, EntityTrait};
 use uuid::Uuid;
 
-use crate::domain::images::{Image, ImageRepositoryError, repository::{ImageRepository, implement::orm_to_domain::to_image}};
+use crate::{domain::images::{Image, ImageRepositoryError, repository::ImageRepository}, shared::to_image};
 
 
 
@@ -26,14 +26,5 @@ impl ImageRepository for ImageRepositoryImpl {
         };
 
         Ok(optional_image)
-    }
-}
-
-pub mod orm_to_domain {
-    use entity::{ images::Model as ImageOrm };
-    use crate::domain::images::Image;
-
-    pub fn to_image(orm: ImageOrm) -> Image{
-        Image { id: orm.id, relative_path: orm.relative_path, name: orm.name, width: orm.width, height: orm.height, size: orm.size, extension: orm.extension, desc: orm.desc }
     }
 }

@@ -2,7 +2,10 @@ use axum::{Json, http::StatusCode, response::IntoResponse};
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 
-use crate::domain::{node_mod::Placement, nodes::Rarity};
+use crate::domain::{node_mod::Placement, nodes::{ Rarity}};
+
+mod response;
+pub use response::PostResponse;
 
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]

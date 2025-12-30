@@ -1,5 +1,5 @@
 use sea_orm::{ColumnTrait, DatabaseConnection, EntityTrait, QueryFilter};
-use crate::domain::item_types::{ItemType, error::ItemTypeRepositoryError, repository::{ItemTypeRepository, implement::orm_to_domain::to_item_type}};
+use crate::{domain::item_types::{ItemType, error::ItemTypeRepositoryError, repository::ItemTypeRepository}, shared::to_item_type};
 use entity::{item_types};
 
 
@@ -25,16 +25,5 @@ impl ItemTypeRepository for ItemTypeRepositoryImpl {
             .map_err(ItemTypeRepositoryError::Db)?;
 
          Ok(item_type.map(to_item_type))
-    }
-}
-
-mod orm_to_domain {
-
-    use entity::item_types::Model as ItemTypeOrm;
-
-    use crate::domain::item_types::ItemType;
-
-    pub fn to_item_type(orm: ItemTypeOrm) -> ItemType{
-        ItemType::new(orm.id, orm.name)
     }
 }

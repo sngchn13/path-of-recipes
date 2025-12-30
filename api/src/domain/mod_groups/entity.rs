@@ -1,5 +1,7 @@
 use std::collections::HashSet;
 
+use serde::Serialize;
+
 use crate::domain::{item_types::ItemType, mods::Mod};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -57,7 +59,7 @@ impl Tag {
     }
 }
 
-#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+#[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub struct Family{
     pub id: i32,
     pub name: String,

@@ -4,5 +4,5 @@ mod error;
 
 pub use entity::*;
 
-pub use repository::save_graph;
+pub use repository::*;
 pub use error::*;

@@ -20,12 +20,10 @@ impl Node {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
 pub enum Rarity {
-    #[serde(alias = "normal")]
     Normal,
-    #[serde(alias = "magic")]
     Magic,
-    #[serde(alias = "rare")]
     Rare,
 }
 

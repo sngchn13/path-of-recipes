@@ -4,3 +4,4 @@ mod repository;
 
 pub use entity::{NodeMod, Placement};
 pub use error::NodeModRepositoryError;
+pub use repository::*;

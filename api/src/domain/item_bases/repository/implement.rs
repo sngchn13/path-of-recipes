@@ -1,7 +1,7 @@
 use entity::{item_bases};
 use sea_orm::{ColumnTrait, DatabaseConnection, EntityTrait, QueryFilter, QueryOrder};
 
-use crate::domain::{item_bases::{ItemBaseRepositoryError, entity::ItemBase, repository::{ItemBaseRepository, implement::orm_to_domain::to_item_base}}, item_types::ItemType};
+use crate::{domain::{item_bases::{ItemBaseRepositoryError, entity::ItemBase, repository::ItemBaseRepository}, item_types::ItemType}, shared::to_item_base};
 
 
 pub struct ItemBaseRepositoryImpl{
@@ -36,23 +36,4 @@ impl ItemBaseRepository for ItemBaseRepositoryImpl {
 
         Ok(item_base_list)
     }
-}
-
-mod orm_to_domain {
-
-    use entity::{ item_bases::Model as ItemBaseOrm };
-
-    use crate::domain::{item_bases::entity::{ItemBase, ItemTypeId}, item_types::ItemType};
-
-    pub fn to_item_base(item_base_model: &ItemBaseOrm, item_type: &ItemType)
-        -> ItemBase {
-            ItemBase::new(
-                item_base_model.id, 
-                item_base_model.name.clone(), 
-                item_base_model.display_en.clone(), 
-                item_base_model.display_kor.clone(), 
-                ItemTypeId::new(item_type.id),
-            )
-        }
-
 }

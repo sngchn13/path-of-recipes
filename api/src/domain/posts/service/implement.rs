@@ -1,10 +1,10 @@
-use std::collections::{HashMap};
+use std::collections::{HashMap, HashSet};
 
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 use uuid::Uuid;
 
-use crate::domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, find_edges_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, find_graph_by_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, save_nodes_returning_map}, posts::{Post, PostServiceError, presentation::NewPost, repository::{find_post_by_id, save_post}, service::{PostAggregate, PostService}}};
+use crate::{domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, find_graph_by_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, find_nodes_with_related_by_node_id, find_representative_nodes_by_mod_group_ids, find_representative_nodes_by_posts, save_nodes_returning_map}, posts::{Post, PostServiceError, presentation::{NewPost, PostOrder, PostSearchCondition}, repository::{find_all_posts, find_post_by_id, find_posts_by_node_id, save_post}, service::{PostAggregate, PostService}}}, shared::{Page, Pagination, SortDirection}};
 
 pub struct PostServiceImpl{
     database_connection: DatabaseConnection,
@@ -73,6 +73,68 @@ impl PostService for PostServiceImpl {
         let post = PostAggregate::assemble_post(post, graph);
 
         Ok(post)
+    }
+
+    async fn find_posts_with_representative_node(&self, mod_group_ids: HashSet<i32>, pagination: Pagination, order_by: PostOrder,direction: SortDirection) 
+    -> Result<Page<(Post, NodeAggregate)>, PostServiceError>
+    {
+        //요구하는 모드의 조건이 없는 경우
+        if(mod_group_ids.is_empty()){
+            //포스트 시작 + 페이지네이팅
+            let paged_posts = find_all_posts(pagination, order_by, direction, &self.database_connection).await?;
+            //대표노드 찾기
+            let mut post_node_relation = find_representative_nodes_by_posts(paged_posts.content.iter().map(|p| p.id).collect(), &self.database_connection).await?;
+            
+            //노드 만들기
+            let raw_nodes = find_nodes_with_related_by_node_id(post_node_relation.values().map(|n| n.id).collect(), &self.database_connection).await?;
+            let node_mod_map = find_node_mods_from_node_ids(raw_nodes.iter().map(|n|n.id).collect(), &self.database_connection).await?;
+            let mod_map = find_all_mods_with_related_by_mod_ids(node_mod_map.values().flat_map(|mods| mods.iter()).map(|m| m.mod_id).collect(), &self.database_connection).await?;
+            let mut node_map: HashMap<i32, NodeAggregate> = assemble_node(raw_nodes, node_mod_map, mod_map)?.into_iter().map(|n| (n.id, n)).collect();
+
+            //조립 시작
+            let pageable = paged_posts.pageable;
+            let content = paged_posts.content;
+            let mut result_content = Vec::new();
+
+
+            info!("posts len = {}, post_node_relation len = {}",
+                content.len(),
+                post_node_relation.len()
+            );
+
+            for post in content {
+                let node_id = post_node_relation.remove(&post.id).ok_or(PostServiceError::AssembleErr(format!("node_id not found for post_id: {}", post.id)))?.id;
+                let node = node_map.remove(&node_id).ok_or(PostServiceError::AssembleErr(format!("node not found for node_id: {}", node_id)))?;
+                
+                result_content.push((post, node));
+            }
+
+            return Ok(Page::new(result_content, pageable))
+        }
+
+        //모드 조건이 있는 경우: 대표노드 찾고 이후에 포스트 찾기+페이지네이팅
+        let representative_nodes = find_representative_nodes_by_mod_group_ids(&mod_group_ids, &self.database_connection).await?;
+        let raw_nodes = find_nodes_with_related_by_node_id(representative_nodes.iter().map(|n| n.id).collect(), &self.database_connection).await?;
+        let node_mod_map = find_node_mods_from_node_ids(raw_nodes.iter().map(|rn| rn.id).collect(), &self.database_connection).await?;
+        let mod_map = find_all_mods_with_related_by_mod_ids(node_mod_map.values().flat_map(|mods| mods.iter()).map(|m| m.mod_id).collect(), &self.database_connection).await?;
+        
+        let representative_nodes = assemble_node(raw_nodes, node_mod_map, mod_map)?;
+        let representative_node_map: HashMap<i32, NodeAggregate> = representative_nodes.into_iter().map(|n| (n.id, n)).collect();
+
+        //노드에 맞는 포스트 찾기
+        let paged_post = find_posts_by_node_id(representative_node_map.keys().map(|k|k.clone()).collect(), pagination, order_by, direction, &self.database_connection).await?;
+
+        //페이지랑 포스트 연결하고 응답하기 Page(Post, NodeAggregate)
+        let result_content = paged_post.content.into_iter()
+            .map(|(post, node_id)| {
+                let node = representative_node_map.get(&node_id)
+                    .cloned()
+                    .ok_or(PostServiceError::AssembleErr(format!("node not found with id:{}", node_id)))?;
+                Ok((post, node))
+            })
+            .collect::<Result<Vec<(Post, NodeAggregate)>, PostServiceError>>()?;
+        
+        Ok(Page::new(result_content, paged_post.pageable))
     }
 }
 

@@ -2,6 +2,7 @@ use std::fmt;
 
 use serde::{Deserialize, Serialize};
 
+#[derive(Debug, Clone)]
 pub struct Node{
     pub id: i32,
     pub context: Option<String>,
@@ -19,7 +20,7 @@ impl Node {
     }
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "lowercase")]
 pub enum Rarity {
     Normal,

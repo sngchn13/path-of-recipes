@@ -1,5 +1,6 @@
 use axum::{http::StatusCode, response::IntoResponse};
 use thiserror::Error;
+use tracing::info;
 
 use crate::domain::{causes::CauseRepositoryError, edges::EdgeRepositoryError, graphs::GraphRepositoryError, mods::ModRepositoryError, node_mod::NodeModRepositoryError, nodes::NodeRepositoryError};
 
@@ -12,6 +13,7 @@ pub enum PostHandlerError {
 
 impl IntoResponse for PostHandlerError {
     fn into_response(self) -> axum::response::Response {
+        info!("error = {}", self);
         (StatusCode::INTERNAL_SERVER_ERROR, "something went wrong").into_response()
     }
 }

@@ -58,7 +58,7 @@ impl RawNodeAggregate {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct NodeAggregate {
     pub id: i32,
     pub context: Option<String>,

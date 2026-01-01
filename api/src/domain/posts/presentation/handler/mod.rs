@@ -35,8 +35,6 @@ pub async fn get_posts_by_condition(
     Query(condition): Query<PostSearchCondition>
 ) -> Result<(StatusCode, Json<PageResponse<PostSummary>>), PostHandlerError> 
 {
-    let msg = format!("condition = {:#?}", condition);
-    info!(msg);
     let page_posts = post_service.find_posts_with_representative_node(condition.mod_group_ids, Pagination::from(condition.paging_query),
         condition.order_by.unwrap_or_default(),condition.direction.unwrap_or_default()).await?
         .map(|(post, node)| PostSummary::from(post, node));

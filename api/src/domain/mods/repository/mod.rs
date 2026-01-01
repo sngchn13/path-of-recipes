@@ -62,8 +62,8 @@ pub async fn find_all_mods_with_related_by_mod_ids(mod_ids: HashSet<i32> , conn:
         let section = to_section(&section.ok_or(ModRepositoryError::SectionNotFound(mod_group.id.to_string()))?);
         let item_type = to_item_type(item_type.ok_or(ModRepositoryError::ItemTypeNotFound(mod_group.id.to_string()))?);
 
-        let families = mod_group_id_families_map.get(&mod_group.id).ok_or(ModRepositoryError::FamiliesNotFound(mod_group.id.to_string()))?;
-        let tags = mod_group_tags_map.get(&mod_group.id).ok_or(ModRepositoryError::TagsNotFound(mod_group.id.to_string()))?;
+        let families = mod_group_id_families_map.get(&mod_group.id).cloned().unwrap_or_else(HashSet::new);
+        let tags = mod_group_tags_map.get(&mod_group.id).cloned().unwrap_or_else(HashSet::new);
 
         let unplaced_mod = UnplacedModAggregate {
             id: mod_item.id,
@@ -81,8 +81,8 @@ pub async fn find_all_mods_with_related_by_mod_ids(mod_ids: HashSet<i32> , conn:
             mod_group_value: mod_group.value,
             mod_generation_type: mod_generation_type,
             item_type: item_type,
-            tags: tags.clone(),
-            families: families.clone(),
+            tags: tags,
+            families: families,
             section: section,
             
         };

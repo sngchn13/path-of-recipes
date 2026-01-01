@@ -4,7 +4,7 @@ use serde::{Serialize};
 use time::OffsetDateTime;
 use uuid::Uuid;
 
-use crate::domain::{edges::EdgeAggregate, graphs::GraphAggregate, mods::ModAggregate, node_mod::Placement, nodes::{NodeAggregate, Rarity}, posts::service::PostAggregate};
+use crate::domain::{edges::EdgeAggregate, graphs::GraphAggregate, mods::ModAggregate, node_mod::Placement, nodes::{NodeAggregate, Rarity}, posts::{Post, service::PostAggregate}};
 
 
 #[derive(Debug, Serialize)]
@@ -190,6 +190,38 @@ impl From<EdgeAggregate> for EdgeResponse {
                 .into_iter()
                 .map(|c| c.to_string())
                 .collect(),
+        }
+    }
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct PostSummary {
+    pub id: Uuid,
+    pub title: String,
+    pub view: i32,
+    pub like: i32,
+    pub dislike: i32,
+    
+    #[serde(with = "time::serde::rfc3339")]
+    pub created_at: OffsetDateTime,
+
+    #[serde(with = "time::serde::rfc3339::option")]
+    pub updated_at: Option<OffsetDateTime>,
+    pub representative_node: NodeResponse,
+}
+
+impl PostSummary {
+    pub fn from(post: Post, node: NodeAggregate) -> Self{
+        Self { 
+            id: post.id, 
+            title: post.title, 
+            view: post.view, 
+            like: post.like, 
+            dislike: post.dislike, 
+            created_at: post.created_at, 
+            updated_at: post.updated_at, 
+            representative_node: NodeResponse::from(node) 
         }
     }
 }

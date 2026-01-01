@@ -5,7 +5,7 @@ use uuid::Uuid;
 use crate::domain::{node_mod::Placement, nodes::{ Rarity}};
 
 mod response;
-pub use response::PostResponse;
+pub use response::{PostResponse, PostSummary};
 
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]

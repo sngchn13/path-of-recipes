@@ -1,12 +1,17 @@
 use std::fmt;
 
 use serde::{Deserialize, Serialize};
+use serde_with::{serde_as, DisplayFromStr};
 
 //1베이스
+#[serde_as]
 #[derive(Debug, Deserialize)]
 pub struct PaginationQuery {
+    #[serde_as(as = "Option<DisplayFromStr>")]
     page: Option<usize>,
-    per_page: Option<usize>,
+
+    #[serde_as(as = "Option<DisplayFromStr>")]
+    size: Option<usize>,
 }
 
 //0베이스
@@ -18,11 +23,11 @@ pub struct Pagination {
 impl From<PaginationQuery> for Pagination {
     fn from(p: PaginationQuery) -> Self {
         let page = p.page.unwrap_or(1).max(1);
-        let per_page = p.per_page.unwrap_or(20).clamp(1, 50);
+        let size = p.size.unwrap_or(20).clamp(1, 50);
 
         Self {
             page: ZeroBaseIndex((page - 1) as u64),
-            size: per_page as u64,
+            size: size as u64,
         }
     }
 }

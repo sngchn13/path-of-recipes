@@ -117,7 +117,7 @@ impl PostService for PostServiceImpl {
         let raw_nodes = find_nodes_with_related_by_node_id(representative_nodes.iter().map(|n| n.id).collect(), &self.database_connection).await?;
         let node_mod_map = find_node_mods_from_node_ids(raw_nodes.iter().map(|rn| rn.id).collect(), &self.database_connection).await?;
         let mod_map = find_all_mods_with_related_by_mod_ids(node_mod_map.values().flat_map(|mods| mods.iter()).map(|m| m.mod_id).collect(), &self.database_connection).await?;
-        
+
         let representative_nodes = assemble_node(raw_nodes, node_mod_map, mod_map)?;
         let representative_node_map: HashMap<i32, NodeAggregate> = representative_nodes.into_iter().map(|n| (n.id, n)).collect();
 

@@ -31,6 +31,8 @@ pub async fn find_post_by_id(post_id: Uuid, conn: &DatabaseConnection) -> Result
 pub async fn find_posts_by_node_id(node_ids: HashSet<i32>, pagination: Pagination, order_by: PostOrder, direction: SortDirection, conn: &DatabaseConnection) 
     -> Result<Page<(Post, i32)>, PostRepositoryError>
 {
+    if node_ids.is_empty() { return Ok(Page::new(Vec::new(), Pageable { page: pagination.page, size: pagination.size, total_items: 0, total_pages: 0 })); }
+
     let order_by = match order_by {
         PostOrder::View => "p.view",
         PostOrder::Like => "p.like",

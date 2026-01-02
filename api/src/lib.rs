@@ -1,6 +1,4 @@
-//use migration::{Migrator, MigratorTrait};
-
-use crate::{app::{build_router, get_state, startup::host_and_port}};
+use crate::{app::{build_router, get_state, startup::host_and_port}, config::run_migration_from_env};
 
 mod config;
 mod app;
@@ -14,7 +12,10 @@ async fn start() -> anyhow::Result<()> {
     app::startup().ok();
     
     let state = get_state().await;
-    //Migrator::up(&state.conn, None).await.unwrap();
+    
+    if let Err(e) = run_migration_from_env(&state.conn).await {
+        tracing::warn!("migration failed: {e}");
+    }
 
     let router = build_router(state);
 

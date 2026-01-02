@@ -123,6 +123,9 @@ pub async fn find_representative_nodes_by_mod_group_ids(mod_group_ids: &HashSet<
 }
 
 pub async fn find_representative_nodes_by_posts(post_ids: Vec<Uuid>, conn: &DatabaseConnection) -> Result<HashMap<Uuid, Node>, NodeRepositoryError>{
+
+    if post_ids.is_empty() { return Ok(HashMap::new()) }
+
     let node_with_post_ids = NodeWithPostId::find_by_statement(raw_sql!(
         Postgres,
        r#"

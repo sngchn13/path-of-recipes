@@ -1,16 +1,15 @@
 use std::collections::{HashMap, HashSet};
 
 use entity::{item_bases, item_types, node_mods, nodes, sea_orm_active_enums::Rarity};
-use sea_orm::{ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, FromQueryResult, QueryFilter, raw_sql, sqlx::Postgres};
-use tracing::info;
+use sea_orm::{ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, FromQueryResult, QueryFilter, raw_sql};
 use uuid::Uuid;
 
-use crate::{domain::{graphs::Graph, item_bases::ItemBase, item_types::ItemType, nodes::{Node, error::NodeRepositoryError}, posts::NewNode}, shared::to_node};
+use crate::{domain::{graphs::Graph, item_bases::ItemBase, item_types::ItemType, nodes::{Node, error::NodeError}, posts::NewNode}, shared::to_node};
 
 mod dto;
 pub use dto::*;
 
-pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn: &DatabaseTransaction) -> Result<HashMap<String, Node>, NodeRepositoryError>{
+pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn: &DatabaseTransaction) -> Result<HashMap<String, Node>, NodeError>{
     
     let mut result = HashMap::new();
 
@@ -52,7 +51,7 @@ pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn
     Ok(result)
 }
 
-pub async fn find_nodes_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -> Result<Vec<Node>, NodeRepositoryError>{
+pub async fn find_nodes_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -> Result<Vec<Node>, NodeError>{
     
     let nodes: Vec<Node> = nodes::Entity::find().filter(nodes::Column::GraphId.eq(*graph_id)).all(conn).await?
         .into_iter()
@@ -62,7 +61,7 @@ pub async fn find_nodes_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -
     Ok(nodes)
 }
 
-pub async fn find_representative_nodes_by_mod_group_ids(mod_group_ids: &HashSet<i32>, conn: &DatabaseConnection) -> Result<Vec<Node>, NodeRepositoryError>{
+pub async fn find_representative_nodes_by_mod_group_ids(mod_group_ids: &HashSet<i32>, conn: &DatabaseConnection) -> Result<Vec<Node>, NodeError>{
 
     let mod_group_size = mod_group_ids.len() as i64;
 
@@ -122,7 +121,7 @@ pub async fn find_representative_nodes_by_mod_group_ids(mod_group_ids: &HashSet<
     Ok(representative_nodes)
 }
 
-pub async fn find_representative_nodes_by_posts(post_ids: Vec<Uuid>, conn: &DatabaseConnection) -> Result<HashMap<Uuid, Node>, NodeRepositoryError>{
+pub async fn find_representative_nodes_by_posts(post_ids: Vec<Uuid>, conn: &DatabaseConnection) -> Result<HashMap<Uuid, Node>, NodeError>{
 
     if post_ids.is_empty() { return Ok(HashMap::new()) }
 
@@ -187,7 +186,7 @@ pub async fn find_representative_nodes_by_posts(post_ids: Vec<Uuid>, conn: &Data
 }
 
 pub async fn find_nodes_with_related_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) 
--> Result<Vec<RawNodeAggregate>, NodeRepositoryError>
+-> Result<Vec<RawNodeAggregate>, NodeError>
 {
     
     let rows = nodes::Entity::find()
@@ -202,10 +201,10 @@ pub async fn find_nodes_with_related_by_graph_id(graph_id: &i32, conn: &Database
         let node = to_node(node);
         let item_base = item_base
             .and_then(|orm| Some(ItemBase::new(orm.id, orm.name, orm.display_en, orm.display_kor, orm.item_type_id)))
-            .ok_or(NodeRepositoryError::ItemBaseNotFound(node.id.to_string()))?;
+            .ok_or(NodeError::ItemBaseNotFound(node.id.to_string()))?;
         let item_type = item_type
             .and_then(|orm| Some(ItemType::new(orm.id, orm.name)))
-            .ok_or(NodeRepositoryError::ItemTypeNotFound(item_base.id.to_string()))?;
+            .ok_or(NodeError::ItemTypeNotFound(item_base.id.to_string()))?;
 
         result.push(RawNodeAggregate::assembly(node, item_base, item_type));
     }
@@ -214,7 +213,7 @@ pub async fn find_nodes_with_related_by_graph_id(graph_id: &i32, conn: &Database
 }
 
 pub async fn find_nodes_with_related_by_node_id(node_ids: Vec<i32>, conn: &DatabaseConnection) 
--> Result<Vec<RawNodeAggregate>, NodeRepositoryError>
+-> Result<Vec<RawNodeAggregate>, NodeError>
 {
     
     let rows = nodes::Entity::find()
@@ -229,10 +228,10 @@ pub async fn find_nodes_with_related_by_node_id(node_ids: Vec<i32>, conn: &Datab
         let node = to_node(node);
         let item_base = item_base
             .and_then(|orm| Some(ItemBase::new(orm.id, orm.name, orm.display_en, orm.display_kor, orm.item_type_id)))
-            .ok_or(NodeRepositoryError::ItemBaseNotFound(node.id.to_string()))?;
+            .ok_or(NodeError::ItemBaseNotFound(node.id.to_string()))?;
         let item_type = item_type
             .and_then(|orm| Some(ItemType::new(orm.id, orm.name)))
-            .ok_or(NodeRepositoryError::ItemTypeNotFound(item_base.id.to_string()))?;
+            .ok_or(NodeError::ItemTypeNotFound(item_base.id.to_string()))?;
 
         result.push(RawNodeAggregate::assembly(node, item_base, item_type));
     }

@@ -2,13 +2,13 @@ use entity::{graphs, sea_orm_active_enums::Verification};
 use sea_orm::{ActiveValue::Set, DatabaseConnection, DatabaseTransaction, EntityTrait, QueryFilter, ColumnTrait};
 use uuid::Uuid;
 
-use crate::{domain::{graphs::{Graph, error::GraphRepositoryError}, posts::{NewGraph, Post}}, shared::to_graph};
+use crate::{domain::{graphs::{Graph, error::GraphError}, posts::{NewGraph, Post}}, shared::to_graph};
 
 mod dto;
 pub use dto::*;
 
 
-pub async fn save_graph(txn: &DatabaseTransaction, new_graph: &NewGraph, post: &Post) -> Result<Graph, GraphRepositoryError>{
+pub async fn save_graph(txn: &DatabaseTransaction, new_graph: &NewGraph, post: &Post) -> Result<Graph, GraphError>{
 
     let model = graphs::ActiveModel {
         description: Set(new_graph.description.clone()),
@@ -22,7 +22,7 @@ pub async fn save_graph(txn: &DatabaseTransaction, new_graph: &NewGraph, post: &
     Ok(to_graph(saved))
 }
 
-pub async fn find_graph_by_id(post_id: &Uuid, conn: &DatabaseConnection) -> Result<Option<Graph>, GraphRepositoryError>{
+pub async fn find_graph_by_post_id(post_id: &Uuid, conn: &DatabaseConnection) -> Result<Option<Graph>, GraphError>{
     let graph = graphs::Entity::find().filter(graphs::Column::PostId.eq(*post_id)).one(conn).await?.and_then(|v| Some(to_graph(v)));
 
     Ok(graph)

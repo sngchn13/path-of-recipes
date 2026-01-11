@@ -4,10 +4,10 @@ use entity::{graphs, posts};
 use sea_orm::{ActiveValue::Set, DatabaseConnection, DatabaseTransaction, EntityTrait, FromQueryResult, JoinType, Order, PaginatorTrait, QueryOrder, QuerySelect, RelationTrait, prelude::DateTimeWithTimeZone, raw_sql};
 use uuid::Uuid;
 
-use crate::{domain::posts::{Post, PostOrder, error::PostRepositoryError, presentation::{NewPost}}, shared::{Page, Pageable, Pagination, SortDirection, fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime, hash_password, to_post}};
+use crate::{domain::posts::{Post, PostError, PostOrder, presentation::NewPost}, shared::{Page, Pageable, Pagination, SortDirection, fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime, hash_password, to_post}};
 
 
-pub async fn save_post(txn: &DatabaseTransaction, new_post: &NewPost) -> Result<Post, PostRepositoryError>{
+pub async fn save_post(txn: &DatabaseTransaction, new_post: &NewPost) -> Result<Post, PostError>{
     let id = Uuid::new_v4();
     let hashed_password = hash_password(&new_post.password)?;
 
@@ -24,12 +24,12 @@ pub async fn save_post(txn: &DatabaseTransaction, new_post: &NewPost) -> Result<
     Ok(to_post(saved))
 }
 
-pub async fn find_post_by_id(post_id: Uuid, conn: &DatabaseConnection) -> Result<Option<Post>, PostRepositoryError>{
+pub async fn find_post_by_id(post_id: Uuid, conn: &DatabaseConnection) -> Result<Option<Post>, PostError>{
     Ok(posts::Entity::find_by_id(post_id).one(conn).await?.and_then(|v| Some(to_post(v))))
 }
 
 pub async fn find_posts_by_node_id(node_ids: HashSet<i32>, pagination: Pagination, order_by: PostOrder, direction: SortDirection, conn: &DatabaseConnection) 
-    -> Result<Page<(Post, i32)>, PostRepositoryError>
+    -> Result<Page<(Post, i32)>, PostError>
 {
     if node_ids.is_empty() { return Ok(Page::new(Vec::new(), Pageable { page: pagination.page, size: pagination.size, total_items: 0, total_pages: 0 })); }
 
@@ -74,7 +74,7 @@ pub async fn find_posts_by_node_id(node_ids: HashSet<i32>, pagination: Paginatio
     Ok(paged_posts)
 }
 
-pub async fn find_all_posts(pagination: Pagination, order_by: PostOrder, direction: SortDirection, conn: &DatabaseConnection) -> Result<Page<Post>, PostRepositoryError> {
+pub async fn find_all_posts(pagination: Pagination, order_by: PostOrder, direction: SortDirection, conn: &DatabaseConnection) -> Result<Page<Post>, PostError> {
     let order_by = match order_by {
         PostOrder::View => posts::Column::View,
         PostOrder::Like => posts::Column::Like,

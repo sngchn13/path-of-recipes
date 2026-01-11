@@ -3,12 +3,12 @@ use std::collections::{HashMap, HashSet};
 use entity::{families, item_types, mod_generation_types, mod_group_families, mod_group_tags, mod_groups, mods, sections, tags};
 use sea_orm::{DatabaseConnection, EntityTrait, QueryFilter, ColumnTrait};
 
-use crate::{domain::{mod_groups::{Family, Tag}, mods::{ModRepositoryError}}, shared::{fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime, to_family, to_item_type, to_mod_generation_type, to_section, to_tag}};
+use crate::{domain::{mod_groups::{Family, Tag}, mods::{ModError}}, shared::{fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime, to_family, to_item_type, to_mod_generation_type, to_section, to_tag}};
 
 mod dto;
 pub use dto::*;
 
-pub async fn find_all_mods_with_related_by_mod_ids(mod_ids: HashSet<i32> , conn: &DatabaseConnection) -> Result<HashMap<i32, UnplacedModAggregate>, ModRepositoryError>{
+pub async fn find_all_mods_with_related_by_mod_ids(mod_ids: HashSet<i32> , conn: &DatabaseConnection) -> Result<HashMap<i32, UnplacedModAggregate>, ModError>{
     let rows = mods::Entity::find()
         .filter(mods::Column::Id.is_in(mod_ids))
         .find_also(mods::Entity, mod_groups::Entity)
@@ -57,10 +57,10 @@ pub async fn find_all_mods_with_related_by_mod_ids(mod_ids: HashSet<i32> , conn:
     let mut result = HashMap::new();
     //합치기
     for (mod_item, mod_group, mod_generation_type, section, item_type) in rows {
-        let mod_group = mod_group.ok_or(ModRepositoryError::ModGroupNotFound(mod_item.id.to_string()))?;
-        let mod_generation_type = to_mod_generation_type(&mod_generation_type.ok_or(ModRepositoryError::ModGenerationTypeNotFound(mod_group.id.to_string()))?);
-        let section = to_section(&section.ok_or(ModRepositoryError::SectionNotFound(mod_group.id.to_string()))?);
-        let item_type = to_item_type(item_type.ok_or(ModRepositoryError::ItemTypeNotFound(mod_group.id.to_string()))?);
+        let mod_group = mod_group.ok_or(ModError::ModGroupNotFound(mod_item.id.to_string()))?;
+        let mod_generation_type = to_mod_generation_type(&mod_generation_type.ok_or(ModError::ModGenerationTypeNotFound(mod_group.id.to_string()))?);
+        let section = to_section(&section.ok_or(ModError::SectionNotFound(mod_group.id.to_string()))?);
+        let item_type = to_item_type(item_type.ok_or(ModError::ItemTypeNotFound(mod_group.id.to_string()))?);
 
         let families = mod_group_id_families_map.get(&mod_group.id).cloned().unwrap_or_else(HashSet::new);
         let tags = mod_group_tags_map.get(&mod_group.id).cloned().unwrap_or_else(HashSet::new);

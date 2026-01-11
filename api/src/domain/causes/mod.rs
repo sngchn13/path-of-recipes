@@ -3,5 +3,5 @@ mod error;
 mod repository;
 
 pub use entity::Cause;
-pub use error::CauseRepositoryError;
+pub use error::CauseError;
 pub use repository::*;

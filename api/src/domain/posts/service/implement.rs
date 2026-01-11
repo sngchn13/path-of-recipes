@@ -4,7 +4,7 @@ use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 use uuid::Uuid;
 
-use crate::{domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, find_graph_by_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, find_nodes_with_related_by_node_id, find_representative_nodes_by_mod_group_ids, find_representative_nodes_by_posts, save_nodes_returning_map}, posts::{Post, PostServiceError, presentation::{NewPost, PostOrder, PostSearchCondition}, repository::{find_all_posts, find_post_by_id, find_posts_by_node_id, save_post}, service::{PostAggregate, PostService}}}, shared::{Page, Pagination, SortDirection}};
+use crate::{domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, find_graph_by_post_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, find_nodes_with_related_by_node_id, find_representative_nodes_by_mod_group_ids, find_representative_nodes_by_posts, save_nodes_returning_map}, posts::{Post, PostError, presentation::{NewPost, PostOrder, PostSearchCondition}, repository::{find_all_posts, find_post_by_id, find_posts_by_node_id, save_post}, service::{PostAggregate, PostService}}}, shared::{Page, Pagination, SortDirection}};
 
 pub struct PostServiceImpl{
     database_connection: DatabaseConnection,
@@ -18,7 +18,7 @@ impl PostServiceImpl {
 
 #[async_trait::async_trait]
 impl PostService for PostServiceImpl {
-    async fn save_posts_with_related(&self, new_post: NewPost) -> Result<Uuid, PostServiceError>{
+    async fn save_posts_with_related(&self, new_post: NewPost) -> Result<Uuid, PostError>{
         //트랜잭션 시작
         let txn = self.database_connection.begin().await?;
         
@@ -46,13 +46,13 @@ impl PostService for PostServiceImpl {
         Ok(post.id)
     }
 
-    async fn find_post_with_related(&self, post_id: Uuid) -> Result<PostAggregate, PostServiceError>{
+    async fn find_post_with_related(&self, post_id: Uuid) -> Result<PostAggregate, PostError>{
         let conn = &self.database_connection;
         //포스트 가져오기
-        let post = find_post_by_id(post_id, conn).await?.ok_or(PostServiceError::NotFoundPost(post_id.to_string()))?;
+        let post = find_post_by_id(post_id, conn).await?.ok_or(PostError::NotFoundPost(post_id.to_string()))?;
 
         //그래프 가져오기
-        let graph = find_graph_by_id(&post.id, conn).await?.ok_or(PostServiceError::NotFoundGraph(post_id.to_string()))?;
+        let graph = find_graph_by_post_id(&post.id, conn).await?.ok_or(PostError::GraphMissingForPost(post.id.to_string()))?;
 
         //노드 가져오기
         let raw_nodes = find_nodes_with_related_by_graph_id(&graph.id, conn).await?;
@@ -76,7 +76,7 @@ impl PostService for PostServiceImpl {
     }
 
     async fn find_posts_with_representative_node(&self, mod_group_ids: HashSet<i32>, pagination: Pagination, order_by: PostOrder,direction: SortDirection) 
-    -> Result<Page<(Post, NodeAggregate)>, PostServiceError>
+    -> Result<Page<(Post, NodeAggregate)>, PostError>
     {
         //요구하는 모드의 조건이 없는 경우
         if(mod_group_ids.is_empty()){
@@ -103,8 +103,8 @@ impl PostService for PostServiceImpl {
             );
 
             for post in content {
-                let node_id = post_node_relation.remove(&post.id).ok_or(PostServiceError::AssembleErr(format!("node_id not found for post_id: {}", post.id)))?.id;
-                let node = node_map.remove(&node_id).ok_or(PostServiceError::AssembleErr(format!("node not found for node_id: {}", node_id)))?;
+                let node_id = post_node_relation.remove(&post.id).ok_or(PostError::AssembleErr(format!("node_id not found for post_id: {}", post.id)))?.id;
+                let node = node_map.remove(&node_id).ok_or(PostError::AssembleErr(format!("node not found for node_id: {}", node_id)))?;
                 
                 result_content.push((post, node));
             }
@@ -129,16 +129,16 @@ impl PostService for PostServiceImpl {
             .map(|(post, node_id)| {
                 let node = representative_node_map.get(&node_id)
                     .cloned()
-                    .ok_or(PostServiceError::AssembleErr(format!("node not found with id:{}", node_id)))?;
+                    .ok_or(PostError::AssembleErr(format!("node not found with id:{}", node_id)))?;
                 Ok((post, node))
             })
-            .collect::<Result<Vec<(Post, NodeAggregate)>, PostServiceError>>()?;
+            .collect::<Result<Vec<(Post, NodeAggregate)>, PostError>>()?;
         
         Ok(Page::new(result_content, paged_post.pageable))
     }
 }
 
-fn assemble_node(raw_nodes: Vec<RawNodeAggregate>, mut node_mod_lookup: HashMap<i32, Vec<NodeMod>>, mod_lookup: HashMap<i32, UnplacedModAggregate>) -> Result<Vec<NodeAggregate>, PostServiceError> {
+fn assemble_node(raw_nodes: Vec<RawNodeAggregate>, mut node_mod_lookup: HashMap<i32, Vec<NodeMod>>, mod_lookup: HashMap<i32, UnplacedModAggregate>) -> Result<Vec<NodeAggregate>, PostError> {
     let mut result = Vec::new();
 
     for raw_node in raw_nodes {
@@ -147,7 +147,7 @@ fn assemble_node(raw_nodes: Vec<RawNodeAggregate>, mut node_mod_lookup: HashMap<
             let mod_id = node_mod.mod_id;
             let placement = node_mod.placement;
 
-            let mod_aggregate = mod_lookup.get(&mod_id).ok_or(PostServiceError::AssembleErr(format!("mod not found with mod_id{}", mod_id)))?.clone().place_mode(placement);
+            let mod_aggregate = mod_lookup.get(&mod_id).ok_or(PostError::AssembleErr(format!("mod not found with mod_id{}", mod_id)))?.clone().place_mode(placement);
             mod_aggregates.push(mod_aggregate);
         }
 

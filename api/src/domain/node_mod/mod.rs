@@ -3,5 +3,5 @@ mod error;
 mod repository;
 
 pub use entity::{NodeMod, Placement};
-pub use error::NodeModRepositoryError;
+pub use error::NodeModError;
 pub use repository::*;

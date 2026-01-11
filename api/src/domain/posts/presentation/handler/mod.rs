@@ -2,17 +2,16 @@ use std::{collections::HashSet, sync::Arc};
 use axum::{Json, extract::{self, State}, http::StatusCode};
 use axum_extra::extract::Query;
 use serde::Deserialize;
-use tracing::{info};
 use uuid::Uuid;
 
-use crate::{domain::posts::{PostService, PostSummary, error::PostHandlerError, presentation::{CreatePostResponse, PostResponse, dto::NewPost}}, shared::{Page, PageResponse, Pagination, PaginationQuery, SortDirection}};
+use crate::{domain::posts::{PostError, PostService, PostSummary, presentation::{CreatePostResponse, PostResponse, dto::NewPost}}, shared::{Page, PageResponse, Pagination, PaginationQuery, SortDirection}};
 
 
 #[axum::debug_handler]
 pub async fn post_new_post(
     State(post_service): State<Arc<dyn PostService>>,
     extract::Json(new_post): extract::Json<NewPost>) 
-    -> Result<CreatePostResponse, PostHandlerError>
+    -> Result<CreatePostResponse, PostError>
 {
     let post_id = post_service.save_posts_with_related(new_post).await?;
     Ok(CreatePostResponse::new(post_id))
@@ -22,7 +21,7 @@ pub async fn post_new_post(
 pub async fn get_post_by_id(
     State(post_service): State<Arc<dyn PostService>>,
     extract::Path(post_id): extract::Path<Uuid>
-) -> Result<(StatusCode, Json<PostResponse>), PostHandlerError>
+) -> Result<(StatusCode, Json<PostResponse>), PostError>
 {
     let post = PostResponse::from(post_service.find_post_with_related(post_id).await?);
 
@@ -33,7 +32,7 @@ pub async fn get_post_by_id(
 pub async fn get_posts_by_condition(
     State(post_service): State<Arc<dyn PostService>>,
     Query(condition): Query<PostSearchCondition>
-) -> Result<(StatusCode, Json<PageResponse<PostSummary>>), PostHandlerError> 
+) -> Result<(StatusCode, Json<PageResponse<PostSummary>>), PostError> 
 {
     let page_posts = post_service.find_posts_with_representative_node(condition.mod_group_ids, Pagination::from(condition.paging_query),
         condition.order_by.unwrap_or_default(),condition.direction.unwrap_or_default()).await?

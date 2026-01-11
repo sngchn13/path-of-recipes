@@ -2,13 +2,13 @@ use std::collections::HashMap;
 use entity::{causes, edge_causes, edges};
 use sea_orm::{ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, QueryFilter, QueryOrder};
 
-use crate::{domain::{causes::Cause, edges::{entity::Edge, error::EdgeRepositoryError}, nodes::Node, posts::NewEdge}, shared::{to_cause, to_edge}};
+use crate::{domain::{causes::Cause, edges::{entity::Edge, error::EdgeError}, nodes::Node, posts::NewEdge}, shared::{to_cause, to_edge}};
 
 mod dto;
 pub use dto::*;
 
 pub async fn save_edges_with_causes(new_edges: Vec<NewEdge>, node_map: HashMap<String, Node>, graph_id: i32, cause_lookup: HashMap<String, Cause>, txn: &DatabaseTransaction)
-    -> Result<(), EdgeRepositoryError>
+    -> Result<(), EdgeError>
 {
     for new_edge in new_edges {
 
@@ -38,7 +38,7 @@ pub async fn save_edges_with_causes(new_edges: Vec<NewEdge>, node_map: HashMap<S
         let causes = new_edge.causes;
         let mut cause_models = Vec::new();
         for (index, cause) in causes.iter().enumerate() {
-            let cause_id = cause_lookup.get(cause).ok_or(EdgeRepositoryError::CauseNameNotFound(cause.clone()))?.id;
+            let cause_id = cause_lookup.get(cause).ok_or(EdgeError::CauseNameNotFound(cause.clone()))?.id;
             
             let cause_model = edge_causes::ActiveModel{
                 edge_id: Set(model.id),
@@ -54,7 +54,7 @@ pub async fn save_edges_with_causes(new_edges: Vec<NewEdge>, node_map: HashMap<S
     Ok(())
 }
 
-pub async fn find_edges_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -> Result<Vec<Edge>, EdgeRepositoryError>{
+pub async fn find_edges_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -> Result<Vec<Edge>, EdgeError>{
 
     let edges: Vec<Edge> = edges::Entity::find().filter(edges::Column::GraphId.eq(*graph_id)).all(conn).await?
         .into_iter()
@@ -64,7 +64,7 @@ pub async fn find_edges_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -
     Ok(edges)
 }
 
-pub async fn find_edge_aggregate_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -> Result<Vec<EdgeAggregate>, EdgeRepositoryError>{
+pub async fn find_edge_aggregate_by_graph_id(graph_id: &i32, conn: &DatabaseConnection) -> Result<Vec<EdgeAggregate>, EdgeError>{
 
     let edge_with_causes = edges::Entity::find()
         .filter(edges::Column::GraphId.eq(*graph_id))

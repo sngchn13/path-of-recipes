@@ -1,64 +1,65 @@
 use axum::{http::StatusCode, response::IntoResponse};
 use thiserror::Error;
-use tracing::info;
+use tracing::{info, warn};
 
-use crate::domain::{causes::CauseRepositoryError, edges::EdgeRepositoryError, graphs::GraphRepositoryError, mods::ModRepositoryError, node_mod::NodeModRepositoryError, nodes::NodeRepositoryError};
+use crate::domain::{causes::CauseError, edges::EdgeError, graphs::GraphError, mods::ModError, node_mod::NodeModError, nodes::NodeError};
 
-
-#[derive(Debug, Error)]
-pub enum PostHandlerError {
-    #[error(transparent)]
-    BadRequestErr(#[from] PostServiceError)
-}
-
-impl IntoResponse for PostHandlerError {
-    fn into_response(self) -> axum::response::Response {
-        info!("error = {}", self);
-        (StatusCode::INTERNAL_SERVER_ERROR, "something went wrong").into_response()
-    }
-}
 
 #[derive(Debug, Error)]
-pub enum PostServiceError {
-    #[error(transparent)]
-    TransactionMakeFail(#[from] sea_orm::DbErr),
+pub enum PostError {
 
-    #[error(transparent)]
-    PostRepositoryErr(#[from] PostRepositoryError),
-
-    #[error(transparent)]
-    GraphRepositoryErr(#[from] GraphRepositoryError),
-
-    #[error(transparent)]
-    NodeRepositoryErr(#[from] NodeRepositoryError),
-
-    #[error(transparent)]
-    EdgeRepositoryErr(#[from] EdgeRepositoryError),
-
-    #[error(transparent)]
-    CauseRepositoryErr(#[from] CauseRepositoryError),
-    
-    #[error(transparent)]
-    NodeModRepositoryErr(#[from] NodeModRepositoryError),
-
-    #[error(transparent)]
-    ModRepositoryErr(#[from] ModRepositoryError),
-
-    #[error("post_id({0}) not found")]
-    NotFoundPost(String),
-
-    #[error("graph not found with post_id({0})")]
-    NotFoundGraph(String),
-
-    #[error("{0}")]
-    AssembleErr(String)
-}
-
-#[derive(Debug, Error)]
-pub enum PostRepositoryError {
     #[error(transparent)]
     CryptError(#[from] bcrypt::BcryptError),
 
     #[error(transparent)]
     DbErr(#[from] sea_orm::DbErr),
+
+    #[error(transparent)]
+    GraphErr(#[from] GraphError),
+
+    #[error(transparent)]
+    NodeErr(#[from] NodeError),
+
+    #[error(transparent)]
+    EdgeErr(#[from] EdgeError),
+
+    #[error(transparent)]
+    CauseErr(#[from] CauseError),
+    
+    #[error(transparent)]
+    NodeModErr(#[from] NodeModError),
+
+    #[error(transparent)]
+    ModErr(#[from] ModError),
+
+    #[error("post_id({0}) not found")]
+    NotFoundPost(String),
+
+    #[error("graph is missing for post_id({0})")]
+    GraphMissingForPost(String),
+
+    #[error("{0}")]
+    AssembleErr(String)
+}
+
+impl IntoResponse for PostError {
+    fn into_response(self) -> axum::response::Response {
+        match self {
+            PostError::NotFoundPost(post_id) => {
+                let msg = format!("post not found: post_id={}", post_id);
+                info!("{}", &msg);
+                (StatusCode::BAD_REQUEST, msg).into_response()
+            },
+            PostError::EdgeErr(err) => err.into_response(),
+            PostError::GraphErr(err) => err.into_response(),
+            PostError::NodeErr(err) => err.into_response(),
+            PostError::CauseErr(err) => err.into_response(),
+            PostError::NodeModErr(err) => err.into_response(),
+            PostError::ModErr(err) => err.into_response(),
+            err => {
+                warn!("{}", err);
+                (StatusCode::INTERNAL_SERVER_ERROR, "something went wrong").into_response()
+            },
+            }
+    }
 }

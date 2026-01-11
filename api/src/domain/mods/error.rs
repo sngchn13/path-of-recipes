@@ -1,7 +1,9 @@
+use axum::{http::StatusCode, response::IntoResponse};
 use thiserror::Error;
+use tracing::warn;
 
 #[derive(Debug, Error)]
-pub enum ModRepositoryError {
+pub enum ModError {
     #[error(transparent)]
     DbErr(#[from] sea_orm::DbErr),
 
@@ -16,10 +18,15 @@ pub enum ModRepositoryError {
 
     #[error("Failed to find a section for mod_group_id '{0}'.")]
     ItemTypeNotFound(String),
+}
 
-    #[error("Failed to find families for mod_group_id '{0}'.")]
-    FamiliesNotFound(String),
-
-    #[error("Failed to find tags for mod_group_id '{0}'.")]
-    TagsNotFound(String),
+impl IntoResponse for ModError {
+    fn into_response(self) -> axum::response::Response {
+        match self {
+            err => {
+                warn!("{}", err);
+                (StatusCode::INTERNAL_SERVER_ERROR, "something went wrong").into_response()
+            },
+        }
+    }
 }

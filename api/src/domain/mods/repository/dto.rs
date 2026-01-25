@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 
 use time::OffsetDateTime;
-use crate::domain::{item_types::ItemType, mod_groups::{Family, ModGenerationType, Section, Tag}, node_mod::Placement};
+use crate::domain::{item_types::ItemType, mod_groups::{Family, ModGenerationType, Section, Tag}, node_mod::{NodeMod, Placement}};
 
 
 #[derive(Clone, Debug, PartialEq, Eq)]
@@ -27,7 +27,7 @@ pub struct UnplacedModAggregate{
 }
 
 impl UnplacedModAggregate {
-    pub fn place_mode(self, placement: Placement) -> ModAggregate {
+    pub fn place_mode(self, node_mod: &NodeMod) -> ModAggregate {
         ModAggregate{
             id: self.id,
             name_en: self.name_en,
@@ -47,7 +47,8 @@ impl UnplacedModAggregate {
             tags: self.tags,
             families: self.families,
             section: self.section,
-            placement,
+            placement: node_mod.placement,
+            fractured: node_mod.fractured,
         } 
     }
 }
@@ -73,4 +74,5 @@ pub struct ModAggregate{
     pub families: HashSet<Family>,
     pub section: Section,
     pub placement: Placement,
+    pub fractured: bool,
 }

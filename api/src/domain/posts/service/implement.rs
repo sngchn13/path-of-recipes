@@ -145,9 +145,8 @@ fn assemble_node(raw_nodes: Vec<RawNodeAggregate>, mut node_mod_lookup: HashMap<
         let mut mod_aggregates = Vec::new();
         for node_mod in node_mod_lookup.remove(&raw_node.id).unwrap_or_default() {
             let mod_id = node_mod.mod_id;
-            let placement = node_mod.placement;
 
-            let mod_aggregate = mod_lookup.get(&mod_id).ok_or(PostError::AssembleErr(format!("mod not found with mod_id{}", mod_id)))?.clone().place_mode(placement);
+            let mod_aggregate = mod_lookup.get(&mod_id).ok_or(PostError::AssembleErr(format!("mod not found with mod_id{}", mod_id)))?.clone().place_mode(&node_mod);
             mod_aggregates.push(mod_aggregate);
         }
 

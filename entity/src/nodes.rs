@@ -10,10 +10,13 @@ pub struct Model {
     #[sea_orm(primary_key)]
     #[serde(skip_deserializing)]
     pub id: i32,
-    #[sea_orm(column_type = "Text", nullable)]
-    pub context: Option<String>,
+    #[sea_orm(column_type = "Text")]
+    pub context: String,
     pub rarity: Rarity,
     pub item_level: i32,
+    pub quality: i32,
+    pub flags: i32,
+    pub influences: i32,
     #[sea_orm(column_type = "Text", nullable)]
     pub note: Option<String>,
     #[sea_orm(column_type = "Float")]

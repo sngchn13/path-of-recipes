@@ -4,7 +4,7 @@ use serde::{Serialize};
 use time::OffsetDateTime;
 use uuid::Uuid;
 
-use crate::domain::{edges::EdgeAggregate, graphs::GraphAggregate, mods::ModAggregate, node_mod::Placement, nodes::{NodeAggregate, Rarity}, posts::{Post, service::PostAggregate}};
+use crate::domain::{edges::EdgeAggregate, graphs::GraphAggregate, mods::ModAggregate, node_mod::Placement, nodes::{Context, Flags, Influence, NodeAggregate, Rarity}, posts::{Post, service::PostAggregate}};
 
 
 #[derive(Debug, Serialize)]
@@ -75,9 +75,12 @@ impl From<GraphAggregate> for GraphResponse {
 #[serde(rename_all = "camelCase")]
 struct NodeResponse {
     pub id: String,
-    pub context: Option<String>,
+    pub context: Context,
     pub rarity: Rarity,
     pub item_level: i32,
+    pub quality: i32,
+    pub flags: Flags,
+    pub influences: HashSet<Influence>,
     pub note: Option<String>,
     pub position_x: f32,
     pub position_y: f32,
@@ -97,6 +100,9 @@ impl From<NodeAggregate> for NodeResponse {
             context: value.context,
             rarity: value.rarity,
             item_level: value.item_level,
+            quality: value.quality,
+            flags: value.flags,
+            influences: value.influences,
             note: value.note,
             position_x: value.position_x,
             position_y: value.position_y,
@@ -135,6 +141,7 @@ struct ModResponse{
     pub families: HashSet<String>,
     pub section: String,
     pub placement: Placement,
+    pub fractured: bool,
 }
 
 impl From<ModAggregate> for ModResponse  {
@@ -164,6 +171,7 @@ impl From<ModAggregate> for ModResponse  {
                 .collect(),
             section: value.section.name,
             placement: value.placement,
+            fractured: value.fractured,
         }
     }
 }

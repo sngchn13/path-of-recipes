@@ -14,6 +14,7 @@ pub struct Model {
     #[serde(skip_deserializing)]
     pub mod_id: i32,
     pub placement: Placement,
+    pub fractured: bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

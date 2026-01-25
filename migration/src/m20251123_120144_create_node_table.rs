@@ -24,13 +24,16 @@ impl MigrationTrait for Migration {
                     .table(Node::Table)
                     .if_not_exists()
                     .col(pk_auto(Node::Id))
-                    .col(text(Node::Context).null())
+                    .col(text(Node::Context))
                     .col(
                         ColumnDef::new(Node::Rarity)
                             .custom(Rarity::Table)
                             .not_null(),
                     )
                     .col(unsigned(Node::ItemLevel))
+                    .col(unsigned(Node::Quality).default(0))
+                    .col(unsigned(Node::Flags).default(0))
+                    .col(unsigned(Node::Influences).default(0))
                     .col(text(Node::Note).null())
                     .col(float(Node::PositionX))
                     .col(float(Node::PositionY))
@@ -83,6 +86,9 @@ enum Node {
     Context,
     Rarity,
     ItemLevel,
+    Quality,
+    Flags,
+    Influences,
     Note,
     PositionX,
     PositionY,

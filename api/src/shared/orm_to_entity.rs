@@ -6,7 +6,7 @@ use entity::{ causes::Model as CauseOrm, edges::Model as EdgeOrm, graphs::Model 
     mod_groups::Model as ModGroupOrm, node_mods::Model as NodeModOrm, nodes::Model as NodeOrm, posts::Model as PostOrm 
 };
 
-use crate::{domain::{causes::Cause, edges::Edge, graphs::{Graph, Verification}, images::Image, item_bases::ItemBase, item_types::ItemType, mod_groups::{Family, ModGenerationType, ModGroup, Section, Tag}, mods::Mod, node_mod::{NodeMod, Placement}, nodes::{Node, Rarity}, posts::Post}, shared::{fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime}};
+use crate::{domain::{causes::Cause, edges::Edge, graphs::{Graph, Verification}, images::Image, item_bases::ItemBase, item_types::ItemType, mod_groups::{Family, ModGenerationType, ModGroup, Section, Tag}, mods::Mod, node_mod::{NodeMod, Placement}, nodes::{Flags, Influence, Node, Rarity}, posts::Post}, shared::{fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime}};
 
 pub fn to_cause(orm: CauseOrm)-> Cause {
     Cause::new(orm.id, orm.name, orm.cause_type_id)
@@ -107,12 +107,25 @@ pub fn to_mod(orm: &ModOrm) -> Mod {
 }
 
 pub fn to_node_mod(orm: NodeModOrm) -> NodeMod {
-    NodeMod { node_id: orm.node_id, mod_id: orm.mod_id, placement: Placement::from(orm.placement) }
+    NodeMod { node_id: orm.node_id, mod_id: orm.mod_id, placement: Placement::from(orm.placement), fractured: orm.fractured }
 }
 
 pub fn to_node(orm: NodeOrm)
     -> Node {
-    Node { id: orm.id, context: orm.context, rarity: Rarity::from(orm.rarity), item_level: orm.item_level, note: orm.note, position_x: orm.position_x, position_y: orm.position_y, item_base_id: orm.item_base_id }
+    Node { 
+        id: orm.id, 
+        context: serde_json::from_str(&orm.context).unwrap_or_default(), 
+        rarity: Rarity::from(orm.rarity), 
+        item_level: orm.item_level, 
+        quality: orm.quality,
+        flags: Flags::from_bits(orm.flags),
+        influences: Influence::from_bits(orm.influences), 
+        note: orm.note, 
+        position_x: orm.position_x, 
+        position_y: orm.position_y, 
+        item_base_id: orm.item_base_id,
+
+    }
 }
 
 pub fn to_post(orm: PostOrm)-> Post {

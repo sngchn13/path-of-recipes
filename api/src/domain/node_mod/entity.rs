@@ -7,6 +7,7 @@ pub struct NodeMod{
     pub node_id: i32,
     pub mod_id: i32,
     pub placement: Placement,
+    pub fractured: bool,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone, Copy, PartialEq, Eq)]

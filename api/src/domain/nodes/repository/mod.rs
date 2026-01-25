@@ -4,7 +4,7 @@ use entity::{item_bases, item_types, node_mods, nodes, sea_orm_active_enums::Rar
 use sea_orm::{ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, FromQueryResult, QueryFilter, raw_sql};
 use uuid::Uuid;
 
-use crate::{domain::{graphs::Graph, item_bases::ItemBase, item_types::ItemType, nodes::{Node, error::NodeError}, posts::NewNode}, shared::to_node};
+use crate::{domain::{graphs::Graph, item_bases::ItemBase, item_types::ItemType, nodes::{Node, entity::{Flags, Influence}, error::NodeError}, posts::NewNode}, shared::to_node};
 
 mod dto;
 pub use dto::*;
@@ -17,9 +17,12 @@ pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn
         let map_id = new_node.id;
 
         let model = nodes::ActiveModel{
-            context: Set(new_node.context),
+            context: Set(serde_json::to_string(&new_node.context).unwrap_or("{}".to_string())),
             rarity: Set(new_node.rarity.to()),
             item_level: Set(new_node.item_level),
+            quality: Set(new_node.quality),
+            flags: Set(new_node.flags.to_bits()),
+            influences: Set(Influence::to_bits(&new_node.influences)),
             note: Set(new_node.note),
             position_x: Set(new_node.position_x),
             position_y: Set(new_node.position_y),
@@ -34,11 +37,13 @@ pub async fn save_nodes_returning_map(new_nodes: Vec<NewNode>, graph: &Graph,txn
         for mod_with_placement in new_node.mods {
             let mod_id = mod_with_placement.mod_id;
             let placement = mod_with_placement.placement;
+            let fractured = mod_with_placement.fractured;
     
             let node_mod = node_mods::ActiveModel{
                 node_id: Set(model.id),
                 mod_id: Set(mod_id),
-                placement: Set(placement.to())
+                placement: Set(placement.to()),
+                fractured: Set(fractured)
             };
 
             node_mods.push(node_mod);
@@ -103,6 +108,9 @@ pub async fn find_representative_nodes_by_mod_group_ids(mod_group_ids: &HashSet<
                 n.context,
                 n.rarity::text AS rarity,
                 n.item_level,
+                n.quality,
+                n.flags,
+                n.influences,
                 n.note,
                 n.position_x,
                 n.position_y,
@@ -133,6 +141,9 @@ pub async fn find_representative_nodes_by_posts(post_ids: Vec<Uuid>, conn: &Data
             t.context,
             t.rarity::text AS rarity,
             t.item_level,
+            t.quality,
+            t.flags,
+            t.influences,
             t.note,
             t.position_x,
             t.position_y,
@@ -242,9 +253,12 @@ pub async fn find_nodes_with_related_by_node_id(node_ids: Vec<i32>, conn: &Datab
 #[derive(Debug, FromQueryResult)]
 struct NodeWithPostId {
     pub id: i32,
-    pub context: Option<String>,
+    pub context: String,
     pub rarity: Rarity,
     pub item_level: i32,
+    pub quality: i32,
+    pub flags: i32,
+    pub influences: i32,
     pub note: Option<String>,
     pub position_x: f32,
     pub position_y: f32,
@@ -257,9 +271,12 @@ impl NodeWithPostId {
     pub fn divide(self) -> (Node, Uuid) {
         let node = Node {
             id: self.id,
-            context: self.context,
+            context: serde_json::from_str(&self.context).unwrap_or_default(),
             rarity: super::Rarity::from(self.rarity),
             item_level: self.item_level,
+            quality: self.quality,
+            flags: Flags::from_bits(self.flags),
+            influences: Influence::from_bits(self.influences),
             note: self.note,
             position_x: self.position_x,
             position_y: self.position_y,

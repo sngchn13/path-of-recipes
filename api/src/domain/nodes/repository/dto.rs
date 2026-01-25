@@ -1,13 +1,16 @@
-use std::hash::Hash;
+use std::{collections::HashSet, hash::Hash};
 
-use crate::domain::{item_bases::ItemBase, item_types::ItemType, mods::ModAggregate, nodes::{Node, Rarity}};
+use crate::domain::{item_bases::ItemBase, item_types::ItemType, mods::ModAggregate, nodes::{Context, Flags, Influence, Node, Rarity}};
 
 #[derive(Debug)]
 pub struct RawNodeAggregate {
     pub id: i32,
-    pub context: Option<String>,
+    pub context: Context,
     pub rarity: Rarity,
     pub item_level: i32,
+    pub quality: i32,
+    pub flags: Flags,
+    pub influences: HashSet<Influence>,
     pub note: Option<String>,
     pub position_x: f32,
     pub position_y: f32,
@@ -25,7 +28,10 @@ impl RawNodeAggregate {
             id: node.id, 
             context: node.context, 
             rarity: node.rarity, 
-            item_level: node.item_level, 
+            item_level: node.item_level,
+            quality: node.quality,
+            flags: node.flags,
+            influences: node.influences, 
             note: node.note, 
             position_x: node.position_x, 
             position_y: node.position_y, 
@@ -34,7 +40,7 @@ impl RawNodeAggregate {
             item_base_display_en: item_base.display_en, 
             item_base_display_kor: item_base.display_kor, 
             item_type_id: item_type.id, 
-            item_type_name: item_type.name 
+            item_type_name: item_type.name,
         }
     }
 
@@ -44,6 +50,9 @@ impl RawNodeAggregate {
             context: self.context,
             rarity: self.rarity,
             item_level: self.item_level,
+            quality: self.quality,
+            flags: self.flags,
+            influences: self.influences,
             note: self.note,
             position_x: self.position_x,
             position_y: self.position_y,
@@ -61,9 +70,12 @@ impl RawNodeAggregate {
 #[derive(Debug, Clone)]
 pub struct NodeAggregate {
     pub id: i32,
-    pub context: Option<String>,
+    pub context: Context,
     pub rarity: Rarity,
     pub item_level: i32,
+    pub quality: i32,
+    pub flags: Flags,
+    pub influences: HashSet<Influence>,
     pub note: Option<String>,
     pub position_x: f32,
     pub position_y: f32,

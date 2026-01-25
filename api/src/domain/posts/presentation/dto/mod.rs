@@ -1,8 +1,10 @@
+use std::collections::HashSet;
+
 use axum::{Json, http::StatusCode, response::IntoResponse};
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 
-use crate::domain::{node_mod::Placement, nodes::{ Rarity}};
+use crate::domain::{node_mod::Placement, nodes::{ Context, Flags, Influence, Rarity}};
 
 mod response;
 pub use response::{PostResponse, PostSummary};
@@ -11,9 +13,12 @@ pub use response::{PostResponse, PostSummary};
 #[serde(rename_all = "camelCase")]
 pub struct NewNode{
     pub id: String,
-    pub context: Option<String>,
+    pub context: Context,
     pub rarity: Rarity,
     pub item_level: i32,
+    pub quality: i32,
+    pub flags: Flags,
+    pub influences: HashSet<Influence>,
     pub note: Option<String>,
     pub position_x: f32,
     pub position_y: f32,
@@ -51,7 +56,8 @@ pub struct NewPost{
 #[serde(rename_all = "camelCase")]
 pub struct ModWithPlacement{
     pub mod_id: i32,
-    pub placement: Placement
+    pub placement: Placement,
+    pub fractured: bool,
 }
 
 #[derive(Debug, Serialize)]

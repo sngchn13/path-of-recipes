@@ -33,6 +33,7 @@ impl MigrationTrait for Migration {
                             .custom(Placement::Table)
                             .not_null(),
                     )
+                    .col(boolean(NodeMod::Fractured).default(false))
                     .primary_key(
                         Index::create()
                             .col(NodeMod::NodeId)
@@ -80,6 +81,7 @@ enum NodeMod {
     NodeId,
     ModId,
     Placement,
+    Fractured,
 }
 
 #[derive(DeriveIden)]

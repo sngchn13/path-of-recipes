@@ -49,6 +49,7 @@ pub struct NewGraph{
 pub struct NewPost{
     pub title: String,
     pub password: String,
+    pub content: String,
     pub graph: NewGraph,
 }
 

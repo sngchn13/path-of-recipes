@@ -14,7 +14,7 @@ pub async fn save_post(txn: &DatabaseTransaction, new_post: &NewPost) -> Result<
     let post = posts::ActiveModel {
         id: Set(id),
         title: Set(new_post.title.clone()),
-        content: Set("".to_string()),
+        content: Set(new_post.content.clone()),
         password: Set(hashed_password),
         ..Default::default()
     };

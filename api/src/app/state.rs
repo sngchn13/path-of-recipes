@@ -5,17 +5,26 @@ use sea_orm::DatabaseConnection;
 
 use crate::{app::Services, domain::{images::ImageService, item_bases::ItemBaseService, mod_groups::ModGroupService, posts::PostService}, infrastructure::get_connection};
 
+const ENV_COOKIE_SECURE: &str = "COOKIE_SECURE";
+
+#[derive(Clone)]
+pub struct AppConfig {
+    pub cookie_secure: bool,
+}
+
 #[derive(Clone, FromRef)]
 pub struct AppState{
     pub conn: DatabaseConnection,
     pub services: Services,
+    config: AppConfig,
 }
 
 impl AppState {
-    pub fn new(conn: DatabaseConnection, services: Services) -> Self{
+    fn new(conn: DatabaseConnection, services: Services, config: AppConfig) -> Self{
         AppState {
             conn,
             services,
+            config,
         }
     }
 }
@@ -47,5 +56,7 @@ impl FromRef<AppState> for Arc<dyn PostService> {
 pub async fn get_state() -> AppState {
     let database_connection = get_connection().await;
 
-    AppState::new( database_connection.clone(), Services::from(database_connection.clone()))
+    let cookie_secure = std::env::var(ENV_COOKIE_SECURE).ok().and_then(|v| v.parse::<bool>().ok()).unwrap_or(true);
+
+    AppState::new( database_connection.clone(), Services::from(database_connection.clone()), AppConfig { cookie_secure })
 }

@@ -1,7 +1,5 @@
 use std::collections::HashSet;
 
-use serde::Serialize;
-
 use crate::domain::{item_types::ItemType, mods::Mod};
 
 #[derive(Debug, Clone, PartialEq, Eq)]

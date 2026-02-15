@@ -79,7 +79,7 @@ impl PostService for PostServiceImpl {
     -> Result<Page<(Post, NodeAggregate)>, PostError>
     {
         //요구하는 모드의 조건이 없는 경우
-        if(mod_group_ids.is_empty()){
+        if mod_group_ids.is_empty() {
             //포스트 시작 + 페이지네이팅
             let paged_posts = find_all_posts(pagination, order_by, direction, &self.database_connection).await?;
             //대표노드 찾기

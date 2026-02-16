@@ -2,6 +2,7 @@
 
 pub use super::cause_types::Entity as CauseTypes;
 pub use super::causes::Entity as Causes;
+pub use super::comments::Entity as Comments;
 pub use super::edge_causes::Entity as EdgeCauses;
 pub use super::edges::Entity as Edges;
 pub use super::families::Entity as Families;

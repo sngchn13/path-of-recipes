@@ -26,6 +26,16 @@ pub enum Rarity {
     Rare,
 }
 #[derive(Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Serialize, Deserialize)]
+#[sea_orm(rs_type = "String", db_type = "Enum", enum_name = "status")]
+pub enum Status {
+    #[sea_orm(string_value = "active")]
+    Active,
+    #[sea_orm(string_value = "deleted")]
+    Deleted,
+    #[sea_orm(string_value = "hidden")]
+    Hidden,
+}
+#[derive(Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Serialize, Deserialize)]
 #[sea_orm(rs_type = "String", db_type = "Enum", enum_name = "verification")]
 pub enum Verification {
     #[sea_orm(string_value = "pending")]

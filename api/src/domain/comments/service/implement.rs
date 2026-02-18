@@ -1,7 +1,7 @@
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 
-use crate::domain::comments::{error::CommentError, repository::save_comment, service::{CommentService, dto::CreateCommentInput}};
+use crate::domain::comments::{error::CommentError, repository::{increase_reply_count, save_comment}, service::{CommentService, dto::CreateCommentInput}};
 
 
 pub struct CommentServiceImpl{
@@ -22,6 +22,11 @@ impl CommentService for CommentServiceImpl {
 
         let txn = self.database_connection.begin().await?;
         let comment = save_comment(&txn, new_comment).await?;
+        
+        if let Some(parent_id) = comment.parent_id {
+            increase_reply_count(&txn, parent_id).await?;
+        }
+
         txn.commit().await?;
 
         Ok(comment.id)

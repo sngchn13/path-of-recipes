@@ -15,6 +15,7 @@ pub struct PaginationQuery {
 }
 
 //0베이스
+#[derive(Debug)]
 pub struct Pagination {
     pub page: ZeroBaseIndex,
     pub size: u64,

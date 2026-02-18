@@ -1,7 +1,7 @@
 use bcrypt::BcryptError;
 use uuid::Uuid;
 
-use crate::shared::hash_password;
+use crate::{domain::comments::presentation::CommentOrder, shared::{Pagination, PaginationQuery, SortDirection, hash_password}};
 
 #[derive(Debug)]
 pub struct CreateCommentInput {
@@ -60,4 +60,12 @@ impl Password {
             Password::Hashed(s) => s,
         }
     }
+}
+
+#[derive(Debug)]
+pub struct SearchCommentInput{
+    pub post_id: Uuid,
+    pub pagination: Pagination,
+    pub order_by: CommentOrder,
+    pub direction: SortDirection,
 }

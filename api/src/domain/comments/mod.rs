@@ -5,4 +5,4 @@ mod service;
 mod repository;
 
 pub use service::*;
-pub use presentation::post_new_comment;
+pub use presentation::{post_new_comment, get_comments_by_conditon};

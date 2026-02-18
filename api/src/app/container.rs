@@ -1,6 +1,7 @@
 use std::sync::Arc;
 
 use sea_orm::DatabaseConnection;
+use crate::domain::comments::{CommentService, CommentServiceImpl};
 use crate::domain::images::{ImageRepository, ImageRepositoryImpl, ImageService, ImageServiceImpl};
 use crate::domain::item_types::{ItemTypeRepository, ItemTypeRepositoryImpl};
 use crate::domain::mod_groups::{ModGroupRepository, ModGroupRepositoryImpl, ModGroupService, ModGroupServiceImpl};
@@ -13,6 +14,7 @@ pub struct Services {
     pub item_base_service: Arc<dyn ItemBaseService + Send + Sync>,
     pub image_service: Arc<dyn ImageService + Send + Sync>,
     pub post_service: Arc<dyn PostService + Send + Sync>,
+    pub comment_service: Arc<dyn CommentService + Send + Sync>,
 }
 
 impl Services {
@@ -27,7 +29,8 @@ impl Services {
             mod_group_service:  Arc::new(ModGroupServiceImpl::new(Arc::clone(&mod_group_repository), Arc::clone(&item_type_repository))),
             item_base_service: Arc::new(ItemBaseServiceImpl::new(Arc::clone(&item_base_repository), Arc::clone(&item_type_repository))),
             image_service: Arc::new(ImageServiceImpl::new(Arc::clone(&image_repository))),
-            post_service: Arc::new(PostServiceImpl::new(conn)),
+            post_service: Arc::new(PostServiceImpl::new(conn.clone())),
+            comment_service: Arc::new(CommentServiceImpl::new(conn)),
         }
     }
 }

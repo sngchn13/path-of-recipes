@@ -1,7 +1,7 @@
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 
-use crate::domain::comments::{error::CommentError, repository::{increase_reply_count, save_comment}, service::{CommentService, dto::CreateCommentInput}};
+use crate::{domain::comments::{SearchCommentInput, entity::Comment, error::CommentError, repository::{find_all_comments_by_condition, increase_reply_count, save_comment}, service::{CommentService, dto::CreateCommentInput}}, shared::Page};
 
 
 pub struct CommentServiceImpl{
@@ -30,5 +30,9 @@ impl CommentService for CommentServiceImpl {
         txn.commit().await?;
 
         Ok(comment.id)
+    }
+
+    async fn search_comments(&self, condition: SearchCommentInput) -> Result<Page<Comment>, CommentError>{
+        find_all_comments_by_condition(&self.database_connection, condition).await
     }
 }

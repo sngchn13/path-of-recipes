@@ -36,14 +36,7 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
-
-        let db = manager.get_connection();
-
-        families::Entity::delete_many()
-            .exec(db)
-            .await?;
-
+    async fn down(&self, _manager: &SchemaManager) -> Result<(), DbErr> {
         Ok(())
     }
 }

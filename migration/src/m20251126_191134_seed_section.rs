@@ -1,5 +1,5 @@
 use entity::sections;
-use sea_orm_migration::{prelude::*, sea_orm::EntityTrait};
+use sea_orm_migration::{prelude::*};
 use sea_orm::{ActiveModelTrait, Set};
 
 #[derive(DeriveMigrationName)]
@@ -34,14 +34,7 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
-
-        let db = manager.get_connection();
-
-        sections::Entity::delete_many()
-            .exec(db)
-            .await?;
-
+    async fn down(&self, _manager: &SchemaManager) -> Result<(), DbErr> {
         Ok(())
     }
 }

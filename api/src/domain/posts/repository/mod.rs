@@ -34,8 +34,8 @@ pub async fn find_posts_by_node_id(node_ids: HashSet<i32>, pagination: Paginatio
     if node_ids.is_empty() { return Ok(Page::new(Vec::new(), Pageable { page: pagination.page, size: pagination.size, total_items: 0, total_pages: 0 })); }
 
     let order_by = match order_by {
-        PostOrder::View => "p.view",
-        PostOrder::Like => "p.like",
+        PostOrder::ViewCount => "p.view_count",
+        PostOrder::LikeCount => "p.like_count",
         PostOrder::CreatedAt => "p.created_at",
     };
     let page = pagination.page;
@@ -44,7 +44,7 @@ pub async fn find_posts_by_node_id(node_ids: HashSet<i32>, pagination: Paginatio
     let post_with_node_ids = match direction {
         SortDirection::Desc => PostWithNodeId::find_by_statement(raw_sql!(
             Postgres,
-            r#"SELECT p.id, p.title, p.content, p.password, p.view, p.like, p.dislike, p.created_at, p.updated_at, n.id as node_id
+            r#"SELECT p.id, p.title, p.content, p.password, p.view_count, p.like_count, p.dislike_count, p.created_at, p.updated_at, n.id as node_id
             FROM nodes n 
                 JOIN graphs g ON n.graph_id = g.id
                 JOIN posts p ON g.post_id = p.id
@@ -54,7 +54,7 @@ pub async fn find_posts_by_node_id(node_ids: HashSet<i32>, pagination: Paginatio
         )).paginate(conn, size),
         SortDirection::Asc => PostWithNodeId::find_by_statement(raw_sql!(
             Postgres,
-            r#"SELECT p.id, p.title, p.content, p.password, p.view, p.like, p.dislike, p.created_at, p.updated_at, n.id as node_id
+            r#"SELECT p.id, p.title, p.content, p.password, p.view_count, p.like_count, p.dislike_count, p.created_at, p.updated_at, n.id as node_id
             FROM nodes n 
                 JOIN graphs g ON n.graph_id = g.id
                 JOIN posts p ON g.post_id = p.id
@@ -76,8 +76,8 @@ pub async fn find_posts_by_node_id(node_ids: HashSet<i32>, pagination: Paginatio
 
 pub async fn find_all_posts(pagination: Pagination, order_by: PostOrder, direction: SortDirection, conn: &DatabaseConnection) -> Result<Page<Post>, PostError> {
     let order_by = match order_by {
-        PostOrder::View => posts::Column::View,
-        PostOrder::Like => posts::Column::Like,
+        PostOrder::ViewCount => posts::Column::ViewCount,
+        PostOrder::LikeCount => posts::Column::LikeCount,
         PostOrder::CreatedAt => posts::Column::CreatedAt,
     };
 
@@ -107,9 +107,9 @@ struct PostWithNodeId {
     pub title: String,
     pub content: String,
     pub password: String,
-    pub view: i32,
-    pub like: i32,
-    pub dislike: i32,
+    pub view_count: i32,
+    pub like_count: i32,
+    pub dislike_count: i32,
     pub created_at: DateTimeWithTimeZone,
     pub updated_at: Option<DateTimeWithTimeZone>,
     pub node_id: i32,
@@ -123,9 +123,9 @@ impl PostWithNodeId {
                 title: self.title,
                 content: self.content,
                 password: self.password,
-                view: self.view,
-                like: self.like,
-                dislike: self.dislike,
+                view_count: self.view_count,
+                like_count: self.like_count,
+                dislike_count: self.dislike_count,
                 created_at: fixed_offset_to_offset_datetime(self.created_at),
                 updated_at: fixed_offset_opt_to_offset_opt( self.updated_at),
             },

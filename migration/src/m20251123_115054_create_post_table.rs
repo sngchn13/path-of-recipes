@@ -15,9 +15,9 @@ impl MigrationTrait for Migration {
                     .col(string(Post::Title))
                     .col(text(Post::Content))
                     .col(string(Post::Password))
-                    .col(integer(Post::View).default(1))
-                    .col(integer(Post::Like).default(0))
-                    .col(integer(Post::Dislike).default(0))
+                    .col(integer(Post::ViewCount).default(0))
+                    .col(integer(Post::LikeCount).default(0))
+                    .col(integer(Post::DislikeCount).default(0))
                     .col(timestamp_with_time_zone(Post::CreatedAt).default(Expr::current_timestamp()))
                     .col(timestamp_with_time_zone_null(Post::UpdatedAt))
                     .to_owned(),
@@ -44,9 +44,9 @@ enum Post {
     Title,
     Content,
     Password,
-    View,
-    Like,
-    Dislike,
+    ViewCount,
+    LikeCount,
+    DislikeCount,
     CreatedAt,
     UpdatedAt,
 }

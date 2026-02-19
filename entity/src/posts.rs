@@ -13,9 +13,9 @@ pub struct Model {
     #[sea_orm(column_type = "Text")]
     pub content: String,
     pub password: String,
-    pub view: i32,
-    pub like: i32,
-    pub dislike: i32,
+    pub view_count: i32,
+    pub like_count: i32,
+    pub dislike_count: i32,
     pub created_at: DateTimeWithTimeZone,
     pub updated_at: Option<DateTimeWithTimeZone>,
 }

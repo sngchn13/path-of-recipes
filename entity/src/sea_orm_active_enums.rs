@@ -26,6 +26,14 @@ pub enum Rarity {
     Rare,
 }
 #[derive(Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Serialize, Deserialize)]
+#[sea_orm(rs_type = "String", db_type = "Enum", enum_name = "reaction_type")]
+pub enum ReactionType {
+    #[sea_orm(string_value = "like")]
+    Like,
+    #[sea_orm(string_value = "dislike")]
+    Dislike,
+}
+#[derive(Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Serialize, Deserialize)]
 #[sea_orm(rs_type = "String", db_type = "Enum", enum_name = "status")]
 pub enum Status {
     #[sea_orm(string_value = "active")]

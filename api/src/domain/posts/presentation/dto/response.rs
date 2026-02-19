@@ -13,9 +13,9 @@ pub struct PostResponse {
     id: Uuid,
     title: String,
     content: String,
-    view: i32,
-    like: i32,
-    dislike: i32,
+    view_count: i32,
+    like_count: i32,
+    dislike_count: i32,
     graph: GraphResponse,
 
     #[serde(with = "time::serde::rfc3339")]
@@ -31,9 +31,9 @@ impl From<PostAggregate> for PostResponse {
             id: value.id,
             title: value.title,
             content: value.content,
-            view: value.view,
-            like: value.like,
-            dislike: value.dislike,
+            view_count: value.view_count,
+            like_count: value.like_count,
+            dislike_count: value.dislike_count,
             graph: value.graph.into(),
             created_at: value.created_at,
             updated_at: value.updated_at,
@@ -207,9 +207,9 @@ impl From<EdgeAggregate> for EdgeResponse {
 pub struct PostSummary {
     pub id: Uuid,
     pub title: String,
-    pub view: i32,
-    pub like: i32,
-    pub dislike: i32,
+    pub view_count: i32,
+    pub like_count: i32,
+    pub dislike_count: i32,
     
     #[serde(with = "time::serde::rfc3339")]
     pub created_at: OffsetDateTime,
@@ -224,9 +224,9 @@ impl PostSummary {
         Self { 
             id: post.id, 
             title: post.title, 
-            view: post.view, 
-            like: post.like, 
-            dislike: post.dislike, 
+            view_count: post.view_count, 
+            like_count: post.like_count, 
+            dislike_count: post.dislike_count, 
             created_at: post.created_at, 
             updated_at: post.updated_at, 
             representative_node: NodeResponse::from(node) 

@@ -20,6 +20,7 @@ pub mod mods;
 pub mod node_mods;
 pub mod nodes;
 pub mod posts;
+pub mod reactions;
 pub mod sea_orm_active_enums;
 pub mod sections;
 pub mod tags;

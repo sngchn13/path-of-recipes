@@ -20,6 +20,7 @@ mod m20251123_123245_create_edge_table;
 mod m20251123_175358_create_edge_cause_table;
 mod m20251123_180000_create_mod_group_family_table;
 mod m20251123_180005_create_comment_table;
+mod m20251123_180010_create_reaction_table;
 mod m20251123_190950_seed_item_type;
 mod m20251123_191000_seed_image;
 mod m20251124_102528_seed_item_base;
@@ -57,6 +58,7 @@ impl MigratorTrait for Migrator {
             Box::new(m20251123_175358_create_edge_cause_table::Migration),
             Box::new(m20251123_180000_create_mod_group_family_table::Migration),
             Box::new(m20251123_180005_create_comment_table::Migration),
+            Box::new(m20251123_180010_create_reaction_table::Migration),
             Box::new(m20251123_190950_seed_item_type::Migration),
             Box::new(m20251123_191000_seed_image::Migration),
             Box::new(m20251124_102528_seed_item_base::Migration),

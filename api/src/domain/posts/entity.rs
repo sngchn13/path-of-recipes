@@ -7,16 +7,16 @@ pub struct Post{
     pub title: String,
     pub content: String,
     pub password: String,
-    pub view: i32,
-    pub like: i32,
-    pub dislike: i32,
+    pub view_count: i32,
+    pub like_count: i32,
+    pub dislike_count: i32,
     pub created_at: OffsetDateTime,
     pub updated_at: Option<OffsetDateTime>,
 }
 
 impl Post {
     pub fn new(id: Uuid, title: String, content: String, password: String, view: i32, like: i32, dislike: i32, created_at: OffsetDateTime, updated_at: Option<OffsetDateTime>) -> Self {
-        Self { id, title, content, password, view, like, dislike, created_at, updated_at }
+        Self { id, title, content, password, view_count: view, like_count: like, dislike_count: dislike, created_at, updated_at }
     }
 }
 

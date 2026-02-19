@@ -60,8 +60,8 @@ pub struct PostSearchCondition {
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum PostOrder {
-    View,
-    Like,
+    ViewCount,
+    LikeCount,
     CreatedAt,
 }
 

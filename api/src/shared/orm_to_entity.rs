@@ -134,9 +134,9 @@ pub fn to_post(orm: PostOrm)-> Post {
         orm.title,
         orm.content,
         orm.password,
-        orm.view,
-        orm.like,
-        orm.dislike,
+        orm.view_count,
+        orm.like_count,
+        orm.dislike_count,
         fixed_offset_to_offset_datetime(orm.created_at),
         fixed_offset_opt_to_offset_opt(orm.updated_at)
     )

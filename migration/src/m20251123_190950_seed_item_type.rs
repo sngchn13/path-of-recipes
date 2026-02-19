@@ -1,5 +1,5 @@
 use entity::item_types;
-use sea_orm::{ActiveModelTrait, EntityTrait, Set};
+use sea_orm::{ActiveModelTrait, Set};
 use sea_orm_migration::{prelude::*};
 
 #[derive(DeriveMigrationName)]
@@ -34,13 +34,7 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
-        let db = manager.get_connection();
-
-        item_types::Entity::delete_many()
-            .exec(db)
-            .await?;
-
+    async fn down(&self, _manager: &SchemaManager) -> Result<(), DbErr> {
         Ok(())
     }
 }

@@ -6,6 +6,7 @@ use crate::domain::comments::entity::{Comment, Status};
 
 
 #[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub struct CommentResponse {
     pub id: i32,
     pub post_id: Uuid,
@@ -34,6 +35,7 @@ impl From<Comment> for CommentResponse {
 }
 
 #[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub struct CreateCommentResponse{
     pub id: i32
 }

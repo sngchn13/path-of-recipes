@@ -1,7 +1,8 @@
 use entity::comments;
+use migration::Expr;
 use sea_orm::{ActiveModelTrait, ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, ExprTrait, Order, PaginatorTrait, QueryFilter, QueryOrder};
 
-use crate::{domain::comments::{CreateCommentInput, SearchCommentInput, entity::Comment, error::CommentError}, shared::{Page, Pageable}};
+use crate::{domain::{comments::{CreateCommentInput, SearchCommentInput, entity::Comment, error::CommentError}, reactions::ReactionType}, shared::{Page, Pageable}};
 
 pub async fn save_comment(txn: &DatabaseTransaction, new_comment: CreateCommentInput) -> Result<Comment, CommentError>{
     let model = comments::ActiveModel {
@@ -64,4 +65,24 @@ pub async fn find_all_comments_by_condition(conn: &DatabaseConnection, condition
 
     let paged_comments = Page::new(items, pageable);
     Ok(paged_comments)
+}
+
+pub async fn increase_comment_reaction_count(comment_id: i32, reaction_type: ReactionType, conn: &DatabaseConnection) -> Result<(), CommentError>{
+    match reaction_type {
+        ReactionType::Like => {
+            comments::Entity::update_many()
+                .col_expr(comments::Column::LikeCount, Expr::col(comments::Column::LikeCount).add(1))
+                .filter(comments::Column::Id.eq(comment_id))
+                .exec(conn)
+                .await?;
+        },
+        ReactionType::Dislike => {
+            comments::Entity::update_many()
+                .col_expr(comments::Column::DislikeCount, Expr::col(comments::Column::DislikeCount).add(1))
+                .filter(comments::Column::Id.eq(comment_id))
+                .exec(conn)
+                .await?;
+        },
+    };
+    Ok(())
 }

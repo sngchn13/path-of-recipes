@@ -1,3 +1,5 @@
+use std::str::FromStr;
+
 use axum::{debug_middleware, extract::{FromRequestParts, Request, State}, http::{StatusCode, request::Parts}, middleware::Next, response::{IntoResponse, Response}};
 use axum_extra::extract::{CookieJar, cookie::{Cookie, SameSite}};
 use uuid::Uuid;
@@ -8,7 +10,7 @@ use crate::app::state::AppConfig;
 const COOKIE_KEY: &str = "anon_id";
 
 #[derive(Clone, Debug)]
-pub struct AnonId(pub String);
+pub struct AnonId(pub Uuid);
 
 #[derive(Debug)]
 pub struct MissingAnonId;
@@ -33,8 +35,11 @@ impl<S> FromRequestParts<S> for AnonId
 pub async fn anon_id_middleware(State(config): State<AppConfig>, jar: CookieJar, mut request: Request, next: Next) -> Response{
 
     let (anon_id, need_set_cookie) = match jar.get(COOKIE_KEY) {
-        Some(c) => (c.value().to_string(), false),
-        None => (Uuid::new_v4().to_string(), true),
+        None => (Uuid::new_v4(), true),
+        Some(c) => match Uuid::from_str(c.value()) {
+            Ok(uuid) => (uuid, false),
+            Err(_) => (Uuid::new_v4(), true),
+        }
     };
 
     request.extensions_mut().insert(AnonId(anon_id.clone()));
@@ -45,7 +50,7 @@ pub async fn anon_id_middleware(State(config): State<AppConfig>, jar: CookieJar,
         return response;
     }
 
-    let cookie = Cookie::build((COOKIE_KEY, anon_id))
+    let cookie = Cookie::build((COOKIE_KEY, anon_id.to_string()))
         .path("/")
         .http_only(true)
         .same_site(SameSite::Lax)

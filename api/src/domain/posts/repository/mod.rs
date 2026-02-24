@@ -1,10 +1,11 @@
 use std::collections::HashSet;
 
 use entity::{graphs, posts};
-use sea_orm::{ActiveValue::Set, DatabaseConnection, DatabaseTransaction, EntityTrait, FromQueryResult, JoinType, Order, PaginatorTrait, QueryOrder, QuerySelect, RelationTrait, prelude::DateTimeWithTimeZone, raw_sql};
+use migration::Expr;
+use sea_orm::{ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, ExprTrait, FromQueryResult, JoinType, Order, PaginatorTrait, QueryFilter, QueryOrder, QuerySelect, RelationTrait, prelude::DateTimeWithTimeZone, raw_sql};
 use uuid::Uuid;
 
-use crate::{domain::posts::{Post, PostError, PostOrder, presentation::NewPost}, shared::{Page, Pageable, Pagination, SortDirection, fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime, hash_password, to_post}};
+use crate::{domain::{posts::{Post, PostError, PostOrder, presentation::NewPost}, reactions::ReactionType}, shared::{Page, Pageable, Pagination, SortDirection, fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime, hash_password, to_post}};
 
 
 pub async fn save_post(txn: &DatabaseTransaction, new_post: &NewPost) -> Result<Post, PostError>{
@@ -99,6 +100,27 @@ pub async fn find_all_posts(pagination: Pagination, order_by: PostOrder, directi
     let pageable = Pageable{ page: pagination.page, size, total_items: paginated.num_items().await?, total_pages: paginated.num_pages().await? };
 
     Ok(Page::new(posts, pageable))
+}
+
+pub async fn increase_post_reaction_count(post_id: Uuid, reaction_type: ReactionType, conn: &DatabaseConnection) -> Result<(), PostError>{
+    match reaction_type {
+        ReactionType::Like => {
+            posts::Entity::update_many()
+                .col_expr(posts::Column::LikeCount, Expr::col(posts::Column::LikeCount).add(1))
+                .filter(posts::Column::Id.eq(post_id))
+                .exec(conn)
+                .await?;
+        },
+        ReactionType::Dislike => {
+            posts::Entity::update_many()
+                .col_expr(posts::Column::DislikeCount, Expr::col(posts::Column::DislikeCount).add(1))
+                .filter(posts::Column::Id.eq(post_id))
+                .exec(conn)
+                .await?;
+        },
+    };
+
+    Ok(())
 }
 
 #[derive(Debug, FromQueryResult)]

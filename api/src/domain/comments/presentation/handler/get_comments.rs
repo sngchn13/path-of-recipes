@@ -1,7 +1,6 @@
 use std::sync::Arc;
 use axum::{Json, extract::{Path, Query, State}, http::StatusCode};
 use serde::Deserialize;
-use tracing::debug;
 use uuid::Uuid;
 
 use crate::{domain::comments::{CommentService, SearchCommentInput, error::CommentError, presentation::dto::CommentResponse}, shared::{Page, PageResponse, Pagination, PaginationQuery, SortDirection}};
@@ -16,7 +15,6 @@ pub async fn get_comments_by_conditon(
 {
     let search_condition = search_condition.0;
     let condition = SearchCommentInput{ post_id, pagination: Pagination::from(search_condition.paging_query), order_by: search_condition.order_by.unwrap_or_default(), direction: search_condition.direction.unwrap_or(SortDirection::Asc) };
-    debug!("condition={:#?}", condition);
 
     let temp = comment_service.search_comments(condition).await?;
     let items: Vec<CommentResponse> = temp.content.into_iter().map(|c| CommentResponse::from(c)).collect();

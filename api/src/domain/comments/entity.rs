@@ -24,6 +24,7 @@ pub struct Comment {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
 pub enum Status {
     Active,
     Deleted,

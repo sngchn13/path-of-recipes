@@ -1,6 +1,7 @@
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct NewCommentRequest {
     pub author_name: Option<String>,
     pub password: String,

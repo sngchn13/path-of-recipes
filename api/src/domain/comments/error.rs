@@ -9,9 +9,6 @@ pub enum CommentError {
     DbErr(#[from] sea_orm::DbErr),
 
     #[error(transparent)]
-    InvalidAnonId(#[from] uuid::Error),
-
-    #[error(transparent)]
     BcryptError(#[from] BcryptError),
 
     #[error("parent comment({0}) not found")]
@@ -25,10 +22,6 @@ impl IntoResponse for CommentError {
                 let msg = format!("parent comment not found: comment_id = {}", comment_id);
                 info!("{}", &msg);
                 (StatusCode::BAD_REQUEST, msg).into_response()
-            },
-            CommentError::InvalidAnonId(err) => {
-                info!("{}", err);
-                (StatusCode::BAD_REQUEST, "invalid anon_id").into_response()
             },
             err => {
                 warn!("{}", err);

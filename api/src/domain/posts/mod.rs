@@ -8,3 +8,4 @@ pub use error::PostError;
 pub use presentation::*;
 pub use entity::Post;
 pub use service::{PostService, PostServiceImpl};
+pub use repository::increase_post_reaction_count;

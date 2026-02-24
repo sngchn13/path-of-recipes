@@ -82,7 +82,7 @@ impl<T> Page<T> {
         Self { content, pageable }
     }
 
-    pub fn map<U, F>(self, mut f: F) -> Page<U> 
+    pub fn map<U, F>(self, f: F) -> Page<U> 
         where F: FnMut(T) -> U
     {
         Page { 

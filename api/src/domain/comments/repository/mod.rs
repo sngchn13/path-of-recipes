@@ -2,7 +2,7 @@ use entity::comments;
 use migration::Expr;
 use sea_orm::{ActiveModelTrait, ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, ExprTrait, Order, PaginatorTrait, QueryFilter, QueryOrder};
 
-use crate::{domain::{comments::{CreateCommentInput, SearchCommentInput, entity::Comment, error::CommentError}, reactions::ReactionType}, shared::{Page, Pageable}};
+use crate::{domain::{comments::{CreateCommentInput, SearchCommentInput, entity::Comment, error::CommentError}, reactions::ReactionType}, shared::{Cursor, Page, Pageable}};
 
 pub async fn save_comment(txn: &DatabaseTransaction, new_comment: CreateCommentInput) -> Result<Comment, CommentError>{
     let model = comments::ActiveModel {
@@ -85,4 +85,33 @@ pub async fn increase_comment_reaction_count(comment_id: i32, reaction_type: Rea
         },
     };
     Ok(())
+}
+
+pub async fn find_all_comments_by_parent_id( parent_id: i32, size: u64, after_id: Option<i32>, conn: &DatabaseConnection) 
+    -> Result<Cursor<Comment>, CommentError>
+{
+    
+    let mut cursor = comments::Entity::find()
+        .filter(comments::Column::ParentId.eq(parent_id))
+        .cursor_by(comments::Column::Id);
+
+    if let Some(after_id) = after_id {
+        cursor.after(after_id);
+    }
+
+    //has_next판단 위해 +1
+    let items = cursor.first(size + 1).all(conn).await?;
+    let mut items: Vec<Comment> = items.into_iter().map(|m| Comment::from(m)).collect();
+
+    let has_next = items.len() as u64 > size ;
+    if has_next {
+        items.pop();
+    }
+
+    let next_after_id = match has_next {
+        true => items.last().map(|m| m.id),
+        false => None,
+    };
+
+    Ok(Cursor::new(items, next_after_id))
 }

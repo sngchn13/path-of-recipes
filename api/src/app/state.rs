@@ -3,7 +3,7 @@ use std::sync::Arc;
 use axum::{extract::FromRef};
 use sea_orm::DatabaseConnection;
 
-use crate::{app::Services, domain::{comments::CommentService, images::ImageService, item_bases::ItemBaseService, mod_groups::ModGroupService, posts::PostService}, infrastructure::get_connection};
+use crate::{app::Services, domain::{comments::CommentService, images::ImageService, item_bases::ItemBaseService, mod_groups::ModGroupService, posts::PostService, reactions::ReactionService}, infrastructure::get_connection};
 
 const ENV_COOKIE_SECURE: &str = "COOKIE_SECURE";
 
@@ -56,6 +56,12 @@ impl FromRef<AppState> for Arc<dyn PostService> {
 impl FromRef<AppState> for Arc<dyn CommentService> {
     fn from_ref(input: &AppState) -> Self {
         input.services.comment_service.clone()
+    }
+}
+
+impl FromRef<AppState> for Arc<dyn ReactionService> {
+    fn from_ref(input: &AppState) -> Self {
+        input.services.reaction_service.clone()
     }
 }
 

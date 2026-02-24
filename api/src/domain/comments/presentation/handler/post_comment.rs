@@ -1,4 +1,4 @@
-use std::{str::FromStr, sync::Arc};
+use std::sync::Arc;
 use axum::{Json, extract::{self, Path, State}, http::StatusCode};
 use uuid::Uuid;
 
@@ -12,8 +12,7 @@ pub async fn post_new_comment(
     Path(post_id): Path<Uuid>,
     extract::Json(new_comment): extract::Json<NewCommentRequest>
 ) -> Result<(StatusCode, Json<CreateCommentResponse>), CommentError> {
-    let author_id = Uuid::from_str(&anon_id.0)?;
-    let comment_input = CreateCommentInput::new(post_id, author_id, new_comment.author_name, new_comment.password, new_comment.parent_id, new_comment.content);
+    let comment_input = CreateCommentInput::new(post_id, anon_id.0, new_comment.author_name, new_comment.password, new_comment.parent_id, new_comment.content);
 
     let saved_comment_id = comment_service.save_comment(comment_input).await?;
 

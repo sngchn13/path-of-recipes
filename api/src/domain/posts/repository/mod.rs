@@ -3,6 +3,7 @@ use std::collections::HashSet;
 use entity::{graphs, posts};
 use migration::Expr;
 use sea_orm::{ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, ExprTrait, FromQueryResult, JoinType, Order, PaginatorTrait, QueryFilter, QueryOrder, QuerySelect, RelationTrait, prelude::DateTimeWithTimeZone, raw_sql};
+use tracing::warn;
 use uuid::Uuid;
 
 use crate::{domain::{posts::{Post, PostError, PostOrder, presentation::NewPost}, reactions::ReactionType}, shared::{Page, Pageable, Pagination, SortDirection, fixed_offset_opt_to_offset_opt, fixed_offset_to_offset_datetime, hash_password, to_post}};
@@ -121,6 +122,18 @@ pub async fn increase_post_reaction_count(post_id: Uuid, reaction_type: Reaction
     };
 
     Ok(())
+}
+
+pub async fn increase_post_view_count(post_id: Uuid, conn: &DatabaseConnection) {
+    let res = posts::Entity::update_many()
+        .col_expr(posts::Column::ViewCount, Expr::col(posts::Column::ViewCount).add(1))
+        .filter(posts::Column::Id.eq(post_id))
+        .exec(conn)
+        .await;
+
+    if let Err(e) = res {
+        warn!("Failed to increment view count. post_id={} error={}", post_id, e);
+    }
 }
 
 #[derive(Debug, FromQueryResult)]

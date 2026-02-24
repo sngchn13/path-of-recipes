@@ -4,7 +4,7 @@ use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 use uuid::Uuid;
 
-use crate::{domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, find_graph_by_post_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, find_nodes_with_related_by_node_id, find_representative_nodes_by_mod_group_ids, find_representative_nodes_by_posts, save_nodes_returning_map}, posts::{Post, PostError, presentation::{NewPost, PostOrder, PostSearchCondition}, repository::{find_all_posts, find_post_by_id, find_posts_by_node_id, save_post}, service::{PostAggregate, PostService}}}, shared::{Page, Pagination, SortDirection}};
+use crate::{domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, find_graph_by_post_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, find_nodes_with_related_by_node_id, find_representative_nodes_by_mod_group_ids, find_representative_nodes_by_posts, save_nodes_returning_map}, posts::{Post, PostError, presentation::{NewPost, PostOrder, PostSearchCondition}, repository::{find_all_posts, find_post_by_id, find_posts_by_node_id, increase_post_view_count, save_post}, service::{PostAggregate, PostService}}}, shared::{Page, Pagination, SortDirection}};
 
 pub struct PostServiceImpl{
     database_connection: DatabaseConnection,
@@ -70,7 +70,15 @@ impl PostService for PostServiceImpl {
         //그래프 조합하기
         let graph = GraphAggregate::assemble_graph(graph, nodes.into_iter().collect(), edges.into_iter().collect());
 
-        let post = PostAggregate::assemble_post(post, graph);
+        let mut post = PostAggregate::assemble_post(post, graph);
+
+        //조회수 증가
+        post.view_count += 1;
+        let ind_conn = conn.clone();
+        let ind_post_id = post_id.clone();
+        tokio::spawn(async move {
+            increase_post_view_count(ind_post_id, &ind_conn).await;
+        });
 
         Ok(post)
     }

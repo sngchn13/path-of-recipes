@@ -1,7 +1,7 @@
 use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 
-use crate::{domain::comments::{SearchCommentInput, entity::Comment, error::CommentError, repository::{find_all_comments_by_condition, increase_reply_count, save_comment}, service::{CommentService, dto::CreateCommentInput}}, shared::Page};
+use crate::{domain::comments::{ReplyCommentCondition, SearchCommentInput, entity::Comment, error::CommentError, repository::{find_all_comments_by_condition, find_all_comments_by_parent_id, increase_reply_count, save_comment}, service::{CommentService, dto::CreateCommentInput}}, shared::{Cursor, Page}};
 
 
 pub struct CommentServiceImpl{
@@ -34,5 +34,10 @@ impl CommentService for CommentServiceImpl {
 
     async fn search_comments(&self, condition: SearchCommentInput) -> Result<Page<Comment>, CommentError>{
         find_all_comments_by_condition(&self.database_connection, condition).await
+    }
+
+    async fn search_reply_comments(&self, condition: ReplyCommentCondition) -> Result<Cursor<Comment>, CommentError>{
+        let conn =  self.database_connection.clone();
+        find_all_comments_by_parent_id(condition.parent_id, condition.size, condition.after_id, &conn).await
     }
 }

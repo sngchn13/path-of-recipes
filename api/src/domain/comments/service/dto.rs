@@ -69,3 +69,10 @@ pub struct SearchCommentInput{
     pub order_by: CommentOrder,
     pub direction: SortDirection,
 }
+
+#[derive(Debug)]
+pub struct ReplyCommentCondition{
+    pub parent_id: i32,
+    pub after_id: Option<i32>,
+    pub size: u64,
+}

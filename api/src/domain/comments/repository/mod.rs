@@ -1,3 +1,4 @@
+use chrono::{DateTime, FixedOffset, Utc};
 use entity::comments;
 use migration::Expr;
 use sea_orm::{ActiveModelTrait, ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, ExprTrait, Order, PaginatorTrait, QueryFilter, QueryOrder};
@@ -22,7 +23,7 @@ pub async fn save_comment(txn: &DatabaseTransaction, new_comment: CreateCommentI
 }
 
 pub async fn increase_reply_count(txn: &DatabaseTransaction, comment_id: i32) -> Result<Comment, CommentError>{
-    let comment = comments::Entity::find_by_id(comment_id).one(txn).await?.ok_or(CommentError::ParentCommentNotFound(comment_id.to_string()))?;
+    let comment = comments::Entity::find_by_id(comment_id).one(txn).await?.ok_or(CommentError::ParentCommentNotFound(comment_id))?;
     let current_reply_count = comment.reply_count;
     
     let mut comment: comments::ActiveModel = comment.into();
@@ -114,4 +115,22 @@ pub async fn find_all_comments_by_parent_id( parent_id: i32, size: u64, after_id
     };
 
     Ok(Cursor::new(items, next_after_id))
+}
+
+pub async fn find_by_id(comment_id: i32, conn: &DatabaseConnection) -> Result<Option<Comment>, CommentError>{
+    let model = comments::Entity::find_by_id(comment_id).one(conn).await?;
+    Ok(model.map(|m| Comment::from(m)))
+}
+
+pub async fn update_comment_by_id(comment_id: i32, content: String, conn: &DatabaseConnection) -> Result<Comment, CommentError>{
+
+    let model = comments::Entity::find_by_id(comment_id).one(conn).await?;
+    let mut model: comments::ActiveModel = model.ok_or(CommentError::CommentNotFound(comment_id))?.into();
+
+    model.content = Set(content.to_owned());
+    let now: DateTime<FixedOffset> = Utc::now().into();
+    model.updated_at = Set(Some(now).to_owned());
+    let updated = model.update(conn).await?;
+
+    Ok(Comment::from(updated))
 }

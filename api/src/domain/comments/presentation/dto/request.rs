@@ -8,3 +8,10 @@ pub struct NewCommentRequest {
     pub parent_id: Option<i32>,
     pub content: String,
 }
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct PatchCommentRequest {
+    pub password: String,
+    pub content: String,
+}

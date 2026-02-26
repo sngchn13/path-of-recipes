@@ -11,13 +11,27 @@ pub enum CommentError {
     #[error(transparent)]
     BcryptError(#[from] BcryptError),
 
+    #[error("invalid password format")]
+    InvalidPassword,
+
     #[error("parent comment({0}) not found")]
-    ParentCommentNotFound(String),
+    ParentCommentNotFound(i32),
+
+    #[error("comment({0}) not found")]
+    CommentNotFound(i32),
 }
 
 impl IntoResponse for CommentError {
     fn into_response(self) -> axum::response::Response {
         match self {
+            CommentError::InvalidPassword => {
+                (StatusCode::BAD_REQUEST, "invalid credentials").into_response()
+            },
+            CommentError::CommentNotFound(comment_id) => {
+                let msg = format!("comment not found: comment_id = {}", comment_id);
+                info!("{}", &msg);
+                (StatusCode::NOT_FOUND, msg).into_response()
+            },
             CommentError::ParentCommentNotFound(comment_id) => {
                 let msg = format!("parent comment not found: comment_id = {}", comment_id);
                 info!("{}", &msg);

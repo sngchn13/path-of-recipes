@@ -1,7 +1,7 @@
 use bcrypt::BcryptError;
 use uuid::Uuid;
 
-use crate::{domain::comments::presentation::CommentOrder, shared::{Pagination, PaginationQuery, SortDirection, hash_password}};
+use crate::{domain::comments::presentation::CommentOrder, shared::{Pagination, SortDirection, hash_password}};
 
 #[derive(Debug)]
 pub struct CreateCommentInput {
@@ -75,4 +75,11 @@ pub struct ReplyCommentCondition{
     pub parent_id: i32,
     pub after_id: Option<i32>,
     pub size: u64,
+}
+
+#[derive(Debug)]
+pub struct PatchCommentCommand{
+    pub comment_id: i32,
+    pub password: String,
+    pub content: String,
 }

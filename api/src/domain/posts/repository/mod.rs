@@ -1,8 +1,9 @@
 use std::collections::HashSet;
 
+use chrono::{DateTime, FixedOffset, Utc};
 use entity::{graphs, posts};
 use migration::Expr;
-use sea_orm::{ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, ExprTrait, FromQueryResult, JoinType, Order, PaginatorTrait, QueryFilter, QueryOrder, QuerySelect, RelationTrait, prelude::DateTimeWithTimeZone, raw_sql};
+use sea_orm::{ActiveModelTrait, ActiveValue::Set, ColumnTrait, DatabaseConnection, DatabaseTransaction, EntityTrait, ExprTrait, FromQueryResult, JoinType, Order, PaginatorTrait, QueryFilter, QueryOrder, QuerySelect, RelationTrait, prelude::DateTimeWithTimeZone, raw_sql};
 use tracing::warn;
 use uuid::Uuid;
 
@@ -134,6 +135,27 @@ pub async fn increase_post_view_count(post_id: Uuid, conn: &DatabaseConnection) 
     if let Err(e) = res {
         warn!("Failed to increment view count. post_id={} error={}", post_id, e);
     }
+}
+
+pub async fn update_post_by_id(post_id: Uuid, new_title: Option<String>, new_content: Option<String>, txn: &DatabaseTransaction) 
+    -> Result<Post, PostError>
+{
+    let model = posts::Entity::find_by_id(post_id).one(txn).await?.ok_or(PostError::NotFoundPost(post_id.to_string()))?;
+    let mut active_model: posts::ActiveModel = model.into();
+
+    if let Some(new_title) = new_title {
+        active_model.title = Set(new_title.to_owned());
+    }
+
+    if let Some(new_content) = new_content {
+        active_model.content = Set(new_content.to_owned());
+    }
+
+    let now: DateTime<FixedOffset> = Utc::now().into();
+    active_model.updated_at = Set(Some(now).to_owned());
+
+    let res = active_model.update(txn).await?;
+    Ok(to_post(res))
 }
 
 #[derive(Debug, FromQueryResult)]

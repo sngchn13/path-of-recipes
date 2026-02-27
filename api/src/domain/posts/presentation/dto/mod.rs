@@ -77,3 +77,18 @@ impl IntoResponse for CreatePostResponse {
         (StatusCode::CREATED, Json(self)).into_response()
     }
 }
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct PatchPost{
+    pub title: Option<String>,
+    pub password: String,
+    pub content: Option<String>,
+    pub graph: Option<NewGraph>,
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct PatchedPostResponse{
+    pub post_id: Uuid,
+}

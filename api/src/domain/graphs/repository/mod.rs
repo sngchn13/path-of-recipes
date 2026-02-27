@@ -28,3 +28,15 @@ pub async fn find_graph_by_post_id(post_id: &Uuid, conn: &DatabaseConnection) ->
     Ok(graph)
 }
 
+pub async fn delete_graph_by_post_id(post_id: Uuid, txn: &DatabaseTransaction) -> Result<(), GraphError>{
+    let res = graphs::Entity::delete_many()
+        .filter(graphs::Column::PostId.eq(post_id))
+        .exec(txn)
+        .await?;
+
+    if res.rows_affected > 1 {
+        return Err(GraphError::UnexpectedAffectedRows(res.rows_affected, post_id));
+    }
+
+    Ok(())
+}

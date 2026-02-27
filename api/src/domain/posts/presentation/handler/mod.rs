@@ -6,6 +6,8 @@ use uuid::Uuid;
 
 use crate::{domain::posts::{PostError, PostService, PostSummary, presentation::{CreatePostResponse, PostResponse, dto::NewPost}}, shared::{Page, PageResponse, Pagination, PaginationQuery, SortDirection}};
 
+mod patch_post;
+pub use patch_post::patch_post_by_id;
 
 #[axum::debug_handler]
 pub async fn post_new_post(

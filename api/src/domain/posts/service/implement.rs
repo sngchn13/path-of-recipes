@@ -4,7 +4,7 @@ use sea_orm::{DatabaseConnection, TransactionTrait};
 use tracing::info;
 use uuid::Uuid;
 
-use crate::{domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, find_graph_by_post_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, find_nodes_with_related_by_node_id, find_representative_nodes_by_mod_group_ids, find_representative_nodes_by_posts, save_nodes_returning_map}, posts::{Post, PostError, presentation::{NewPost, PostOrder, PostSearchCondition}, repository::{find_all_posts, find_post_by_id, find_posts_by_node_id, increase_post_view_count, save_post}, service::{PostAggregate, PostService}}}, shared::{Page, Pagination, SortDirection}};
+use crate::{domain::{causes::find_all_returning_map, edges::{find_edge_aggregate_by_graph_id, save_edges_with_causes}, graphs::{GraphAggregate, delete_graph_by_post_id, find_graph_by_post_id, save_graph}, mods::{ModAggregate, UnplacedModAggregate, find_all_mods_with_related_by_mod_ids}, node_mod::{NodeMod, Placement, find_node_mods_from_node_ids}, nodes::{NodeAggregate, RawNodeAggregate, find_nodes_with_related_by_graph_id, find_nodes_with_related_by_node_id, find_representative_nodes_by_mod_group_ids, find_representative_nodes_by_posts, save_nodes_returning_map}, posts::{Post, PostError, presentation::{NewPost, PostOrder, PostSearchCondition}, repository::{find_all_posts, find_post_by_id, find_posts_by_node_id, increase_post_view_count, save_post, update_post_by_id}, service::{PatchPostCommand, PostAggregate, PostService}}}, shared::{Page, Pagination, SortDirection, verify_password}};
 
 pub struct PostServiceImpl{
     database_connection: DatabaseConnection,
@@ -143,6 +143,37 @@ impl PostService for PostServiceImpl {
             .collect::<Result<Vec<(Post, NodeAggregate)>, PostError>>()?;
         
         Ok(Page::new(result_content, paged_post.pageable))
+    }
+
+    async fn update_post_with_related(&self, patch_post_command: PatchPostCommand) -> Result<Post, PostError>{
+
+        let conn = self.database_connection.clone();
+        let post_id = patch_post_command.post_id;
+        let raw_password = patch_post_command.password;
+        let optional_graph = patch_post_command.graph;
+        let optional_title = patch_post_command.title;
+        let optional_content = patch_post_command.content;
+
+        // 1)포스트 찾아와서 비밀번호 검증
+        let post = find_post_by_id(post_id, &conn).await?.ok_or(PostError::NotFoundPost(post_id.to_string()))?;
+        if !verify_password(&raw_password, &post.password)? { return Err(PostError::InvalidPasswordErr); }
+
+        // 2)트랜잭션 시작
+        let txn = conn.begin().await?;
+        // 3)그래프가 있으면 삭제 + 그래프 업데이트
+        if let Some(new_graph) = optional_graph {
+            delete_graph_by_post_id(post_id, &txn).await?;
+            
+            let graph = save_graph(&txn, &new_graph, &post).await?;
+            let node_map = save_nodes_returning_map(new_graph.nodes, &graph, &txn).await?;
+            let cause_lookup = find_all_returning_map(&txn).await?;
+            save_edges_with_causes(new_graph.edges, node_map, graph.id, cause_lookup, &txn).await?;
+        }
+        // 4)나머지 포스트의 부분들을 업데이트
+        let updated = update_post_by_id(post_id, optional_title, optional_content, &txn).await?;
+        txn.commit().await?;
+        
+        Ok(post)
     }
 }
 

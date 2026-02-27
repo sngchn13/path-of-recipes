@@ -1,7 +1,7 @@
 use time::OffsetDateTime;
 use uuid::Uuid;
 
-use crate::domain::{graphs::GraphAggregate, posts::Post};
+use crate::domain::{graphs::GraphAggregate, posts::{NewGraph, Post}};
 
 #[derive(Debug)]
 pub struct PostAggregate {
@@ -30,4 +30,13 @@ impl PostAggregate {
             updated_at: post.updated_at 
         }
     }
+}
+
+#[derive(Debug)]
+pub struct PatchPostCommand {
+    pub post_id: Uuid,
+    pub title: Option<String>,
+    pub password: String,
+    pub content: Option<String>,
+    pub graph: Option<NewGraph>,
 }

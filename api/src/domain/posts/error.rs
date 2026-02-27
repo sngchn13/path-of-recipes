@@ -39,7 +39,10 @@ pub enum PostError {
     GraphMissingForPost(String),
 
     #[error("{0}")]
-    AssembleErr(String)
+    AssembleErr(String),
+
+    #[error("invalid password")]
+    InvalidPasswordErr,
 }
 
 impl IntoResponse for PostError {
@@ -49,6 +52,9 @@ impl IntoResponse for PostError {
                 let msg = format!("post not found: post_id={}", post_id);
                 info!("{}", &msg);
                 (StatusCode::BAD_REQUEST, msg).into_response()
+            },
+            PostError::InvalidPasswordErr => {
+                (StatusCode::UNAUTHORIZED).into_response()
             },
             PostError::EdgeErr(err) => err.into_response(),
             PostError::GraphErr(err) => err.into_response(),

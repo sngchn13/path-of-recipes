@@ -25,7 +25,7 @@ impl IntoResponse for CommentError {
     fn into_response(self) -> axum::response::Response {
         match self {
             CommentError::InvalidPassword => {
-                (StatusCode::BAD_REQUEST, "invalid credentials").into_response()
+                (StatusCode::UNAUTHORIZED, "invalid credentials").into_response()
             },
             CommentError::CommentNotFound(comment_id) => {
                 let msg = format!("comment not found: comment_id = {}", comment_id);
